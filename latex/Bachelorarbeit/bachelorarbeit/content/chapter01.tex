@@ -1,0 +1,114 @@
+\chapter{Einleitung}
+
+Nach der ersten experimentellen Realisierung von Bose-Einstein-Kondensaten 
+(\textit{engl.: Bose-Einstein-Condensate}, kurz BEC) im Jahre 1995 
+(\cite{av:m2},\cite{av:m3},\cite{av:m4}), ca. 70 Jahre nach der theoretischen 
+Vorhersage und dem darauf 
+folgenden Nobelpreis \cite{av:m1} im Jahre 2001 hat sich ein neues 
+Forschungsgebiet der Atom- und Molekülphysik sowie in der Quantenoptik 
+eröffnet. 
+
+BECs sind makroskopische Quantenobjekte. Sie bestehen aus 
+ultrakalten, 
+neutralen, bosonischen Atomen, die quantenmechanisch überwiegend den 
+Grundzustand des Systems besiedeln. Dabei ist die Wellenfunktion eines 
+einzelnen Teilchens stark delokalisiert.  
+
+Eine sehr erfolgreiche Methode BECs theoretisch zu beschreiben, liefert die 
+"Meanfield-Theorie"\ bei der angenommen wird, dass sich der quantenmechanische 
+Zustand des Mehrteilchensystems durch eine einzige effektive Wellenfunktion 
+beschreiben lässt. Durch iterative Verfahren kann so nicht 
+nur die Energie, 
+sondern auch die Form des BECs abgeschätzt werden. Da neutrale Atome im 
+ultrakalten Regime, das heißt im Mikro- bis Nanokelvin 
+Bereich, 
+nur 
+auf einer sehr 
+kurzen Distanz wechselwirken (s-Wellen-Streuung), stellt das sogenannte 
+$\delta$-Pseudopotential eine gute Näherung dar. Es entspricht einer 
+Kontaktwechselwirkung mit effektiver Streulänge.
+
+Will man darüber hinaus eine genauere Berechnung durchführen, bietet sich 
+eine Konfigurationswechselwirkungsrechnung (\textit{engl.: Configuration 
+Interaction}, kurz CI) an. Dabei stellt man schnell 
+fest, dass bei klassischen BECs mit einer Teilchenzahl in der Größenordnung 
+von $10^{5}$ (vergleiche mit \cite{av:m2}) eine zu große Anzahl an 
+Konfigurationen im System vorhanden sind und so 
+die Berechnung fast unmöglich scheint.
+
+Seit 2011 ist es möglich, einzelne Atome in 
+optischen Dipol-Fallen, das heißt, mit Lasern zu 
+halten \cite{av:7a} und diese zu untersuchen. Weiterhin gibt es die Variante, 
+sogenannte optische Gitter zu erstellen, womit BECs sogar 3d-periodisch 
+angeordnet werden können (siehe u.a. in \cite{phdthesis:Schneider}, 
+\cite{phdthesis:sala}). Daher kann für solche sehr kleinen Systeme dieser 
+Ansatz wieder verfolgt werden.
+
+Das Problem ist nun jedoch, dass eine genauere Berechnung von BECs mithilfe 
+des Deltapotentials im Rahmen einer CI-Rechnung in 3d nicht möglich ist. 
+\cite{av:1b} zeigt, dass die Energie hierbei nicht konvergiert. Für immer 
+größere Konfigurationen entsteht eine immer höhere Energie des Systems.
+
+Es gibt zwei Herangehensweisen, um mit einer solchen Divergenz umzugehen. Zum 
+einen kann versucht werden, die Berechnung zu renormieren, das heißt die 
+Unendlichkeit durch eine  Re-Definition von Operatoren zu umgehen. Ein solches 
+Vorgehen ist unter anderem in \cite{phdthesis:sala} erfolglos versucht worden. 
+%
+Ein anderer Weg wäre es, ein realistischeres Wechelwirkungspotential zu 
+benutzen. Dieses setzt sich prinzipiell aus zwei Teilen 
+zusammen: Einen 
+abstoßenden Part, der verhindert, dass sich zwei Teilchen am exakt selben Ort 
+befinde und einen anziehenden Part, der durch die 
+Van-der-Waals 
+Wechselwirkung beschrieben wird. Wechselwirkungspotentiale sind sehr 
+kurzreichweitig.  Auf der anderen Seite werden BECs in optischen Fallen 
+gehalten, die in erster Näherung durch ein harmonisches Potential beschrieben 
+werden können. Das Fallenpotential ist auf Grund der makroskopischen Größe der 
+Apparatur langreichweitig gegenüber der Ausdehnung des BECs.  Beide Potentiale 
+sollen bei einer genaueren Berechnung berücksichtigt werden, 
+was auf Grund der 
+unterschiedlichen Skalen der Ausdehnung die Rechnung erschwert.
+
+Es entstehen schwer zu berechnende Wechselwirkungsintegrale, 
+die prinzipiell von 6 Koordinaten abhängen und im Allgemeinen nicht separieren.
+
+Für das Zweiteilchenproblem in einem optischen Gitter hat man in 
+\cite{phdthesis:sergey} eine analytische Lösung in Relativ- und 
+Schwerpunktskoordinaten gefunden. Dieses Vorgehen kann jedoch für mehr als zwei 
+Teilchen nicht mehr angewendet werden.
+
+Im Kontext der Elektronenstrukturrechnungen von Molekülen stößt man auch auf 
+solche sechsdimensionalen Wechselwirkungsintegrale. 2015 wird 
+in der Arbeit 
+\cite{av:1a} ein Vorgehen präsentiert, wie eine sehr allgemeine Klasse der 
+Integrale erst vereinfacht und anschließend über eine Schar 
+an Basisintegralen 
+berechnet werden kann. \\
+
+Ziel dieser Arbeit soll es also sein, den vorgestellten 
+Algorithmus zu 
+überprüfen, zu implementieren und die Anwendbarkeit auf die Berechnung von 
+ultrakalten Gasen mittels CI abzuschätzen. Damit wäre ein neuer Zugang zu einer 
+genaueren Berechnung und damit ein tieferes Verständnis von BECs möglich. \\
+
+
+Zukünftig können BECs  in vielen Anwendungsbereichen zum Einsatz kommen. 
+Vorstellbar wären Bereiche wie Quantencomputer, Quantensimulatoren oder auch 
+Quantensensoren. Einige Ideen zur Nutzung von BECs im Rahmen von 
+Quantencomputern können in \cite{phdthesis:Schneider} 
+gefunden werden. Weiterhin 
+zeigt \cite{av:m5} ein Beispiel der Anwendung für Quantensensoren.
+Letztere versprechen äußerst präzise Messungen auf der Skala einzelner Atome.
+Um zum Beispiel Quantensensoren zu realisieren bzw. zu 
+verbessern, muss es auch 
+theoretische Grundlagen und präzise Vorhersagen bzgl. des Verhaltens von BECs 
+auf einer sehr kleinen Skalierung und mit hoher Genauigkeit geben.\\
+\ \\[1cm]
+Demzufolge erklärt diese Arbeit zunächst das betrachtete System und die 
+theoretische Grundlage erklärt, worauf eine CI Rechnung 
+basiert. Anschließend 
+wird der Algorithmus zur Berechnung von sechsedimensionalen Integralen 
+vorgestellt und an das hier betrachtete Problem angepasst. In Kapitel 3 wird 
+die Implementierung erläutert und getestet. Danach wird ein 
+Fazit gegeben 
+und ein Ausblick auf die nächsten Schritte dargestellt.

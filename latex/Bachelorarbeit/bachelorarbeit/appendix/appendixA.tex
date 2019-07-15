@@ -1,0 +1,171 @@
+\chapter{Schlegel-Koeffizienten und Kugelflächenfunktionen}
+\label{sec:AnhangA:Schlegel}
+In diesem Abschnitt sollen relevante Definitionen und 
+Konventionen zur Transformation von kartesischen Ableitungen 
+in sphärische Ableitungen nach Abschnitt 
+\ref{sec:Hobson_schlegel} unter Zuhilfenahme der 
+Schlegel-Koeffizienten und  des Hobson-Theorems angebracht 
+werden. Es sei darauf hingewiesen, dass die Bedeutung der 
+hier verwendeten Variablen von den in der restlichen Arbeit abweichen.  
+Zunächst ist aus \cite{av:4a} bekannt, dass die 
+Transformation von sphärischen in kartesische GTOs durch 
+%
+\begin{align}%\nonumber
+%r^{l-n}\tilde{N}(n)\cdot r^n\cdot Y^l_m\cdot e^{-ar^2} 
+%&=\sum_{l_x+l_y+l_z=l}^{} c(l,m,l_x,l_y,l_z)\cdot 
+%N(l_x,l_y,l_z,a)\cdot x^{l_x}y^{l_y}z^{l_z}
+%\cdot e^{-ar^2}\\
+%\Leftrightarrow
+\tilde{N}(l,a)\cdot Y^l_m 
+&=\sum_{l_x+l_y+l_z=l}^{} c(l,m,l_x,l_y,l_z)\cdot 
+N(l_x,l_y,l_z,a)\cdot x^{l_x}y^{l_y}z^{l_z}
+\end{align}
+%
+gegeben ist. Hierbei sind $\tilde{N}$ und $N$ 
+Normierungskonstanten und c die Schlegel-Koeffizienten, die 
+durch
+%
+\begin{align}\nonumber
+c(l,m,l_x,l_y,l_z)&=(-1)^{\frac{|m|+m}{2}}\cdot 
+\sqrt{\frac{2l+1}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}\cdot 
+\frac{1}{2^ll!}\cdot \\\nonumber
+&\cdot 
+\sum_{p=0}^{\frac{l-|m|}{2}}\binom{l}{p}\binom{p}{j}\cdot 
+\frac{(-1)^p(2l-2p)!}{(l-|m|-2p)!}\cdot\\
+&\cdot 
+\sum_{k=0}^{j}\binom{j}{k}\binom{|m|}{l_x-2k}(\text{sign}(m)\cdot
+ i)^{|m|-l_x+2k}
+\end{align}
+%
+%clm[l_, m_, lx_, ly_, lz_] := Module[{js, val},
+%If[lx + ly + lz != l, Return[0]];
+%js = (lx + ly - Abs[m])/2;
+%If[IntegerQ[js] == False, Return[0]];
+%val = (-1)^((Abs[m] + m)/
+%2) Sqrt[(2 l + 1)/(4 Pi) (l - Abs[m])!/(l + Abs[m])!]/(2^
+%l l!) 
+%Sum[
+%Binomial[l, i] Binomial[i, js] (-1)^
+%i (2 l - 2 i)!/(l - Abs[m] - 2 i)! 
+%Sum[
+%Binomial[js, k] Binomial[Abs[m], 
+%lx - 2 k] (I Sgn2[m])^(Abs[m] - lx + 2 k), {k, 0, js}]
+%, {i,0, (l - Abs[m])/2}];
+%Return[val];
+%]
+%
+gegeben sind. Hierbei ist $i$ die komplexe Einheit und 
+$j:=(l_x+l_y-|m|)/2$. Weiterhin muss gelten, dass 
+\begin{enumerate}
+	\item ein 
+	Binomialkoeffizient mit $\binom{a}{b}=0$ ausgewertet wird, falls b>a oder 
+	b<0	ist,
+	\item der Koeffizient c=0 gesetzt wird, falls $j\notin\mathbb{N}_0$ 
+	oder $l\neq l_x+l_y+l_z$ ist,
+	\item sign definiert ist als sign(m):=$\begin{cases}
+	1 & , m\geq0\\
+	-1 & , m<0
+	\end{cases}\qquad$ .
+\end{enumerate}
+%
+Die komplexen Kugelflächenfunktionen $Y^l_m$ sind definiert 
+durch
+%
+\begin{align}
+Y^l_m(\phi,\theta):=\sqrt{\frac{2l+1}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}\cdot
+ e^{i m \phi} \cdot P^{m}_l(\cos(\theta))
+\end{align}
+%
+mit den assoziierten Legendre-Polynomen
+%
+\begin{align}
+P^m_l(\cos(\theta)):=\frac{(-1)^m}{2^ll!}(1-\cos^2(\theta))^{\frac{m}{2}}\cdot
+\frac{\text{d}^{l+m}}{\text{d}\cos(\theta)^{l+m}}(\cos^2(\theta)-1)^l\qquad.
+\end{align}
+%
+Es sei auf die Eigenschaft%en 
+%
+\begin{align}
+%P^{-|m|}_l&=(-1)^m\frac{(l-|m|)!}{(l+|m|)!} P^{|m|}_l\quad,\\
+Y^{-|m|}_l&=(-1)^m \rl{Y^{|m|}_l}^*
+\end{align}
+%
+hingewiesen wodurch nur assoziierte Legendre-Polynome mit $m\geq0$ berechnet 
+werden müssen \cite{b:4a}. Wie in 
+\cite{av:4a} angedeutet und mit den Autoren von \cite{av:1a} 
+besprochen ist, kann die reelle Version durch die Definition 
+von
+%
+\begin{align}
+c_r(l,m,l_x,l_y,l_z):=\begin{cases}
+\frac{1}{\sqrt{2}}\cdot 
+\left[c(l,-|m|,l_x,l_y,l_z)+(-1)^m\cdot 
+c(l,|m|,l_x,l_y,l_z)\right]& , m>0 \\
+c(l,0,l_x,l_y,l_z) & , m=0 \\
+\frac{i}{\sqrt{2}}\cdot 
+\left[c(l,-|m|,l_x,l_y,l_z)-(-1)^m\cdot 
+c(l,|m|,l_x,l_y,l_z)\right]& , m<0
+\end{cases}
+\end{align}
+%
+und unter Verwendung der soliden reellen 
+Kugelflächenfunktionen
+%
+\begin{align}
+Z_{l,m}(\text{r},\theta,\phi):&=\begin{cases}
+r^l\cdot\frac{1}{\sqrt{2}}\left[Y^{-|m|}_l+(-1)^m\cdot 
+Y^{|m|}_l\right] & , m>0\\
+r^l \cdot Y^0_l & , m=0 \\
+r^l\cdot\frac{i}{\sqrt{2}}\left[Y^{-|m|}_l-(-1)^m\cdot 
+Y^{|m|}_l\right]& , m<0
+\end{cases}\\
+&=r^l\cdot\begin{cases}
+(-1)^m \cdot  
+\sqrt{2}\sqrt{\frac{2l+1}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}\cdot
+P^{|m|}_l(\cos(\theta))\cdot \cos(|m|\cdot \phi)& , m>0\\
+\sqrt{\frac{2l+1}{4\pi}}\cdot P^{0}_l(\cos(\theta))&, m=0\\
+(-1)^m\cdot \sqrt{2} 
+\sqrt{\frac{2l+1}{4\pi}\frac{(l-|m|)!}{(l+|m|)!}}\cdot P^{|m|}_l(\cos(\theta)) 
+\cdot \sin(|m|\cdot \phi) &, m<0
+\end{cases}
+\end{align}
+%
+zu 
+%
+\begin{align}
+Z_{l,m}=\sum_{l_x=0}^{l}\sum_{l_y=0}^{(l-l_x)}\sum_{l_z=0}^{(l-l_x-l_y)}c_r\cdot
+ x^{l_x}\cdot y^{l_y}\cdot z^{l_z}
+\end{align}
+%
+bestimmt werden. Die reelle Rücktransformation kann durch 
+Berechnung der Überlappmatrix bewerkstelligt werden. Es 
+ergibt sich Formel \ref{eq:def:c_koef}
+%
+\begin{align*}\nonumber
+c^{-1}_r(l,m,l_x,l_y,l_z)&=\frac{2}{\Gamma\rl{\frac{l_x+l_y+l_z+l+3}{2}}} 
+\ \cdot \\ 
+&\cdot  \sum_{a+b+c\leq l} \ _rc_{l_xl_yl_z}^{lm}\cdot 
+\Gamma\rl{\frac{1+l_x+a}{2}}\cdot 
+\Gamma\rl{\frac{1+l_y+b}{2}}\cdot \Gamma\rl{\frac{1+l_z+c}{2}}
+\end{align*}
+%
+und \ref{eq:trafo_c-1}
+%
+\begin{align*}
+x^{l_x}y^{l_y}z^{l_z} = \sum_{l=0}^{l_{max}}\sum_{m=0}^l 
+c^{-1}(l,m,l_x,l_y,l_z)\cdot r^{l_{max}-l} Z_{lm}(\textbf{r})\quad,
+\end{align*}
+ wobei die Summe 
+$\sum_{a+b+c\leq 
+l}^{}$ die Bedeutung 
+$\sum_{a=0}^{l}\sum_{b=0}^{l-a}\sum_{c=0}^{l-a-b}$ hat. Weiterhin wird in 
+\cite{av:9a} die Beobachtung hinzugefügt, dass $c^{-1}\equiv0$ ist, falls 
+$l_\text{max}-l$ ungerade ist.  Aus 
+Vollständigkeitsgründen sollte erwähnt sein, dass zur 
+numerischen Berechnung von $c_r$ die Fälle für $m>0$ und 
+geradem $(|m|-l_x)$, $m<0$ zu ungeradem $(|m|-l_x)$ und $m=0$ zu 
+geradem $l_x$ unterschiedet werden muss. In allen anderen 
+Fällen ist die Summe über k identisch Null.
+
+
+  

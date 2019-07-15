@@ -1,0 +1,175 @@
+\begin{thebibliography}{10}
+
+\bibitem{squid}
+{D. Drungl et al.}, ``{Low‐noise high‐speed dc superconducting quantum
+  interference device magnetometer with simplified feedback electronics},''
+  {\em Appl. Phys. Lett. 57}, 1990.
+
+\bibitem{avc}
+{W. Clark Griffith et al.}, ``{Femtotesla atomic magnetometry in a
+  microfabricated vapor cell},'' {\em Optics Express Vol. 18}, 2010.
+
+\bibitem{nvref}
+{R. Schirhagl et al.}, ``{Nitrogen-Vacancy Centers in Diamond: Nanoscale
+  Sensors for Physics and Biology},'' {\em Annu. Rev. Phys. Chem. 65}, 2014.
+
+\bibitem{gmf}
+{R. Gross and A. Marx}, {\em {Festk\"orperphysik}}.
+\newblock De Gruyter, 2014.
+
+\bibitem{pod}
+{J. E. Field et al.}, {\em {The Properties of Diamond}}.
+\newblock Academic Press, 1979.
+
+\bibitem{mspd}
+{J. E. Field}, ``{The mechanical and strength properties of diamond},'' {\em
+  Reports on Progress in Physics, Volume 75}, 2012.
+
+\bibitem{cod}
+{Christopher M. Breeding and James E. Shigley}, ``{The "Type" Classification
+  System of Diamonds and Its Importance in Gemology},'' {\em Gems \& Gemology},
+  2009.
+
+\bibitem{darm}
+{H. Sumiya et al.}, ``{Mechanical properties of synthetic type IIa diamond
+  crystal},'' {\em Diamond and Related Materials}, 1997.
+
+\bibitem{opdadh}
+{A. M. Zaitsev}, {\em {Optical Properties of Diamond: A Data Handbook}}.
+\newblock Springer, 2001.
+
+\bibitem{dgcvd}
+{J. J. Gracio et al.}, ``{Diamond growth by chemical vapour deposition},'' {\em
+  Journal of Physics D: Applied Physics, IOP Publishing, 43}, 2010.
+
+\bibitem{hpht}
+{Yafei Zhang et al.}, ``{HPHT synthesis of large single crystal diamond doped
+  with high nitrogen concentration},'' {\em Diamond and Related Materials,
+  Volume 17}, 2007.
+
+\bibitem{st}
+{Boris I. Kharisov et al.}, ``{Synthesis Techiques, Properties and Applications
+  of Nanodiamonds},'' {\em Synthesis and Reactivity in Inorganic,
+  Metal-Organic, and Nano-Metal Chemistry Vol. 40}, 2010.
+
+\bibitem{nd}
+{Oliver A. Williams}, {\em {Nanodiamond}}.
+\newblock Cambridge: Royal Society of Chemistry, 2014.
+
+\bibitem{repprog}
+{L. Rondin et al.}, ``{Magnetometry with nitrogen-vacancy defects in
+  diamond},'' {\em Rep. Prog. Phys. 77}, 2014.
+
+\bibitem{qr}
+{M. V. Gurudev Dutt et al.}, ``{Quantum Register Based on Individual Electronic
+  and Nuclear Spin Qubits in Diamond},'' {\em Science Vol. 316, Issue 5829},
+  2007.
+
+\bibitem{qc}
+{T. D. Ladd et al.}, ``{Quantum computers},'' {\em Nature 464}, 2010.
+
+\bibitem{lar}
+{A. Lenef and S. C. Rand}, ``{Electronic structure of the NV-center in diamond:
+  Theory},'' {\em Physical Review B 53}, 1996.
+
+\bibitem{nv1}
+{R. Hanson et al.}, ``Room-temperature manipulation and decoherence of a single
+  spin in diamond,'' {\em Physical Review B 74}, 2006.
+
+\bibitem{qtl}
+{Rodney Loudon}, {\em The quantum theory of light}.
+\newblock Oxford University Press, 2004.
+
+\bibitem{bel}
+{Michel Le Bellac}, {\em A Short Introduction to Quantum Information and
+  Quantum Computation}.
+\newblock Cambridge University Press, 2006.
+
+\bibitem{qmg}
+{David J. Griffiths}, {\em {Quantenmechanik}}.
+\newblock Pearson, 2012.
+
+\bibitem{nmr}
+{Malcolm H. Levitt}, {\em Spin dynamics}.
+\newblock WILEY, 2001.
+
+\bibitem{qm}
+{Claude Cohen-Tannoudji et al.}, {\em Quantum mechanics}.
+\newblock WILEY, 1977.
+
+\bibitem{ttwo}
+{C. L\"u et al.}, ``{Spin relaxation time, spin dephasing time and ensemble
+  spin dephasing time in n-type GaAs quantum wells},'' {\em Physics Letters},
+  2007.
+
+\bibitem{ssbd}
+{N. Bar-Gill et al.}, ``{Suppression of spin-bath dynamics for improved
+  coherence of multi-spin-qubit systems},'' {\em Nature Communications 3,
+  Article number: 858}, 2012.
+
+\bibitem{hted}
+{L. Cywinski et al.}, ``{How to enhance dephasing time in superconducting
+  qubits},'' {\em Physical Review B 77}, 2008.
+
+\bibitem{sas}
+{Alexandre M. Souza et al.}, ``Effects of time-reversal symmetry in dynamical
+  decoupling,'' {\em Physical Review A 85}, 2012.
+
+\bibitem{sas2}
+{M. A. A. Ahmed et al.}, ``Robustness of dynamical decoupling sequences,'' {\em
+  arXiv:1211.5001v2}, 2012.
+
+\bibitem{dd}
+{C. A. Ryan et al.}, ``{Robust Decoupling Techniques to Extend Quantum
+  Coherence in Diamond},'' {\em Physical Review Letters}, 2010.
+
+\bibitem{rdc}
+{A. M. Souza et al.}, ``{Robust dynamical decoupling},'' {\em Phil. Trans. R.
+  Soc. A 2012 370}, 2011.
+
+\bibitem{udd}
+{Götz S. Uhrig}, ``{Exact Results on Dynamical Decoupling by Pi Pulses in
+  Quantum Information Processes},'' {\em arXiv:0803.1427v2}, 2008.
+
+\bibitem{cmmem}
+{Barry R. Masters}, {\em {Confocal Microscopy and Multiphoton Excitation
+  Microscopy: The Genesis of Live Cell Imaging}}.
+\newblock SPIE Press, 2006.
+
+\bibitem{czj}
+{Stefan Wilhelm et al.}, ``{Die konfokale Laser Scanning Mikroskopie},'' tech.
+  rep., Carl Zeiss Mikroskopsysteme, 2003.
+
+\bibitem{poo}
+{Max Born and Emil Wolf}, {\em {Principles of Optics}}.
+\newblock Pergamon Press, 1970.
+
+\bibitem{cfm}
+{Michiel Müller}, {\em {Confocal Fluorescence Microscopy}}.
+\newblock SPIE Press, 2006.
+
+\bibitem{ess}
+{R. de Sousa}, ``{Electron Spin as a Spectrometer of Nuclear-Spin Noise and
+  Other Fluctuations},'' {\em In: Fanciulli M. (eds) Electron Spin Resonance
+  and Related Phenomena in Low-Dimensional Structures. Topics in Applied
+  Physics, vol 115. Springer}, 2009.
+
+\bibitem{sdd}
+{J. Medford et al.}, ``{Scaling of Dynamical Decoupling for Spin Qubits},''
+  {\em Physical Review Letters 108}, 2012.
+
+\bibitem{diss}
+L.~M. Pham, {\em Magnetic Field Sensing with Nitrogen-Vacancy Color Centers in
+  Diamond}.
+\newblock PhD thesis, The School of Engineering and Applied Sciences, 2013.
+
+\bibitem{pea}
+{Z. Wang et al.}, ``{Effect of pulse error accumulation on dynamical decoupling
+  of the electron spins of phosphorus donors in silicon},'' {\em Physical
+  Review B85}, 2012.
+
+\bibitem{qdd}
+{G. S. Uhrig et al.}, ``{Rigorous Performance Bounds for Quadratic and Nested
+  Dynamical Decoupling},'' {\em Physical Review A 84}, 2011.
+
+\end{thebibliography}

@@ -1,0 +1,4 @@
+\babel@toc {german}{}
+\contentsline {section}{\numberline {1}Verhalten der Feuerrate im burstenden Zustand}{1}
+\contentsline {section}{\numberline {2}Verhalten der mittleren Feuerrate}{4}
+\contentsline {section}{\numberline {3}SNR}{7}

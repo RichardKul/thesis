@@ -1,0 +1,4 @@
+\babel@toc {german}{}
+\contentsline {section}{\numberline {1}Fano-Faktor im Neuronenmodell}{1}
+\contentsline {section}{\numberline {2}Parameter im Neuronenmodell}{4}
+\contentsline {section}{\numberline {3}mechanisches Modell}{8}

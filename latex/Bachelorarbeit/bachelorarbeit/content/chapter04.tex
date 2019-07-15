@@ -1,0 +1,46 @@
+\chapter{Zusammenfassung}
+
+Es ist der Algorithmus zur Berechnung von sechsdimensionalen 
+Wechselwirkungsintegralen, präsentiert in \cite{av:1a} für 
+Elektronenstrukturrechnungen, überprüft, zum Teil berichtigt 
+und an ein System von zwei ultrakalten Atomen angepasst 
+worden. Zwei Näherungsfunktionen für realistische 
+Wechselwirkungspotentiale sind vorgestellt und die Anwendung 
+des Algorithmus, das heißt die Berechnung der Basisintegrale 
+unter Benutzung der Näherungsfunktionen, ist analytisch 
+vorbereitet worden. \\
+Der Algorithmus ist in der Programmiersprache FORTRAN als 
+Subroutine \texttt{gto\_int} implementiert und getestet 
+worden. Dabei kann gezeigt werden, dass \texttt{gto\_int} für 
+reguläre Potentiale, das heißt Integrale, die nicht renomiert 
+werden müssen, in einem gewissen Parameterbereich präzise 
+Ergebnisse liefert. Bei Anwendung des Renormierungsschemas 
+zeigt sich jedoch ein  eingeschränkter Anwendungsbereich, 
+falls x<1 ist. 
+Weiterhin sind Vorschläge zur Optimierung des 
+Programms angebracht worden.\\
+
+Der unmittelbar nächste Schritt sollte es sein, das hier 
+beschriebene Programm 
+im Rahmen einer CI Rechnung auf das echte physikalische 
+System mithilfe des nicht zu renomierenden Morse-Potentials 
+anzuwenden und zu testen ob ein mit \cite{phdthesis:sergey} 
+vergleichbares Energiespektrum berechenbar ist. Falls dabei 
+festgestellt werden sollte, dass der 
+Anwendungsbereich aktuell nicht groß genug ist, dann sollten  
+relevante Optimierungen umgesetzt und erneut getestet werden. 
+Weiterhin ist noch nicht geklärt, inwiefern das 
+Renormierungsschema bei Verwendung des 
+Lennard-Jones-Potentials konvergiert und ob damit eventuell 
+ein vergleichbares, besseres oder schlechteres Ergebnis 
+erzielt werden kann. Überprüft werden sollte dies, da das LJP 
+prinzipiell die physikalische Gegebenheit für größere 
+Abstände der Atome besser beschreibt. 
+Weiterhin lässt \texttt{gto\_int} im Rahmen einer CI Rechnung 
+auch mehr als nur 2 
+Teilchen / Atome zu. Daher kann, falls das Zweiteilchensystem 
+zu plausiblen Ergebnissen kommt, das Programm auf größere 
+Systeme angewandt werden. 
+
+%kann gezeigt werden
+%zeigt sich

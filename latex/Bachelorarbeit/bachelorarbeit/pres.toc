@@ -1,0 +1,11 @@
+\beamer@sectionintoc {1}{Motivation}{2}{0}{1}
+\beamer@sectionintoc {2}{Theory}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{NV center}{4}{0}{2}
+\beamer@subsectionintoc {2}{2}{Rabi oscillations}{5}{0}{2}
+\beamer@subsectionintoc {2}{3}{Dynamical decoupling sequences}{6}{0}{2}
+\beamer@sectionintoc {3}{Setup}{8}{0}{3}
+\beamer@sectionintoc {4}{Measurements}{9}{0}{4}
+\beamer@subsectionintoc {4}{1}{Nanodiamond}{9}{0}{4}
+\beamer@subsectionintoc {4}{2}{Bulk diamond}{17}{0}{4}
+\beamer@subsectionintoc {4}{3}{Spectral decomposition}{18}{0}{4}
+\beamer@sectionintoc {5}{Conclusion and Outlook}{21}{0}{5}

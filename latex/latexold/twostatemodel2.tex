@@ -1,0 +1,72 @@
+%\documentclass[10pt,a4paper]{article}
+\documentclass[12pt,a4paper]{article}
+\usepackage{graphicx,amsmath}
+%\usepackage{subfigure}
+\usepackage{float}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+\setcounter{secnumdepth}{4}
+\usepackage[top=2cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
+\begin{document}
+
+
+%\title{Bachelorarbeit}
+%\author{Richard Kullmann}
+%\date{02.06.2017}
+
+\thispagestyle{empty}
+%\setcounter{page}{2}
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\pagenumbering{arabic}
+\section{Zwei-Zustands-Theorie}
+Im Falle geringer Rauschintensitäten nehmen die Übergänge zwischen Burst- und Ruhezustand deutlich weniger Zeit ein als die Verweildauer in dem jeweiligen Zustand. Deshalb bietet es sich an, das Modell in diesem Regime mit einer Zwei-Zustands-Theorie zu beschreiben. \\
+Für die Übergangsraten wird angenommen, dass sie einer Arrhenius-Gleichung genügen:
+\begin{align*}
+r_{\pm}=r_{0,\pm}\text{e}^{-\frac{\Delta U_{\pm}}{D}}
+\end{align*}
+wobei $r_-$ die Übergangsrate vom ruhendem zum burstenden Zustand bezeichnet, und $r_+$ die Rate für den anderen Übergang. $\Delta U_{\pm}$ ist dabei die jeweilige Potentialbarriere, und $D$ die Rauschintensität.  Der Diffusionskoeffizient lässt sich aus der Feuerrate $v_0$ im burstenden Zustand und den Übergangsraten berechnen:
+\begin{align*}
+D_{\text{eff}}=\frac{v_0^2 r_+r_-}{(r_++r_-)^3}
+\end{align*}
+Zunächst gilt es herauszufinden, wo sich die Kurven der Diffusionskoeffizienten schneiden, sie also unabhängig von der Rauschintensität werden. Es ist
+\begin{align*}
+D_{\text{eff}}&=\frac{v_0^2r_{0,+}r_{0,-}\text{e}^{-\frac{\Delta U_++\Delta U_-}{D}}}{\left(r_{0,+}\text{e}^{\frac{-\Delta U_+}{D}}+r_{0,-}\text{e}^{\frac{-\Delta U_-}{D}}\right)^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left(r_{0,+}\text{e}^{-\frac{3\Delta U_+-\Delta U_+-\Delta U_-}{3D}}+r_{0,-}\text{e}^{-\frac{3\Delta U_--\Delta U_+ -\Delta U_-}{3D}}\right)^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left(r_{0,+}\text{e}^{-\frac{2\Delta U_+-\Delta U_-}{3D}}+r_{0,-}\text{e}^{-\frac{2\Delta U_--\Delta U_+}{3D}}\right)^3}
+\end{align*}
+Im Grenzfall $D\rightarrow 0,\Delta U_+>U_-$ verschwindet der erste Term im Nenner und man erhält:
+\begin{align*}
+D_{\text{eff}}=\frac{v_0^2r_{0,+}}{r_{0,-}^2}\text{e}^{-\frac{\Delta U_+-2\Delta U_-}{D}}
+\end{align*}
+Unter der Annahme, dass sich die Vorfaktoren langsam im Vergleich zu der e-Funktion verändern, ergibt sich daraus folgende Bedingung:
+\begin{align*}
+\Delta U_+=2\Delta U_-
+\end{align*}
+Aufgrund der Symmetrie des Problems liefert der andere Fall $D\rightarrow 0,\Delta U_+<U_-$:
+\begin{align*}
+\Delta U_-=2\Delta U_+
+\end{align*}
+In beiden Fällen ist die eine Potentialbarriere genau doppelt so hoch wie die andere.\\
+Als nächstes ist zu untersuchen, ob der Fano-Faktor ein ähnliches Verhalten aufweist. Dieser ergibt sich aus dem Quotienten von Diffusionskoeffizient und mittlerer Feuerrate $<v>$:
+\begin{align*}
+F=\frac{2D_{\text{eff}}}{<v>}
+\end{align*}
+Wenn man berücksichtigt, dass die Feuerrate im Ruhezustand null ist, lässt sich der Mittelwert mit folgender Formel ermitteln:
+\begin{align*}
+<v>=v_0\frac{r_-}{r_++r_-}
+\end{align*}
+Damit ist
+\begin{align*}
+F=\frac{2v_0r_+}{(r_++r_-)^2}=\frac{2v_0r_{0,+}\text{e}^{\frac{-\Delta U_+}{D}}}{\left(r_{0,+}\text{e}^{\frac{-\Delta U_+}{D}}+r_{0,-}\text{e}^{-\frac{\Delta U_-}{D}}\right)^2}
+\end{align*}
+Im Grenzfall $D\ll1$ gibt es erneut zwei Lösungen. Für $\Delta U_+ > \Delta U_-$:
+\begin{align*}
+F=\frac{2v_0r_{0,+}}{r_{0,-}^2}\text{e}^{-\frac{\Delta U_+-2\Delta U_-}{D}} \rightarrow \Delta U_+=2\Delta U_-
+\end{align*}
+sowie für $\Delta U_+ < \Delta U_-$:
+\begin{align*}
+F=\frac{2v_0}{r_{0,+}}\text{e}^{-\frac{\Delta U_+-2\Delta U_+}{D}} \rightarrow \Delta U_+=0
+\end{align*}
+Der rechte Schnittpunkt verschiebt sich also nicht, während für den zweiten Schnittpunkt die eine Potentialbarriere exakt verschwinden muss.
+\end{document}

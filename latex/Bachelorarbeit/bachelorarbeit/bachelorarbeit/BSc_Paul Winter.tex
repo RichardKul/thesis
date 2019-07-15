@@ -1,0 +1,141 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \listfiles    % Erstellt eine Liste von allen benutzten Dateien
+% zusammen mit ihrer Versionen
+% und ggf. einer kurzen Beschreibung
+% Sie wird in die log-Datei geschrieben
+
+\documentclass[12pt,a4paper% die Verwendung von DIN-A4-Format ist pflicht!
+]{report}
+\usepackage[top=2cm, bottom=2.5cm, left=3cm, right=3cm]{geometry}
+
+%notwendige Pakete
+\usepackage[english, ngerman]{babel}    % mehrsprachiger Textsatz
+% babel: letzte Sprache in Optionen zeigt die Sprache des Dokumentes
+% und kann durch den Befehl \selectlanguage{} geaendert werden
+% Passen Sie die Optionen des babel-Paketes nach Bedarf an!
+\usepackage[utf8]{inputenc}       % Eingabekodierung Parameter latin1 darf 
+%ge�ndert werden
+\usepackage[T1]{fontenc}                % Schriftenkodierung
+\usepackage{graphicx}                       % zum Einbinden von Grafiken
+\usepackage{lmodern}                        % Ersatz fuer Computer Modern-Schriften
+                                                                % zum besseren Aussehen am Bildschirm
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}  % mathe-structures
+\usepackage{float}
+\usepackage{listings} % quellcode
+
+\usepackage{setspace} % Zwischenraum \vspace{length}
+\usepackage{threeparttable} % Fußnoten in Tabellen 
+\usepackage{multirow} % Text von mehreren Spalten in Tabellen in eine Spalte 
+%schreiben
+\usepackage{subfigure}
+
+\include{settings/metadata}                          % Bitte ALLE Angaben 
+%erfüllen!
+\include{settings/compatibility}
+
+%-Eigene Trennregeln*---------------------------------------------
+
+% \include{other/hyphenations}
+
+%-zusaetzliche Kommandos*-----------------------------------------
+
+\include{settings/command}
+
+\graphicspath{{images/}}
+
+%-Dokument--------------------------------------------------------
+
+\begin{document}
+
+% Es muss zitiert werden können! Im Vorspann roemisch,
+% Im Hauptteil benutzt man arabische Nummerierung.
+\pagenumbering{roman}
+
+%-Titelblatt------------------------------------------------------
+
+\include{other/titlepage}                         % Bitte KEINE �nderungen 
+%vornehmen!
+\maketitle
+
+
+%-Zusammenfassung / Abstract*-------------------------------------
+
+\include{other/abstract}
+\selectlanguage{ngerman}               % Bitte an die Sprache denken!!!
+\setcounter{page}{3}                   %   Bitte an die Seitenzahl denken!!!
+
+%-Widmung*--------------------------------------------------------
+
+%\include{dedication}
+
+%-Inhaltsverzeichnis----------------------------------------------
+
+\tableofcontents
+\pagebreak
+
+\listoffigures
+\pagebreak
+
+\listoftables
+\pagebreak
+
+%-Hauptteil-------------------------------------------------------
+
+\pagenumbering{arabic}
+\pagestyle{myheadings}                  % bzw. ist fancyhdr zu benutzten
+
+%-Kapitel---------------------------------------------------------
+
+% part ist optional, bitte ggf. löschen
+% \part{Teil1}
+
+%\include{chapter01}
+\include{content/chapter01}
+%\include{content/chapter02}
+%\include{content/chapter03}
+%\include{content/chapter04}
+% \include{chapter02}
+% usw.
+
+%-Anhang----------------------------------------------------------
+
+\appendix
+
+%-Literaturverzeichnis--------------------------------------------
+
+%\nocite{*}
+%die Verwendung von bibtex ist Pflicht!!!
+\bibliography{bib/bibliography}
+\bibliographystyle{plaindin}        %bzw.plain, unsrtdin, alphadin, abbrvdin, 
+%siam
+%plaindin
+
+%-Kapitel des Anhangs---------------------------------------------
+
+%\include{appendix/appendixA}
+%\include{appendix/appendixB}
+%\include{appendix/appendixC}
+%usw.
+
+%-Abkuerzungen*---------------------------------------------------
+
+%\include{other/abbreviations}
+
+%-Danksagung*-----------------------------------------------------
+
+%\include{other/acknowledgement}
+
+%-Lebenslauf*-----------------------------------------------------
+
+%\include{other/cv}
+
+%-Selbständigkeiterklärung--------------------------------------
+
+\include{other/declaration}
+
+%-----------------------------------------------------------------
+
+\end{document}

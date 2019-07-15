@@ -1,0 +1,700 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.1.22)  13 FEB 2018 18:26
+entering extended mode
+**Bachelorarbeit.tex
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\Bachelorarbeit.tex
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\units\units.sty"
+Package: units 1998/08/04 v0.9b Typesetting units
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\units\nicefrac.sty"
+Package: nicefrac 1998/08/04 v0.9b Nice fractions
+\L@UnitsRaiseDisplaystyle=\skip43
+\L@UnitsRaiseTextstyle=\skip44
+\L@UnitsRaiseScriptstyle=\skip45
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip46
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks15
+\ex@=\dimen105
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks16
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip49
+\subfigcapskip=\skip50
+\subfigcaptopadj=\dimen114
+\subfigbottomskip=\skip51
+\subfigcapmargin=\dimen115
+\subfiglabelskip=\skip52
+\c@subfigure=\count100
+\c@lofdepth=\count101
+\c@subtable=\count102
+\c@lotdepth=\count103
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfigure\subfigure.cfg")
+\subfig@top=\skip53
+\subfig@bottom=\skip54
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count104
+\float@exts=\toks20
+\float@box=\box28
+\@float@everytoks=\toks21
+\@floatcapt=\box29
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2008/07/08 v3.8m The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\ngermanb.ldf"
+Language: ngermanb 2008/07/06 v2.6n new German support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2008/07/08 v3.8m Babel common definitions
+\babel@savecnt=\count105
+\U@D=\dimen116
+)
+\l@naustrian = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 92.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
+Language: english 2005/03/30 v3.3o English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count106
+\Gm@cntv=\count107
+\c@Gm@tempcnt=\count108
+\Gm@bindingoffset=\dimen117
+\Gm@wd@mp=\dimen118
+\Gm@odd@mp=\dimen119
+\Gm@even@mp=\dimen120
+\Gm@layoutwidth=\dimen121
+\Gm@layoutheight=\dimen122
+\Gm@layouthoffset=\dimen123
+\Gm@layoutvoffset=\dimen124
+\Gm@dimlist=\toks22
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+\@input{settings/metadata.aux}
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\settings/metadata.tex)
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\Bachelorarbeit.aux
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\other/titlepage.aux)
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\other/abstract.aux)
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\other/declaration.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count109
+\scratchdimen=\dimen125
+\scratchbox=\box30
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen126
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks24
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(56.9055pt, 717.00946pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=717.00946pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\other/titlepage.tex)
+<husiegel.pdf, id=1, 131.49126pt x 132.495pt>
+File: husiegel.pdf Graphic file (type pdf)
+ <use husiegel.pdf>
+Package pdftex.def Info: husiegel.pdf used on input line 22.
+(pdftex.def)             Requested size: 170.71652pt x 172.02713pt.
+ [1
+
+
+
+
+
+{C:/Users/Richard/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/
+Richard/OneDrive/Documents/Bachelorarbeit/husiegel.pdf>]
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\other/abstract.tex)
+[2
+
+] (C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\Bachelorarbeit.toc)
+\tf@toc=\write3
+
+[3
+
+]
+
+LaTeX Warning: Command \r invalid in math mode on input line 39.
+
+[1] <nv.png, id=27, 432.11438pt x 432.11438pt>
+File: nv.png Graphic file (type png)
+ <use nv.png>
+Package pdftex.def Info: nv.png used on input line 48.
+(pdftex.def)             Requested size: 192.0548pt x 192.05621pt.
+
+<autoc4.pdf, id=29, 462.52798pt x 346.89601pt>
+File: autoc4.pdf Graphic file (type pdf)
+ <use autoc4.pdf>
+Package pdftex.def Info: autoc4.pdf used on input line 49.
+(pdftex.def)             Requested size: 277.41176pt x 208.07039pt.
+
+Overfull \hbox (45.28629pt too wide) in paragraph at lines 48--50
+[][] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--52
+
+ []
+
+<energy_levels.png, id=30, 763.85374pt x 306.14375pt>
+File: energy_levels.png Graphic file (type png)
+ <use energy_levels.png>
+Package pdftex.def Info: energy_levels.png used on input line 57.
+(pdftex.def)             Requested size: 305.53607pt x 122.45532pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 53--60
+
+ []
+
+[2 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/nv.png> <C:/Users/Richar
+d/OneDrive/Documents/Bachelorarbeit/autoc4.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 61--62
+
+ []
+
+[3 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/energy_levels.png>]
+[4] [5] [6] [7] <Hahn1.png, id=96, 673.51625pt x 120.45pt>
+File: Hahn1.png Graphic file (type png)
+ <use Hahn1.png>
+Package pdftex.def Info: Hahn1.png used on input line 241.
+(pdftex.def)             Requested size: 269.40172pt x 48.17914pt.
+
+[8] [9 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/Hahn1.png>]
+<CPMG41.png, id=104, 673.51625pt x 130.4875pt>
+File: CPMG41.png Graphic file (type png)
+ <use CPMG41.png>
+Package pdftex.def Info: CPMG41.png used on input line 283.
+(pdftex.def)             Requested size: 269.40172pt x 52.19406pt.
+
+<XY81.png, id=105, 718.685pt x 129.48375pt>
+File: XY81.png Graphic file (type png)
+ <use XY81.png>
+Package pdftex.def Info: XY81.png used on input line 290.
+(pdftex.def)             Requested size: 287.4689pt x 51.79257pt.
+ [10 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/CPMG41.png> <C:/Users/
+Richard/OneDrive/Documents/Bachelorarbeit/XY81.png>] <UDD1.png, id=112, 749.801
+25pt x 140.525pt>
+File: UDD1.png Graphic file (type png)
+
+<use UDD1.png>
+Package pdftex.def Info: UDD1.png used on input line 306.
+(pdftex.def)             Requested size: 299.91519pt x 56.20898pt.
+ [11 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/UDD1.png>] <setup4.pdf
+, id=117, 542.27141pt x 309.91106pt>
+File: setup4.pdf Graphic file (type pdf)
+ <use setup4.pdf>
+Package pdftex.def Info: setup4.pdf used on input line 322.
+(pdftex.def)             Requested size: 379.58739pt x 216.93625pt.
+
+<cmzfocus.png, id=118, 697.8572pt x 312.41719pt>
+File: cmzfocus.png Graphic file (type png)
+ <use cmzfocus.png>
+Package pdftex.def Info: cmzfocus.png used on input line 331.
+(pdftex.def)             Requested size: 279.13792pt x 124.96465pt.
+ [12 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/setup4.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 335--337
+
+ []
+
+<PSF.png, id=168, 683.55376pt x 308.15125pt>
+File: PSF.png Graphic file (type png)
+ <use PSF.png>
+Package pdftex.def Info: PSF.png used on input line 341.
+(pdftex.def)             Requested size: 341.77605pt x 154.07524pt.
+ [13 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/cmzfocus.png>]
+<gatestiming.pdf, id=173, 642.4pt x 385.44pt>
+File: gatestiming.pdf Graphic file (type pdf)
+ <use gatestiming.pdf>
+Package pdftex.def Info: gatestiming.pdf used on input line 361.
+(pdftex.def)             Requested size: 321.19922pt x 192.71953pt.
+ [14 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/PSF.png>]
+<mwt.pdf, id=178, 642.4pt x 385.44pt>
+File: mwt.pdf Graphic file (type pdf)
+ <use mwt.pdf>
+Package pdftex.def Info: mwt.pdf used on input line 369.
+(pdftex.def)             Requested size: 321.19922pt x 192.71953pt.
+ [15 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/gatestiming.pdf> <C:/U
+sers/Richard/OneDrive/Documents/Bachelorarbeit/mwt.pdf
+
+pdfTeX warning: pdflatex (file C:/Users/Richard/OneDrive/Documents/Bachelorarbe
+it/mwt.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>] <rf2fit.pdf, id=197, 642.4pt x 385.44pt>
+File: rf2fit.pdf Graphic file (type pdf)
+ <use rf2fit.pdf>
+Package pdftex.def Info: rf2fit.pdf used on input line 389.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+ [16]
+<rabinano.pdf, id=202, 642.4pt x 385.44pt>
+File: rabinano.pdf Graphic file (type pdf)
+ <use rabinano.pdf>
+Package pdftex.def Info: rabinano.pdf used on input line 397.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--400
+
+ []
+
+<Hahnn110.pdf, id=203, 642.4pt x 385.44pt>
+File: Hahnn110.pdf Graphic file (type pdf)
+ <use Hahnn110.pdf>
+Package pdftex.def Info: Hahnn110.pdf used on input line 405.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+ [17 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/rf2fit.pdf> <C:/Users/
+Richard/OneDrive/Documents/Bachelorarbeit/rabinano.pdf
+
+pdfTeX warning: pdflatex (file C:/Users/Richard/OneDrive/Documents/Bachelorarbe
+it/rabinano.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>] <4cpmgo1pt.pdf, id=222, 642.4pt x 385.44pt>
+File: 4cpmgo1pt.pdf Graphic file (type pdf)
+ <use 4cpmgo1pt.pdf>
+Package pdftex.def Info: 4cpmgo1pt.pdf used on input line 420.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--423
+
+ []
+
+[18 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/Hahnn110.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 424--437
+
+ []
+
+<cv.pdf, id=235, 642.4pt x 385.44pt>
+File: cv.pdf Graphic file (type pdf)
+ <use cv.pdf>
+Package pdftex.def Info: cv.pdf used on input line 442.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+ [19 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/4cpmgo1pt.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 446--457
+
+ []
+
+<nanox.pdf, id=247, 642.4pt x 385.44pt>
+File: nanox.pdf Graphic file (type pdf)
+ <use nanox.pdf>
+Package pdftex.def Info: nanox.pdf used on input line 464.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+ [20 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/cv.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 468--480
+
+ []
+
+<xv.pdf, id=259, 642.4pt x 385.44pt>
+File: xv.pdf Graphic file (type pdf)
+ <use xv.pdf>
+Package pdftex.def Info: xv.pdf used on input line 484.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--487
+
+ []
+
+[21 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/nanox.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 488--499
+
+ []
+
+<udd8.pdf, id=271, 642.4pt x 385.44pt>
+File: udd8.pdf Graphic file (type pdf)
+ <use udd8.pdf>
+Package pdftex.def Info: udd8.pdf used on input line 508.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--511
+
+ []
+
+[22 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/xv.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 512--524
+
+ []
+
+<xcvergleich.pdf, id=284, 642.4pt x 385.44pt>
+File: xcvergleich.pdf Graphic file (type pdf)
+ <use xcvergleich.pdf>
+Package pdftex.def Info: xcvergleich.pdf used on input line 529.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+ [23 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/udd8.pdf>]
+<hahngr.pdf, id=296, 439.6425pt x 298.11375pt>
+File: hahngr.pdf Graphic file (type pdf)
+ <use hahngr.pdf>
+Package pdftex.def Info: hahngr.pdf used on input line 540.
+(pdftex.def)             Requested size: 209.1301pt x 141.80565pt.
+
+<hahnkl.pdf, id=297, 475.7775pt x 298.11375pt>
+File: hahnkl.pdf Graphic file (type pdf)
+ <use hahnkl.pdf>
+Package pdftex.def Info: hahnkl.pdf used on input line 541.
+(pdftex.def)             Requested size: 224.06285pt x 140.39551pt.
+
+Overfull \hbox (9.01268pt too wide) in paragraph at lines 540--542
+[][] [] 
+ []
+
+[24 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/xcvergleich.pdf>]
+<ndc82.pdf, id=316, 424.58624pt x 304.13625pt>
+File: ndc82.pdf Graphic file (type pdf)
+ <use ndc82.pdf>
+Package pdftex.def Info: ndc82.pdf used on input line 553.
+(pdftex.def)             Requested size: 209.1301pt x 149.80305pt.
+
+<ndc32.pdf, id=317, 439.6425pt x 298.11375pt>
+File: ndc32.pdf Graphic file (type pdf)
+ <use ndc32.pdf>
+Package pdftex.def Info: ndc32.pdf used on input line 554.
+(pdftex.def)             Requested size: 209.1301pt x 141.80565pt.
+
+<nd12.pdf, id=318, 620.3175pt x 295.1025pt>
+File: nd12.pdf Graphic file (type pdf)
+ <use nd12.pdf>
+Package pdftex.def Info: nd12.pdf used on input line 564.
+(pdftex.def)             Requested size: 372.19337pt x 177.06285pt.
+ [25 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/hahngr.pdf> <C:/Users/
+Richard/OneDrive/Documents/Bachelorarbeit/hahnkl.pdf> <C:/Users/Richard/OneDriv
+e/Documents/Bachelorarbeit/ndc82.pdf> <C:/Users/Richard/OneDrive/Documents/Bach
+elorarbeit/ndc32.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 571--572
+
+ []
+
+<rfbulk.pdf, id=326, 642.4pt x 385.44pt>
+File: rfbulk.pdf Graphic file (type pdf)
+ <use rfbulk.pdf>
+Package pdftex.def Info: rfbulk.pdf used on input line 575.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 573--578
+
+ []
+
+[26 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/nd12.pdf>]
+<bulkrabi.pdf, id=331, 642.4pt x 385.44pt>
+File: bulkrabi.pdf Graphic file (type pdf)
+ <use bulkrabi.pdf>
+Package pdftex.def Info: bulkrabi.pdf used on input line 583.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 579--586
+
+ []
+
+<bulkhahn.pdf, id=332, 642.4pt x 385.44pt>
+File: bulkhahn.pdf Graphic file (type pdf)
+ <use bulkhahn.pdf>
+Package pdftex.def Info: bulkhahn.pdf used on input line 592.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+ [27 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/rfbulk.pdf> <C:/Users/
+Richard/OneDrive/Documents/Bachelorarbeit/bulkrabi.pdf
+
+pdfTeX warning: pdflatex (file C:/Users/Richard/OneDrive/Documents/Bachelorarbe
+it/bulkrabi.pdf): PDF inclusion: multiple pdfs with page group included in a si
+ngle page
+>] <cref.pdf, id=351, 642.4pt x 385.44pt>
+File: cref.pdf Graphic file (type pdf)
+ <use cref.pdf>
+Package pdftex.def Info: cref.pdf used on input line 600.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 598--603
+
+ []
+
+[28 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/bulkhahn.pdf>]
+<cpbulk.pdf, id=364, 642.4pt x 385.44pt>
+File: cpbulk.pdf Graphic file (type pdf)
+ <use cpbulk.pdf>
+Package pdftex.def Info: cpbulk.pdf used on input line 612.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 609--615
+
+ []
+
+[29 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/cref.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 616--628
+
+ []
+
+<xybulk.pdf, id=383, 642.4pt x 385.44pt>
+File: xybulk.pdf Graphic file (type pdf)
+ <use xybulk.pdf>
+Package pdftex.def Info: xybulk.pdf used on input line 633.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+ [30 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/cpbulk.pdf>]
+<bulkcx2.pdf, id=395, 642.4pt x 385.44pt>
+File: bulkcx2.pdf Graphic file (type pdf)
+ <use bulkcx2.pdf>
+Package pdftex.def Info: bulkcx2.pdf used on input line 654.
+(pdftex.def)             Requested size: 385.44298pt x 231.26578pt.
+ [31 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/xybulk.pdf>]
+<hahnbulk.pdf, id=407, 488.82625pt x 298.11375pt>
+File: hahnbulk.pdf Graphic file (type pdf)
+ <use hahnbulk.pdf>
+Package pdftex.def Info: hahnbulk.pdf used on input line 662.
+(pdftex.def)             Requested size: 234.73654pt x 143.15665pt.
+
+<bdc32.pdf, id=408, 439.6425pt x 298.11375pt>
+File: bdc32.pdf Graphic file (type pdf)
+ <use bdc32.pdf>
+Package pdftex.def Info: bdc32.pdf used on input line 663.
+(pdftex.def)             Requested size: 209.1301pt x 141.80565pt.
+
+Overfull \hbox (19.68637pt too wide) in paragraph at lines 662--664
+[][] [] 
+ []
+
+[32 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/bulkcx2.pdf> <C:/Users/
+Richard/OneDrive/Documents/Bachelorarbeit/hahnbulk.pdf> <C:/Users/Richard/OneDr
+ive/Documents/Bachelorarbeit/bdc32.pdf>]
+<bd12.pdf, id=429, 620.3175pt x 295.1025pt>
+File: bd12.pdf Graphic file (type pdf)
+ <use bd12.pdf>
+Package pdftex.def Info: bd12.pdf used on input line 675.
+(pdftex.def)             Requested size: 372.19337pt x 177.06285pt.
+ [33 <C:/Users/Richard/OneDrive/Documents/Bachelorarbeit/bd12.pdf>]
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\Bachelorarbeit.bbl
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ê in font cmr12!
+ [34]
+[35]
+Missing character: There is no √ in font cmr12!
+Missing character: There is no ∂ in font cmr12!
+Missing character: There is no √ in font cmr12!
+Missing character: There is no º in font cmr12!
+) [36]
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\other/declaration.tex)
+[37
+
+] (C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\Bachelorarbeit.aux
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\other/titlepage.aux)
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\other/abstract.aux)
+(C:\Users\Richard\OneDrive\Documents\Bachelorarbeit\other/declaration.aux)) ) 
+Here is how much of TeX's memory you used:
+ 3245 strings out of 493921
+ 43638 string characters out of 3144870
+ 112330 words of memory out of 3000000
+ 6439 multiletter control sequences out of 15000+200000
+ 11235 words of font info for 40 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,9n,24p,1596b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Bachelorarbeit.pdf (40 pages, 1521033 bytes).
+PDF statistics:
+ 499 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+

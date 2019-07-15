@@ -1,0 +1,5 @@
+\babel@toc {german}{}
+\contentsline {section}{\numberline {1}Gleichgewichtspunkte und Stabilit\IeC {\"a}t}{1}
+\contentsline {subsection}{\numberline {1.1}$I_{Na,p}+I_K$-Modell}{1}
+\contentsline {subsubsection}{\numberline {1.1.1}Lokale lineare Analyse}{2}
+\contentsline {subsection}{\numberline {1.2}Mechanisches Modell}{3}

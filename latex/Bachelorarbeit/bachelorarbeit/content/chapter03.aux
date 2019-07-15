@@ -1,0 +1,117 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\citation{o:1a}
+\citation{b:4a}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Implementierung}{18}{chapter.116}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{sec:Implementierung}{{3}{18}{Implementierung}{chapter.116}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Integralberechnung mit \texttt  {gto\_int}}{18}{section.117}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Programmablauf, Subprogramme und Funktionen}{18}{subsection.118}}
+\newlabel{eq:def:V1}{{3.1}{19}{Programmablauf, Subprogramme und Funktionen}{equation.125}{}}
+\newlabel{eq:def:V2}{{3.2}{19}{Programmablauf, Subprogramme und Funktionen}{equation.128}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Programmablaufplan der Subroutine \texttt  {gto\_int}}}{19}{figure.129}}
+\newlabel{pic:FC:gto_int}{{3.1}{19}{Programmablaufplan der Subroutine \texttt {gto\_int}}{figure.129}{}}
+\@writefile{toc}{\contentsline {subsubsection}{$S$ Integrale mit \texttt  {int\_S\_sub}}{20}{section*.131}}
+\newlabel{eq:def:parameter y,x}{{3.3}{20}{$S$ Integrale mit \texttt {int\_S\_sub}}{equation.132}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Programmablaufplan der Subroutine \texttt  {int\_S\_sub} zur Berechnung der Integrale \ref  {eq:def:S} mit der M\IeC {\"o}glichkeit der Nutzung des Renormierungschemas in Abschnitt \ref  {sec:renorm}. Dick markiert ist der Pfad ohne Nutzung einer Renormierung (Standard Pfad).}}{21}{figure.133}}
+\newlabel{pic:FC:int_S_sub}{{3.2}{21}{Programmablaufplan der Subroutine \texttt {int\_S\_sub} zur Berechnung der Integrale \ref {eq:def:S} mit der Möglichkeit der Nutzung des Renormierungschemas in Abschnitt \ref {sec:renorm}. Dick markiert ist der Pfad ohne Nutzung einer Renormierung (Standard Pfad)}{figure.133}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Rekursive Funktion \texttt  {H\_rec} f\IeC {\"u}r $\mathcal  {H}_{11l}^\pm $}{22}{section*.140}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Programmablaufplan der rekursiven Funktion \texttt  {H\_rec} unter Verwendung der Formeln \ref  {eq:rek:H} und \ref  {eq:prop:H}. Pfade, die auf den Start zur\IeC {\"u}ckf\IeC {\"u}hren, bedeuten einen rekursiven Aufruf mit ver\IeC {\"a}nderten Input. Der dick markierte Pfad zeigt die Rekursionsschleife.}}{22}{figure.141}}
+\newlabel{pic:FC:H_rec}{{3.3}{22}{Programmablaufplan der rekursiven Funktion \texttt {H\_rec} unter Verwendung der Formeln \ref {eq:rek:H} und \ref {eq:prop:H}. Pfade, die auf den Start zurückführen, bedeuten einen rekursiven Aufruf mit veränderten Input. Der dick markierte Pfad zeigt die Rekursionsschleife}{figure.141}{}}
+\citation{av:9a}
+\@writefile{toc}{\contentsline {subsubsection}{Subroutine \texttt  {sum\_R\_sub}}{23}{section*.143}}
+\newlabel{eq:short_R_sum}{{3.4}{23}{Subroutine \texttt {sum\_R\_sub}}{equation.144}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Programmablaufplan der Subroutine \texttt  {sum\_R\_sub}. 1. Schleife geht \IeC {\"u}ber alle Eintr\IeC {\"a}ge von R, die 2. Schleife summiert \IeC {\"u}ber l vlg. Formel \ref  {eq:short_R_sum}. Die Summen \IeC {\"u}ber k und m sind in den blauen Bl\IeC {\"o}cken rechts zusammengefasst.}}{24}{figure.149}}
+\newlabel{pic:FC:sum_R_sub}{{3.4}{24}{Programmablaufplan der Subroutine \texttt {sum\_R\_sub}. 1. Schleife geht über alle Einträge von R, die 2. Schleife summiert über l vlg. Formel \ref {eq:short_R_sum}. Die Summen über k und m sind in den blauen Blöcken rechts zusammengefasst}{figure.149}{}}
+\@writefile{toc}{\contentsline {subparagraph}{Zur Berechnung der d-Koeffizienten mit \texttt  {d\_coef}}{24}{section*.150}}
+\citation{av:4a}
+\citation{av:1a2}
+\citation{b:4a}
+\@writefile{toc}{\contentsline {subparagraph}{Die Berechnung der $c^{-1}$-Koeffizienten mit \texttt  {irc\_coef}}{25}{section*.154}}
+\@writefile{toc}{\contentsline {subsubsection}{Subroutine \texttt  {sum\_E\_sub}}{25}{section*.155}}
+\@writefile{toc}{\contentsline {subsubsection}{Weitere mathematische Funktionen}{25}{section*.161}}
+\citation{b:4a}
+\citation{o:1a}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Genauigkeitstests}{26}{section.166}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Normberechnung ($f_{12}\equiv 1$)}{26}{subsection.167}}
+\newlabel{sec:T:norm}{{3.2.1}{26}{Normberechnung ($f_{12}\equiv 1$)}{subsection.167}{}}
+\newlabel{eq:tests:annahmen:norm}{{3.5}{26}{Normberechnung ($f_{12}\equiv 1$)}{equation.168}{}}
+\citation{av:1a}
+\citation{av:1a2}
+\newlabel{eq:I_NORM}{{3.6}{27}{Normberechnung ($f_{12}\equiv 1$)}{equation.169}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Variation des Orbitals}{27}{section*.170}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Genauigkeitstest der Subroutine \texttt  {gto\_int} zu verschiedenen Orbitalen durch Normberechnung im Vergleich zu analytischen Ergebnissen und der numerischen NAG-Berechnung mit $A_x=1$ und a=c=0,001.}}{27}{table.172}}
+\newlabel{tab:norm:orbital}{{3.1}{27}{Genauigkeitstest der Subroutine \texttt {gto\_int} zu verschiedenen Orbitalen durch Normberechnung im Vergleich zu analytischen Ergebnissen und der numerischen NAG-Berechnung mit $A_x=1$ und a=c=0,001}{table.172}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Laufzeiten von \texttt  {gto\_int} zu verschiedenen Orbitalen. Es werden \IeC {\"u}ber 1000 Durchl\IeC {\"a}ufe gemittelt.}}{28}{table.175}}
+\newlabel{tab:norm:orbital_time}{{3.2}{28}{Laufzeiten von \texttt {gto\_int} zu verschiedenen Orbitalen. Es werden über 1000 Durchläufe gemittelt}{table.175}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Variation des Abstandes}{29}{section*.176}}
+\newlabel{sec:var.Abstand_norm}{{3.2.1}{29}{Variation des Abstandes}{section*.176}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces Genauigkeitstest der Subroutine \texttt  {gto\_int} zu verschiedenen Zentren der GTOs durch Normberechnung im Vergleich zu analytischen Ergebnissen am Beispiel des (1,0,0)-Orbitals. Eine kleinschrittigere Tabelle ist im Anhang \ref  {sec:AnhangC:Tests} gegeben.}}{29}{table.177}}
+\newlabel{tab:norm:abst\IeC {\"a}nde}{{3.3}{29}{Genauigkeitstest der Subroutine \texttt {gto\_int} zu verschiedenen Zentren der GTOs durch Normberechnung im Vergleich zu analytischen Ergebnissen am Beispiel des (1,0,0)-Orbitals. Eine kleinschrittigere Tabelle ist im Anhang \ref {sec:AnhangC:Tests} gegeben}{table.177}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Laufzeit von \texttt  {gto\_int} in Abh\IeC {\"a}ngigkeit des Parameters $A_x$ bei der Normberechnung zu den Orbitalen (0,0,1) und (0,0,0) und den Exponenten a=c=0,001}}{30}{figure.179}}
+\newlabel{pic:test_norm_abstand_laufzeit}{{3.5}{30}{Laufzeit von \texttt {gto\_int} in Abhängigkeit des Parameters $A_x$ bei der Normberechnung zu den Orbitalen (0,0,1) und (0,0,0) und den Exponenten a=c=0,001}{figure.179}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Schematische Darstellung der quadratischen N\IeC {\"a}herung und des dazugeh\IeC {\"o}rigen Grundzustandes}}{30}{figure.181}}
+\newlabel{pic:quad.naerung}{{3.6}{30}{Schematische Darstellung der quadratischen Näherung und des dazugehörigen Grundzustandes}{figure.181}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Variation des Exponenten}{30}{section*.180}}
+\citation{av:7a}
+\citation{phdthesis:sala}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces Genauigkeitstest der Subroutine \texttt  {gto\_int} zu verschiedenen Exponenten c der GTOs durch Normberechnung im Vergleich zu analytischen Ergebnissen mit den Konstanten a=0,001 und $A_x=1$}}{31}{table.185}}
+\newlabel{tab:norm:exp_c_A1}{{3.4}{31}{Genauigkeitstest der Subroutine \texttt {gto\_int} zu verschiedenen Exponenten c der GTOs durch Normberechnung im Vergleich zu analytischen Ergebnissen mit den Konstanten a=0,001 und $A_x=1$}{table.185}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Genauigkeitstest der Subroutine \texttt  {gto\_int} zu verschiedenen Exponenten a der GTOs durch Normberechnung im Vergleich zu analytischen Ergebnissen mit konstanten c=0,001 und $A_x=1$}}{32}{table.186}}
+\newlabel{tab:norm:exp_a_A1}{{3.5}{32}{Genauigkeitstest der Subroutine \texttt {gto\_int} zu verschiedenen Exponenten a der GTOs durch Normberechnung im Vergleich zu analytischen Ergebnissen mit konstanten c=0,001 und $A_x=1$}{table.186}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces Genauigkeitstest der Subroutine \texttt  {gto\_int} zu verschiedenen Exponenten a der GTOs durch Normberechnung im Vergleich zu analytischen Ergebnissen mit konstanten c=0,001 und $A_x=201$}}{32}{table.187}}
+\newlabel{tab:norm:exp_a_A201}{{3.6}{32}{Genauigkeitstest der Subroutine \texttt {gto\_int} zu verschiedenen Exponenten a der GTOs durch Normberechnung im Vergleich zu analytischen Ergebnissen mit konstanten c=0,001 und $A_x=201$}{table.187}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Regul\IeC {\"a}res Wechselwirkungspotential ($f_{12}=r_{12}^2$)}{33}{subsection.188}}
+\newlabel{sec:T:quad}{{3.2.2}{33}{Reguläres Wechselwirkungspotential ($f_{12}=r_{12}^2$)}{subsection.188}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Variation des Orbitals}{33}{section*.189}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.7}{\ignorespaces Genauigkeitstest der Subroutine \texttt  {gto\_int} zu verschiedenen Exponenten a der GTOs zu einem quadratischen Wechselwirkungspotential im Vergleich zu numerischen NAG-Routine mit konstanten c=0,001 und $A_x=1$}}{34}{table.190}}
+\newlabel{tab:r2_orbit}{{3.7}{34}{Genauigkeitstest der Subroutine \texttt {gto\_int} zu verschiedenen Exponenten a der GTOs zu einem quadratischen Wechselwirkungspotential im Vergleich zu numerischen NAG-Routine mit konstanten c=0,001 und $A_x=1$}{table.190}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Variation des Abstands}{34}{section*.191}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces (a) Vergleich der Ergebnisse der \texttt  {gto\_int} und der NAG-Routine zu verschiedenen Werten des Abstandsparameters $A_x$, wobei die Orbitale (1,0,0) mit dem Exponenten a=0,001 und (0,0,0) mit dem Exponenten c=0,001 betrachtet worden sind. Zus\IeC {\"a}tzlich ist eine quadratische Funktion dargestellt. (b) zeigt die relative Abweichung zwischen $I_\text  {NAG}$ und $I_\text  {gto\_int}$ . }}{34}{figure.194}}
+\newlabel{pic:quad.WW_Abstand}{{3.7}{34}{(a) Vergleich der Ergebnisse der \texttt {gto\_int} und der NAG-Routine zu verschiedenen Werten des Abstandsparameters $A_x$, wobei die Orbitale (1,0,0) mit dem Exponenten a=0,001 und (0,0,0) mit dem Exponenten c=0,001 betrachtet worden sind. Zusätzlich ist eine quadratische Funktion dargestellt. (b) zeigt die relative Abweichung zwischen $I_\text {NAG}$ und $I_\text {gto\_int}$ }{figure.194}{}}
+\citation{phdthesis:sergey}
+\citation{av:1a2}
+\@writefile{toc}{\contentsline {subsubsection}{Variation des Exponenten}{35}{section*.195}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Vergleich der Ergebnisse der \texttt  {gto\_int} und der NAG-Routine zu unterschiedlichen Exponenten c bei a=0,001 , $A_x=101$ und \textbf  {C}=\textbf  {0}.}}{35}{figure.196}}
+\newlabel{pic:quad.WW_exponent}{{3.8}{35}{Vergleich der Ergebnisse der \texttt {gto\_int} und der NAG-Routine zu unterschiedlichen Exponenten c bei a=0,001 , $A_x=101$ und \textbf {C}=\textbf {0}}{figure.196}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Renormierungsschema}{35}{subsection.197}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Konvergenzverhalten der Rekursion \ref  {recursiveT2} zur Berechnung von $T^+_s(x)$ f\IeC {\"u}r verschiedene Startindizes $s_\text  {max}$ am Beispiel s=7 und x=$\{0,004 ,\ 0,009 ,\ 0,01 \}$ }}{36}{figure.198}}
+\newlabel{pic:Trec}{{3.9}{36}{Konvergenzverhalten der Rekursion \ref {recursiveT2} zur Berechnung von $T^+_s(x)$ für verschiedene Startindizes $s_\text {max}$ am Beispiel s=7 und x=$\{0,004 ,\0,009 ,\ 0,01 \}$}{figure.198}{}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{36}{figure.198}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{36}{figure.198}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Optimierungsvorschl\IeC {\"a}ge}{36}{section.200}}
+\citation{av:1a}
+\citation{av:1a2}
+\citation{av:1a}
+\@setckpt{content/chapter03}{
+\setcounter{page}{38}
+\setcounter{equation}{7}
+\setcounter{enumi}{4}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{10}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{3}
+\setcounter{section}{3}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{9}
+\setcounter{table}{7}
+\setcounter{parentequation}{0}
+\setcounter{float@type}{8}
+\setcounter{lstnumber}{5}
+\setcounter{subfigure}{0}
+\setcounter{lofdepth}{1}
+\setcounter{subtable}{0}
+\setcounter{lotdepth}{1}
+\setcounter{Item}{34}
+\setcounter{Hfootnote}{25}
+\setcounter{bookmark@seq@number}{16}
+\setcounter{lstlisting}{0}
+\setcounter{section@level}{1}
+}

@@ -1,0 +1,120 @@
+\chapter{Ergänzung zu den T-Integralen}
+\label{sec:AnhangB:T_Integral}
+In diesem Abschnitt soll zum Einen die korrigierte Rechnung 
+zur Formel \ref{eq:korr_T_1} detaillierter gezeigt werden und 
+zum Anderen entscheidende Formeln für die Berechnung von 
+$\omega_0$ und $\omega_1$ gegeben werden, da auch diese in 
+\cite{av:1a2} einen Tippfehler enthalten. Wie oben schon 
+angefangen, soll $T_1^\pm(x)$ berechnet werden. Es gilt 
+\begin{align*}
+T_1^\pm (x)=& \mathcal{R}\int_{0}^{\infty} \frac{dz}{z} \ 
+e^{\pm z - xz^2}\\
+\overset{\text{part. Integration}}{=}& 
+\mathcal{R}\log(z)e^{\pm 
+z-xz^2}|_0^\infty - \int_{0}^{\infty}\log(z)e^{\pm z-xz^2} 
+\cdot (\pm 1-2xz) \quad,
+\end{align*}
+wobei nun die Randterme durch das Renormierungsschema 
+entfallen. Es folgt 
+\begin{align*}
+T_1^\pm(x) &= \mp \int_{0}^{\infty}\log(z)e^{\pm z-xz^2}\ dz 
++ 2\cdot x\int_{0}^{\infty} z\ \log(z)e^{\pm z-xz^2} \ dz 
+\quad.
+\end{align*}
+Wird mit 
+\begin{align*}
+z&=\frac{u}{\sqrt{x}}\\
+dz&=\frac{1}{\sqrt{x}} \ du \\
+x\cdot z^2&=u^2
+\end{align*} 
+substituiert, folgt
+\begin{align*}
+T_1^\pm(x)&=\mp \frac{1}{\sqrt{x}}\int_{0}^{\infty}du\ 
+\log(\frac{u}{\sqrt{x}}) e^{\pm\frac{u}{\sqrt{x}}-u^2 }+ 
+2x\frac{1}{\sqrt{x}}\int_{0}^{\infty}du\ 
+\log(\frac{u}{\sqrt{x}})\cdot \frac{u}{\sqrt{x}}\cdot 
+e^{\pm\frac{u}{\sqrt{x}}-u^2 }\\
+&=\mp \frac{1}{\sqrt{x}}\int_{0}^{\infty}du\ 
+\log(\frac{u}{\sqrt{x}}) e^{\pm\frac{u}{\sqrt{x}}-u^2 }+ 
+2\int_{0}^{\infty}du\ \log(\frac{u}{\sqrt{x}})\cdot u\cdot 
+e^{\pm\frac{u}{\sqrt{x}}-u^2 }\\
+&=\mp \frac{1}{\sqrt{x}}\int_{0}^{\infty}du\ \log(u) 
+e^{\pm\frac{u}{\sqrt{x}}-u^2 }
+\pm  \frac{\log(\sqrt{x})}{\sqrt{x}}\int_{0}^{\infty}du\ 
+e^{\pm\frac{u}{\sqrt{x}}-u^2 }
++ 2\int_{0}^{\infty}du\ \log(u)\cdot u\cdot 
+e^{\pm\frac{u}{\sqrt{x}}-u^2 }\\
+&\ \ \ \ \ -2 \log(\sqrt{x})\int_{0}^{\infty}du\cdot u\cdot 
+e^{\pm\frac{u}{\sqrt{x}}-u^2 }\qquad.
+\end{align*}
+Im letzten Schritt wurde 
+$\log(\frac{a}{b})=\log(a)-\log(b)$ für a,b$\in\mathbb{R}^+$ 
+verwendet. Im Vergleich zu den Definitionen \ref{eq:def:omega} von 
+$\omega_k(\pm\frac{1}{\sqrt{x}})$ ist zu sehen, dass
+\begin{align*}
+T_1^\pm(x)&= \mp \frac{1}{\sqrt{x}} \omega_0(\pm 
+\frac{1}{\sqrt{x}}) + 2\omega_1(\pm\frac{1}{\sqrt{x}}) \\
+& \pm \log(\sqrt{x})\int_{0}^{\infty}\frac{du}{\sqrt{x}}\ 
+e^{\pm\frac{u}{\sqrt{x}}-u^2 }
+-2 \log(\sqrt{x})\int_{0}^{\infty}du\cdot u\cdot 
+e^{\pm\frac{u}{\sqrt{x}}-u^2 }
+\end{align*}
+gilt. Für die letzten beiden Integrale kann man abermals 
+substituieren mit  
+$z=\frac{u}{\sqrt{x}},\ du=\sqrt{x}dz$ und erhält
+\begin{align}
+\int_{0}^{\infty}dz \ e^{\pm z -x z^2} &=T_0^\pm(x)= 
+\sqrt{\frac{\pi}{4x}}e^{\frac{1}{4x}}\left[1\pm 
+\text{Erf}\rl{\frac{1}{2\sqrt{x}}}\right]\\
+\int_{0}^{\infty}dz\ z\cdot e^{\pm z -x z^2}&=\frac{1}{2x}\pm 
+\frac{\sqrt{\pi}e^{\frac{1}{4x}}}{4x^{\frac{3}{2}}}\cdot 
+\left[1\pm \text{Erf}\rl{\frac{1}{2\sqrt{x}}}\right]\quad.
+\end{align}
+Für $T_1^\pm(x)$ folgt dann
+\begin{align*}
+T_1^\pm(x)&= \mp \frac{1}{\sqrt{x}} \omega_0(\pm 
+\frac{1}{\sqrt{x}}) + 2\ \omega_1(\pm\frac{1}{\sqrt{x}}) \\
+& \pm \log(\sqrt{x})\cdot 
+\sqrt{\frac{\pi}{4x}}e^{\frac{1}{4x}}\left[1\pm 
+\text{Erf}\rl{\frac{1}{2\sqrt{x}}}\right]\\
+&-2\log(\sqrt{x})\cdot x\cdot \biggl\{  
+\frac{1}{2x}\pm 
+\frac{\sqrt{\pi}e^{\frac{1}{4x}}}{4x^{\frac{3}{2}}}\cdot 
+\left[1\pm \text{Erf}\rl{\frac{1}{2\sqrt{x}}}\right]
+\biggr\}\quad,
+\end{align*}
+was nichts anderes ist als
+\begin{align}\nonumber
+T_1^\pm(x)&= \mp \frac{1}{\sqrt{x}} \omega_0(\pm 
+\frac{1}{\sqrt{x}}) + 2\ \omega_1(\pm\frac{1}{\sqrt{x}}) 
+\\\nonumber
+& \pm \log(\sqrt{x})\cdot 
+\sqrt{\frac{\pi}{4x}}e^{\frac{1}{4x}}\\\nonumber
+& +\log(\sqrt{x})\cdot 
+\sqrt{\frac{\pi}{4x}}e^{\frac{1}{4x}}\text{Erf}\rl{\frac{1}{2\sqrt{x}}}\\\nonumber
+& -\log(\sqrt{x})\\\nonumber
+& \mp\log(\sqrt{x})\cdot 
+\sqrt{\frac{\pi}{4x}}e^{\frac{1}{4x}}\\\nonumber
+& -\log(\sqrt{x})\cdot 
+\sqrt{\frac{\pi}{4x}}e^{\frac{1}{4x}}\text{Erf}\rl{\frac{1}{2\sqrt{x}}}\\
+%
+T_1^\pm(x)&= \mp \frac{1}{\sqrt{x}} \omega_0(\pm 
+\frac{1}{\sqrt{x}}) + 2\ 
+\omega_1(\pm\frac{1}{\sqrt{x}})-\frac12 \log(x)\quad.
+\end{align}
+$\omega_0$ und $\omega_1$ können mithilfe von
+%
+\begin{align}\label{omega}
+\omega_k(x)=\begin{cases}
+\sum_{n=0}^{\infty}\frac{(-x)^n}{n!}\frac{1}{4}\Gamma\rl{\frac{n+1}{2}}
+\psi_d\rl{\frac{n+1}{2}}&,
+k=0\\
+\sum_{n=0}^{\infty}\frac{(-x)^n}{n!}\frac{1}{4}\Gamma\rl{\frac{n}{2}+1}
+\psi_d\rl{\frac{n}{2}+1}&,
+k=1\\
+\end{cases}
+\end{align}
+%
+berechnet werden. $\psi_d$ ist dabei die Diagamma-Funktion 
+(vergleiche \cite{av:1a2}). Hierbei fehlt in \cite{av:1a2} im 
+Vergleich zu \ref{omega} der Faktor $\frac{1}{4}$.
