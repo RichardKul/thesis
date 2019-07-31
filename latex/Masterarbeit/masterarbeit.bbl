@@ -1,0 +1,45 @@
+\begin{thebibliography}{10}
+
+\bibitem{eqnum}
+{F. Azevedo et al.}, ``{Equal Numbers of Neuronal and Nonneuronal Cells Make
+  the Human Brain an Isometrically Scaled-Up Primate Brain},'' {\em The Journal
+  of Comparative Neurology 513}, 2009.
+
+\bibitem{izi}
+{Eugene M. Izhikevich}, {\em {Dynamical Systems in Neuroscience}}.
+\newblock The MIT Press, 2007.
+
+\bibitem{dnb}
+{Gennady S. Cymbalyuk}, ``{Dynamics of neuronal bursting},'' {\em J Biol Phys
+  37}, 2011.
+
+\bibitem{abp}
+{B. Lindner and E. M. Nicola}, ``{Critical Asymmetry for Giant Diffusion of
+  Active Brownian Particles},'' {\em PRL 101}, 2008.
+
+\bibitem{bpp}
+{B. Lindner and I. M. Sokolov}, ``{Giant diffusion of underdamped particles in
+  a biased periodic potential},'' {\em PRE 93}, 2016.
+
+\bibitem{td}
+{G. Costantini and F. Marchesoni}, ``{Threshold diffusion in a tilted washboard
+  potential},'' {\em Europhys. Lett. 48}, 1999.
+
+\bibitem{ga}
+{P. Reimann et al.}, ``{Giant Acceleration of Free Diffusion by Use of Tilted
+  Periodic Potentials},'' {\em Physical Review Letters 87}, 2001.
+
+\bibitem{dit}
+{P. Reimann et al.}, ``{Diffusion in tilted periodic potentials: Enhancement,
+  universality, and scaling},'' {\em Physical Review E 65}, 2002.
+
+\bibitem{gd}
+{D. Dan and A. M. Jayannavar}, ``{Giant diffusion and coherent transport in
+  tilted periodic inhomogeneous systems},'' {\em Physical Review E 66}, 2002.
+
+\bibitem{bm}
+{I. Karatzas and S. E. Shreve}, {\em {Brownian Motion and Stochastic
+  Calculus}}.
+\newblock Springer, 1998.
+
+\end{thebibliography}
