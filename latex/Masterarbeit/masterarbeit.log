@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.2.11)  29 JUL 2019 21:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.2.11)  5 AUG 2019 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -342,39 +342,39 @@ Package pdftex.def Info: husiegel.pdf  used on input line 23.
  [3
 
 ] [1]
-Underfull \hbox (badness 10000) in paragraph at lines 58--62
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
 
- []
-
-<velpot.pdf, id=30, 462.52798pt x 346.89601pt>
-File: velpot.pdf Graphic file (type pdf)
-<use velpot.pdf>
-Package pdftex.def Info: velpot.pdf  used on input line 77.
-(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
-
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 77--78
- [][] 
  []
 
 [2]
+<velpot.pdf, id=33, 462.52798pt x 346.89601pt>
+File: velpot.pdf Graphic file (type pdf)
+<use velpot.pdf>
+Package pdftex.def Info: velpot.pdf  used on input line 86.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 86--87
+ [][] 
+ []
+
 <mess08.png, id=34, 744.7825pt x 558.085pt>
 File: mess08.png Graphic file (type png)
 <use mess08.png>
-Package pdftex.def Info: mess08.png  used on input line 86.
+Package pdftex.def Info: mess08.png  used on input line 95.
 (pdftex.def)             Requested size: 372.39034pt x 279.04182pt.
- [3 <./velpot.pdf>]
+[3 <./velpot.pdf>]
 <veldynupper.png, id=70, 498.86375pt x 237.88875pt>
 File: veldynupper.png Graphic file (type png)
 <use veldynupper.png>
-Package pdftex.def Info: veldynupper.png  used on input line 98.
+Package pdftex.def Info: veldynupper.png  used on input line 108.
 (pdftex.def)             Requested size: 213.39568pt x 101.7602pt.
 <veldynlower.png, id=71, 498.86375pt x 337.26pt>
 File: veldynlower.png Graphic file (type png)
 <use veldynlower.png>
-Package pdftex.def Info: veldynlower.png  used on input line 99.
+Package pdftex.def Info: veldynlower.png  used on input line 109.
 (pdftex.def)             Requested size: 213.39568pt x 144.26762pt.
 
-Overfull \hbox (2.61108pt too wide) in paragraph at lines 98--100
+Overfull \hbox (2.61108pt too wide) in paragraph at lines 108--110
 [][] [] 
  []
 
@@ -382,40 +382,85 @@ Overfull \hbox (2.61108pt too wide) in paragraph at lines 98--100
 <nbpsim1.png, id=78, 731.73375pt x 542.025pt>
 File: nbpsim1.png Graphic file (type png)
 <use nbpsim1.png>
-Package pdftex.def Info: nbpsim1.png  used on input line 106.
+Package pdftex.def Info: nbpsim1.png  used on input line 116.
 (pdftex.def)             Requested size: 365.86598pt x 271.01183pt.
- (./masterarbeit.bbl [5 <./veldynupper.png> <./veldynlower.png> <./nbpsim1.png>
-]) [6]
+<kramerfit.png, id=79, 893.3375pt x 556.0775pt>
+File: kramerfit.png Graphic file (type png)
+<use kramerfit.png>
+Package pdftex.def Info: kramerfit.png  used on input line 122.
+(pdftex.def)             Requested size: 446.66765pt x 278.03807pt.
+
+Overfull \hbox (19.8763pt too wide) in paragraph at lines 122--122
+ [][] 
+ []
+
+[5 <./veldynupper.png> <./veldynlower.png> <./nbpsim1.png>]
+<barrierplot.png, id=86, 827.09pt x 561.09625pt>
+File: barrierplot.png Graphic file (type png)
+<use barrierplot.png>
+Package pdftex.def Info: barrierplot.png  used on input line 126.
+(pdftex.def)             Requested size: 413.54398pt x 280.54744pt.
+ [6 <./kramerfit.png>] [7 <./barrierplot.png>] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 191--196
+
+ []
+
+[9]
+<inapikrealncwn.pdf, id=104, 462.52798pt x 346.89601pt>
+File: inapikrealncwn.pdf Graphic file (type pdf)
+<use inapikrealncwn.pdf>
+Package pdftex.def Info: inapikrealncwn.pdf  used on input line 214.
+(pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--216
+
+ []
+
+[10] (./masterarbeit.bbl [11 <./inapikrealncwn.pdf>]
+! Misplaced alignment tab character &.
+l.55 ... epilepsy and behavior},'' {\em Epilepsy &
+                                                   Behavior 13},
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+) [12]
 \openout2 = `other/declaration.aux'.
 
- (./other/declaration.tex) [7
+ (./other/declaration.tex) [13
 
 ] (./masterarbeit.aux
 (./other/titlepage.aux) (./other/abstract.aux) (./other/declaration.aux)) ) 
 Here is how much of TeX's memory you used:
- 3548 strings out of 494534
- 48673 string characters out of 6175442
- 131017 words of memory out of 5000000
- 7099 multiletter control sequences out of 15000+600000
+ 3572 strings out of 494534
+ 49050 string characters out of 6175442
+ 135076 words of memory out of 5000000
+ 7120 multiletter control sequences out of 15000+600000
  11235 words of font info for 40 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 41i,10n,25p,1179b,251s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 41i,12n,25p,1179b,251s stack positions out of 5000i,500n,10000p,200000b,80000s
 </us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on masterarbeit.pdf (10 pages, 401054 bytes).
+st/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on masterarbeit.pdf (16 pages, 548552 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 201 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

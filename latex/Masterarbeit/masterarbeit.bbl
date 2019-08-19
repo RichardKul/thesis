@@ -42,4 +42,25 @@
   Calculus}}.
 \newblock Springer, 1998.
 
+\bibitem{fpe}
+{Hans Risken}, {\em {The Fokker-Planck Equation}}.
+\newblock Springer, 1984.
+
+\bibitem{gamma}
+{L. V. Moran and L. E. Hong}, ``{High vs Low Frequency Neural Oscillations in
+  Schizophrenia},'' {\em Schizophr Bull 37}, 2011.
+
+\bibitem{gamma2}
+{J. R. Hughes}, ``{Gamma, fast, and ultrafast waves of the brain: Their
+  relationships with epilepsy and behavior},'' {\em Epilepsy & Behavior 13},
+  2008.
+
+\bibitem{burstneu}
+{K. Nakajima et al.}, ``{Dynamic characteristics of a simplebursting neuron
+  model},'' {\em NOLTA Vol. 3}, 2012.
+
+\bibitem{burstneu2}
+{X. Zhao et al.}, ``{Low dimensional model of bursting neurons},'' {\em J
+  Comput Neurosci}, 2014.
+
 \end{thebibliography}

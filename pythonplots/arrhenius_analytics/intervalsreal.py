@@ -23,7 +23,7 @@ def r(r0,a,b,t,D):
 def deffana(t,r0p,r0m,ap,am,bp,bm):
 	return (r(r0p,ap,bp,t,30)*r(r0m,am,bm,t,30))/((r(r0p,ap,bp,t,30)+r(r0m,am,bm,t,30))**3)
 
-D=[30]
+D=[20]
 l=len(D)
 Da=np.array(D)
 d=Da[0]/100
@@ -31,7 +31,7 @@ d=Da[0]/100
 #def deffana(t,r0p,r0m,ap,am,bp,bm):
 #	return (r(r0p,ap,bp,t,0.5)*r(r0m,am,bm,t,0.5))/((r(r0p,ap,bp,t,0.5)+r(r0m,am,bm,t,0.5))**3) 
 
-date='realfast6jjem2'
+date='realfast11jjem2'
 params2=np.zeros(6)
 params=np.zeros((4,11))
 changespertime=np.zeros((l,20))

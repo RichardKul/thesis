@@ -25,14 +25,14 @@ double init(double x[],int n);
 int main(int argc, char** argv) {
     
     ofstream myfile;
-    myfile.open ("countI.txt");
+    myfile.open ("countI9a.txt");
     
-    double I0=0; // 0
-    double gL=8; // 8
+    double I0=-0.2; // 0
+    double gL=0.3; // 8
     double EL=-80; // -80  
-    double gNa=20; // 20
+    double gNa=1; // 20
     double ENa=60; // 60
-    double gK=9; // 9
+    double gK=0.4; // 9
     double EK=-90; // -90
     double gM=5; // 5
     //slow K+ current
@@ -40,12 +40,12 @@ int main(int argc, char** argv) {
     double vinf=-20; // -20  
     double tauM=30; // 20 
     //Na current
-    double km=15; // 15 
-    double vm=-20; // -20 
+    double km=14; // 15 
+    double vm=-18; // -20 
     //fast K+ current
     double kn=5; // 5 
     double vn=-25; // -20 
-    double tau=0.152; // 0.152  
+    double tau=3; // 0.152  
     int N0;
     N0=50000000;
     int runs=50;
@@ -56,11 +56,11 @@ int main(int argc, char** argv) {
     nfs=0.2;
     int j,f;
     double dt;
-    dt=0.00001; 
+    dt=0.0005; 
     init(count,runs);
 for(int a=0;a<runs;a++){
 for(j=0;j<N0;j++){
-    v=(I0+0.2*a)*dt+vs-gL*(vs-EL)*dt-gNa*ninf(vs,km,vm)*(vs-ENa)*dt-gK*nfs*(vs-EK)*dt;
+    v=(I0+0.01*a)*dt+vs-gL*(vs-EL)*dt-gNa*ninf(vs,km,vm)*(vs-ENa)*dt-gK*nfs*(vs-EK)*dt;
     nf=nfs+(ninf(vs,kn,vn)-nfs)*dt/tau;
 if(v > th && vs < th){
         count[a]=count[a]+1;

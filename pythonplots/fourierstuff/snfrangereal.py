@@ -10,17 +10,19 @@ import matplotlib.pyplot as plt
 
 from scipy.fftpack import fft, ifft
 
-date='realfrange9jj'
-nr=[10]
+date='realfrange8aem2'
+nr=[30]
 l=len(nr)
-omega0=0.0001
-runs=160
+omega0=0.0000005
+runs=50
 points=1000000
 length=500000
 N=100000000
-repetitions=20
-dt=0.0001
+repetitions=400
+dt=0.0005
+eps=0.01
 T=N*repetitions*dt
+scale=T*eps
 S=np.zeros(length)
 
 SNR=np.zeros((l,20))
@@ -73,14 +75,14 @@ plt.figure()
 plt.xlabel('signal frequency')
 plt.ylabel('SNR')
 xs=omega0*np.square(np.arange(1,21))
-#plt.yscale('log')
+plt.yscale('log')
 plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
-#plt.xlim(4*10**(-4),100)
+plt.ylim(1,100)
 for n in range(0,l):
-	plt.plot(xs,SNR[n,:],label='I=0.08,D=%f' %(nr[n]*0.01))
+	plt.plot(xs,(SNR[n,:]-1)/scale,label='I=0.08,D=%f' %(nr[n]*0.01+0.1))
 #plt.plot(xs,SNR[2,:],label='D=3')
 #plt.plot(xs,SNR[1,:],label='D=2.5')
 plt.legend()
 #plt.plot(sax2,say2/T2,label='e6')
-plt.savefig('snrfrange2.pdf')
+plt.savefig('snrfrange8a.pdf')

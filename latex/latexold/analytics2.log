@@ -1,0 +1,549 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.2.11)  13 AUG 2019 15:30
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**analytics2.tex
+(./analytics2.tex
+LaTeX2e <2018-04-01> patch level 5
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen105
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen106
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks16
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks17
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks18
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count100
+\float@exts=\toks20
+\float@box=\box28
+\@float@everytoks=\toks21
+\@floatcapt=\box29
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2018/06/05 3.22 The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/06/05 3.22 Babel switching mechanism
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
+Language: german 2018/03/29 v2.10 German support for babel (pre-1996 orthograph
+y)
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
+Language: germanb 2018/03/29 v2.10 German support for babel (pre-1996 orthograp
+hy)
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2018/06/05 3.22 Babel common definitions
+\babel@savecnt=\count101
+\U@D=\dimen114
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count102
+)
+Package babel Info: Making " an active character on input line 135.
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks22
+\inpenc@posthook=\toks23
+)
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count103
+\Gm@cntv=\count104
+\c@Gm@tempcnt=\count105
+\Gm@bindingoffset=\dimen115
+\Gm@wd@mp=\dimen116
+\Gm@odd@mp=\dimen117
+\Gm@even@mp=\dimen118
+\Gm@layoutwidth=\dimen119
+\Gm@layoutheight=\dimen120
+\Gm@layouthoffset=\dimen121
+\Gm@layoutvoffset=\dimen122
+\Gm@dimlist=\toks24
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2018/05/01 v1.1-162 Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2018/05/01 v3.3-147 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2018/05/27 v1.8a caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen123
+\captionmargin@=\dimen124
+\captionwidth=\dimen125
+\caption@tempdima=\dimen126
+\caption@indent=\dimen127
+\caption@parindent=\dimen128
+\caption@hangindent=\dimen129
+)
+\c@ContinuedFloat=\count106
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count107
+\c@subtable=\count108
+)
+(./analytics2.aux)
+\openout1 = `analytics2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count109
+\scratchdimen=\dimen130
+\scratchbox=\box30
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks25
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen131
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks26
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+))))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(56.9055pt, 717.00946pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=717.00946pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-52.36449pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+(./analytics2.toc)
+\tf@toc=\write3
+\openout3 = `analytics2.toc'.
+
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+<25.png, id=7, 385.44pt x 315.1775pt>
+File: 25.png Graphic file (type png)
+<use 25.png>
+Package pdftex.def Info: 25.png  used on input line 30.
+(pdftex.def)             Requested size: 154.17326pt x 126.06876pt.
+<26.png, id=9, 153.57375pt x 160.6pt>
+File: 26.png Graphic file (type png)
+<use 26.png>
+Package pdftex.def Info: 26.png  used on input line 36.
+(pdftex.def)             Requested size: 122.85915pt x 128.48016pt.
+<27.png, id=10, 182.6825pt x 141.52875pt>
+File: 27.png Graphic file (type png)
+<use 27.png>
+Package pdftex.def Info: 27.png  used on input line 45.
+(pdftex.def)             Requested size: 146.14618pt x 113.22314pt.
+<42.png, id=11, 340.27126pt x 237.88875pt>
+File: 42.png Graphic file (type png)
+<use 42.png>
+Package pdftex.def Info: 42.png  used on input line 52.
+(pdftex.def)             Requested size: 163.32834pt x 114.18529pt.
+<28.png, id=12, 330.23375pt x 154.5775pt>
+File: 28.png Graphic file (type png)
+<use 28.png>
+Package pdftex.def Info: 28.png  used on input line 60.
+(pdftex.def)             Requested size: 264.18735pt x 123.66214pt.
+
+[1 <./25.png> <./26.png> <./27.png> <./42.png> <./28.png>]
+Overfull \hbox (46.20714pt too wide) detected at line 92
+[]
+ []
+
+[2]
+<inapik8je1long3011wfom4.pdf, id=37, 462.52798pt x 346.89601pt>
+File: inapik8je1long3011wfom4.pdf Graphic file (type pdf)
+<use inapik8je1long3011wfom4.pdf>
+Package pdftex.def Info: inapik8je1long3011wfom4.pdf  used on input line 121.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+ [3 <./inapik8je1long3011wfom4.pdf>] [4]
+Overfull \hbox (2.67079pt too wide) detected at line 189
+[]
+ []
+
+[5] [6]
+Overfull \hbox (22.86597pt too wide) detected at line 230
+[]
+ []
+
+
+Overfull \hbox (4.96884pt too wide) detected at line 235
+[]
+ []
+
+<nullclines70Hz.pdf, id=86, 361.35pt x 181.67876pt>
+File: nullclines70Hz.pdf Graphic file (type pdf)
+<use nullclines70Hz.pdf>
+Package pdftex.def Info: nullclines70Hz.pdf  used on input line 242.
+(pdftex.def)             Requested size: 325.21199pt x 163.50935pt.
+[7]
+<nullclinenew.pdf, id=90, 361.35pt x 181.67876pt>
+File: nullclinenew.pdf Graphic file (type pdf)
+<use nullclinenew.pdf>
+Package pdftex.def Info: nullclinenew.pdf  used on input line 249.
+(pdftex.def)             Requested size: 325.21199pt x 163.50935pt.
+<realstate2.pdf, id=91, 462.52798pt x 346.89601pt>
+File: realstate2.pdf Graphic file (type pdf)
+<use realstate2.pdf>
+Package pdftex.def Info: realstate2.pdf  used on input line 257.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+ [8 <./nullclines70Hz.pdf> <./nullclinenew.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./nullclinenew.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>]
+<inapikrealdrange6a1.pdf, id=122, 462.52798pt x 346.89601pt>
+File: inapikrealdrange6a1.pdf Graphic file (type pdf)
+<use inapikrealdrange6a1.pdf>
+Package pdftex.def Info: inapikrealdrange6a1.pdf  used on input line 264.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+<inapikrealdrange6a8.pdf, id=123, 462.52798pt x 346.89601pt>
+File: inapikrealdrange6a8.pdf Graphic file (type pdf)
+<use inapikrealdrange6a8.pdf>
+Package pdftex.def Info: inapikrealdrange6a8.pdf  used on input line 270.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+ [9 <./realstate2.pdf>]
+<inapikrealdrange6a20.pdf, id=155, 462.52798pt x 346.89601pt>
+File: inapikrealdrange6a20.pdf Graphic file (type pdf)
+<use inapikrealdrange6a20.pdf>
+Package pdftex.def Info: inapikrealdrange6a20.pdf  used on input line 276.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+ [10 <./inapikrealdrange6a1.pdf> <./inapikrealdrange6a8.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./inapikrealdrange6a8.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+>]
+<snrrealdrange6aem2.pdf, id=230, 462.52798pt x 346.89601pt>
+File: snrrealdrange6aem2.pdf Graphic file (type pdf)
+<use snrrealdrange6aem2.pdf>
+Package pdftex.def Info: snrrealdrange6aem2.pdf  used on input line 283.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+ [11 <./inapikrealdrange6a20.pdf>]
+<inapikrealfrange8a1.pdf, id=270, 462.52798pt x 346.89601pt>
+File: inapikrealfrange8a1.pdf Graphic file (type pdf)
+<use inapikrealfrange8a1.pdf>
+Package pdftex.def Info: inapikrealfrange8a1.pdf  used on input line 290.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+<inapikrealfrange8a6.pdf, id=271, 462.52798pt x 346.89601pt>
+File: inapikrealfrange8a6.pdf Graphic file (type pdf)
+<use inapikrealfrange8a6.pdf>
+Package pdftex.def Info: inapikrealfrange8a6.pdf  used on input line 296.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+<snrfrange8a.pdf, id=272, 462.52798pt x 346.89601pt>
+File: snrfrange8a.pdf Graphic file (type pdf)
+<use snrfrange8a.pdf>
+Package pdftex.def Info: snrfrange8a.pdf  used on input line 302.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+ [12 <./snrrealdrange6aem2.pdf> <./inapikrealfrange8a1.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./inapikrealfrange8a1.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+>]
+<dneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf, id=343, 462.5279
+8pt x 346.89601pt>
+File: dneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf Graphic file
+ (type pdf)
+<use dneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf>
+Package pdftex.def Info: dneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2
+st.pdf  used on input line 311.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+ [13 <./inapikrealfrange8a6.pdf> <./snrfrange8a.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./snrfrange8a.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+>]
+<gneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf, id=418, 462.5279
+8pt x 346.89601pt>
+File: gneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf Graphic file
+ (type pdf)
+<use gneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf>
+Package pdftex.def Info: gneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2
+st.pdf  used on input line 317.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+<fneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf, id=419, 462.5279
+8pt x 346.89601pt>
+File: fneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf Graphic file
+ (type pdf)
+<use fneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf>
+Package pdftex.def Info: fneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2
+st.pdf  used on input line 323.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+ [14 <./dneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf>]
+<arrheniustotnewrealfast11jjem2shnewrealfast19jjem2stfit5.pdf, id=459, 462.5279
+8pt x 346.89601pt>
+File: arrheniustotnewrealfast11jjem2shnewrealfast19jjem2stfit5.pdf Graphic file
+ (type pdf)
+<use arrheniustotnewrealfast11jjem2shnewrealfast19jjem2stfit5.pdf>
+Package pdftex.def Info: arrheniustotnewrealfast11jjem2shnewrealfast19jjem2stfi
+t5.pdf  used on input line 331.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+
+[15 <./gneurrealfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf> <./fneurre
+alfast11jjem2shrealfast11jjem2strealfast19jjem2st.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./fneurrealfast11jjem2shrealfast11jjem2
+strealfast19jjem2st.pdf): PDF inclusion: multiple pdfs with page group included
+ in a single page
+>]
+<barriercompnewrealfast11jjem2shnewrealfast19jjem2st.pdf, id=525, 462.52798pt x
+ 346.89601pt>
+File: barriercompnewrealfast11jjem2shnewrealfast19jjem2st.pdf Graphic file (typ
+e pdf)
+<use barriercompnewrealfast11jjem2shnewrealfast19jjem2st.pdf>
+Package pdftex.def Info: barriercompnewrealfast11jjem2shnewrealfast19jjem2st.pd
+f  used on input line 338.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+ [16 <./arrheniustotnewrealfast11jjem2shnewrealfast19jjem2stfit5.pdf>]
+<dcompdfrealfast11jjem2shrealfast19jjem2st.pdf, id=573, 462.52798pt x 346.89601
+pt>
+File: dcompdfrealfast11jjem2shrealfast19jjem2st.pdf Graphic file (type pdf)
+<use dcompdfrealfast11jjem2shrealfast19jjem2st.pdf>
+Package pdftex.def Info: dcompdfrealfast11jjem2shrealfast19jjem2st.pdf  used on
+ input line 345.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+<fcompdfrealfast11jjem2shrealfast19jjem2st.pdf, id=574, 462.52798pt x 346.89601
+pt>
+File: fcompdfrealfast11jjem2shrealfast19jjem2st.pdf Graphic file (type pdf)
+<use fcompdfrealfast11jjem2shrealfast19jjem2st.pdf>
+Package pdftex.def Info: fcompdfrealfast11jjem2shrealfast19jjem2st.pdf  used on
+ input line 351.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+
+[17 <./barriercompnewrealfast11jjem2shnewrealfast19jjem2st.pdf>]
+<snrreal9a.pdf, id=610, 462.52798pt x 346.89601pt>
+File: snrreal9a.pdf Graphic file (type pdf)
+<use snrreal9a.pdf>
+Package pdftex.def Info: snrreal9a.pdf  used on input line 358.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+ [18 <./dcompdfrealfast11jjem2shrealfast19jjem2st.pdf> <./fcompdfrealfast11jjem
+2shrealfast19jjem2st.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./fcompdfrealfast11jjem2shrealfast19jje
+m2st.pdf): PDF inclusion: multiple pdfs with page group included in a single pa
+ge
+>]
+<snrreal9awf.pdf, id=690, 462.52798pt x 346.89601pt>
+File: snrreal9awf.pdf Graphic file (type pdf)
+<use snrreal9awf.pdf>
+Package pdftex.def Info: snrreal9awf.pdf  used on input line 365.
+(pdftex.def)             Requested size: 416.27133pt x 312.20352pt.
+ [19 <./snrreal9a.pdf>] [20 <./snrreal9awf.pdf>] (./analytics2.aux) ) 
+Here is how much of TeX's memory you used:
+ 4514 strings out of 494534
+ 69183 string characters out of 6175442
+ 157148 words of memory out of 5000000
+ 8082 multiletter control sequences out of 15000+600000
+ 9903 words of font info for 36 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 42i,11n,40p,536b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on analytics2.pdf (21 pages, 829265 bytes).
+PDF statistics:
+ 804 PDF objects out of 1000 (max. 8388607)
+ 221 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
+

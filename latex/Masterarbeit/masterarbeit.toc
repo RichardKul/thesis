@@ -2,7 +2,13 @@
 \contentsline {section}{\numberline {1}Introduction}{1}
 \contentsline {section}{\numberline {2}Theory}{1}
 \contentsline {subsection}{\numberline {2.1}Quantities of interest}{1}
-\contentsline {subsection}{\numberline {2.2}Giant Diffusion}{1}
+\contentsline {subsection}{\numberline {2.2}Giant Diffusion}{2}
 \contentsline {subsection}{\numberline {2.3}Giant diffusion of Brownian Particles}{2}
 \contentsline {subsubsection}{\numberline {2.3.1}Active Brownian Particles}{2}
 \contentsline {subsubsection}{\numberline {2.3.2}Regular Brownian Particles in a tilted periodic potential}{4}
+\contentsline {subsection}{\numberline {2.4}Two-state theory}{7}
+\contentsline {section}{\numberline {3}Giant diffusion in a bursting neuron model}{9}
+\contentsline {subsection}{\numberline {3.1}Brownian motion and neuronal models}{9}
+\contentsline {subsection}{\numberline {3.2}Neuronal bursting}{9}
+\contentsline {subsection}{\numberline {3.3}The bursting neuron model}{9}
+\contentsline {subsubsection}{\numberline {3.3.1}Phase plane analysis}{10}

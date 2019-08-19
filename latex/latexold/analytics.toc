@@ -3,4 +3,4 @@
 \contentsline {section}{\numberline {2}Absch"atzung des Spektrums}{2}
 \contentsline {section}{\numberline {3}Zwei-Zustands-Theorie}{3}
 \contentsline {section}{\numberline {4}Realistisches Modell}{6}
-\contentsline {section}{\numberline {5}Potentialbarrieren}{15}
+\contentsline {section}{\numberline {5}Potentialbarrieren}{17}
