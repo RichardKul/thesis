@@ -1,6 +1,7 @@
 %\documentclass[10pt,a4paper]{article}
 \documentclass[12pt,a4paper]{article}
 \usepackage{graphicx,units,amsmath}
+\usepackage{bm} % bold in math mode
 \usepackage{subfigure}
 \usepackage{float}
 \usepackage[ngerman, english]{babel} 
@@ -129,7 +130,7 @@ The plot shows that the points where one potential barrier equals twice the othe
 \subsection{Two-state theory}
 In the case of low noise intensity, the transition times between the locked state and the running state will be much shorter than the periods of time that the particle stays in one of the two states. That is why it is practical to describe the behavior of the system in this regime with a two-state model. The following derivation applies to the Brownian Particle in a tilted periodic potential. The transition rates are assumed to obey an Arrhenius law:
 \begin{align*}
-r_{\pm}=r_{0,\pm}\text{e}^{-\frac{\Delta U_{\pm}}{D}}
+r_{\pm}=r_{0,\pm}\exp\left(-\frac{\Delta U_{\pm}}{D}\right)
 \end{align*}
 where $r_-$ denotes the transition rate from locked to running state, and $r_+$ the rate for the other transition. $\Delta U_{\pm}$ is the corresponding potential barrier and $D$ the noise intensity. The effective diffusion coefficient can be calculated from the velocity $v_0$ in the running state and the transition rates: 
 \begin{align*}
@@ -138,11 +139,11 @@ D_{\text{eff}}=\frac{v_0^2 r_+r_-}{(r_++r_-)^3}
 The first task is to find the intersection points of the diffusion coefficients. At these points, the diffusion coefficients become independent of the noise intensity.
 It is
 \begin{align*}
-D_{\text{eff}}&=\frac{v_0^2r_{0,+}r_{0,-}\text{e}^{-\frac{\Delta U_++\Delta U_-}{D}}}{\left(r_{0,+}\text{e}^{\frac{-\Delta U_+}{D}}+r_{0,-}\text{e}^{\frac{-\Delta U_-}{D}}\right)^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left(r_{0,+}\text{e}^{-\frac{3\Delta U_+-\Delta U_+-\Delta U_-}{3D}}+r_{0,-}\text{e}^{-\frac{3\Delta U_--\Delta U_+ -\Delta U_-}{3D}}\right)^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left(r_{0,+}\text{e}^{-\frac{2\Delta U_+-\Delta U_-}{3D}}+r_{0,-}\text{e}^{-\frac{2\Delta U_--\Delta U_+}{3D}}\right)^3}
+D_{\text{eff}}&=\frac{v_0^2r_{0,+}r_{0,-}\exp\left(-\frac{\Delta U_++\Delta U_-}{D}\right)}{\left[r_{0,+}\exp(\frac{-\Delta U_+}{D})+r_{0,-}\exp\left(\frac{-\Delta U_-}{D}\right)\right]^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left[r_{0,+}\exp\left(-\frac{3\Delta U_+-\Delta U_+-\Delta U_-}{3D}\right)+r_{0,-}\exp\left(-\frac{3\Delta U_--\Delta U_+ -\Delta U_-}{3D}\right)\right]^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left[r_{0,+}\exp\left(-\frac{2\Delta U_+-\Delta U_-}{3D}\right)+r_{0,-}\exp\left(-\frac{2\Delta U_--\Delta U_+}{3D}\right)\right]^3}
 \end{align*}
 In the limes $D\rightarrow 0,\Delta U_+>U_-$ the first term in the denominator vanishes, resulting in:
 \begin{align*}
-D_{\text{eff}}=\frac{v_0^2r_{0,+}}{r_{0,-}^2}\text{e}^{-\frac{\Delta U_+-2\Delta U_-}{D}}
+D_{\text{eff}}=\frac{v_0^2r_{0,+}}{r_{0,-}^2}\exp\left(-\frac{\Delta U_+-2\Delta U_-}{D}\right)
 \end{align*}
 Under the assumption that the prefactors change slowly in comparison to the exponential function, the following condition arises:
 \begin{align*}
@@ -163,20 +164,20 @@ an expression for the average velocity is required to compute the Fano factor. T
 \end{align*}
 Therefore
 \begin{align*}
-F=\frac{2v_0r_+}{(r_++r_-)^2}=\frac{2v_0r_{0,+}\text{e}^{\frac{-\Delta U_+}{D}}}{\left(r_{0,+}\text{e}^{\frac{-\Delta U_+}{D}}+r_{0,-}\text{e}^{-\frac{\Delta U_-}{D}}\right)^2}
+F=\frac{2v_0r_+}{(r_++r_-)^2}=\frac{2v_0r_{0,+}\exp\left(\frac{-\Delta U_+}{D}\right)}{\left(r_{0,+}\exp\left(\frac{-\Delta U_+}{D}\right)+r_{0,-}\exp\left(-\frac{\Delta U_-}{D}\right)\right)^2}
 \end{align*}
 In the limes $D\ll1$ there are again two solutions. For $\Delta U_+ > \Delta U_-$:
 \begin{align*}
-F=\frac{2v_0r_{0,+}}{r_{0,-}^2}\text{e}^{-\frac{\Delta U_+-2\Delta U_-}{D}} \rightarrow \Delta U_+=2\Delta U_-
+F=\frac{2v_0r_{0,+}}{r_{0,-}^2}\exp\left(-\frac{\Delta U_+-2\Delta U_-}{D}\right) \rightarrow \Delta U_+=2\Delta U_-
 \end{align*}
 as well as for $\Delta U_+ < \Delta U_-$:
 \begin{align*}
-F=\frac{2v_0}{r_{0,+}}\text{e}^{-\frac{\Delta U_+-2\Delta U_+}{D}} \rightarrow \Delta U_+=0
+F=\frac{2v_0}{r_{0,+}}\exp\left(-\frac{\Delta U_+-2\Delta U_+}{D}\right) \rightarrow \Delta U_+=0
 \end{align*}
 The intersection point for $\Delta U_+ > \Delta U_-$ stays the same while at the other critical point the potential barrier from running to locked state needs to vanish. As the latter condition violates the requirements for the application of the two-state theory - because only one state would exist in this case - the second intersection point can't be determined via this two-state model.
 \section{Giant diffusion in a bursting neuron model}
 \subsection{Brownian motion and neuronal models}
-Brownian motion in periodic potentials has numerous applications among which one can find superionic conduction, rotation of a dipole in a static field or the description of a Josephson Tunneling junction\cite{fpe}. However, apart from these mechanical examples, Brownian motion in periodic potentials is also suited to describe a bursting neuron. If one counts every time the particle crosses a hill as a spike, the running state can be associated with tonic firing and the locked state with a stable equilibrium point. Because of the random noise, transition between the states will occur and the sustained spiking will be eventually terminated so that there is only a finite number of spikes within each burst. The position of the Brownian Particle then corresponds to the spike count of the neuron and its velocity to the firing rate. Thus, based on the similarities to Brownian motion, we expect to find a weak noise behavior comparable to giant diffusion in bursting neurons as well.
+Brownian motion in periodic potentials has numerous applications among which one can find superionic conduction, rotation of a dipole in a static field or the description of a Josephson Tunneling junction\cite{fpe}. However, apart from these mechanical examples, Brownian motion in periodic potentials is also suited to describe a bursting neuron. If one counts every time the particle crosses a hill as a spike, the running state can be associated with tonic firing and the locked state with a stable equilibrium point. Because of the random noise, transition between the states will occur and the sustained spiking will be eventually terminated so that there is only a finite number of spikes within each burst. The position of the Brownian Particle then corresponds to the spike count of the neuron and its velocity to the firing rate. Thus, based on the similarities to Brownian motion, we expect to find a weak noise behavior comparable to giant diffusion also in bursting neurons.
 \subsection{Neuronal bursting}
 Depending on its physiology and the properties of the stimulus, a neuron doesn't always fire a single spike. A series of multiple spikes in a short time interval that is followed by a period of quiescence is called a burst\cite{izi}. Typically, bursting results from the interplay between two subsystems: a fast subsystem, that is responsible for the generation of the spikes within a burst, and a slow subsystem that modulates the bursting pattern and eventually terminates sustained spiking. However, a bursting neuron model that implements these slow and fast dynamics would at least have to be three-dimensional, as there would be a variable for the membrane voltage as well as for the fast and slow oscillations. One way to realize a bursting two-dimensional model and to make use of the various methods of phase plane analysis is to introduce noise into the system. Considering that any neuron is subject to some kind of noise, this is a justified assumption and was even proposed by Izhikevich as a way to make two-dimensional neuronal models burst\cite{izi}.
 \subsection{The bursting neuron model}
@@ -198,8 +199,9 @@ $C=1$ , $g_L=0.3$ , $E_L=-80$ , $g_{Na}=1$ , $E_{Na}=60$ , $g_K=0.4$ , $E_K=-90$
 \\
 \intertext{$K^+$ current:} k_n&=5 , V_{1/2,n}=-25 , \tau(V)=\text{const}=3.
 \end{align*}
-\subsubsection{Phase plane analysis}
-For a system that depends on the evolution of two state variables, in this case $V$ and $n$, some qualitative and quantitative analysis can be carried out in the phase plane. A neat way to obtain information about an unknown system is to calculate its nullclines. The nullclines are curves in the phase plane, where one of the state variables remains constant. Thus, the $V$-nullcline is defined by the condition $\dot{V}=0$ and the $n$-nullcline follows from $\dot{n}=0$. By crossing one of the nullclines, the system changes its direction with respect to the corresponding variable. As a consequence, each nullcline separates the phase space into two regions where one variable evolves in opposite directions. Taken together, the nullclines define four different regions of directions: one region each where both variables decrease or increase and two regions where one variable increases and the other decreases. Depending on the specific shape of the nullclines, these do not necessarily have to be coherent.\\
+\subsection{Phase plane analysis}
+\subsubsection{Nullclines}
+For a system that depends on the evolution of two state variables, in this case $V$ and $n$, some qualitative and quantitative analysis can be carried out in the phase plane. A neat way to obtain information about an unknown system is to calculate its nullclines. The nullclines are curves in the phase plane, where one of the state variables remains constant. Thus, the $V$-nullcline is defined by the condition $\dot{V}=0$ and the $n$-nullcline follows from $\dot{n}=0$. By crossing one of the nullclines, the system changes its direction with respect to the corresponding variable. As a consequence, each nullcline separates the phase space into two regions where one variable evolves in opposite directions. Taken together, the nullclines define four different regions of directions: one region each where both variables decrease or increase and two regions where one variable increases and the other decreases. Depending on the specific shape of the nullclines, these regions do not necessarily have to be coherent.\\
 The $V$-nullcline can be obtained by setting the left side of equation (\ref{Veq}) to zero. In the $V$-$n$-plane, it can then be described by the function
 \begin{align}
 n(V)=\frac{I - g_L(V-E_L) - g_{Na}m_{\infty}(V)(V-E_{Na})}{g_K(V-E_K)}
@@ -209,12 +211,62 @@ The $n$-nullcline is just
 n(V)=n_\infty(V)
 \end{align}
 The nullclines of the $I_{Na,p}+I_K$-model are shown in figure \ref{realnc}.\\
+A second aspect of the nullclines are their intersection points. As both state variables remain constant when the nullclines intersect, these points are equilibrium points.\\
+In general, there are three different types of equilibria: nodes, saddles and foci. These may be stable or unstable. Any trajectory in the phase space starting close enough to a stable equilibrium stays near it for all times. In contrast to that, an equilibrium is unstable, if at least one trajectory that starts arbitrarily close to it diverges from the equilibrium.
+If they are in the vicinity of a node, all trajectories either converge to or diverge from it. In the case of a saddle, most trajectories first approach the equilibrium point and then diverge from it. Trajectories that start near a focus rotate around the equilibrium point and thereby get closer to or farther away from it. 
+\subsubsection{Jacobian matrix of the system}
+The equilibrium points can be characterized by studying the Jacobian matrix of the system at these points. A two-dimensional system can be written in the form
+\begin{align}
+\dot{x}=f(x,y)\\
+\dot{y}=g(x,y)
+\end{align}
+Utilizing the fact that the functions $f$ and $g$ can be linearized near the equilibrium, which means they can be approximated by the first term of their Taylor expansion, one finds a linear system at the equilibrium $(x_0,y_0)$:
+\begin{align}				
+\left(\begin{matrix}\dot{u}\\\dot{w}
+\end{matrix}\right)
+=\left(\begin{matrix}a b\\
+c d\end{matrix}\right)\left(\begin{matrix}u\\w\end{matrix}\right)=L\left(\begin{matrix}u\\w\end{matrix}\right)
+\end{align}
+where $u=x-x_0$, $w=y-y_0$, $L$ is the Jacobian matrix at equilibrium and the coefficients are the partial derivatives
+\begin{align}
+a=\frac{\partial f}{\partial x}(x_0,y_0),\qquad b=\frac{\partial f}{\partial y}(x_0,y_0) \\
+c=\frac{\partial g}{\partial x}(x_0,y_0),\qquad d=\frac{\partial g}{\partial y}(x_0,y_0)
+\end{align} 
+Having determined the eigenvalues $\lambda_\pm$ and eigenvectors $ \boldsymbol{v_\pm}$ of $L$, a solution for the linear system can be constructed:
+\begin{align}
+\left(\begin{matrix}u(t)\\w(t)
+\end{matrix}\right)=c_+\boldsymbol{v_+}\exp(\lambda_+t)+c_-\boldsymbol{v_-}\exp(\lambda_-t)
+\end{align}
+At this point, the connection between the Jacobian matrix and the different types of equilibria becomes clear. If both eigenvalues are real and have the same sign, both terms of the solution either grow or decay exponentially, meaning that the equilibrium is a node. If they are real with opposite signs, the equilibrium point is a saddle. Finally, if the eigenvalues are complex-conjugate, the solution oscillates, which makes the equilibrium a focus\cite{izi}.\\
+When no bias current is applied (that is, I=0), the system features three equilibrium points:
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{inapikrealncwn.pdf}\caption{Nullclines of the $I_{Na,p}+I_K$-model. The equilibrium points are marked with dots: the red dot denotes a stable equilibrium, the blue dot an unstable focus and the purple dot a saddle point}
+	\includegraphics[scale=0.5]{inapikrealncwnp.pdf}\caption{Nullclines of the $I_{Na,p}+I_K$-model with $I=0$. The arrows indicate the direction of motion in the different regions.}
 	\label{realnc}
 \end{figure}
-A second aspect of the nullclines are their intersection points. As both state variables remain constant when the nullclines intersect, these points are equilibrium points.
+Carrying out the phase plane analysis, one finds:
+\begin{align*}
+\lambda_+(P_1)&\approx-0.1 & \lambda_-(P_1)&\approx-0.3\\
+\lambda_+(P_2)&\approx 0.1& \lambda_-(P_2)&\approx -0.3\\
+\lambda_+(P_3)&\approx 0.05 + 0.5i& \lambda_-(P_3)&\approx 0.05 - 0.5i
+\end{align*}
+This means that $P_1$ is a stable node, $P_2$ is a saddle point and $P_3$ is an unstable focus. Thus, in the bursting state, the phase vector will rotate around $P_3$, approach $P_2$ in $n$ - direction and then go away from $P_2$ in $V$ - direction in order to do another rotation around $P_3$.\\
+However, this applies only to the case of small bias currents. When $I\approx 0.36$, the saddle and the node fall together and the system undergoes a saddle-node bifurcation. In this case, the resting state vanishes and the neuron is in a state of tonic spiking.
+\subsection{Phenomenology}
+The qualitative behavior of the neural model can be best understood by first considering the noiseless system. Depending on the choice of initial conditions, the system will start in either the resting or the running state and stay in it for all times.
+\newpage
+\begin{figure}[H]
+	\subfigure[]{\includegraphics[scale=0.4]{inapreali20nb.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.4]{inapreali20.pdf}}\\	\subfigure[]{\includegraphics[scale=0.4]{inapreali20nbv.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.4]{inapreali20v.pdf}}
+	\caption{Evolution of the phase vector (first row) and the membrane voltage over time (second row).
+		The left side shows the evolution of the system with resting ICs, and on the right one can see the behavior under bursting ICs.}
+	\label{subfig} 
+\end{figure}
+
+		
+
+
 \bibliography{quellen}
 \bibliographystyle{ieeetr}
 \include{other/declaration}

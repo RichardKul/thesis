@@ -13,19 +13,14 @@ from scipy.fftpack import fft, ifft
 date='realfrange8aem2'
 nr=[30]
 l=len(nr)
-omega0=0.0000005
-runs=50
+
 points=1000000
 length=500000
-N=100000000
-repetitions=400
-dt=0.0005
-eps=0.01
-T=N*repetitions*dt
-scale=T*eps
-S=np.zeros(length)
 
-SNR=np.zeros((l,20))
+fvalues=20
+SNR=np.zeros((l,fvalues))
+omegavec=np.zeros((l,fvalues))
+scale=np.zeros((l,fvalues))
 ii=0
 
 for c in nr:
@@ -38,8 +33,28 @@ for c in nr:
 			y.append(float(row[1]))
 		ax=np.array(x)
 		ay=np.array(y)
-		omega=omega0*z**2
-		omegaind=round(omega*T)
+		param=open('/home/richard/outhome/param%s%d%d.txt' %(date,c,z),"r")
+		ll=0
+		name,value=[],[]
+		for k in param:
+			row=k.split()
+			lp=len(row)
+			if ll<1:
+				for jj in range(0,lp):
+					name.append(row[jj])
+			else:
+				for kk in range(0,lp):
+					value.append(float(row[kk]))
+			ll=ll+1
+		dt=value[name.index('dt')]
+		N=value[name.index('N')]-value[name.index('Neq')]
+		repetitions=value[name.index('repetitions')]
+		epsilon=value[name.index('epsilon')]
+		omega=value[name.index('omega')]
+		omegavec[ii][z-1]=omega
+		T=N*repetitions*dt
+		scale[ii][z-1]=epsilon**2*T
+		omegaind=round(omega*T)		
 		SNR[ii][z-1]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
 	ii=ii+1
 
@@ -74,15 +89,15 @@ for c in nr:
 plt.figure()
 plt.xlabel('signal frequency')
 plt.ylabel('SNR')
-xs=omega0*np.square(np.arange(1,21))
+#xs=omega0*np.square(np.arange(1,21))
 plt.yscale('log')
 plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
-plt.ylim(1,100)
+#plt.ylim(1,100)
 for n in range(0,l):
-	plt.plot(xs,(SNR[n,:]-1)/scale,label='I=0.08,D=%f' %(nr[n]*0.01+0.1))
+	plt.plot(omegavec[n,:],(SNR[n,:]-1)/scale[n,:],label='I=0.08,D=%f' %(nr[n]*0.01+0.1))
 #plt.plot(xs,SNR[2,:],label='D=3')
 #plt.plot(xs,SNR[1,:],label='D=2.5')
 plt.legend()
 #plt.plot(sax2,say2/T2,label='e6')
-plt.savefig('snrfrange8a.pdf')
+plt.savefig('snrautofrange8a.pdf')

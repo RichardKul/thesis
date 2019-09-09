@@ -13,19 +13,20 @@ from scipy.fftpack import fft, ifft
 def spectrum(f,tau,sigma):
 	return (2*tau*sigma**2)/(1+(2*np.pi*f*tau)**2)
 
-omega=0.0000005
+omega=0.000005
 runs=50
 points=1000000
 length=500000
-N=100000000
-repetitions=400
+N=400000000
+repetitions=200
 dt=0.0005
 T=N*repetitions*dt
 T2=T*10
+D=50
 S=np.zeros(length)
 #omegaind=round(omega*T)
-for z in range(1,21):
-	file=open('/home/richard/outhome/ftrealfrange8aem230%d.txt' %z,"r")
+for z in range(13,18):
+	file=open('/home/richard/outhome/spikerealfast28aem2n4%d%d.txt' %(D,z),"r")
 	x,y=[],[]
 	for k in file:
 		row=k.split()
@@ -79,4 +80,4 @@ for z in range(1,21):
 #plt.plot(omega,background/T,'kx')
 	plt.legend()
 #plt.plot(sax2,say2/T2,label='e6')
-	plt.savefig('inapikrealfrange8a%d.pdf' %z)	
+	plt.savefig('inapikrealfrange28aspD=%.2fI=%.2f.pdf' %(D*0.01,-0.1+z*0.02))	

@@ -1,5 +1,5 @@
 # I Na,p +I K  model
-p gL=0.0029,EL=-80,gNa=0.01,ENa=60,gK=0.004,EK=-90,gM=0.5,kinf=5,vinf=-20,tauM=300,km=14,vm=-18,kn=5,vn=-25,tau=340,I=0
+p gL=0.3,EL=-80,gNa=1,ENa=60,gK=0.4,EK=-90,gM=0.3,kinf=5,vinf=-20,tauM=300,km=14,vm=-18,kn=5,vn=-25,tau=3,I=0
 ninf(V,k,Vh)=1/(1+exp((Vh-V)/k))
 v'=I-gL*(v-EL)-gNa*ninf(v,km,vm)*(v-ENa)-gK*nf*(v-EK)-gM*nM*(v-EK)
 nf'=(ninf(v,kn,vn)-nf)/tau

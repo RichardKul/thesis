@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     ofstream myfile;
     //ofstream myfile2;
     //ofstream myfile3;
-    myfile.open ("realstate4.txt");
+    myfile.open ("realstate155.txt");
     //myfile2.open ("statechange.txt");
     //myfile3.open (argv[4]
      
@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
     std::mt19937 gen(rd());
     std::normal_distribution<> n(0,1);
     
-    double I0=0.08; // 0
+    double I0=0.2; // 0
     double dI=0.5;
     double gL=0.3; // 8
     double EL=-80; // -80  
@@ -61,7 +61,7 @@ int main(int argc, char** argv) {
     int points=100000;
     int sampling=Neq/points;
     int j,f;
-    double dt=0.0001;
+    double dt=0.0005;
     double D=1;
     //int spikes=100;
     //double* spike=new double[spikes];

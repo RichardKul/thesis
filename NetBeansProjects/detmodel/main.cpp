@@ -48,7 +48,7 @@ int main(int argc, char** argv) {
     double tau=3; // 0.152  
     int N0;
     N0=50000000;
-    int runs=50;
+    int runs=51;
     double count[runs];
     double v,vs,nf,nfs;
     double th=-25;
@@ -70,7 +70,7 @@ nfs=nf;
 }
 }
 for(f=0;f<runs;f++){
-myfile << I0+0.2*f << " " << count[f] << "\n";
+myfile << I0+0.01*f << " " << count[f] << "\n";
 }
  myfile.close();   
     return 0;

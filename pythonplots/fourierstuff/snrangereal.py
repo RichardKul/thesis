@@ -24,28 +24,18 @@ bm = 3.15
 am = -10.76
 r0m = 0.012
 
-date='realfast9aem2sh'
-date1='realfast19jjem2st'
-D=[35]
-D1=[]
+date='realfast13aem2n4'
+date1='realfast9aem2sh'
+D=[25,30]
+D1=[35,45]
 Dtot=D+D1
 l=len(D)+len(D1)
-omega=0.000005
-runs=50
+
 points=1000000
 length=500000
-N=200000000
-repetitions=200
-dt=0.0005
-epsilon=0.01
-T=N*repetitions*dt
-scale=T*epsilon
-T1=T
-T2=T*10
-S=np.zeros(length)
-omegaind=round(omega*T)
-omegaind1=round(omega*T1)
-SNR=np.zeros((l,20))
+ivalues=20
+SNR=np.zeros((l,ivalues))
+scale=np.zeros((l,ivalues))
 ii=0
 
 for c in D:
@@ -58,6 +48,27 @@ for c in D:
 			y.append(float(row[1]))
 		ax=np.array(x)
 		ay=np.array(y)
+		param=open('/home/richard/outhome/param%s%d%d.txt' %(date,c,z),"r")
+		ll=0
+		name,value=[],[]
+		for k in param:
+			row=k.split()
+			lp=len(row)
+			if ll<1:
+				for jj in range(0,lp):
+					name.append(row[jj])
+			else:
+				for kk in range(0,lp):
+					value.append(float(row[kk]))
+			ll=ll+1
+		dt=value[name.index('dt')]
+		N=value[name.index('N')]-value[name.index('Neq')]
+		repetitions=value[name.index('repetitions')]
+		epsilon=value[name.index('epsilon')]
+		omega=value[name.index('omega')]
+		T=N*repetitions*dt
+		scale[ii][z-1]=epsilon**2*T
+		omegaind=round(omega*T)		
 		SNR[ii][z-1]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
 	ii=ii+1
 
@@ -71,7 +82,28 @@ for c1 in D1:
 			y.append(float(row[1]))
 		ax=np.array(x)
 		ay=np.array(y)
-		SNR[ii][z-1]=ay[omegaind1]/np.mean([ay[omegaind1-1],ay[omegaind1-2],ay[omegaind1+1],ay[omegaind1+2],ay[omegaind1-3]])
+		param=open('/home/richard/outhome/param%s%d%d.txt' %(date1,c1,z),"r")
+		ll=0
+		name,value=[],[]
+		for k in param:
+			row=k.split()
+			lp=len(row)
+			if ll<1:
+				for jj in range(0,lp):
+					name.append(row[jj])
+			else:
+				for kk in range(0,lp):
+					value.append(float(row[kk]))
+			ll=ll+1
+		dt=value[name.index('dt')]
+		N=value[name.index('N')]-value[name.index('Neq')]
+		repetitions=value[name.index('repetitions')]
+		epsilon=value[name.index('epsilon')]
+		omega=value[name.index('omega')]
+		T=N*repetitions*dt
+		scale[ii][z-1]=epsilon**2*T
+		omegaind=round(omega*T)		
+		SNR[ii][z-1]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
 	ii=ii+1
 
 
@@ -111,10 +143,11 @@ plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
+colorv=['y','g','b','r','c']
 for n in range(0,l):
-	plt.plot(xs,(SNR[n,:]-1)/scale,label='D=%s' %(Dtot[n]*0.01))
+	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n],label='D=%.2f' %(Dtot[n]*0.01))
 for n in range(0,l):	
-	plt.plot(t,400*snr(r0p,r0m,ap,am,bp,bm,t,Dtot[n]*0.01))
+	plt.plot(t,snr(r0p,r0m,ap,am,bp,bm,t,Dtot[n]*0.01),colorv[n]+'o')
 #plt.plot(xs,SNR[2,:],label='D=3')
 #plt.plot(xs,SNR[1,:],label='D=2.5')
 #handles, labels = plt.gca().get_legend_handles_labels()
@@ -122,4 +155,4 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snrreal9awf.pdf')
+plt.savefig('snrautoreal13a25snr.pdf')

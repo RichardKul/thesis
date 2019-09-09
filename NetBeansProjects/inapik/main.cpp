@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     ofstream myfile;
     //ofstream myfile2;
     //ofstream myfile3;
-    myfile.open ("inapi18d3.txt");
+    myfile.open ("inapreali20nb.txt");
     //myfile2.open ("statechange.txt");
     //myfile3.open (argv[4]
      
@@ -36,13 +36,13 @@ int main(int argc, char** argv) {
     std::mt19937 gen(rd());
     std::normal_distribution<> n(0,1);
     
-    double I0=1.8; // 0
+    double I0=0.2; // 0
     double dI=0.5;
-    double gL=8; // 8
+    double gL=0.3; // 8
     double EL=-80; // -80  
-    double gNa=20; // 20
+    double gNa=1; // 20
     double ENa=60; // 60
-    double gK=9; // 9
+    double gK=0.4; // 9
     double EK=-90; // -90
     //double gM=5; // 5
     /*//slow K+ current
@@ -50,19 +50,19 @@ int main(int argc, char** argv) {
     double vinf=-20; // -20  
     double tauM=30; // 20*/ 
     //Na current
-    double km=15; // 15 
-    double vm=-20; // -20 
+    double km=14; // 15 
+    double vm=-18; // -20 
     //fast K+ current
     double kn=5; // 5 
     double vn=-25; // -20 
-    double tau=0.152; // 0.152  
+    double tau=3; // 0.152  
     //int N=500000;
     int Neq=30000000;
     int points=100000;
     int sampling=Neq/points;
     int j,f;
-    double dt=0.00001;
-    double D=3;
+    double dt=0.0005;
+    double D=0;
     //int spikes=100;
     //double* spike=new double[spikes];
     double th=-25;
@@ -80,7 +80,7 @@ int main(int argc, char** argv) {
 //for(s=0;s<Ivalues;s++){
     //initd(nfs,runs);
     nfs[0]=0.2;
-    vs[0]=-48.5;
+    vs[0]=-58.5;
     mx=0.0285-0.0006*I0;
     nx=1.5-I0/80;
     nx2=1.6-I0/80;

@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-date='firingratesreal'
+date='firingratestimesh'
 D=[30,35,40,45,50]
 dvalues=len(D)
 istart=-0.05
@@ -40,6 +40,6 @@ plt.ylabel('firing rate')
 for n in range(0,dvalues):
 	plt.plot(ivar,vec[n,:],label='D=%s' %D[n])
 
-plt.savefig('firingrate.pdf')
+plt.savefig('firingratesh.pdf')
 
 

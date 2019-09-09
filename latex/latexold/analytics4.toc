@@ -1,0 +1,3 @@
+\babel@toc {german}{}
+\contentsline {section}{\numberline {1}Vergleich SNR-Theorie}{1}
+\contentsline {section}{\numberline {2}Einfluss der Parameter}{8}

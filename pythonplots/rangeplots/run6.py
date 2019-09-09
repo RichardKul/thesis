@@ -8,7 +8,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-file=open('/home/richard/mastergit/NetBeansProjects/realstatevar/realstate4.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/realstatevar/realstate155.txt',"r")
 x,y,z,a=[],[],[],[]
 for k in file:
 	row=k.split()
@@ -22,10 +22,10 @@ az=40*np.array(z)-65
 aa=-np.array(a)/40
 
 plt.figure()
-plt.xlabel('time')
-plt.ylabel('membrane voltage')
-plt.xlim(2600,3000)
-plt.plot(ax,ay)
+plt.xlabel('time [s]')
+plt.ylabel('membrane voltage [mV]')
+#plt.xlim(6350,7500)
+plt.plot(ax/1000,ay)
 #plt.plot(ax,az)
 #plt.plot(ax,aa)
-plt.savefig('realstate2sh.pdf')
+plt.savefig('realstate155.pdf')

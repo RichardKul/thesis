@@ -11,4 +11,7 @@
 \contentsline {subsection}{\numberline {3.1}Brownian motion and neuronal models}{9}
 \contentsline {subsection}{\numberline {3.2}Neuronal bursting}{9}
 \contentsline {subsection}{\numberline {3.3}The bursting neuron model}{9}
-\contentsline {subsubsection}{\numberline {3.3.1}Phase plane analysis}{10}
+\contentsline {subsection}{\numberline {3.4}Phase plane analysis}{10}
+\contentsline {subsubsection}{\numberline {3.4.1}Nullclines}{10}
+\contentsline {subsubsection}{\numberline {3.4.2}Jacobian matrix of the system}{11}
+\contentsline {subsection}{\numberline {3.5}Phenomenology}{12}

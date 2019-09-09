@@ -58,7 +58,7 @@ params2=np.zeros(4)
 paramsq=np.zeros(6)
 for k2 in range(0,ivalues):
 	x=[]
-	ratefile = open('rate%s%d.txt' %(date1+date2,k2),'r')
+	ratefile = open('rate%s%d.txt' %('new'+date1+'new'+date2,k2),'r')
 	for k4 in ratefile:
 		row=k4.split()
 		x.append(float(row[0]))
@@ -108,7 +108,7 @@ params2[1]=popt[1]
 popt,pcov = curve_fit(barrier, xnew, paramsav[3,:])
 params2[2]=popt[0]
 params2[3]=popt[1]
-eqfile2 = open('paramsdf%s.txt'%(date1+date2),'w')
+eqfile2 = open('paramsdfnew%s.txt'%(date1+date2),'w')
 for k4 in range(0,2): 
 	eqfile2.write('%.6f\n'%params2[k4]) 
 eqfile2.write('%.6f\n'%rbte) 
@@ -117,7 +117,7 @@ for k4 in range(2,4):
 eqfile2.write('%.6f\n'%retb) 
 eqfile2.close() 
 	
-paramfile = open('parambarrier%s.txt' %(date1+date2),'r')
+paramfile = open('parambarrier%s.txt' %('new'+date1+'new'+date2),'r')
 xx=[]
 for k4 in paramfile:
 	row=k4.split()
@@ -225,7 +225,7 @@ t=np.arange(-0.1,0.3,0.01)
 #	plt.plot(t,deffana(axx[2],axx[5],axx[0],axx[3],axx[1],axx[4],t,Da[n]/100,av,v0),colorv[n])
 #plt.plot(xsh,veco[0,:],label='D=1.2')
 for n in range(0,l):
-	plt.plot(xs,vec[n,:],colorv[n]+'o',label='D=%f' %(Da[n]/100))
+	plt.plot(xs,vec[n,:],colorv[n]+'o',label='D=%.2f' %(Da[n]/100))
 for n in range(0,l):
 	plt.plot((pv-4)*0.02,deff((pv-4)*0.02,btoeq[n][pv],eqtob[n][pv],v0,av),colorv[n])
 #plt.plot(xs,vec[4,:],label='D=2')
@@ -236,7 +236,7 @@ for n in range(0,l):
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [4,0,2,1,3]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('dcompdfpw%s.pdf' %(date1+date2))
+plt.savefig('dcompdfpwnew%s.pdf' %(date1+date2))
 
 g=np.zeros((l,ivalues1))
 ii=0
@@ -316,7 +316,7 @@ t=np.arange(-0.1,0.3,0.01)
 for n in range(0,l):
 	plt.plot(t,vana(axx[2],axx[5],axx[0],axx[3],axx[1],axx[4],t,Da[n]/100,av,v0),colorv[n])
 for n in range(0,l):
-	plt.plot(xs,g[n,:],colorv[n]+'o',label='D=%f' %(Da[n]/100))
+	plt.plot(xs,g[n,:],colorv[n]+'o',label='D=%.2f' %(Da[n]/100))
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
 #plt.plot(xs,vec[6,:],label='D=4')
@@ -324,7 +324,7 @@ for n in range(0,l):
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [4,0,2,1,3]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('gcompdf%s.pdf' %(date1+date2))
+plt.savefig('gcompdfnew%s.pdf' %(date1+date2))
 
 
 fano=np.zeros((l,ivalues1))
@@ -405,7 +405,7 @@ for n in range(0,l):
 	plt.plot(t,fanoana(axx[2],axx[5],axx[0],axx[3],axx[1],axx[4],t,Da[n]/100,av,v0),colorv[n])
 #plt.plot(xsh,veco[0,:],label='D=1.2')
 for n in range(0,l):
-	plt.plot(xs,fano[n,:],colorv[n]+'o',label='D=%f' %(Da[n]/100))
+	plt.plot(xs,fano[n,:],colorv[n]+'o',label='D=%.2f' %(Da[n]/100))
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
 #plt.plot(xs,vec[6,:],label='D=4')
@@ -414,7 +414,7 @@ for n in range(0,l):
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [4,0,2,1,3]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('fcompdf%s.pdf' %(date1+date2))
+plt.savefig('fcompdfnew%s.pdf' %(date1+date2))
 
 t=np.arange(-0.1,0.3,0.001)
 plt.figure()
@@ -433,4 +433,4 @@ plt.plot(xs,params[3,:],label='eq to burst')
 plt.plot(xs,2*params[1,:],label='2x burst to eq')
 plt.plot(xs,2*params[3,:],label='2x eq to burst')
 plt.legend()
-plt.savefig('barriercompdf%s.pdf' %(date1+date2))
+plt.savefig('barriercompdfnew%s.pdf' %(date1+date2))

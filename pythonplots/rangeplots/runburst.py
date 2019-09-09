@@ -8,7 +8,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-file=open('/home/richard/NetBeansProjects/realbursting/countI2.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/realbursting/countI2.txt',"r")
 x,y=[],[]
 for k in file:
 	row=k.split()
@@ -24,7 +24,7 @@ ay=np.array(y)
 plt.figure()
 plt.xlabel('time')
 plt.ylabel('membrane voltage')
-#plt.xlim(50,70)
+plt.xlim(200000,250000)
 plt.plot(ax,ay)
 #plt.plot(ax,az)
 #plt.plot(ax,aa)

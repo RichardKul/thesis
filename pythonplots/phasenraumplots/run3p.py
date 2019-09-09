@@ -8,7 +8,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-file=open('/home/richard/NetBeansProjects/inapik/inapi0d0.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/inapik/inapreali20nb.txt',"r")
 x,y=[],[]
 for k in file:
 	row=k.split()
@@ -18,8 +18,8 @@ ax=np.array(x)
 ay=np.array(y)
 
 plt.figure()
-plt.xlabel('membrane voltage V')
+plt.xlabel('membrane voltage V [mV]')
 plt.ylabel('gating variable n')
 #plt.gcf().subplots_adjust(left=0.15)
 plt.plot(ax,ay)
-plt.savefig('inapburst.pdf')
+plt.savefig('inapreali20nb.pdf')

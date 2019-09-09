@@ -104,11 +104,13 @@ for n in range(l1+lvar,l1+lvar+l0):
 	plt.plot(colxa0,vec[n,:],label='D=%s' %D0[n-lvar-l1])
 for n in range(l1+lvar+l0,ltot):
 	plt.plot(colxa,vec[n,:],label='D=%s' %D[n-lvar-l1-l0])
+plt.plot([0.163, 0.163], [5*10**(-4), 50], color='black', linestyle='-')
+plt.plot([-0.02, -0.02], [5*10**(-4), 50], color='black', linestyle='-')
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [0,2,3,1,4]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.legend()
-plt.savefig('dneur%s.pdf' %datefull)
+plt.savefig('dneurcrit%s.pdf' %datefull)
 
 vec=np.zeros((ltot,20))
 ii=0
@@ -192,6 +194,8 @@ for n in range(l1+lvar,l1+lvar+l0):
 	plt.plot(colxa0,vec[n,:],label='D=%s' %D0[n-lvar-l1])
 for n in range(l1+lvar+l0,ltot):
 	plt.plot(colxa,vec[n,:],label='D=%s' %D[n-lvar-l1-l0])
+plt.plot([0.163, 0.163], [10**(-2), 10**4], color='black', linestyle='-')
+plt.plot([-0.02, -0.02], [10**(-2), 10**4], color='black', linestyle='-')
 #plt.plot(xs,vec[3,:],label='D=1.5')
 #plt.plot(xs,vec[0,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
@@ -200,7 +204,7 @@ for n in range(l1+lvar+l0,ltot):
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [0,2,3,1,4]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('fneur%s.pdf' %datefull)
+plt.savefig('fneurcrit%s.pdf' %datefull)
 
 vec=np.zeros((ltot,20))
 ii=0
