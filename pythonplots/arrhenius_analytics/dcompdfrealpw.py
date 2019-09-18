@@ -28,6 +28,8 @@ def deffana(r0p,r0m,ap,am,bp,bm,t,D,av,v0):
 	return ((barrier(av,v0,t))**2*r(r0p,ap,bp,t,D)*r(r0m,am,bm,t,D))/((r(r0p,ap,bp,t,D)+r(r0m,am,bm,t,D))**3)
 def deffqana(r0p,r0m,ap,am,bp,bm,cp,cm,t,D,av,v0):
 	return ((barrier(av,v0,t))**2*qr(r0p,ap,bp,cp,t,D)*qr(r0m,am,bm,cm,t,D))/((qr(r0p,ap,bp,cp,t,D)+qr(r0m,am,bm,cm,t,D))**3)
+def fanoqana(r0p,r0m,ap,am,bp,bm,cp,cm,t,D,av,v0):
+	return deffqana(r0p,r0m,ap,am,bp,bm,cp,cm,t,D,av,v0)/vqana(r0p,r0m,ap,am,bp,bm,cp,cm,t,D,av,v0)
 def fanoana(r0p,r0m,ap,am,bp,bm,t,D,av,v0):
 	return (2*barrier(av,v0,t)*r(r0p,ap,bp,t,D))/((r(r0p,ap,bp,t,D)+r(r0m,am,bm,t,D))**2)
 def vana(r0p,r0m,ap,am,bp,bm,t,D,av,v0):
@@ -37,18 +39,18 @@ def vqana(r0p,r0m,ap,am,bp,bm,cp,cm,t,D,av,v0):
 
 
 D1=[35]
-D3=[40,50]
+D3=[25]
 D2=[45]
 Dvar=[30]
 D=D1+D2+D3+Dvar
-Da=np.array(D)
+Da1=np.array(D)
 l1=len(D1)
 l2=len(D2)
 l3=len(D3)
 lvar=len(Dvar)
 l=l1+l2+l3+lvar
 date1='realfast11jjem2sh'
-date3='realfast11jjem2st'
+date3='realfast13aem2n4'
 date2='realfast19jjem2st'
 datevar=['realfast11jjem2','realfast11jjem2sh','realfast11jjem2']
 yvar=[4,13,3]
@@ -58,8 +60,8 @@ istart=1
 ivalues=20
 epsilon = 0.00001
 
-btoeq=np.zeros((l,ivalues))
-eqtob=np.zeros((l,ivalues))
+btoeq=np.zeros((5,ivalues))
+eqtob=np.zeros((5,ivalues))
 params=np.zeros((4,ivalues))
 paramsav=np.zeros((4,ivalues))
 params2=np.zeros(4)
@@ -71,14 +73,15 @@ for k2 in range(0,ivalues):
 		row=k4.split()
 		x.append(float(row[0]))
 	ax=np.array(x)
-	for k in range(0,l):
+	for k in range(0,5):
 		btoeq[k][k2]=1/ax[k]
 		eqtob[k][k2]=1/ax[k+l]
 
+Da=np.array([35,45,40,50,30])
 av=0.013
 v0=0.0637
-xs=np.zeros(l)
-for b in range(0,l):
+xs=np.zeros(5)
+for b in range(0,5):
 	xs[b]=100/Da[b]
 for k2 in range(0,ivalues):
 	popt,pcov = curve_fit(func, xs, btoeq[:,k2])
@@ -131,8 +134,6 @@ for k4 in paramfile:
 	row=k4.split()
 	xx.append(float(row[0]))
 axx=np.array(xx)
-
-
 
 ii=0
 
@@ -212,8 +213,8 @@ for x in Dvar:
 xs=np.arange(-5+istart1,-5+istart1+ivalues1)*0.02
 pv=np.arange(0,ivalues)
 
-plt.xlabel('bias current I')
-plt.ylabel('$D_{eff}$')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('$D_{eff}$ $[10^3s^{-1}]$')
 #plt.xlim(0,3.5)
 #plt.ylim(5*10**(-2),2*10**3)
 plt.yscale('log')
@@ -225,17 +226,17 @@ bm=ax[4]
 r0p=rbte
 r0m=retb
 
-colorv=['y','g','b','r','c']
-t=np.arange(-0.1,0.3,0.01)
-#for n in range(0,l):
-#	plt.plot(t,deffqana(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Da[n]/100,av,v0),colorv[n])
+colorv=['b','r','g','y','c']
+t=np.arange(-0.08,0.32,0.02)
 for n in range(0,l):
-	plt.plot(t,deffana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,av,v0),colorv[n])
+	plt.plot(t,deffqana(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Da1[n]/100,av,v0),colorv[n])
+#for n in range(0,l):
+#	plt.plot(t,deffana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,av,v0),colorv[n])
 #for n in range(0,l):
 #	plt.plot(t,deffana(axx[2],axx[5],axx[0],axx[3],axx[1],axx[4],t,Da[n]/100,av,v0),colorv[n])
 #plt.plot(xsh,veco[0,:],label='D=1.2')
 for n in range(0,l):
-	plt.plot(xs,vec[n,:],colorv[n]+'o',label='D=%f' %(Da[n]/100))
+	plt.plot(xs,vec[n,:],colorv[n]+'o',label='D=%f' %(Da1[n]/100))
 #for n in range(0,l):
 #	plt.plot((pv-4)*0.02,deff((pv-4)*0.02,btoeq[n][pv],eqtob[n][pv],v0,av),colorv[n])
 #plt.plot(xs,vec[4,:],label='D=2')
@@ -244,9 +245,9 @@ for n in range(0,l):
 
 
 handles, labels = plt.gca().get_legend_handles_labels()
-order = [4,0,2,1,3]
+order = [2,3,0,1]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('dcompdfnew%s.pdf' %(date1+date2))
+plt.savefig('dcompdfqnew%s.pdf' %(date1+date2))
 
 #iii=0
 #dv=5
@@ -340,11 +341,11 @@ for x in Dvar:
 	ii=ii+1
 
 plt.figure()
-plt.xlabel('bias current I')
-plt.ylabel('firing rate')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('firing rate r [$10^3s^{-1}$]')
 #plt.yscale('log')
 
-colorv=['y','g','b','r','c']
+colorv=['b','r','g','y','c']
 t=np.arange(-0.1,0.3,0.01)
 #for n in range(0,l):
 #	plt.plot(t,vana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,v),colorv[n])
@@ -352,15 +353,15 @@ t=np.arange(-0.1,0.3,0.01)
 #for n in range(0,l):
 #	plt.plot(t,vana(axx[2],axx[5],axx[0],axx[3],axx[1],axx[4],t,Da[n]/100,av,v0),colorv[n])
 for n in range(0,l):
-	plt.plot(t,vqana(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Da[n]/100,av,v0),colorv[n])
+	plt.plot(t,vqana(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Da1[n]/100,av,v0),colorv[n])
 for n in range(0,l):
-	plt.plot(xs,g[n,:],colorv[n]+'o',label='D=%f' %(Da[n]/100))
+	plt.plot(xs,g[n,:],colorv[n]+'o',label='D=%f' %(Da1[n]/100))
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
 #plt.plot(xs,vec[6,:],label='D=4')
 
 handles, labels = plt.gca().get_legend_handles_labels()
-order = [4,0,2,1,3]
+order = [2,3,0,1]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.savefig('gcompdfqnew%s.pdf' %(date1+date2))
 
@@ -431,12 +432,14 @@ for x in Dvar:
 	ii=ii+1
 
 #pv=np.arange(0,20)
-#plt.figure()
-#plt.xlabel('bias current I')
-#plt.ylabel('Fano factor')
-#plt.yscale('log')
-#colorv=['y','g','b','r','c']
-#t=np.arange(-0.1,0.3,0.01)
+plt.figure()
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('Fano factor')
+plt.yscale('log')
+colorv=['b','r','g','y','c']
+t=np.arange(-0.1,0.3,0.01)
+for n in range(0,l):
+	plt.plot(t,fanoqana(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Da1[n]/100,av,v0),colorv[n])
 #for n in range(0,l):
 #	plt.plot(t,fanoana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,v),colorv[n])
 #for n in range(0,l):
@@ -444,15 +447,15 @@ for x in Dvar:
 #plt.plot(xsh,veco[0,:],label='D=1.2')
 #for n in range(0,l):
 #	plt.plot((pv-4)*0.02,fano((pv-4)*0.02,btoeq[n][pv],eqtob[n][pv],v0,av),colorv[n])
-#for n in range(0,l):
-#	plt.plot(xs,fano[n,:],colorv[n]+'o',label='D=%f' %(Da[n]/100))
+for n in range(0,l):
+	plt.plot(xs,fano[n,:],colorv[n]+'o',label='D=%f' %(Da1[n]/100))
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
 #plt.plot(xs,vec[6,:],label='D=4')
-#handles, labels = plt.gca().get_legend_handles_labels()
-#order = [4,0,2,1,3]
-#plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-#plt.savefig('fcompdfpwnew%s.pdf' %(date1+date2))
+handles, labels = plt.gca().get_legend_handles_labels()
+order = [2,3,0,1]
+plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
+plt.savefig('fcompdfqnew%s.pdf' %(date1+date2))
 
 t=np.arange(-0.1,0.3,0.001)
 plt.figure()

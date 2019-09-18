@@ -22,10 +22,12 @@ az=40*np.array(z)-65
 aa=-np.array(a)/40
 
 plt.figure()
+plt.suptitle('I=0.2$\mu A/cm^2$')
+#plt.suptitle('I=0')
 plt.xlabel('time [s]')
 plt.ylabel('membrane voltage [mV]')
-#plt.xlim(6350,7500)
-plt.plot(ax/1000,ay)
+#plt.xlim(3.75,4.25)
+plt.plot(ax/1000,ay,'black')
 #plt.plot(ax,az)
 #plt.plot(ax,aa)
-plt.savefig('realstate155.pdf')
+plt.savefig('realstate155black.pdf')

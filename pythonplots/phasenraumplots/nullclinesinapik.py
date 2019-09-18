@@ -43,7 +43,7 @@ plt.figure()
 for a in [a1,a2,a3,a4]:
     plt.gca().add_patch(a)
 
-plt.xlabel('membrane voltage V')
+plt.xlabel('membrane voltage V [mV]')
 plt.ylabel('gating variable n')
 plt.plot(t,vnc(t,I,vm,km,gL,EL,gNa,ENa,gK,EK),label='v-nullcline')
 plt.plot(t,finf(t,vn,kn),label='n-nullcline')

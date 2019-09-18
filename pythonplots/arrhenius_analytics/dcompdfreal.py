@@ -18,6 +18,8 @@ def r(r0,a,b,t,D):
 	return r0*np.exp(-barrier(a,b,t)/D)
 def deff(x,rp,rm,v0,av):
 	return ((v0+av*x)**2*rp*rm)/((rp+rm)**3)
+def v(x,rp,rm,v0,av):
+	return ((v0+av*x)*rm)/(rp+rm)
 def func(x, a, b):
 	return a * np.exp(-b * x)
 def deffana(r0p,r0m,ap,am,bp,bm,t,D,av,v0):
@@ -26,7 +28,8 @@ def fanoana(r0p,r0m,ap,am,bp,bm,t,D,av,v0):
 	return (2*barrier(av,v0,t)*r(r0p,ap,bp,t,D))/((r(r0p,ap,bp,t,D)+r(r0m,am,bm,t,D))**2)
 def vana(r0p,r0m,ap,am,bp,bm,t,D,av,v0):
 	return barrier(av,v0,t)*r(r0m,am,bm,t,D)/(r(r0p,ap,bp,t,D)+r(r0m,am,bm,t,D))
-
+def fanofun(x,rp,rm,v0,av):
+	return 2*deff(x,rp,rm,v0,av)/v(x,rp,rm,v0,av)
 
 D1=[35]
 D3=[40,50]
@@ -124,7 +127,18 @@ for k4 in paramfile:
 	xx.append(float(row[0]))
 axx=np.array(xx)
 
-
+file=open('/home/richard/mastergit/NetBeansProjects/detmodel/countI9a.txt',"r")
+col,colx=[],[]
+for k in file:
+    row=k.split()
+    col.append(float(row[1]))
+cola=np.array(col)
+N=50000000
+dt=0.0005
+T=N*dt
+vvec=np.zeros(ivalues)
+for ll in range(0,ivalues):
+	vvec[ll]=cola[2*ll+12]/T
 
 ii=0
 
@@ -227,7 +241,7 @@ t=np.arange(-0.1,0.3,0.01)
 for n in range(0,l):
 	plt.plot(xs,vec[n,:],colorv[n]+'o',label='D=%.2f' %(Da[n]/100))
 for n in range(0,l):
-	plt.plot((pv-4)*0.02,deff((pv-4)*0.02,btoeq[n][pv],eqtob[n][pv],v0,av),colorv[n])
+	plt.plot((pv-4)*0.02,deff((pv-4)*0.02,btoeq[n][pv],eqtob[n][pv],vvec[pv],0),colorv[n])
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
 #plt.plot(xs,vec[6,:],label='D=4')
@@ -314,7 +328,7 @@ t=np.arange(-0.1,0.3,0.01)
 #	plt.plot(t,vana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,v),colorv[n])
 #plt.plot(xsh,veco[0,:],label='D=1.2')
 for n in range(0,l):
-	plt.plot(t,vana(axx[2],axx[5],axx[0],axx[3],axx[1],axx[4],t,Da[n]/100,av,v0),colorv[n])
+	plt.plot((pv-4)*0.02,v((pv-4)*0.02,btoeq[n][pv],eqtob[n][pv],vvec[pv],0),colorv[n])
 for n in range(0,l):
 	plt.plot(xs,g[n,:],colorv[n]+'o',label='D=%.2f' %(Da[n]/100))
 #plt.plot(xs,vec[4,:],label='D=2')
@@ -324,7 +338,7 @@ for n in range(0,l):
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [4,0,2,1,3]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('gcompdfnew%s.pdf' %(date1+date2))
+plt.savefig('gcompdfpwnew%s.pdf' %(date1+date2))
 
 
 fano=np.zeros((l,ivalues1))
@@ -402,7 +416,7 @@ t=np.arange(-0.1,0.3,0.01)
 #for n in range(0,l):
 #	plt.plot(t,fanoana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,v),colorv[n])
 for n in range(0,l):
-	plt.plot(t,fanoana(axx[2],axx[5],axx[0],axx[3],axx[1],axx[4],t,Da[n]/100,av,v0),colorv[n])
+	plt.plot((pv-4)*0.02,fanofun((pv-4)*0.02,btoeq[n][pv],eqtob[n][pv],vvec[pv],0),colorv[n])
 #plt.plot(xsh,veco[0,:],label='D=1.2')
 for n in range(0,l):
 	plt.plot(xs,fano[n,:],colorv[n]+'o',label='D=%.2f' %(Da[n]/100))
@@ -414,23 +428,23 @@ for n in range(0,l):
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [4,0,2,1,3]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('fcompdfnew%s.pdf' %(date1+date2))
+plt.savefig('fcompdfpwnew%s.pdf' %(date1+date2))
 
 t=np.arange(-0.1,0.3,0.001)
 plt.figure()
-plt.xlabel('bias current')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('potential barrier')
-plt.plot(t,barrier(t,params2[0],params2[1]),'y')
-plt.plot(t,barrier(t,params2[2],params2[3]),'y')
-plt.plot(t,2*barrier(t,params2[0],params2[1]),'y')
-plt.plot(t,2*barrier(t,params2[2],params2[3]),'y')
-plt.plot(t,qbarrier(t,paramsq[0],paramsq[1],paramsq[2]),'y')
-plt.plot(t,qbarrier(t,paramsq[3],paramsq[4],paramsq[5]),'y')
-plt.plot(t,2*qbarrier(t,paramsq[0],paramsq[1],paramsq[2]),'y')
-plt.plot(t,2*qbarrier(t,paramsq[3],paramsq[4],paramsq[5]),'y')
-plt.plot(xs,params[1,:],label='burst to eq')
-plt.plot(xs,params[3,:],label='eq to burst')
-plt.plot(xs,2*params[1,:],label='2x burst to eq')
-plt.plot(xs,2*params[3,:],label='2x eq to burst')
+#plt.plot(t,barrier(t,params2[0],params2[1]),'y')
+#plt.plot(t,barrier(t,params2[2],params2[3]),'y')
+#plt.plot(t,2*barrier(t,params2[0],params2[1]),'y')
+#plt.plot(t,2*barrier(t,params2[2],params2[3]),'y')
+plt.plot(t,qbarrier(t,paramsq[0],paramsq[1],paramsq[2]),colorv[0])
+plt.plot(t,qbarrier(t,paramsq[3],paramsq[4],paramsq[5]),colorv[1])
+plt.plot(t,2*qbarrier(t,paramsq[0],paramsq[1],paramsq[2]),colorv[2])
+plt.plot(t,2*qbarrier(t,paramsq[3],paramsq[4],paramsq[5]),colorv[3])
+plt.plot(xs,params[1,:],colorv[0]+'o',label='burst to eq')
+plt.plot(xs,params[3,:],colorv[1]+'o',label='eq to burst')
+plt.plot(xs,2*params[1,:],colorv[2]+'o',label='2x burst to eq')
+plt.plot(xs,2*params[3,:],colorv[3]+'o',label='2x eq to burst')
 plt.legend()
 plt.savefig('barriercompdfnew%s.pdf' %(date1+date2))

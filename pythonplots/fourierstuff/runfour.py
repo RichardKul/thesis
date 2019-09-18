@@ -17,16 +17,16 @@ omega=0.000005
 runs=50
 points=1000000
 length=500000
-N=400000000
+N=200000000
 repetitions=200
 dt=0.0005
 T=N*repetitions*dt
 T2=T*10
-D=50
+D=45
 S=np.zeros(length)
 #omegaind=round(omega*T)
-for z in range(13,18):
-	file=open('/home/richard/outhome/spikerealfast28aem2n4%d%d.txt' %(D,z),"r")
+for z in range(1,21):
+	file=open('/home/richard/outhome/spikerealfast9aem2sh%d%d.txt' %(D,z),"r")
 	x,y=[],[]
 	for k in file:
 		row=k.split()
@@ -69,8 +69,9 @@ for z in range(13,18):
 	ax3=np.arange(0,length)
 #omega=np.arange(0,length)*2*np.pi/T
 	plt.figure()
-	plt.xlabel('frequency')
-	plt.ylabel('power spectrum')	
+	plt.suptitle('I=%.2f, D=%.2f' %(-0.1+z*0.02,D*0.01))
+	plt.xlabel('Frequency $[10^3s^{-1}]$')
+	plt.ylabel('Spectral power')	
 	plt.yscale('log')
 	plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
@@ -78,6 +79,6 @@ for z in range(13,18):
 	plt.plot(ax3/T,ay2/T,label='Simulation')
 #plt.plot(ax2,spectrum(ax2,1/(4.748*10**(-3)),13),label='theory')
 #plt.plot(omega,background/T,'kx')
-	plt.legend()
+	#plt.legend()
 #plt.plot(sax2,say2/T2,label='e6')
-	plt.savefig('inapikrealfrange28aspD=%.2fI=%.2f.pdf' %(D*0.01,-0.1+z*0.02))	
+	plt.savefig('inapikrealfrange9aspD=%.2fI=%.2f.pdf' %(D*0.01,-0.1+z*0.02))	

@@ -8,21 +8,21 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-v=open('/home/richard/outhome/phasevneu4.txt',"r")
+v=open('/home/richard/cppworkshop/phasevneushort0.1.txt',"r")
 vv=[]
 for k in v:
  num = float(k.rstrip())
  vv.append(num)
 av=np.array(vv)
 vl=len(av)
-n=open('/home/richard/outhome/phasenneu4.txt',"r")
+n=open('/home/richard/cppworkshop/phasenneushort0.1.txt',"r")
 vn=[]
 for k2 in n:
  num = float(k2.rstrip())
  vn.append(num)
 an=np.array(vn)
 nl=len(an)
-z=open('/home/richard/outhome/phasezneu4.txt',"r")
+z=open('/home/richard/cppworkshop/phasezneushort0.1.txt',"r")
 vz=np.zeros((nl,vl))
 v=0
 for k3 in z:
@@ -31,21 +31,39 @@ for k3 in z:
  for f in range(0,vl):
   vz[v][f]=rowza[f]
  v=v+1
-t=np.arange(-70,-17,0.1)
-vnc=(4-8*(t+80)-20*(t-60)/(1+np.exp((-20-t)/15)))/(9*(t+90))
-nnc=1/(1+np.exp((-25-t)/5))
-b=1.65+0.0261*t
+
+def finf(x,v12,k):
+	return 1/(1+np.exp((v12-x)/k))
+def vnc(x,I,v12,k,gL,EL,gNa,ENa,gK,EK):
+	return (I-gL*(x-EL)-gNa*finf(x,v12,k)*(x-ENa))/(gK*(x-EK)) 
+
+I=0.1
+gL=0.3
+EL=-80
+gNa=1
+ENa=60
+gK=0.4
+EK=-90
+km=14 
+vm=-18
+kn=5 
+vn=-25
+tau=3 
+#b=1.65+0.0261*t
 #s=0.76*np.sin((t+56)*np.pi/80)
+t=np.arange(av[0],av[-1]+0.01,0.01)
 
 plt.figure()
 plt.contourf(av,an,vz)
 plt.colorbar()
-plt.plot(t,vnc,label='v-nullcline')
-plt.plot(t,nnc,label='n-nullcline')
-plt.plot(t,b,label='barrier')
+plt.plot(t,vnc(t,I,vm,km,gL,EL,gNa,ENa,gK,EK),label='v-nullcline')
+plt.plot(t,finf(t,vn,kn),label='n-nullcline')
+#plt.plot(t,b,label='barrier')
 #plt.plot(t,s,label='barrier2')
-plt.plot(-62.5701,0.00054509, 'bo')
+#plt.plot(-62.5701,0.00054509, 'bo')
+#plt.ylim(-0.1,an[-1])
 plt.suptitle('spike count per starting point')
-plt.xlabel('initial membrane voltage')
-plt.ylabel('initial gating variable')
-plt.savefig('contourneu4neuwn.pdf')
+plt.xlabel('initial membrane voltage $V_0$')
+plt.ylabel('initial gating variable $n_0$')
+plt.legend()
+plt.savefig('contourtime01wnvs.pdf')

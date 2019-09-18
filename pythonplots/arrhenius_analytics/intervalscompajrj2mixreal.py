@@ -27,10 +27,10 @@ l2=len(D2)
 l3=len(D3)
 lvar=len(Dvar)
 l=l1+l2+l3+lvar
-date1='realfast11jjem2sh'
-date2='realfast19jjem2st'
-date3='realfast11jjem2st'
-datevar=['realfast11jjem2','realfast11jjem2sh','realfast11jjem2']
+date1='new'+'realfast11jjem2sh'
+date2='new'+'realfast19jjem2st'
+date3='new'+'realfast11jjem2st'
+datevar=['new'+'realfast11jjem2','new'+'realfast11jjem2sh','new'+'realfast11jjem2']
 istart=1
 ivalues=20
 params2=np.zeros(6)
@@ -416,8 +416,9 @@ if l > 1:
 		xs=np.zeros(l)
 		for xf in range(0,l):
 			xs[xf]=100/D[xf]
+		plt.suptitle('I=%.2f$\mu A/cm^2$' %(-0.1+0.02*k2))
 		plt.xlabel('inverse noise intensity 1/D')
-		plt.ylabel('transition rate')
+		plt.ylabel('transition rate w $[10^3s^{-1}]$')
 		plt.yscale('log')
 		plt.plot(xs,1/btottime[:,k2],'bo',label='burst to eq')
 #plt.plot(xs,breltime[1,:],label='D=3,burst')

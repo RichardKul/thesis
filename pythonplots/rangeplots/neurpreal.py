@@ -9,20 +9,20 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 datevar=['realfast11jjem2','realfast11jjem2sh','realfast11jjem2']
-Dvar=[30]
+Dvar=np.array([30])
 lvar=len(Dvar)
 yvar=[4,13,3]
 yvalues=len(yvar)
 
-date1='realfast19jjem2st'
 date0='realfast11jjem2sh'
-date='realfast11jjem2st'
-datefull=date0+date+date1
-D1=[45]
+date='realfast19jjem2st'
+date1='realfast13aem2n4'
+D=np.array([45])
+D1=np.array([25])
+datefull=date+date1+date0
 l1=len(D1)
-D0=[35]
+D0=np.array([35])
 l0=len(D0)
-D=[40,50]
 l=len(D)
 ltot=l0+l+lvar+l1
 vec=np.zeros((ltot,20))
@@ -89,28 +89,28 @@ for x in D:
 		vec[ii][z]=cola[z]
 	ii=ii+1
 
-
+colorv=['y','g','b','r','c']
 #xs=np.arange(-0.75,4.25,0.25)
 #xs=np.arange(0.25,2,0.25)
-plt.xlabel('bias current I')
-plt.ylabel('$D_{eff}$')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('$D_{eff}$ $[10^3s^{-1}]$')
 plt.yscale('log')
 #plt.xscale('log')
 for n in range(0,lvar):
-	plt.plot(colxavar,vec[n,:],label='D=%s' %Dvar[n])
+	plt.plot(colxavar,vec[n,:],colorv[n],label='D=%.2f' %(Dvar[n]/100))
 for n in range(lvar,l1+lvar):
-	plt.plot(colxa1,vec[n,:],label='D=%s' %D1[n-lvar])
+	plt.plot(colxa1,vec[n,:],colorv[n],label='D=%.2f' %(D1[n-lvar]/100))
 for n in range(l1+lvar,l1+lvar+l0):
-	plt.plot(colxa0,vec[n,:],label='D=%s' %D0[n-lvar-l1])
+	plt.plot(colxa0,vec[n,:],colorv[n],label='D=%.2f' %(D0[n-lvar-l1]/100))
 for n in range(l1+lvar+l0,ltot):
-	plt.plot(colxa,vec[n,:],label='D=%s' %D[n-lvar-l1-l0])
-plt.plot([0.163, 0.163], [5*10**(-4), 50], color='black', linestyle='-')
-plt.plot([-0.02, -0.02], [5*10**(-4), 50], color='black', linestyle='-')
-handles, labels = plt.gca().get_legend_handles_labels()
-order = [0,2,3,1,4]
-plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
+	plt.plot(colxa,vec[n,:],colorv[n],label='D=%.2f' %(D[n-lvar-l1-l0]/100))
+plt.plot([0.165, 0.165], [5*10**(-4), 50], color='black', linestyle='-')
+plt.plot([-0.022, -0.022], [5*10**(-4), 50], color='black', linestyle='-')
 #plt.legend()
-plt.savefig('dneurcrit%s.pdf' %datefull)
+handles, labels = plt.gca().get_legend_handles_labels()
+order = [1,0,2,3]
+plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
+plt.savefig('dneurcrit2sh%s.pdf' %datefull)
 
 vec=np.zeros((ltot,20))
 ii=0
@@ -182,29 +182,29 @@ for x in D:
 plt.figure()
 #xs=np.arange(-0.75,4.25,0.25)
 #xs=np.arange(0.25,2,0.25)
-plt.xlabel('bias current I')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('Fano factor')
 plt.yscale('log')
 #plt.xscale('log')
 for n in range(0,lvar):
-	plt.plot(colxavar,vec[n,:],label='D=%s' %Dvar[n])
+	plt.plot(colxavar,vec[n,:],colorv[n],label='D=%.2f' %(Dvar[n]/100))
 for n in range(lvar,l1+lvar):
-	plt.plot(colxa1,vec[n,:],label='D=%s' %D1[n-lvar])
+	plt.plot(colxa1,vec[n,:],colorv[n],label='D=%.2f' %(D1[n-lvar]/100))
 for n in range(l1+lvar,l1+lvar+l0):
-	plt.plot(colxa0,vec[n,:],label='D=%s' %D0[n-lvar-l1])
+	plt.plot(colxa0,vec[n,:],colorv[n],label='D=%.2f' %(D0[n-lvar-l1]/100))
 for n in range(l1+lvar+l0,ltot):
-	plt.plot(colxa,vec[n,:],label='D=%s' %D[n-lvar-l1-l0])
-plt.plot([0.163, 0.163], [10**(-2), 10**4], color='black', linestyle='-')
-plt.plot([-0.02, -0.02], [10**(-2), 10**4], color='black', linestyle='-')
+	plt.plot(colxa,vec[n,:],colorv[n],label='D=%.2f' %(D[n-lvar-l1-l0]/100))
+plt.plot([0.165, 0.165], [10**(-2), 10**4], color='black', linestyle='-')
+plt.plot([-0.022, -0.022], [10**(-2), 10**4], color='black', linestyle='-')
 #plt.plot(xs,vec[3,:],label='D=1.5')
 #plt.plot(xs,vec[0,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
 #plt.plot(colxa,cola,label='D=3e-3')
-
+#plt.legend()
 handles, labels = plt.gca().get_legend_handles_labels()
-order = [0,2,3,1,4]
+order = [1,0,2,3]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('fneurcrit%s.pdf' %datefull)
+plt.savefig('fneurcrit2sh%s.pdf' %datefull)
 
 vec=np.zeros((ltot,20))
 ii=0
@@ -273,6 +273,17 @@ for x in D:
 
 
 
+N=50000000
+dt=0.0005
+T=N*dt
+file=open('/home/richard/mastergit/NetBeansProjects/detmodel/countI9a.txt',"r")
+col=[]
+for k in file:
+	row=k.split()
+	col.append(float(row[1]))
+cola=np.array(col)
+xburst=np.arange(-0.20,0.31,0.01)
+
 plt.figure()
 #xs=np.arange(-0.75,4.25,0.25)
 #xs=np.arange(0.25,2,0.25)
@@ -280,22 +291,23 @@ plt.xlabel('bias current I')
 plt.ylabel('firing rate')
 #plt.yscale('log')
 #plt.xscale('log')
+plt.plot(xburst,cola/T,label='measured bursting rate',color='black')
 for n in range(0,lvar):
-	plt.plot(colxavar,vec[n,:],label='D=%s' %Dvar[n])
+	plt.plot(colxavar,vec[n,:],colorv[n],label='D=%.2f' %(Dvar[n]/100))
 for n in range(lvar,l1+lvar):
-	plt.plot(colxa1,vec[n,:],label='D=%s' %D1[n-lvar])
+	plt.plot(colxa1,vec[n,:],colorv[n],label='D=%.2f' %(D1[n-lvar]/100))
 for n in range(l1+lvar,l1+lvar+l0):
-	plt.plot(colxa0,vec[n,:],label='D=%s' %D0[n-lvar-l1])
+	plt.plot(colxa0,vec[n,:],colorv[n],label='D=%.2f' %(D0[n-lvar-l1]/100))
 for n in range(l1+lvar+l0,ltot):
-	plt.plot(colxa,vec[n,:],label='D=%s' %D[n-lvar-l1-l0])
+	plt.plot(colxa,vec[n,:],colorv[n],label='D=%.2f' %(D[n-lvar-l1-l0]/100))
 #plt.plot(xs,vec[3,:],label='D=1.5')
 #plt.plot(xs,vec[0,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
 #plt.plot(colxa,cola,label='D=3e-3')
-
+#plt.legend()
 handles, labels = plt.gca().get_legend_handles_labels()
-order = [0,2,3,1,4]
+order = [2,1,3,4,0]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('gneur%s.pdf' %datefull)
+plt.savefig('gneursh%s.pdf' %datefull)
 
 

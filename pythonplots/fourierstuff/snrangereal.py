@@ -134,7 +134,7 @@ for c1 in D1:
 
 #omega=np.arange(0,length)*2*np.pi/T
 plt.figure()
-plt.xlabel('bias current')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('SNR')
 
 t=np.arange(-0.1,0.3,0.01)
@@ -146,8 +146,8 @@ plt.yscale('log')
 colorv=['y','g','b','r','c']
 for n in range(0,l):
 	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n],label='D=%.2f' %(Dtot[n]*0.01))
-for n in range(0,l):	
-	plt.plot(t,snr(r0p,r0m,ap,am,bp,bm,t,Dtot[n]*0.01),colorv[n]+'o')
+#for n in range(0,l):	
+#	plt.plot(t,snr(r0p,r0m,ap,am,bp,bm,t,Dtot[n]*0.01),colorv[n]+'o')
 #plt.plot(xs,SNR[2,:],label='D=3')
 #plt.plot(xs,SNR[1,:],label='D=2.5')
 #handles, labels = plt.gca().get_legend_handles_labels()
@@ -155,4 +155,4 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snrautoreal13a25snr.pdf')
+plt.savefig('snronly.pdf')

@@ -253,19 +253,35 @@ Carrying out the phase plane analysis, one finds:
 This means that $P_1$ is a stable node, $P_2$ is a saddle point and $P_3$ is an unstable focus. Thus, in the bursting state, the phase vector will rotate around $P_3$, approach $P_2$ in $n$ - direction and then go away from $P_2$ in $V$ - direction in order to do another rotation around $P_3$.\\
 However, this applies only to the case of small bias currents. When $I\approx 0.36$, the saddle and the node fall together and the system undergoes a saddle-node bifurcation. In this case, the resting state vanishes and the neuron is in a state of tonic spiking.
 \subsection{Phenomenology}
-The qualitative behavior of the neural model can be best understood by first considering the noiseless system. Depending on the choice of initial conditions, the system will start in either the resting or the running state and stay in it for all times.
-\newpage
+The qualitative behavior of the neural model can be best understood by first considering the noiseless system. Depending on the choice of initial conditions, the system will start in either the resting or the running state and will not change its behavior anymore after a short period of equilibration, as can be seen in figure \ref{subfig}. 
 \begin{figure}[H]
-	\subfigure[]{\includegraphics[scale=0.4]{inapreali20nb.pdf}} 
-	\subfigure[]{	\includegraphics[scale=0.4]{inapreali20.pdf}}\\	\subfigure[]{\includegraphics[scale=0.4]{inapreali20nbv.pdf}} 
+	\subfigure[]{\includegraphics[scale=0.4]{inapreali20nbwn.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.4]{inapreali20wn.pdf}}\\	\subfigure[]{\includegraphics[scale=0.4]{inapreali20nbv.pdf}} 
 	\subfigure[]{	\includegraphics[scale=0.4]{inapreali20v.pdf}}
 	\caption{Evolution of the phase vector (first row) and the membrane voltage over time (second row).
-		The left side shows the evolution of the system with resting ICs, and on the right one can see the behavior under bursting ICs.}
+		The left side shows the evolution of the system with resting ICs, and on the right one can see the behavior under spiking ICs.}
 	\label{subfig} 
 \end{figure}
+Analytically, it is hardly possible to determine whether a specific starting point ($V_0$,$n_0$) leads to repetitive spiking or no spiking at all. The only thing one can say for sure is that the line that separates both domains will go through the saddle point that was found in the phase plane analysis. Assuming that the gating variable does not change, any trajectory starting at higher voltages will lead to spiking while all trajectories at lower voltage converge to the stable node. A numerical investigation of the model without noise confirms our presumptions (figure \ref{twodom}).
+\begin{figure}[H]
+	\hspace*{-0.5cm}
+	\subfigure[]{	\includegraphics[scale=0.5]{contourneu01wnshort.pdf}}
+	\subfigure[]{\includegraphics[scale=0.5]{contourtime01wn.pdf}}
 
-		
-
+	\caption{Phase plane image of the neuron model with $I=0.1$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right picture, the equilibration times for both states were measured. The times to reach the stable node were multiplied with $-1$ so that a distinction between the states is possible. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
+	\label{twodom}
+\end{figure}		
+There are two distinct regions which can be separated by a monotonically increasing curve that passes through the saddle point. In figure \ref{twodom}b one can see a small intermediate area of large equilibration times. If the system parameters lie in the vicinity of this transition area, a small perturbation suffices to bring the system into either state. Remarkably, most of this area is made up by starting points leading to the stable equilibrium while only a small streak consists of bursting initial conditions. Consequently, the running state is reached much faster than the resting state.
+\\
+When noise is brought into the system, the findings for the noiseless system still apply to a great extent. Starting in one of the two domains, the system will most likely first converge to the corresponding state, and the time it takes for that will be about the same as before. However, the system will not stay in this state forever, but constantly perform noise-driven transitions between the states. Thus, it will not be possible anymore to assign an end state to each set of initial conditions. Obviously, both transition rates, meaning from running to resting and in the opposite direction, will grow when the noise intensity $D$ increases. \\
+In addition to that, depending on the overall configuration, the system is usually biased towards one of the states. It is to be expected that at low bias current $I$, the resting state dominates and the running state is favored at high $I$. Considering the simulations (figure\ref{currentnoise}), this turns out to be a valid hypothesis: At $I=-0.1$, the neuron almost immediately returns to the resting state once it has gotten into the running state. Furthermore, at $I=0$, the periods of stay in both states are almost equal, and at $I=0.15$, the system is in the running state for the majority of time.
+\begin{figure}[H]
+ 	\subfigure[]{\includegraphics[scale=0.4]{realstate125.pdf}} 
+ 	\subfigure[]{	\includegraphics[scale=0.4]{realstate135.pdf}}\\	\subfigure[]{\includegraphics[scale=0.4]{realstate15.pdf}} 
+ 	\subfigure[]{	\includegraphics[scale=0.4]{realstate125vsh.pdf}}
+ 	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$}
+ 	\label{currentnoise} 
+ \end{figure}
 
 \bibliography{quellen}
 \bibliographystyle{ieeetr}

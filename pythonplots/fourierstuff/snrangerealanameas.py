@@ -60,7 +60,7 @@ r0m = 0.012
 
 date='realfast13aem2n4'
 date1='realfast9aem2sh'
-D=[30]
+D=[25,30]
 D1=[35,45]
 Dtot=D+D1
 l=len(D)+len(D1)
@@ -142,16 +142,17 @@ for c1 in D1:
 
 
 
-
+D0=[25]
 D3=[35]
 D2=[45]
 Dvar=[30]
-D=Dvar+D3+D2
+D=D0+Dvar+D3+D2
 Da=np.array(D)
+l0=len(D0)
 l2=len(D2)
 l3=len(D3)
 lvar=len(Dvar)
-l=l2+l3+lvar
+l=l2+l3+lvar+l0
 date3='realfast11jjem2sh'
 date2='realfast19jjem2st'
 datevar=['realfast11jjem2','realfast11jjem2sh','realfast11jjem2']
@@ -161,10 +162,27 @@ yvalues=len(yvar)
 
 ii=0
 
+istart0=1
+ivalues0=20
 istart2=1
 ivalues2=20
+vec=np.zeros((l,ivalues))
 
-vec=np.zeros((l,ivalues2))
+for x in D0:
+	col0,colx0=[],[]	
+	for y in range(istart0,istart0+ivalues0):
+		file=open('/home/richard/outhome/d%s%d%d.txt' % (date,x,y),"r")
+		for k in file:
+			row=k.split()
+			colx0.append(float(row[0]))
+			col0.append(float(row[1]))
+	colxa0=np.array(colx0)
+	cola0=np.array(col0)
+	for z in range(0,ivalues0):
+		vec[ii][z]=cola0[z]
+	ii=ii+1
+
+
 for x in Dvar:
 	colvar,colxvar=[],[]
 	for kk in range(0,yvalues):
@@ -219,8 +237,25 @@ for x in D2:
 istep=0.02
 
 ii=0
-gvec=np.zeros((l,ivalues2))
-drdr=np.zeros((l,ivalues2-2))
+gvec=np.zeros((l,ivalues))
+drdr=np.zeros((l,ivalues-2))
+
+for x in D0:
+	col0,colx0=[],[]	
+	for y in range(istart0,istart0+ivalues0):
+		file=open('/home/richard/outhome/g%s%d%d.txt' % (date,x,y),"r")
+		for k in file:
+			row=k.split()
+			colx0.append(float(row[0]))
+			col0.append(float(row[1]))
+	colxa0=np.array(colx0)
+	cola0=np.array(col0)
+	for z in range(0,ivalues0):
+		gvec[ii][z]=cola0[z]
+	for z in range(0,18):
+		drdr[ii][z]=(cola0[z+2]-cola0[z])/(2*istep)
+	ii=ii+1
+
 for x in Dvar:
 	colvar,colxvar=[],[]
 	for kk in range(0,yvalues):
@@ -284,7 +319,7 @@ plt.yscale('log')
 for n in range(0,l):
 	plt.plot(xsh,drdr[n,:],label='D=%s' %Dtot[n])
 plt.legend()
-plt.savefig('drdineur.pdf')
+plt.savefig('drdineurall.pdf')
 #files=open('/home/richard/NetBeansProjects/oup/xtraje6newwcav2.txt',"r")
 #sx,sy=[],[]
 #for ks in files:
@@ -322,7 +357,7 @@ plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
-colorv=['c','y','g']
+colorv=['g','y','b','r']
 for n in range(0,l):
 	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.01))
 for n in range(0,l):	
@@ -336,4 +371,4 @@ plt.plot([-0.02, -0.02], [2*10**(-5), 6*10**(-2)], color='black', linestyle='-',
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snrangerealanameassp.pdf')
+plt.savefig('snrangerealanameasspall.pdf')

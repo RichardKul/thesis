@@ -1,0 +1,9 @@
+\babel@toc {german}{}
+\contentsline {section}{\numberline {1}Modell}{1}
+\contentsline {subsection}{\numberline {1.1}Isoklinen}{1}
+\contentsline {subsection}{\numberline {1.2}Ph\IeC {\"a}nomenologie des deterministischen Systems}{2}
+\contentsline {subsection}{\numberline {1.3}Verhalten unter Rauschen}{2}
+\contentsline {section}{\numberline {2}Z\IeC {\"a}hlstatistik}{4}
+\contentsline {subsection}{\numberline {2.1}\IeC {\"U}bergangsraten}{5}
+\contentsline {subsubsection}{\numberline {2.1.1}Extraktion der Potentialbarrieren}{5}
+\contentsline {subsection}{\numberline {2.2}Spektrum und SNR}{8}

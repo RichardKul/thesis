@@ -30,9 +30,9 @@ for k in file:
 cola=np.array(col)
 
 D1=[35]
-D3=[40,50]
+D3=[25,30]
 D2=[45]
-Dvar=[30]
+Dvar=[]
 D=D1+D2+D3+Dvar
 Da=np.array(D)
 l1=len(D1)
@@ -41,7 +41,7 @@ l3=len(D3)
 lvar=len(Dvar)
 l=l1+l2+l3+lvar
 date1='realfast11jjem2sh'
-date3='realfast11jjem2st'
+date3='realfast13aem2n4'
 date2='realfast19jjem2st'
 datevar=['realfast11jjem2','realfast11jjem2sh','realfast11jjem2']
 yvar=[4,13,3]
@@ -139,26 +139,26 @@ for kk in range(0,l):
 	av[kk]=popt[2]
 	bv[kk]=popt[3]
 
-eqfile2 = open('rateparamsv27a.txt','w')
+eqfile2 = open('rateparamsv11s.txt','w')
 for k4 in range(0,l): 
 	eqfile2.write('%.6f %.6f %.6f %.6f \n'%(avn[k4],v0n[k4],av[k4],bv[k4])) 
 eqfile2.close() 
 
 plt.figure()
-plt.xlabel('bias current I')
-plt.ylabel('firing rate')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('firing rate r $[10^3s^{-1}]$')
 #plt.yscale('log')
 
-colorv=['y','g','b','r','c']
+colorv=['b','r','g','y','c']
 t=np.arange(-0.1,0.31,0.01)
-xburst=np.arange(-0.19,0.31,0.01)
+xburst=np.arange(-0.20,0.31,0.01)
+#for n in range(0,l):
+#	plt.plot(t,r(t,avn[n],v0n[n],av[n],bv[n]),colorv[n])
 for n in range(0,l):
-	plt.plot(t,r(t,avn[n],v0n[n],av[n],bv[n]),colorv[n])
-for n in range(0,l):
-	plt.plot(xg[n,:],g[n,:],colorv[n]+'o',label='D=%.2f' %(Da[n]/100))
+	plt.plot(xg[n,:],g[n,:],colorv[n],label='D=%.2f' %(Da[n]/100))
 plt.plot(xburst,cola/T,label='measured bursting rate',color='black')
 plt.xlim(-0.1,0.3)
 handles, labels = plt.gca().get_legend_handles_labels()
-order = [4,0,2,1,3,5]
+order = [2,3,0,1,4]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('ganaburst%s.pdf' %(date1+date2))
+plt.savefig('ganaburst13s%s.pdf' %(date1+date2))
