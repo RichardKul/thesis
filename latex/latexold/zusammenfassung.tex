@@ -103,6 +103,22 @@ Durch die geringe Anzahl an Wechseln zwischen den Zuständen ist die Kurve für 
 \\
 \subsection{Übergangsraten}
 Neben der Anzahl an Spikes kann man noch andere Grö"sen messen, zum Beispiel die Übergangsraten zwischen den beiden Zuständen. Das System befindet sich im ruhenden Zustand, wenn es in beliebiger Reihenfolge $n$- und $V$- Wert des stabilen Knotens überquert hat. Im laufenden Zustand ist es, wenn es gerade einen Spike erzeugt hat, also zunächst den $V$- Wert des instabilen Fokus und danach dessen $n$- Wert passiert hat. Indem man die Zeitpunkte dieser Wechsel festhält, kann man dann die Übergangsraten bestimmen. Demnach gibt es für jeden Wert des Bias-Stromes $I$ Übergangsraten für mehrere Werte von $D$. Für diese biete sich die Darstellung in einem Arrhenius-Plot an.
+\subsubsection{Interburst-Intervalle}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{eqdistajrj2newrealfast11jjem2sh352.pdf}\caption{Verteilung der Interburst-Intervalle bei $D=0.35$ und $I=-0.06$}
+	\label{hist35bad}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{eqdistajrj2newrealfast11jjem2sh359.pdf}\caption{Verteilung der Interburst-Intervalle bei $D=0.35$ und $I=0.08$}
+	\label{hist35}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{eqdistajrj2newrealfast11jjem2st509.pdf}\caption{Verteilung der Interburst-Intervalle bei $D=0.5$ und $I=0.08$}
+	\label{hist50}
+\end{figure}
 \subsubsection{Extraktion der Potentialbarrieren}
 F"ur die "Ubergangsraten wird eine Arrhenius-Gleichung angenommen:
 \begin{align*}
@@ -201,4 +217,59 @@ Auch hier bietet es sich daher an, den Verlauf für noch kleinere Werte von $D$ 
 	\label{snrpred}
 \end{figure}
 Mit abnehmendem Rauschen wird das Verhalten des SNR immer monotoner: bei kleinen Strömen geht es gegen 0, und bei hohen Strömen steigt es exponentiell. Der Schnittpunkt aller Kurven verschiebt sich nach links und stimmt am Ende mit dem Schnittpunkt der Diffusionskoeffizienten überein.
+\section{Andere bistabile Modelle}
+Hodgkin-Huxley-Modell mit additivem Rauschen
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{realstatehhkurz.pdf}\caption{Verlauf der Spannungsvariablen im Hodgkin-Huxley Modell}
+	\label{hhvolt}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{detmocounthh.pdf}\caption{Verhalten der mittleren Feuerrate im H-H-Modell}
+	\label{hhcount}
+\end{figure}
+FHN-artiges Modell des H-H-Modells nach Rinzel
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{realstaterinzel.pdf}\caption{Spannungsvariable im vereinfachten H-H}
+	\label{rinzelvolt}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{detmocountrinzel.pdf}\caption{Verhalten der mittleren Feuerrate im vereinfachten H-H}
+	\label{rinzelcount}
+\end{figure}
+\subsection{Zählstatistik}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{drinzel.pdf}\caption{Verhalten des Diffusionskoeffizienten im vereinfachten H-H}
+	\label{drinzel}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{frinzel.pdf}\caption{Verhalten des Fano-Faktors im vereinfachten H-H}
+	\label{frinzel}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{grinzel.pdf}\caption{Verhalten der Feuerrate im vereinfachten H-H}
+	\label{grinzel}
+\end{figure}
+\subsection{Zwei-Zustands-Theorie}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{arrheniustotrealrinzel25onewrealfast19jjem2stfit0.pdf}\caption{Übergangsraten bei kleinem Strom im vereinfachten H-H}
+	\label{arrhrinzel1}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{arrheniustotrealrinzel25onewrealfast19jjem2stfit5.pdf}\caption{Übergangsraten bei mittlerem Strom im vereinfachten H-H}
+	\label{arrhrinzel2}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{arrheniustotrealrinzel25onewrealfast19jjem2stfit9.pdf}\caption{Übergangsraten bei hohem Strom im vereinfachten H-H}
+	\label{arrhrinzel3}
+\end{figure}
 \end{document}

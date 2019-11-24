@@ -20,12 +20,12 @@
 using namespace std;
 
 double ninf(double V, double k, double Vh);
-double init(double x[],int n); 
+void init(double x[],int n); 
 
 int main(int argc, char** argv) {
     
     ofstream myfile;
-    myfile.open ("countInew.txt");
+    myfile.open ("countInew2.txt");
     
     double I0=0; // 0
     double gL=0.3; // 8
@@ -52,7 +52,7 @@ int main(int argc, char** argv) {
     nfs=0.2;
     int j,f;
     double dt,dt0;
-    dt0=0.00001; 
+    dt0=0.00005; 
     init(count,runs);
 for(int a=0;a<runs;a++){
     dt=dt0*(a+1);
@@ -79,7 +79,7 @@ double ninf(double V, double k, double Vh){
     return f;
 }
 
-double init(double x[],int n){
+void init(double x[],int n){
     int k;
     for(k=0;k<n;k++){
         x[k]=0;

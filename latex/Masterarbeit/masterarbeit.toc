@@ -15,3 +15,7 @@
 \contentsline {subsubsection}{\numberline {3.4.1}Nullclines}{10}
 \contentsline {subsubsection}{\numberline {3.4.2}Jacobian matrix of the system}{11}
 \contentsline {subsection}{\numberline {3.5}Phenomenology}{12}
+\contentsline {section}{\numberline {4}Simulations}{15}
+\contentsline {subsection}{\numberline {4.1}Numerics}{15}
+\contentsline {subsection}{\numberline {4.2}Count statistics}{16}
+\contentsline {subsection}{\numberline {4.3}Transition rates}{18}

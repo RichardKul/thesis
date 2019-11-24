@@ -1,0 +1,18 @@
+# Rinzel  model
+p gL=0.3,VL=10,gNa=120,VNa=115,gK=36,VK=12,phi=3.82,Iapp=-6,h0=0.596,n0=0.318,S=1.27
+an(V)=(10-V)/(100*(exp((10-V)/10)-1))
+am(V)=(25-V)/(10*(exp((25-V)/10)-1))
+ah(V)=7*exp(-V/20)/100
+bn(V)=exp(-V/80)/8
+bm(V)=4*exp(-V/18)
+bh(V)=1/(exp((30-V)/10)+1)
+minf(V)=am(V)/(am(V)+bm(V))
+hinf(V)=ah(V)/(ah(V)+bh(V))
+ninf(V)=an(V)/(an(V)+bn(V))
+tau(V)=5*exp(-(((V+10)/55)^2))+1
+winf(V)=S*(ninf(V)+S*(1-hinf(V)))/(1+S^2)
+V'=Iapp-gK*((W/S)^4)*(V-VK)-gNa*((minf(V))^3)*abs(1-W)*(V-VNa)-gL*(V-VL)
+W'=phi*(winf(V)-W)/tau(V)
+init V=-20,W=0.4
+d
+

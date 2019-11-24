@@ -16,7 +16,7 @@ nr=[9]
 l=len(nr)
 points=1000000
 length=500000
-dvalues=50
+dvalues=70
 SNR=np.zeros((l,dvalues))
 D=np.zeros(	(l,dvalues))
 scale=np.zeros((l,dvalues))
@@ -74,7 +74,7 @@ for c in nr:
 	#ii=ii+1
 
 for c in nr:
-	for z in range(1,11):
+	for z in range(1,31):
 		file=open('/home/richard/outhome/ft%s%d%d.txt' %(date2,z,c),"r")
 		x,y=[],[]
 		for k in file:
@@ -150,4 +150,4 @@ for n in range(0,l):
 plt.legend()
 plt.tight_layout()
 #plt.plot(sax2,say2/T2,label='e6')
-plt.savefig('snrautoabglong%s.pdf' %date)
+plt.savefig('snrautoabglong2%s.pdf' %date)

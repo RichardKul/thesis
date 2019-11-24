@@ -24,23 +24,24 @@ bm = 3.15
 am = -10.76
 r0m = 0.012
 
-date='realfast13aem2n4'
-date1='realfast9aem2sh'
-D=[25,30]
-D1=[35,45]
+date='realrinzel15ninv0'
+date1='realrinzel15ninv1'
+D=[200,300,500]
+D1=[200,300,500]
 Dtot=D+D1
 l=len(D)+len(D1)
 
 points=1000000
 length=500000
-ivalues=20
+istart=2
+ivalues=8
 SNR=np.zeros((l,ivalues))
 scale=np.zeros((l,ivalues))
 ii=0
 
 for c in D:
-	for z in range(1,21):
-		file=open('/home/richard/outhome/ft%s%d%d.txt' %(date,c,z),"r")
+	for z in range(istart,istart+ivalues):
+		file=open('/home/richard/outhome/spike%s%d%d.txt' %(date,c,z),"r")
 		x,y=[],[]
 		for k in file:
 			row=k.split()
@@ -67,14 +68,14 @@ for c in D:
 		epsilon=value[name.index('epsilon')]
 		omega=value[name.index('omega')]
 		T=N*repetitions*dt
-		scale[ii][z-1]=epsilon**2*T
+		scale[ii][z-istart]=epsilon**2*T
 		omegaind=round(omega*T)		
-		SNR[ii][z-1]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
+		SNR[ii][z-istart]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
 	ii=ii+1
 
 for c1 in D1:
-	for z in range(1,21):
-		file=open('/home/richard/outhome/ft%s%d%d.txt' %(date1,c1,z),"r")
+	for z in range(istart,istart+ivalues):
+		file=open('/home/richard/outhome/spike%s%d%d.txt' %(date1,c1,z),"r")
 		x,y=[],[]
 		for k in file:
 			row=k.split()
@@ -101,9 +102,9 @@ for c1 in D1:
 		epsilon=value[name.index('epsilon')]
 		omega=value[name.index('omega')]
 		T=N*repetitions*dt
-		scale[ii][z-1]=epsilon**2*T
+		scale[ii][z-istart]=epsilon**2*T
 		omegaind=round(omega*T)		
-		SNR[ii][z-1]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
+		SNR[ii][z-istart]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
 	ii=ii+1
 
 
@@ -138,14 +139,16 @@ plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('SNR')
 
 t=np.arange(-0.1,0.3,0.01)
-xs=np.arange(-0.08,0.32,0.02)
+xs=np.arange(-15.4,-9,0.8)
 plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
 colorv=['y','g','b','r','c']
-for n in range(0,l):
-	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n],label='D=%.2f' %(Dtot[n]*0.01))
+for n in range(0,3):
+	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],label='D=%.2f, rest' %(Dtot[n]*0.1))
+for n in range(3,l):
+	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],label='D=%.2f, run' %(Dtot[n]*0.1))
 #for n in range(0,l):	
 #	plt.plot(t,snr(r0p,r0m,ap,am,bp,bm,t,Dtot[n]*0.01),colorv[n]+'o')
 #plt.plot(xs,SNR[2,:],label='D=3')
@@ -155,4 +158,4 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snronly.pdf')
+plt.savefig('snronlyrinzel.pdf')

@@ -104,11 +104,11 @@ for n in range(l1+lvar,l1+lvar+l0):
 	plt.plot(colxa0,vec[n,:],colorv[n],label='D=%.2f' %(D0[n-lvar-l1]/100))
 for n in range(l1+lvar+l0,ltot):
 	plt.plot(colxa,vec[n,:],colorv[n],label='D=%.2f' %(D[n-lvar-l1-l0]/100))
-plt.plot([0.165, 0.165], [5*10**(-4), 50], color='black', linestyle='-')
+plt.plot([0.165, 0.165], [5*10**(-4), 50], color='black', linestyle='-',label='$I_{crit}$')
 plt.plot([-0.022, -0.022], [5*10**(-4), 50], color='black', linestyle='-')
 #plt.legend()
 handles, labels = plt.gca().get_legend_handles_labels()
-order = [1,0,2,3]
+order = [1,0,2,3,4]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.savefig('dneurcrit2sh%s.pdf' %datefull)
 
@@ -194,7 +194,7 @@ for n in range(l1+lvar,l1+lvar+l0):
 	plt.plot(colxa0,vec[n,:],colorv[n],label='D=%.2f' %(D0[n-lvar-l1]/100))
 for n in range(l1+lvar+l0,ltot):
 	plt.plot(colxa,vec[n,:],colorv[n],label='D=%.2f' %(D[n-lvar-l1-l0]/100))
-plt.plot([0.165, 0.165], [10**(-2), 10**4], color='black', linestyle='-')
+plt.plot([0.165, 0.165], [10**(-2), 10**4], color='black', linestyle='-', label='$I_{crit}$')
 plt.plot([-0.022, -0.022], [10**(-2), 10**4], color='black', linestyle='-')
 #plt.plot(xs,vec[3,:],label='D=1.5')
 #plt.plot(xs,vec[0,:],label='D=2')
@@ -202,7 +202,7 @@ plt.plot([-0.022, -0.022], [10**(-2), 10**4], color='black', linestyle='-')
 #plt.plot(colxa,cola,label='D=3e-3')
 #plt.legend()
 handles, labels = plt.gca().get_legend_handles_labels()
-order = [1,0,2,3]
+order = [1,0,2,3,4]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.savefig('fneurcrit2sh%s.pdf' %datefull)
 
@@ -291,7 +291,7 @@ plt.xlabel('bias current I')
 plt.ylabel('firing rate')
 #plt.yscale('log')
 #plt.xscale('log')
-plt.plot(xburst,cola/T,label='measured bursting rate',color='black')
+#plt.plot(xburst,cola/T,label='measured bursting rate',color='black')
 for n in range(0,lvar):
 	plt.plot(colxavar,vec[n,:],colorv[n],label='D=%.2f' %(Dvar[n]/100))
 for n in range(lvar,l1+lvar):
@@ -306,7 +306,7 @@ for n in range(l1+lvar+l0,ltot):
 #plt.plot(colxa,cola,label='D=3e-3')
 #plt.legend()
 handles, labels = plt.gca().get_legend_handles_labels()
-order = [2,1,3,4,0]
+order = [1,0,2,3]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.savefig('gneursh%s.pdf' %datefull)
 

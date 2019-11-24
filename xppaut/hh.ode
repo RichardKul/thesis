@@ -1,0 +1,15 @@
+# I Na,p +I K  model
+p gL=0.3,VL=10,gNa=120,VNa=115,gK=36,VK=-12,mu=7
+an(V)=(10-V)/(100*(exp((10-V)/10)-1))
+am(V)=(25-V)/(10*(exp((25-V)/10)-1))
+ah(V)=7*exp(-V/20)/100
+bn(V)=exp(-V/80)/8
+bm(V)=4*exp(-V/18)
+bh(V)=1/(exp((30-V)/10)+1)
+V'=mu+gK*(n^4)*(VK-V)+gNa*(m^3)*h*(VNa-V)+gL*(VL-V)
+n'=an(V)*(1-n)-bn(V)*n
+m'=am(V)*(1-m)-bm(V)*m
+h'=ah(V)*(1-h)-bh(V)*h
+init V=0,n=0.35,m=0.06,h=0.6
+d
+

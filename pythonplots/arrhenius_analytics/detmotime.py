@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 def comp(x,a,b):
 	return a*x+b
 
-file=open('/home/richard/NetBeansProjects/detmodelreal/countInew.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/detmodelreal/countInew2.txt',"r")
 col,colx=[],[]
 for k in file:
 	row=k.split()
@@ -33,6 +33,6 @@ plt.xscale('log')
 plt.plot(colxa,cola)
 #plt.plot(t,comp(t,a2,602)/500,label='linear appr')
 #plt.legend()
-plt.savefig('detmotimenew.pdf')
+plt.savefig('detmotimenew2.pdf')
 
 

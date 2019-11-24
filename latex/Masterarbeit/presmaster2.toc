@@ -1,0 +1,14 @@
+\babel@toc {ngerman}{}
+\beamer@sectionintoc {1}{Motivation}{2}{0}{1}
+\beamer@sectionintoc {2}{Brownsche Teilchen im gekippten Kosinuspotential}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Theorie}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Simulation}{7}{0}{2}
+\beamer@subsectionintoc {2}{3}{Auswertung}{9}{0}{2}
+\beamer@subsectionintoc {2}{4}{Reproduktion}{15}{0}{2}
+\beamer@subsectionintoc {2}{5}{Zwei-Zustands-System}{18}{0}{2}
+\beamer@sectionintoc {3}{Nervenmodell}{20}{0}{3}
+\beamer@subsectionintoc {3}{1}{Theorie}{22}{0}{3}
+\beamer@subsectionintoc {3}{2}{Bistabilit"at}{23}{0}{3}
+\beamer@subsectionintoc {3}{3}{Simulation}{25}{0}{3}
+\beamer@subsectionintoc {3}{4}{Signal"ubertragung}{35}{0}{3}
+\beamer@sectionintoc {4}{Zusammenfassung}{42}{0}{4}

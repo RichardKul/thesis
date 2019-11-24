@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.2.11)  15 SEP 2019 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.2.11)  11 NOV 2019 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -308,271 +308,537 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--41
 
  []
 
-<Isoklinen.pdf, id=8, 462.52798pt x 346.89601pt>
-File: Isoklinen.pdf Graphic file (type pdf)
-<use Isoklinen.pdf>
-Package pdftex.def Info: Isoklinen.pdf  used on input line 49.
-(pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<Startparam_lang.pdf, id=9, 462.52798pt x 346.89601pt>
-File: Startparam_lang.pdf Graphic file (type pdf)
-<use Startparam_lang.pdf>
-Package pdftex.def Info: Startparam_lang.pdf  used on input line 57.
-(pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<Startparam_kurz.pdf, id=10, 462.52798pt x 346.89601pt>
+
+LaTeX Warning: File `Isoklinen.pdf' not found on input line 49.
+
+
+! Package pdftex.def Error: File `Isoklinen.pdf' not found: using draft setting
+.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.49 	\includegraphics[scale=0.5]{Isoklinen.pdf}
+                                                \caption{Isoklinen des $I_{N...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `Startparam_lang.pdf' not found on input line 57.
+
+
+! Package pdftex.def Error: File `Startparam_lang.pdf' not found: using draft s
+etting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.57 ...egraphics[scale=0.5]{Startparam_lang.pdf}}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<Startparam_kurz.pdf, id=8, 462.52798pt x 346.89601pt>
 File: Startparam_kurz.pdf Graphic file (type pdf)
 <use Startparam_kurz.pdf>
 Package pdftex.def Info: Startparam_kurz.pdf  used on input line 58.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
+[1]
 
-Overfull \hbox (30.6479pt too wide) in paragraph at lines 56--59
-[]|  [] [] 
- []
+LaTeX Warning: File `V-t-diagramm.pdf' not found on input line 68.
 
-[1 <./Isoklinen.pdf>]
-<V-t-diagramm.pdf, id=60, 462.52798pt x 346.89601pt>
-File: V-t-diagramm.pdf Graphic file (type pdf)
-<use V-t-diagramm.pdf>
-Package pdftex.def Info: V-t-diagramm.pdf  used on input line 68.
-(pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<n-V-diagramm.pdf, id=61, 462.52798pt x 346.89601pt>
-File: n-V-diagramm.pdf Graphic file (type pdf)
-<use n-V-diagramm.pdf>
-Package pdftex.def Info: n-V-diagramm.pdf  used on input line 69.
-(pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \hbox (30.6479pt too wide) in paragraph at lines 67--70
-[]|  [] [] 
- []
+! Package pdftex.def Error: File `V-t-diagramm.pdf' not found: using draft sett
+ing.
 
-[2 <./Startparam_lang.pdf> <./Startparam_kurz.pdf
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 ...ludegraphics[scale=0.5]{V-t-diagramm.pdf}}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-pdfTeX warning: /usr/bin/pdflatex (file ./Startparam_kurz.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
->]
-<uebergaengeI=-0,1.pdf, id=149, 462.52798pt x 346.89601pt>
-File: uebergaengeI=-0,1.pdf Graphic file (type pdf)
-<use uebergaengeI=-0,1.pdf>
-Package pdftex.def Info: uebergaengeI=-0,1.pdf  used on input line 75.
-(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
-<uebergaengeI=0.pdf, id=150, 462.52798pt x 346.89601pt>
-File: uebergaengeI=0.pdf Graphic file (type pdf)
-<use uebergaengeI=0.pdf>
-Package pdftex.def Info: uebergaengeI=0.pdf  used on input line 76.
-(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
-<uebergaengeI=0,1.pdf, id=151, 462.52798pt x 346.89601pt>
+
+LaTeX Warning: File `n-V-diagramm.pdf' not found on input line 69.
+
+
+! Package pdftex.def Error: File `n-V-diagramm.pdf' not found: using draft sett
+ing.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.69 ...ludegraphics[scale=0.5]{n-V-diagramm.pdf}}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `uebergaengeI=-0,1.pdf' not found on input line 75.
+
+
+! Package pdftex.def Error: File `uebergaengeI=-0,1.pdf' not found: using draft
+ setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.75 ...raphics[scale=0.4]{uebergaengeI=-0,1.pdf}}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `uebergaengeI=0.pdf' not found on input line 76.
+
+
+! Package pdftex.def Error: File `uebergaengeI=0.pdf' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 ...degraphics[scale=0.4]{uebergaengeI=0.pdf}}
+                                                  \\	\subfigure[]{\includegr...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<uebergaengeI=0,1.pdf, id=18, 462.52798pt x 346.89601pt>
 File: uebergaengeI=0,1.pdf Graphic file (type pdf)
 <use uebergaengeI=0,1.pdf>
 Package pdftex.def Info: uebergaengeI=0,1.pdf  used on input line 76.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
-<uebergaengeI=0,2.pdf, id=152, 462.52798pt x 346.89601pt>
-File: uebergaengeI=0,2.pdf Graphic file (type pdf)
-<use uebergaengeI=0,2.pdf>
-Package pdftex.def Info: uebergaengeI=0,2.pdf  used on input line 77.
-(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
- [3 <./V-t-diagramm.pdf> <./n-V-diagramm.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./n-V-diagramm.pdf): PDF inclusion: mul
-tiple pdfs with page group included in a single page
-> <./uebergaengeI=-0,1.pdf
+LaTeX Warning: File `uebergaengeI=0,2.pdf' not found on input line 77.
 
-pdfTeX warning: /usr/bin/pdflatex (file ./uebergaengeI=-0,1.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
-> <./uebergaengeI=0.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./uebergaengeI=0.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
-> <./uebergaengeI=0,1.pdf
+! Package pdftex.def Error: File `uebergaengeI=0,2.pdf' not found: using draft 
+setting.
 
-pdfTeX warning: /usr/bin/pdflatex (file ./uebergaengeI=0,1.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
-> <./uebergaengeI=0,2.pdf
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.77 ...graphics[scale=0.4]{uebergaengeI=0,2.pdf}}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-pdfTeX warning: /usr/bin/pdflatex (file ./uebergaengeI=0,2.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
->]
-<deff.pdf, id=405, 462.52798pt x 346.89601pt>
+[2 <./Startparam_kurz.pdf>]
+<deff.pdf, id=65, 462.52798pt x 346.89601pt>
 File: deff.pdf Graphic file (type pdf)
 <use deff.pdf>
 Package pdftex.def Info: deff.pdf  used on input line 86.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<firingrate.pdf, id=406, 462.52798pt x 346.89601pt>
+<firingrate.pdf, id=66, 462.52798pt x 346.89601pt>
 File: firingrate.pdf Graphic file (type pdf)
 <use firingrate.pdf>
 Package pdftex.def Info: firingrate.pdf  used on input line 92.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<fano.pdf, id=407, 462.52798pt x 346.89601pt>
+ [3 <./uebergaengeI=0,1.pdf> <./deff.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./deff.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>]
+<fano.pdf, id=154, 462.52798pt x 346.89601pt>
 File: fano.pdf Graphic file (type pdf)
 <use fano.pdf>
 Package pdftex.def Info: fano.pdf  used on input line 98.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
- [4 <./deff.pdf> <./firingrate.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./firingrate.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
->]
 Underfull \hbox (badness 10000) in paragraph at lines 101--104
 
  []
 
-<ArrheniusI=0.pdf, id=500, 462.52798pt x 346.89601pt>
+<eqdistajrj2newrealfast11jjem2sh352.pdf, id=155, 462.52798pt x 346.89601pt>
+File: eqdistajrj2newrealfast11jjem2sh352.pdf Graphic file (type pdf)
+<use eqdistajrj2newrealfast11jjem2sh352.pdf>
+Package pdftex.def Info: eqdistajrj2newrealfast11jjem2sh352.pdf  used on input 
+line 109.
+(pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
+
+LaTeX Warning: File `eqdistajrj2newrealfast11jjem2sh359.pdf' not found on input
+ line 114.
+
+
+! Package pdftex.def Error: File `eqdistajrj2newrealfast11jjem2sh359.pdf' not f
+ound: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114 ...]{eqdistajrj2newrealfast11jjem2sh359.pdf}
+                                                  \caption{Verteilung der In...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[4 <./firingrate.pdf> <./fano.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./fano.pdf): PDF inclusion: multiple pd
+fs with page group included in a single page
+>]
+<eqdistajrj2newrealfast11jjem2st509.pdf, id=246, 462.52798pt x 346.89601pt>
+File: eqdistajrj2newrealfast11jjem2st509.pdf Graphic file (type pdf)
+<use eqdistajrj2newrealfast11jjem2st509.pdf>
+Package pdftex.def Info: eqdistajrj2newrealfast11jjem2st509.pdf  used on input 
+line 119.
+(pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
+<ArrheniusI=0.pdf, id=247, 462.52798pt x 346.89601pt>
 File: ArrheniusI=0.pdf Graphic file (type pdf)
 <use ArrheniusI=0.pdf>
-Package pdftex.def Info: ArrheniusI=0.pdf  used on input line 113.
+Package pdftex.def Info: ArrheniusI=0.pdf  used on input line 129.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
-<ArrheniusI=0,04.pdf, id=501, 462.52798pt x 346.89601pt>
+<ArrheniusI=0,04.pdf, id=248, 462.52798pt x 346.89601pt>
 File: ArrheniusI=0,04.pdf Graphic file (type pdf)
 <use ArrheniusI=0,04.pdf>
-Package pdftex.def Info: ArrheniusI=0,04.pdf  used on input line 114.
+Package pdftex.def Info: ArrheniusI=0,04.pdf  used on input line 130.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
-<ArrheniusI=0,1.pdf, id=502, 462.52798pt x 346.89601pt>
-File: ArrheniusI=0,1.pdf Graphic file (type pdf)
-<use ArrheniusI=0,1.pdf>
-Package pdftex.def Info: ArrheniusI=0,1.pdf  used on input line 114.
-(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
-<potbarriersfit.pdf, id=503, 462.52798pt x 346.89601pt>
-File: potbarriersfit.pdf Graphic file (type pdf)
-<use potbarriersfit.pdf>
-Package pdftex.def Info: potbarriersfit.pdf  used on input line 115.
-(pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
-[5 <./fano.pdf>]
-<deffnofit.pdf, id=552, 462.52798pt x 346.89601pt>
-File: deffnofit.pdf Graphic file (type pdf)
-<use deffnofit.pdf>
-Package pdftex.def Info: deffnofit.pdf  used on input line 135.
+
+
+LaTeX Warning: File `ArrheniusI=0,1.pdf' not found on input line 130.
+
+
+! Package pdftex.def Error: File `ArrheniusI=0,1.pdf' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.130 ...egraphics[scale=0.4]{ArrheniusI=0,1.pdf}}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `potbarriersfit.pdf' not found on input line 131.
+
+
+! Package pdftex.def Error: File `potbarriersfit.pdf' not found: using draft se
+tting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.131 ...egraphics[scale=0.4]{potbarriersfit.pdf}}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[5 <./eqdistajrj2newrealfast11jjem2sh352.pdf> <./eqdistajrj2newrealfast11jjem2s
+t509.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./eqdistajrj2newrealfast11jjem2st509.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+LaTeX Warning: File `deffnofit.pdf' not found on input line 151.
+
+
+! Package pdftex.def Error: File `deffnofit.pdf' not found: using draft setting
+.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.151 	\includegraphics[scale=0.5]{deffnofit.pdf}
+                                                 \caption{Vergleich der Diff...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<ratenofit.pdf, id=312, 462.52798pt x 346.89601pt>
+File: ratenofit.pdf Graphic file (type pdf)
+<use ratenofit.pdf>
+Package pdftex.def Info: ratenofit.pdf  used on input line 156.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
- [6 <./ArrheniusI=0.pdf> <./ArrheniusI=0,04.pdf
+[6 <./ArrheniusI=0.pdf> <./ArrheniusI=0,04.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./ArrheniusI=0,04.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
-> <./ArrheniusI=0,1.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./ArrheniusI=0,1.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
-> <./potbarriersfit.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./potbarriersfit.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
 >]
-<ratenofit.pdf, id=771, 462.52798pt x 346.89601pt>
-File: ratenofit.pdf Graphic file (type pdf)
-<use ratenofit.pdf>
-Package pdftex.def Info: ratenofit.pdf  used on input line 140.
-(pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<fanonofit.pdf, id=772, 462.52798pt x 346.89601pt>
-File: fanonofit.pdf Graphic file (type pdf)
-<use fanonofit.pdf>
-Package pdftex.def Info: fanonofit.pdf  used on input line 145.
-(pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<deffpred.pdf, id=773, 462.52798pt x 346.89601pt>
-File: deffpred.pdf Graphic file (type pdf)
-<use deffpred.pdf>
-Package pdftex.def Info: deffpred.pdf  used on input line 151.
-(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 151--151
- [][] 
- []
+LaTeX Warning: File `fanonofit.pdf' not found on input line 161.
 
-[7 <./deffnofit.pdf> <./ratenofit.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./ratenofit.pdf): PDF inclusion: multip
-le pdfs with page group included in a single page
-> <./fanonofit.pdf
+! Package pdftex.def Error: File `fanonofit.pdf' not found: using draft setting
+.
 
-pdfTeX warning: /usr/bin/pdflatex (file ./fanonofit.pdf): PDF inclusion: multip
-le pdfs with page group included in a single page
->]
-<spektrumD=0,45I=0,14.pdf, id=920, 462.52798pt x 346.89601pt>
-File: spektrumD=0,45I=0,14.pdf Graphic file (type pdf)
-<use spektrumD=0,45I=0,14.pdf>
-Package pdftex.def Info: spektrumD=0,45I=0,14.pdf  used on input line 159.
-(pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<spektrumD=0,45I=-0,04.pdf, id=921, 462.52798pt x 346.89601pt>
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.161 	\includegraphics[scale=0.5]{fanonofit.pdf}
+                                                 \caption{Vergleich Fano-Fak...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `deffpred.pdf' not found on input line 167.
+
+
+! Package pdftex.def Error: File `deffpred.pdf' not found: using draft setting.
+
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.167 	\includegraphics[scale=1]{deffpred.pdf}
+                                              \caption{Vorhersage des Diffus...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `spektrumD=0,45I=0,14.pdf' not found on input line 175.
+
+
+! Package pdftex.def Error: File `spektrumD=0,45I=0,14.pdf' not found: using dr
+aft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 ...ics[scale=0.5]{spektrumD=0,45I=0,14.pdf}}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<spektrumD=0,45I=-0,04.pdf, id=429, 462.52798pt x 346.89601pt>
 File: spektrumD=0,45I=-0,04.pdf Graphic file (type pdf)
 <use spektrumD=0,45I=-0,04.pdf>
-Package pdftex.def Info: spektrumD=0,45I=-0,04.pdf  used on input line 160.
+Package pdftex.def Info: spektrumD=0,45I=-0,04.pdf  used on input line 176.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
+[7 <./ratenofit.pdf>]
 
-Overfull \hbox (30.6479pt too wide) in paragraph at lines 158--161
-[]|  [] [] 
- []
+LaTeX Warning: File `snronly.pdf' not found on input line 183.
 
-[8 <./deffpred.pdf>]
-<snronly.pdf, id=975, 462.52798pt x 346.89601pt>
-File: snronly.pdf Graphic file (type pdf)
-<use snronly.pdf>
-Package pdftex.def Info: snronly.pdf  used on input line 167.
+
+! Package pdftex.def Error: File `snronly.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.183 	\includegraphics[scale=1]{snronly.pdf}
+                                             \caption{SNR für verschiedene ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `snrdeffrate.pdf' not found on input line 195.
+
+
+! Package pdftex.def Error: File `snrdeffrate.pdf' not found: using draft setti
+ng.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.195 	\includegraphics[scale=1]{snrdeffrate.pdf}
+                                                 \caption{Vergleich des SNR ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[8 <./spektrumD=0,45I=-0,04.pdf>]
+
+LaTeX Warning: File `snrtwostate.pdf' not found on input line 210.
+
+
+! Package pdftex.def Error: File `snrtwostate.pdf' not found: using draft setti
+ng.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.210 	\includegraphics[scale=1]{snrtwostate.pdf}
+                                                 \caption{Vergleich des SNR ...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+LaTeX Warning: File `SNRpred.pdf' not found on input line 216.
+
+
+! Package pdftex.def Error: File `SNRpred.pdf' not found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.216 	\includegraphics[scale=1]{SNRpred.pdf}
+                                             \caption{SNR für niedrige Wert...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+<realstatehhkurz.pdf, id=530, 462.52798pt x 346.89601pt>
+File: realstatehhkurz.pdf Graphic file (type pdf)
+<use realstatehhkurz.pdf>
+Package pdftex.def Info: realstatehhkurz.pdf  used on input line 224.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 167--167
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 224--224
  [][] 
  []
 
-[9 <./spektrumD=0,45I=0,14.pdf> <./spektrumD=0,45I=-0,04.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./spektrumD=0,45I=-0,04.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
-> <./snronly.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./snronly.pdf): PDF inclusion: multiple
- pdfs with page group included in a single page
->]
-<snrdeffrate.pdf, id=1106, 462.52798pt x 346.89601pt>
-File: snrdeffrate.pdf Graphic file (type pdf)
-<use snrdeffrate.pdf>
-Package pdftex.def Info: snrdeffrate.pdf  used on input line 179.
+[9]
+<detmocounthh.pdf, id=535, 462.52798pt x 346.89601pt>
+File: detmocounthh.pdf Graphic file (type pdf)
+<use detmocounthh.pdf>
+Package pdftex.def Info: detmocounthh.pdf  used on input line 229.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 179--179
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 229--229
  [][] 
  []
 
-<snrtwostate.pdf, id=1107, 462.52798pt x 346.89601pt>
-File: snrtwostate.pdf Graphic file (type pdf)
-<use snrtwostate.pdf>
-Package pdftex.def Info: snrtwostate.pdf  used on input line 194.
+[10 <./realstatehhkurz.pdf>]
+<realstaterinzel.pdf, id=580, 462.52798pt x 346.89601pt>
+File: realstaterinzel.pdf Graphic file (type pdf)
+<use realstaterinzel.pdf>
+Package pdftex.def Info: realstaterinzel.pdf  used on input line 235.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 194--194
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 235--235
  [][] 
  []
 
-[10 <./snrdeffrate.pdf>]
-<SNRpred.pdf, id=1156, 462.52798pt x 346.89601pt>
-File: SNRpred.pdf Graphic file (type pdf)
-<use SNRpred.pdf>
-Package pdftex.def Info: SNRpred.pdf  used on input line 200.
+<detmocountrinzel.pdf, id=581, 462.52798pt x 346.89601pt>
+File: detmocountrinzel.pdf Graphic file (type pdf)
+<use detmocountrinzel.pdf>
+Package pdftex.def Info: detmocountrinzel.pdf  used on input line 240.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 200--200
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 240--240
  [][] 
  []
 
-[11 <./SNRtwostate.pdf>] [12 <./SNRpred.pdf>] (./zusammenfassung.aux) ) 
+[11 <./detmocounthh.pdf>] [12 <./realstaterinzel.pdf>]
+<drinzel.pdf, id=661, 462.52798pt x 346.89601pt>
+File: drinzel.pdf Graphic file (type pdf)
+<use drinzel.pdf>
+Package pdftex.def Info: drinzel.pdf  used on input line 246.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 246--246
+ [][] 
+ []
+
+<frinzel.pdf, id=662, 462.52798pt x 346.89601pt>
+File: frinzel.pdf Graphic file (type pdf)
+<use frinzel.pdf>
+Package pdftex.def Info: frinzel.pdf  used on input line 251.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 251--251
+ [][] 
+ []
+
+[13 <./detmocountrinzel.pdf>]
+<grinzel.pdf, id=696, 462.52798pt x 346.89601pt>
+File: grinzel.pdf Graphic file (type pdf)
+<use grinzel.pdf>
+Package pdftex.def Info: grinzel.pdf  used on input line 256.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 256--256
+ [][] 
+ []
+
+[14 <./drinzel.pdf>] [15 <./frinzel.pdf>]
+<arrheniustotrealrinzel25onewrealfast19jjem2stfit0.pdf, id=791, 462.52798pt x 3
+46.89601pt>
+File: arrheniustotrealrinzel25onewrealfast19jjem2stfit0.pdf Graphic file (type 
+pdf)
+<use arrheniustotrealrinzel25onewrealfast19jjem2stfit0.pdf>
+Package pdftex.def Info: arrheniustotrealrinzel25onewrealfast19jjem2stfit0.pdf 
+ used on input line 262.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 262--262
+ [][] 
+ []
+
+<arrheniustotrealrinzel25onewrealfast19jjem2stfit5.pdf, id=792, 462.52798pt x 3
+46.89601pt>
+File: arrheniustotrealrinzel25onewrealfast19jjem2stfit5.pdf Graphic file (type 
+pdf)
+<use arrheniustotrealrinzel25onewrealfast19jjem2stfit5.pdf>
+Package pdftex.def Info: arrheniustotrealrinzel25onewrealfast19jjem2stfit5.pdf 
+ used on input line 267.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 267--267
+ [][] 
+ []
+
+[16 <./grinzel.pdf>]
+<arrheniustotrealrinzel25onewrealfast19jjem2stfit9.pdf, id=827, 462.52798pt x 3
+46.89601pt>
+File: arrheniustotrealrinzel25onewrealfast19jjem2stfit9.pdf Graphic file (type 
+pdf)
+<use arrheniustotrealrinzel25onewrealfast19jjem2stfit9.pdf>
+Package pdftex.def Info: arrheniustotrealrinzel25onewrealfast19jjem2stfit9.pdf 
+ used on input line 272.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 272--272
+ [][] 
+ []
+
+[17 <./arrheniustotrealrinzel25onewrealfast19jjem2stfit0.pdf>] [18 <./arrhenius
+totrealrinzel25onewrealfast19jjem2stfit5.pdf>] [19 <./arrheniustotrealrinzel25o
+newrealfast19jjem2stfit9.pdf>] (./zusammenfassung.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3518 strings out of 494534
- 49448 string characters out of 6175442
- 128165 words of memory out of 5000000
- 7090 multiletter control sequences out of 15000+600000
- 8568 words of font info for 31 fonts, out of 8000000 for 9000
+ 3526 strings out of 494534
+ 49973 string characters out of 6175442
+ 128234 words of memory out of 5000000
+ 7084 multiletter control sequences out of 15000+600000
+ 8737 words of font info for 32 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,11n,25p,728b,250s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on zusammenfassung.pdf (13 pages, 852311 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on zusammenfassung.pdf (20 pages, 582202 bytes).
 PDF statistics:
- 1304 PDF objects out of 1440 (max. 8388607)
- 309 compressed objects within 4 object streams
+ 1051 PDF objects out of 1200 (max. 8388607)
+ 271 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 106 words of extra memory for PDF output out of 10000 (max. 10000000)
 

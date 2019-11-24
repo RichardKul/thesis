@@ -268,21 +268,48 @@ Analytically, it is hardly possible to determine whether a specific starting poi
 	\subfigure[]{	\includegraphics[scale=0.5]{contourneu01wnshort.pdf}}
 	\subfigure[]{\includegraphics[scale=0.5]{contourtime01wn.pdf}}
 
-	\caption{Phase plane image of the neuron model with $I=0.1$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right picture, the equilibration times for both states were measured. The times to reach the stable node were multiplied with $-1$ so that a distinction between the states is possible. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
+	\caption{Phase plane image of the neuron model with $I=0.1$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right picture, the equilibration times for both states were measured. The times to reach the stable node were multiplied with $-1$ so that a distinction between the states would be possible. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
 	\label{twodom}
 \end{figure}		
 There are two distinct regions which can be separated by a monotonically increasing curve that passes through the saddle point. In figure \ref{twodom}b one can see a small intermediate area of large equilibration times. If the system parameters lie in the vicinity of this transition area, a small perturbation suffices to bring the system into either state. Remarkably, most of this area is made up by starting points leading to the stable equilibrium while only a small streak consists of bursting initial conditions. Consequently, the running state is reached much faster than the resting state.
 \\
 When noise is brought into the system, the findings for the noiseless system still apply to a great extent. Starting in one of the two domains, the system will most likely first converge to the corresponding state, and the time it takes for that will be about the same as before. However, the system will not stay in this state forever, but constantly perform noise-driven transitions between the states. Thus, it will not be possible anymore to assign an end state to each set of initial conditions. Obviously, both transition rates, meaning from running to resting and in the opposite direction, will grow when the noise intensity $D$ increases. \\
-In addition to that, depending on the overall configuration, the system is usually biased towards one of the states. It is to be expected that at low bias current $I$, the resting state dominates and the running state is favored at high $I$. Considering the simulations (figure\ref{currentnoise}), this turns out to be a valid hypothesis: At $I=-0.1$, the neuron almost immediately returns to the resting state once it has gotten into the running state. Furthermore, at $I=0$, the periods of stay in both states are almost equal, and at $I=0.15$, the system is in the running state for the majority of time.
+In addition to that, depending on the overall configuration, the system is usually biased towards one of the states. It is to be expected that at low bias current $I$, the resting state dominates and the running state is favored at high $I$. Considering the simulations (figure \ref{currentnoise}), this turns out to be a valid hypothesis: At $I=-0.1$, the neuron almost immediately returns to the resting state once it has gotten into the running state. At a slightly higher bias current of $I=0$, the periods of stay in both states are almost equal, and at $I=0.15$, the system is in the running state for the majority of time. The firing frequency in the running state lies at about 70 Hz.
 \begin{figure}[H]
  	\subfigure[]{\includegraphics[scale=0.4]{realstate125.pdf}} 
  	\subfigure[]{	\includegraphics[scale=0.4]{realstate135.pdf}}\\	\subfigure[]{\includegraphics[scale=0.4]{realstate15.pdf}} 
  	\subfigure[]{	\includegraphics[scale=0.4]{realstate125vsh.pdf}}
- 	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$}
+ 	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$. In figure (d), a segment with a higher time resolution is shown in order to better illustrate the evolution of the voltage variable.}
  	\label{currentnoise} 
  \end{figure}
+In conclusion, the behavior of this two-dimensional bursting model displays the same characteristics as the Brownian particle in a tilted potential. Therefore, we expect to find similar count statistics and Giant Diffusion for this system as well. This question will be examined in the following chapter.
 
+\section{Simulations}
+\subsection{Numerics}
+The behavior of the two-dimensional neuron model can be investigated by conducting simulations with the parameters described above and evaluating the data in a couple different ways. The simulations were done by letting the system evolve almost freely with the only external influence being the white gaussian noise with intensity $D$. \\
+In most of the computations, 500 neurons were simulated. Only for $D=0.25$, the number of neurons was set to 50 so that there would be a higher number of transitions in a single voltage curve. In all cases, the timestep was 0.5 $\mu$s. The total measurement time for a single neuron after an equilibration period between $2\cdot10^2$ s and $2\cdot10^3$s ranged from $10^3$ s for high noise intensities to $4\cdot 10^4$ s for the lowest noise intensities.
+\subsection{Count statistics}
+Firstly, the effective diffusion coefficient $D_{eff}$, the fano factor $F$ and the average firing rate $r$ could be obtained from the spike counts of the simulated neurons. \\
+As observed for the Brownian Particles, all curves intersect at two points which define the range of Giant Diffusion: between the intersection points, decreasing noise intensity leads to increasing diffusion and outside of the critical region, less noise leads to smaller diffusion. Thus, for $D=0.45$, the diffusion coefficient changes by approximately 3 orders of magnitude over the whole range of bias currents $I$ while the curve with $D=0.25$ already extends over 6 orders of magnitude. When halving the noise intensity roughly doubles the order of magnitudes in the measured diffusion coefficient, the effects of further reductions will be even greater. This makes it numerically very difficult to go beyond the values chosen in this plot.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{deffcrit.pdf}\caption{Effective diffusion coefficients for different noise intensities. The vertical lines mark the intersection points of the curves. The curve for $D=0.25$ displays some irregularities at negative currents because the number of changes between both states was not high enough to yield good statistics.}
+	\label{deff}
+\end{figure}
+Also the fano factor shows the same behavior as for the Brownian Particles: All curves only intersect at the higher critical value of the current. Currents higher than this critical value lead to a decrease of $F$ upon reduction of noise whereas at lower currents the fano factor increases. Although the curve with the highest noise intensity already spreads over 4 orders of magnitude, $F$ at $D=0.25$ spans only 6 orders of magnitude, similar to $D_{eff}$ at the same noise.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{fanocrit.pdf}\caption{Fano factors for different noise intensities. The vertical lines mark the critical value of $I$ determined from the curves of $D_{eff}$ (Figure \ref{deff})}
+	\label{fano}
+\end{figure}
+The mean firing rates start at zero, increase monotonically with the bias current and eventually approach the firing rate of the running state. This comes as no surprise considering that the neurons spend the majority of the time in the resting state at low bias currents and most of the time in the running state when $I$ is high. All curves intersect at about $I=0.08$, which roughly corresponds to the maxima of $D_{eff}$. This makes sense as the point where the system will be in either state with equal probabilities will also be the point where diffusion gets maximal.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{firingrate.pdf}\caption{Average firing rates for different noise intensities. The black curve denotes the firing rate in the running state which was obtained from a simulation of the system without noise.}
+	\label{rate}
+\end{figure}
+\subsection{Transition rates}
+While the spike count may be the most important quantity to determine, there are some other characteristics which should be investigated. An example for these are the transition rates between the states. Looking at the membrane voltage over time, both states can be clearly distinguished: in the running state, the voltage oscillates around a value of about -25 $V$
 \bibliography{quellen}
 \bibliographystyle{ieeetr}
 \include{other/declaration}

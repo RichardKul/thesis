@@ -254,7 +254,7 @@ plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
-colorv=['y','g','b','r','c']
+colorv=['y','g','b','r','c','m']
 for n in range(0,l):
 	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n],label='D=%.2f' %(Dtot[n]*0.01))
 for n in range(0,l):	
