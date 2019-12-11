@@ -12,5 +12,5 @@
 \contentsline {subsection}{\numberline {3.1}Z\IeC {\"a}hlstatistik}{18}
 \contentsline {subsection}{\numberline {3.2}Zwei-Zustands-Theorie}{21}
 \contentsline {subsection}{\numberline {3.3}Wahl der Anfangsbedingungen}{27}
-\contentsline {subsection}{\numberline {3.4}SNR}{30}
-\contentsline {subsubsection}{\numberline {3.4.1}Absch"atzung aus $D_{eff}$ und r}{30}
+\contentsline {subsection}{\numberline {3.4}SNR}{31}
+\contentsline {subsubsection}{\numberline {3.4.1}Absch"atzung aus $D_{eff}$ und r}{31}

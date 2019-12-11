@@ -285,7 +285,7 @@ for x in D2:
 plt.figure()
 xsh=colxa0[1:ivalues-1]
 plt.xlabel('bias current I')
-plt.ylabel('firing rate')
+plt.ylabel('derivative of the firing rate')
 plt.yscale('log')
 for n in range(0,l):
 	plt.plot(xsh,drdr[n,:],label='D=%s' %Dtot[n])
@@ -332,7 +332,7 @@ colorv=['y','g','b','r']
 #for n in range(0,l):
 #	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.01))
 for n in range(0,l):	
-	plt.plot(xsh,snrmeas(drdr[n,:],f)/vec[n,1:9],colorv[n])
+	plt.plot(xsh,snrmeas(drdr[n,:],f)/vec[n,1:9],colorv[n],label='D=%.2f' %(Dtot[n]/10))
 #plt.plot([0.163, 0.163], [2*10**(-5), 6*10**(-2)], color='black', linestyle='-')
 #plt.plot([-0.02, -0.02], [2*10**(-5), 6*10**(-2)], color='black', linestyle='-',label='$I_{crit}$')
 #plt.plot(xs,SNR[2,:],label='D=3')

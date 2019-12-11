@@ -140,8 +140,7 @@ vvec=np.zeros(ivalues)
 for ll in range(0,ivalues):
 	vvec[ll]=cola[round(2.5*ll)+14]/T
 
-date10='realrinzel25o'
-date20='realfast19jjem2st'
+
 
 ivalues=10
 
@@ -152,7 +151,7 @@ ueqtob=np.zeros(ivalues)
 
 for k2 in range(0,ivalues):
     x=[]
-    ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/param%s%d.txt' %(date10+'new'+date20,k2),'r')
+    ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/param%s%d.txt' %(date1+'new'+date2,k2),'r')
     for k4 in ratefile:
         row=k4.split()
         x.append(float(row[0]))
@@ -170,6 +169,9 @@ def vred(rp,up,rm,um,v,D):
 	return v*rred(rm,um,D)/(rred(rp,up,D)+rred(rm,um,D))
 def fanored(rp,up,rm,um,v,D):
 	return 2*deffred(rp,up,rm,um,v,D)/vred(rp,up,rm,um,v,D)
+
+date1='realrinzel25o'
+date2='realrinzel15ninv0'
 
 ii=0
 
@@ -192,8 +194,8 @@ for x in D1:
 		vec[ii][z]=cola1[z]
 	ii=ii+1
 
-istart2=1
-ivalues2=10
+istart2=2
+ivalues2=8
 
 for x in D2:
 	col2,colx2=[],[]	
@@ -255,7 +257,7 @@ plt.ylabel('$D_{eff}$ [$10^3s^{-1}$]')
 #plt.ylim(5*10**(-2),2*10**3)
 plt.yscale('log')
 
-colorv=['b','r','g','y','c']
+colorv=['y','g','b','r','c']
 #for n in range(0,l):
 #	plt.plot(t,deffana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,v),colorv[n])
 #for n in range(0,l):
@@ -347,7 +349,7 @@ plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('firing rate r [$10^3s^{-1}$]')
 #plt.yscale('log')
 
-colorv=['b','r','g','y','c']
+colorv=['y','g','b','r','c']
 #for n in range(0,l):
 #	plt.plot(t,vana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,v),colorv[n])
 #plt.plot(xsh,veco[0,:],label='D=1.2')
@@ -437,7 +439,7 @@ plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('Fano factor')
 plt.yscale('log')
 
-colorv=['b','r','g','y','c']
+colorv=['y','g','b','r','c']
 t=np.arange(-0.1,0.3,0.01)
 #for n in range(0,l):
 #	plt.plot(t,fanoana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,v),colorv[n])
@@ -457,21 +459,21 @@ for n in range(0,l):
 plt.legend()
 plt.savefig('fcompdfpwnew%s.pdf' %(date1+date2))
 
-t=np.arange(-17.2,-10,0.01)
-plt.figure()
-plt.xlabel('bias current I $[\mu A/cm^2]$')
-plt.ylabel('potential barrier')
+#t=np.arange(-12,-9,0.01)
+#plt.figure()
+#plt.xlabel('bias current I $[\mu A/cm^2]$')
+#plt.ylabel('potential barrier')
 #plt.plot(t,barrier(t,params2[0],params2[1]),'y')
 #plt.plot(t,barrier(t,params2[2],params2[3]),'y')
 #plt.plot(t,2*barrier(t,params2[0],params2[1]),'y')
 #plt.plot(t,2*barrier(t,params2[2],params2[3]),'y')
-plt.plot(t,qbarrier(t,paramsq[0],paramsq[1],paramsq[2]),colorv[0])
-plt.plot(t,qbarrier(t,paramsq[3],paramsq[4],paramsq[5]),colorv[1])
-plt.plot(t,2*qbarrier(t,paramsq[0],paramsq[1],paramsq[2]),colorv[2])
-plt.plot(t,2*qbarrier(t,paramsq[3],paramsq[4],paramsq[5]),colorv[3])
-plt.plot(xs,params[1,:],colorv[0]+'o',label='burst to eq')
-plt.plot(xs,params[3,:],colorv[1]+'o',label='eq to burst')
-plt.plot(xs,2*params[1,:],colorv[2]+'o',label='2x burst to eq')
-plt.plot(xs,2*params[3,:],colorv[3]+'o',label='2x eq to burst')
-plt.legend()
-plt.savefig('barriercompdfnew%s.pdf' %(date1+date2))	
+#plt.plot(t,qbarrier(t,paramsq[0],paramsq[1],paramsq[2]),colorv[0])
+#plt.plot(t,qbarrier(t,paramsq[3],paramsq[4],paramsq[5]),colorv[1])
+#plt.plot(t,2*qbarrier(t,paramsq[0],paramsq[1],paramsq[2]),colorv[2])
+#plt.plot(t,2*qbarrier(t,paramsq[3],paramsq[4],paramsq[5]),colorv[3])
+#plt.plot(xs,params[1,:],colorv[0]+'o',label='burst to eq')
+#plt.plot(xs,params[3,:],colorv[1]+'o',label='eq to burst')
+#plt.plot(xs,2*params[1,:],colorv[2]+'o',label='2x burst to eq')
+#plt.plot(xs,2*params[3,:],colorv[3]+'o',label='2x eq to burst')
+#plt.legend()
+#plt.savefig('barriercompdfnew%s.pdf' %(date1+date2))	

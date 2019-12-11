@@ -15,19 +15,20 @@ import matplotlib.pyplot as plt
 #yvalues=len(yvar)
 
 
-date='realrinzel15ninv0'
+date='realrinzelpoi26n1'
 date1='realrinzel15ninv1'
 date2='realrinzel15ninv0'
 date3='realrinzel15ninv1'
-D=[200,300,500]
-D1=[200,300,500]
+D=[250,400]
+D1=[]
 D2=[]
 D3=[]
 Dtot=D+D1+D2+D3
 l=len(D)+len(D1)+len(D2)+len(D2)
-
-vecx=np.zeros((l,8))
-vec=np.zeros((l,8))
+istart=1
+ivalues=5
+vecx=np.zeros((l,ivalues))
+vec=np.zeros((l,ivalues))
 ii=0
 #for x in Dvar:
 #	colvar,colxvar=[],[]
@@ -51,7 +52,7 @@ ii=0
 
 for x in D:
 	col,colx=[],[]	
-	for y in range(2,10):
+	for y in range(istart,istart+ivalues):
 		file=open('/home/richard/outhome/d%s%d%d.txt' % (date,x,y),"r")
 		for k in file:
 			row=k.split()
@@ -59,13 +60,13 @@ for x in D:
 			col.append(float(row[1]))
 	colxa=np.array(colx)
 	cola=np.array(col)
-	for z in range(0,8):
+	for z in range(0,ivalues):
 		vec[ii][z]=cola[z]
 		vecx[ii][z]=colxa[z]
 	ii=ii+1
 for x in D1:
 	col,colx=[],[]	
-	for y in range(2,10):
+	for y in range(istart,istart+ivalues):
 		file=open('/home/richard/outhome/d%s%d%d.txt' % (date1,x,y),"r")
 		for k in file:
 			row=k.split()
@@ -73,13 +74,13 @@ for x in D1:
 			col.append(float(row[1]))
 	colxa=np.array(colx)
 	cola=np.array(col)
-	for z in range(0,8):
+	for z in range(0,ivalues):
 		vec[ii][z]=cola[z]
 		vecx[ii][z]=colxa[z]
 	ii=ii+1
 for x in D2:
 	col,colx=[],[]	
-	for y in range(2,10):
+	for y in range(istart,istart+ivalues):
 		file=open('/home/richard/outhome/d%s%d%d.txt' % (date2,x,y),"r")
 		for k in file:
 			row=k.split()
@@ -87,7 +88,7 @@ for x in D2:
 			col.append(float(row[1]))
 	colxa=np.array(colx)
 	cola=np.array(col)
-	for z in range(0,10):
+	for z in range(0,ivalues):
 		vec[ii][z]=cola[z]
 		vecx[ii][z]=colxa[z]
 	ii=ii+1
@@ -114,15 +115,15 @@ plt.ylabel('$D_{eff}$ $[10^3s^{-1}]$')
 plt.yscale('log')
 #plt.xscale('log')
 for n in range(0,l):
-	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,IC: %i' %(Dtot[n]/10,round(n/5)))
+	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f' %(Dtot[n]/10))
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [3,4,2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
 plt.savefig('dneursingle%s.pdf' %(date+date1))
 
-vec=np.zeros((l,8))
-vecx=np.zeros((l,8))
+vec=np.zeros((l,ivalues))
+vecx=np.zeros((l,ivalues))
 ii=0
 
 #for x in Dvar:
@@ -147,7 +148,7 @@ ii=0
 
 for x in D:
 	col,colx=[],[]	
-	for y in range(2,10):
+	for y in range(istart,istart+ivalues):
 		file=open('/home/richard/outhome/f%s%d%d.txt' % (date,x,y),"r")
 		for k in file:
 			row=k.split()
@@ -155,7 +156,7 @@ for x in D:
 			col.append(float(row[1]))
 	colxa=np.array(colx)
 	cola=np.array(col)
-	for z in range(0,8):
+	for z in range(0,ivalues):
 		vec[ii][z]=cola[z]
 		vecx[ii][z]=colxa[z]
 	ii=ii+1
@@ -198,15 +199,15 @@ plt.ylabel('Fano factor')
 plt.yscale('log')
 #plt.xscale('log')
 for n in range(0,l):
-	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,IC: %i' %(Dtot[n]/10,round(n/5)))
+	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f' %(Dtot[n]/10))
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [3,4,2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
 plt.savefig('fneursingle%s.pdf' %(date+date1))
 
-vec=np.zeros((l,8))
-vecx=np.zeros((l,8))
+vec=np.zeros((l,ivalues))
+vecx=np.zeros((l,ivalues))
 ii=0
 
 #for x in Dvar:
@@ -231,7 +232,7 @@ ii=0
 
 for x in D:
 	col,colx=[],[]	
-	for y in range(2,10):
+	for y in range(istart,istart+ivalues):
 		file=open('/home/richard/outhome/g%s%d%d.txt' % (date,x,y),"r")
 		for k in file:
 			row=k.split()
@@ -239,7 +240,7 @@ for x in D:
 			col.append(float(row[1]))
 	colxa=np.array(colx)
 	cola=np.array(col)
-	for z in range(0,8):
+	for z in range(0,ivalues):
 		vec[ii][z]=cola[z]
 		vecx[ii][z]=colxa[z]
 	ii=ii+1
@@ -295,7 +296,7 @@ plt.ylabel('firing rate')
 #plt.xscale('log')
 #plt.plot(xburst,cola/T,label='measured bursting rate',color='black')
 for n in range(0,l):
-	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,IC: %i' %(Dtot[n]/10,round(n/5)))
+	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f' %(Dtot[n]/10))
 #plt.plot(colxa,vec[0,:],label='D=%.2f' %(D[0]/100))
 
 #plt.plot(xs,vec[3,:],label='D=1.5')
