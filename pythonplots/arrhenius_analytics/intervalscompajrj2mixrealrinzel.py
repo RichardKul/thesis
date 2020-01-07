@@ -17,7 +17,7 @@ def func2(x, a, b):
 def func3(x, a):
 	return a 
 
-D1=[150,200,250,300,400,500]
+D1=[200,300,500]
 D2=[]
 D3=[]
 Dvar=[]
@@ -27,12 +27,12 @@ l2=len(D2)
 l3=len(D3)
 lvar=len(Dvar)
 l=l1+l2+l3+lvar
-date1='realrinzelpoi26n1'
+date1='realrinzel25o'
 date2='realrinzel15ninv0'
 date3='new'+'realfast11jjem2st'
 datevar=['new'+'realfast11jjem2','new'+'realfast11jjem2sh','new'+'realfast11jjem2']
-istart=4
-ivalues=1
+istart=1
+ivalues=11
 params2=np.zeros(6)
 params=np.zeros((4,ivalues))
 changespertime=np.zeros((l,ivalues))
@@ -270,7 +270,7 @@ if l > 1:
 		xs=np.zeros(l)
 		for xf in range(0,l):
 			xs[xf]=10/D[xf]
-		plt.suptitle('I=%.2f$\mu A/cm^2$' %(-12+0.6*k2))
+		plt.suptitle('I=%.2f$\mu A/cm^2$' %(-17.2+0.8*k2))
 		plt.xlabel('inverse noise intensity 1/D')
 		plt.ylabel('transition rate w $[10^3s^{-1}]$')
 		plt.yscale('log')
@@ -310,7 +310,7 @@ if l > 1:
 		plt.savefig('cortime%s%d.pdf' %(date1+date2,k2))
 plt.figure()
 #xold=np.arange(-21.25+istart,-21.25+istart+ivalues)*0.8
-xold=np.arange(-20+istart,-20+istart+ivalues)*0.6
+xold=np.arange(-22.5+istart,-22.5+istart+ivalues)*0.8
 plt.xlabel('bias current I')
 plt.ylabel('correlation time')
 plt.yscale('log')
@@ -322,7 +322,7 @@ plt.savefig('altcortime%s.pdf' %(date1+date2))
 
 plt.figure()
 #xnew=np.arange(-21.25+istart,-21.25+istart+ivalues)*0.8
-xnew=np.arange(-20+istart,-20+istart+ivalues)*0.6
+xnew=np.arange(-22.5+istart,-22.5+istart+ivalues)*0.8
 plt.xlabel('bias current')
 plt.ylabel('prefactor')
 plt.plot(xnew,params[0,:],label='burst to eq')
@@ -358,7 +358,7 @@ for k4 in range(0,6):
 	eqfile2.write('%.6f\n'%params2[k4]) 
 eqfile2.close() 
 
-t=np.arange(-17.2,-10,0.01)
+t=np.arange(-17.2,-9,0.01)
 plt.figure()
 plt.xlabel('bias current')
 plt.ylabel('potential barrier')

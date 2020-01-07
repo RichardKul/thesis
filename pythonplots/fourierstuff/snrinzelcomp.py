@@ -209,8 +209,9 @@ istep=0.8
 
 ii=0
 gvec=np.zeros((l,ivalues))
-drdr=np.zeros((l,ivalues-2))
+#drdr=np.zeros((l,ivalues-2))
 
+D0,D2,D3,Dvar=[],[],[],[]
 for x in D0:
 	col0,colx0=[],[]	
 	for y in range(istart0,istart0+ivalues0):
@@ -282,16 +283,39 @@ for x in D2:
 		drdr[ii][z]=(cola2[z+2]-cola2[z])/(2*istep)
 	ii=ii+1
 
-xsold=np.arange(-22.5+2,-22.5+10)*0.8
+istep=0.3
+drdr=np.zeros((l,10))
+drdrlong=np.zeros((l,50))
+d2z,d3z,d5z=[],[],[]
+filerate=open('/home/richard/outhome/countrinzelrate.txt',"r")
+for k in filerate:
+	row=k.split()
+	d2z.append(float(row[2]))
+	d3z.append(float(row[4]))
+	d5z.append(float(row[6]))
+d2=np.array(d2z)/10000000
+d3=np.array(d3z)/10000000
+d5=np.array(d5z)/10000000
+for z in range(0,10):
+	drdr[0][z]=abs((d2[round(9.5+(8/3)*(z+1))+1]-d2[round(9.5+(8/3)*(z+1))])/istep)
+	drdr[1][z]=abs((d3[round(9.5+(8/3)*(z+1))+1]-d3[round(9.5+(8/3)*(z+1))])/istep)
+	drdr[2][z]=abs((d5[round(9.5+(8/3)*(z+1))+1]-d5[round(9.5+(8/3)*(z+1))])/istep)
+for z in range(0,50):
+	drdrlong[0][z]=abs((d2[z+1]-d2[z])/istep)
+	drdrlong[1][z]=abs((d3[z+1]-d3[z])/istep)
+	drdrlong[2][z]=abs((d5[z+1]-d5[z])/istep)
+
+
+xsold=np.arange(-69.5+1,-69.5+51)*0.3
 plt.figure()
 plt.xlabel('bias current I')
 plt.ylabel('derivative of firing rate')
 plt.yscale('log')
 colorv=['y','g','b','r','c']
 for n in range(0,l):
-	plt.plot(xsold,drdr[n,:],colorv[n],label='D=%.0f' %Da[n])
+	plt.plot(xsold,drdrlong[n,:],colorv[n],label='D=%.0f' %Da[n])
 plt.legend()
-plt.savefig('drdirinzel.pdf')
+plt.savefig('drdirinzellong.pdf')
 
 date='realrinzel20ninv0'
 date2='realrinzel20ninv1'
@@ -306,8 +330,8 @@ l=len(D)+len(D1)+len(D2)+len(D3)
 
 points=1000000
 length=500000
-istart=2
-ivalues=8
+istart=1
+ivalues=10
 SNR=np.zeros((l,ivalues))
 scale=np.zeros((l,ivalues))
 ii=0
@@ -484,17 +508,17 @@ plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('SNR')
 
 t=np.arange(-0.1,0.3,0.01)
-xs=np.arange(-16.4,-10,0.8)
-xsh=colxa0[1:ivalues0-1]
+xs=np.arange(-16.2,-9,0.8)
+xsh=np.arange(-17.2,-9.2,0.8)
 plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
-plt.ylim(10**(-7),10**(-3))
+plt.ylim(10**(-8),10**(-3))
 colorv=['y','g','b','r','c']
-for n in range(0,l):
-	plt.plot(xs,abs((SNR[n,:]-1)/scale[n,:]),colorv[n]+'o')
 for n in range(0,l):	
-	plt.plot(xsh,snrmeas(drdr[n,:],f)/vec[n,1:9],colorv[n],label='D=%.2f' %(Dtot[n]/10))
+	plt.plot(xsh,snrmeas(drdr[n,:],f)/vec[n,:],colorv[n],label='D=%.2f' %(Dtot[n]/10))
+for n in range(0,l):
+	plt.plot(xs,abs((SNR[n,0:9]-1)/scale[n,0:9]),colorv[n]+'o')
 #plt.plot([0.163, 0.163], [2*10**(-5), 6*10**(-2)], color='black', linestyle='-')
 #plt.plot([-0.02, -0.02], [2*10**(-5), 6*10**(-2)], color='black', linestyle='-',label='$I_{crit}$')
 #plt.plot(xs,SNR[2,:],label='D=3')
@@ -504,4 +528,4 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snrangerealrinzelcomp.pdf')
+plt.savefig('snrangerealrinzelcomplong.pdf')

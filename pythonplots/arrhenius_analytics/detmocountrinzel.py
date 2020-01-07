@@ -16,12 +16,12 @@ def comp(x,b,c,d,e):
 N=5000000
 dt=0.005
 T=N*dt
-dvalues=4
+dvalues=6
 ivalues=51
-D=[200,300,500]
+D=[150,200,250,300,400,500]
 count=np.zeros((dvalues,ivalues))
 ii=0
-file=open('/home/richard/NetBeansProjects/detrinzel/countrinzelnoise4.txt',"r")
+file=open('/home/richard/NetBeansProjects/detrinzel/countrinzelnoise5.txt',"r")
 colx=[]
 for k in file:
 	col=[]
@@ -42,7 +42,7 @@ c=np.zeros(dvalues)
 d=np.zeros(dvalues)
 e=np.zeros(dvalues)
 #xnew=np.arange(-0.19,0.31,0.01)
-eqfile = open('detmocountparam.txt','w')
+eqfile = open('detmocountparam5.txt','w')
 for n in range(0,dvalues):
 	popt,pcov = curve_fit(comp, colxa, count[n,:]/T)
 #	a[n]=popt[0]
@@ -54,18 +54,18 @@ for n in range(0,dvalues):
 		eqfile.write('%.6f '%popt[k3])
 	eqfile.write('\n') 
 eqfile.close() 
-colorv=['y','g','b','r','c']
+colorv=['y','g','b','r','c','k']
 t=np.arange(-21,-6,0.1)
 plt.xlabel('bias current I')
 plt.ylabel('firing rate')
 #plt.xlim(0,4)
 #plt.ylim(1.2,1.4)
 #plt.yscale('log')
-for n in range(0,dvalues-1):
-	plt.plot(colxa,count[n+1,:]/T,colorv[n]+'o',label='D=%s' %(D[n]/10))
-	plt.plot(t,comp(t,b[n+1],c[n+1],d[n+1],e[n+1]),colorv[n])
+for n in range(0,dvalues):
+	plt.plot(colxa,count[n,:]/T,colorv[n]+'o',label='D=%s' %(D[n]/10))
+	plt.plot(t,comp(t,b[n],c[n],d[n],e[n]),colorv[n])
 #plt.plot(t,comp(t,popt[0],popt[1]),label='linear appr %f %f'%(popt[0],popt[1]))
 plt.legend()
-plt.savefig('detmocountrinzelcomp2.pdf')
+plt.savefig('detmocountrinzelcomp5.pdf')
 
 

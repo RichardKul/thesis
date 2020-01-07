@@ -42,7 +42,7 @@ void initd(double x[],int n){
 
 int main(int argc, char** argv) {
 std::ofstream myfile;
-    myfile.open("xtraje8f10eps1.txt");
+    myfile.open("xtraje2j.txt");
 
 const double pi = 3.14159265358979323846;    
 std::random_device rd;
@@ -51,7 +51,7 @@ std::normal_distribution<> n(0,1);
 std::uniform_real_distribution<> dis(0, 2*pi);
 
 int points=1000000;
-int runs=1000;
+int runs=2000;
 int N=100000000;
 int sampling=N/points;
 double dt=0.001;
@@ -59,8 +59,8 @@ double dtint=sampling*dt;
 double T=N*dt;
 double tau=1;
 double sigma=1;
-double epsilon=1;
-double omega=10;
+double epsilon=0.01;
+double omega=0.01;
 double t,phi;
 //double xv[points];
 //double xvout[500][2];

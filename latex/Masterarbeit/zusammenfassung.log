@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.2.11)  10 DEC 2019 14:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.11)  6 JAN 2020 19:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **zusammenfassung.tex
 (./zusammenfassung.tex
-LaTeX2e <2018-04-01> patch level 5
+LaTeX2e <2018-12-01>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+File: size12.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
 \c@section=\count81
@@ -47,7 +47,7 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@width=\dimen104
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2017/09/02 v2.17a AMS math features
+Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
@@ -67,20 +67,20 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count88
-LaTeX Info: Redefining \frac on input line 213.
+LaTeX Info: Redefining \frac on input line 223.
 \uproot@=\count89
 \leftroot@=\count90
-LaTeX Info: Redefining \overline on input line 375.
+LaTeX Info: Redefining \overline on input line 385.
 \classnum@=\count91
 \DOTSCASE@=\count92
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
 \big@size=\dimen107
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 \macc@depth=\count93
 \c@MaxMatrixCols=\count94
 \dotsspace@=\muskip10
@@ -101,33 +101,33 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks19
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count100
 \float@exts=\toks20
-\float@box=\box28
+\float@box=\box29
 \@float@everytoks=\toks21
-\@floatcapt=\box29
+\@floatcapt=\box30
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2018/06/05 3.22 The Babel package
+Package: babel 2018/11/13 3.27 The Babel package
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
-File: switch.def 2018/06/05 3.22 Babel switching mechanism
+File: switch.def 2018/11/13 3.27 Babel switching mechanism
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel-german/german.ldf
-Language: german 2018/03/29 v2.10 German support for babel (pre-1996 orthograph
+Language: german 2018/12/08 v2.11 German support for babel (pre-1996 orthograph
 y)
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel-german/germanb.ldf
-Language: germanb 2018/03/29 v2.10 German support for babel (pre-1996 orthograp
+Language: germanb 2018/12/08 v2.11 German support for babel (pre-1996 orthograp
 hy)
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2018/06/05 3.22 Babel common definitions
+File: babel.def 2018/11/13 3.27 Babel common definitions
 \babel@savecnt=\count101
 \U@D=\dimen114
 
@@ -157,7 +157,7 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfig@bottom=\skip51
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
-Package: inputenc 2018/04/06 v1.3b Input encoding file
+Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks22
 \inpenc@posthook=\toks23
 )
@@ -165,7 +165,7 @@ Package: inputenc 2018/04/06 v1.3b Input encoding file
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
@@ -207,7 +207,7 @@ LaTeX Font Info:    ... okay on input line 12.
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count110
 \scratchdimen=\dimen125
-\scratchbox=\box30
+\scratchbox=\box31
 \nofMPsegments=\count111
 \nofMParguments=\count112
 \everyMPshowfont=\toks25
@@ -245,7 +245,7 @@ Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 ))))
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2018/01/30 v0.27 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -1110,31 +1110,235 @@ Overfull \hbox (35.73549pt too wide) in paragraph at lines 467--467
 
 [57 <./bdistajrj2realrinzelpoi26n14003.pdf>] [58 <./eqdistajrj2realrinzelpoi26n
 11501.pdf>] [59 <./eqdistajrj2realrinzelpoi26n12001.pdf>]
-(./zusammenfassung.aux) ) 
+<firingraterinzelnoiselong.pdf, id=3380, 462.52798pt x 346.89601pt>
+File: firingraterinzelnoiselong.pdf Graphic file (type pdf)
+<use firingraterinzelnoiselong.pdf>
+Package pdftex.def Info: firingraterinzelnoiselong.pdf  used on input line 473.
+
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 473--473
+ [][] 
+ []
+
+<firingraterinzelnoiselonglog.pdf, id=3381, 462.52798pt x 346.89601pt>
+File: firingraterinzelnoiselonglog.pdf Graphic file (type pdf)
+<use firingraterinzelnoiselonglog.pdf>
+Package pdftex.def Info: firingraterinzelnoiselonglog.pdf  used on input line 4
+78.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 478--478
+ [][] 
+ []
+
+File: drdirinzel.pdf Graphic file (type pdf)
+<use drdirinzel.pdf>
+Package pdftex.def Info: drdirinzel.pdf  used on input line 483.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 483--483
+ [][] 
+ []
+
+[60 <./firingraterinzelnoiselong.pdf>]
+<drdirinzellong.pdf, id=3418, 462.52798pt x 346.89601pt>
+File: drdirinzellong.pdf Graphic file (type pdf)
+<use drdirinzellong.pdf>
+Package pdftex.def Info: drdirinzellong.pdf  used on input line 488.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 488--488
+ [][] 
+ []
+
+[61 <./firingraterinzelnoiselonglog.pdf>]
+File: snrangerealrinzelcomp.pdf Graphic file (type pdf)
+<use snrangerealrinzelcomp.pdf>
+Package pdftex.def Info: snrangerealrinzelcomp.pdf  used on input line 493.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 493--493
+ [][] 
+ []
+
+[62]
+<snrangerealrinzelcomplong.pdf, id=3458, 462.52798pt x 346.89601pt>
+File: snrangerealrinzelcomplong.pdf Graphic file (type pdf)
+<use snrangerealrinzelcomplong.pdf>
+Package pdftex.def Info: snrangerealrinzelcomplong.pdf  used on input line 498.
+
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 498--498
+ [][] 
+ []
+
+[63 <./drdirinzellong.pdf>]
+<spekpoi4dd20.pdf, id=3496, 462.52798pt x 346.89601pt>
+File: spekpoi4dd20.pdf Graphic file (type pdf)
+<use spekpoi4dd20.pdf>
+Package pdftex.def Info: spekpoi4dd20.pdf  used on input line 503.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 503--503
+ [][] 
+ []
+
+[64]
+<spekpoi4dd30.pdf, id=3500, 462.52798pt x 346.89601pt>
+File: spekpoi4dd30.pdf Graphic file (type pdf)
+<use spekpoi4dd30.pdf>
+Package pdftex.def Info: spekpoi4dd30.pdf  used on input line 508.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 508--508
+ [][] 
+ []
+
+[65 <./snrangerealrinzelcomplong.pdf>]
+<snrinzelpoi4d3.pdf, id=3552, 462.52798pt x 346.89601pt>
+File: snrinzelpoi4d3.pdf Graphic file (type pdf)
+<use snrinzelpoi4d3.pdf>
+Package pdftex.def Info: snrinzelpoi4d3.pdf  used on input line 513.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 513--513
+ [][] 
+ []
+
+[66 <./spekpoi4dd20.pdf>]
+<arrhcomp.pdf, id=3603, 462.52798pt x 346.89601pt>
+File: arrhcomp.pdf Graphic file (type pdf)
+<use arrhcomp.pdf>
+Package pdftex.def Info: arrhcomp.pdf  used on input line 518.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 518--518
+ [][] 
+ []
+
+[67 <./spekpoi4dd30.pdf>] [68 <./snrinzelpoi4d3.pdf>] [69 <./arrhcomp.pdf>]
+<inapikrealrD20I-114.pdf, id=3729, 462.52798pt x 346.89601pt>
+File: inapikrealrD20I-114.pdf Graphic file (type pdf)
+<use inapikrealrD20I-114.pdf>
+Package pdftex.def Info: inapikrealrD20I-114.pdf  used on input line 526.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 526--526
+ [][] 
+ []
+
+<inapikrealrD30I-102.pdf, id=3730, 462.52798pt x 346.89601pt>
+File: inapikrealrD30I-102.pdf Graphic file (type pdf)
+<use inapikrealrD30I-102.pdf>
+Package pdftex.def Info: inapikrealrD30I-102.pdf  used on input line 531.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 531--531
+ [][] 
+ []
+
+<snrinzelpoi6j17d.pdf, id=3731, 462.52798pt x 346.89601pt>
+File: snrinzelpoi6j17d.pdf Graphic file (type pdf)
+<use snrinzelpoi6j17d.pdf>
+Package pdftex.def Info: snrinzelpoi6j17d.pdf  used on input line 536.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 536--536
+ [][] 
+ []
+
+[70 <./inapikrealrD20I-114.pdf>]
+<snrinzelpoi6j17dshort.pdf, id=3781, 462.52798pt x 346.89601pt>
+File: snrinzelpoi6j17dshort.pdf Graphic file (type pdf)
+<use snrinzelpoi6j17dshort.pdf>
+Package pdftex.def Info: snrinzelpoi6j17dshort.pdf  used on input line 541.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 541--541
+ [][] 
+ []
+
+[71 <./inapikrealrD30I-102.pdf>] [72 <./snrinzelpoi6j17d.pdf>]
+<dcomprate25o6j.pdf, id=3873, 462.52798pt x 346.89601pt>
+File: dcomprate25o6j.pdf Graphic file (type pdf)
+<use dcomprate25o6j.pdf>
+Package pdftex.def Info: dcomprate25o6j.pdf  used on input line 547.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 547--547
+ [][] 
+ []
+
+<barrierinzelfit4.pdf, id=3874, 462.52798pt x 346.89601pt>
+File: barrierinzelfit4.pdf Graphic file (type pdf)
+<use barrierinzelfit4.pdf>
+Package pdftex.def Info: barrierinzelfit4.pdf  used on input line 552.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 552--552
+ [][] 
+ []
+
+[73 <./snrinzelpoi6j17dshort.pdf>] [74 <./dcomprate25o6j.pdf>] [75 <./barrierin
+zelfit4.pdf>]
+<tranrates.pdf, id=3979, 462.52798pt x 346.89601pt>
+File: tranrates.pdf Graphic file (type pdf)
+<use tranrates.pdf>
+Package pdftex.def Info: tranrates.pdf  used on input line 559.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 559--559
+ [][] 
+ []
+
+<tranratesneur.pdf, id=3980, 462.52798pt x 346.89601pt>
+File: tranratesneur.pdf Graphic file (type pdf)
+<use tranratesneur.pdf>
+Package pdftex.def Info: tranratesneur.pdf  used on input line 564.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 564--564
+ [][] 
+ []
+
+[76 <./tranrates.pdf>]
+<oup2jtheo3.pdf, id=4037, 462.52798pt x 346.89601pt>
+File: oup2jtheo3.pdf Graphic file (type pdf)
+<use oup2jtheo3.pdf>
+Package pdftex.def Info: oup2jtheo3.pdf  used on input line 570.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 570--570
+ [][] 
+ []
+
+[77 <./tranratesneur.pdf>] [78 <./oup2jtheo3.pdf>] (./zusammenfassung.aux) ) 
 Here is how much of TeX's memory you used:
- 3807 strings out of 494534
- 58638 string characters out of 6175442
- 128654 words of memory out of 5000000
- 7331 multiletter control sequences out of 15000+600000
+ 3929 strings out of 494508
+ 61575 string characters out of 6175044
+ 130156 words of memory out of 5000000
+ 7461 multiletter control sequences out of 15000+600000
  8568 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,11n,25p,728b,250s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb>
-Output written on zusammenfassung.pdf (60 pages, 1857396 bytes).
+</u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on zusammenfassung.pdf (79 pages, 2289696 bytes).
 PDF statistics:
- 3422 PDF objects out of 3580 (max. 8388607)
- 802 compressed objects within 9 object streams
+ 4178 PDF objects out of 4296 (max. 8388607)
+ 975 compressed objects within 10 object streams
  0 named destinations out of 1000 (max. 500000)
- 371 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 456 words of extra memory for PDF output out of 10000 (max. 10000000)
 

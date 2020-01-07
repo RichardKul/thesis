@@ -18,11 +18,11 @@ runs=50
 points=1000000
 length=500000
 
-date='realrinzelpoi26n1'
+date='realrinzelpoi17dlong1'
 
-D=500
+D=200
 istart=1
-ivalues=4
+ivalues=3
 nr=9
 S=np.zeros(length)
 #omegaind=round(omega*T)
@@ -96,7 +96,7 @@ for z in range(istart,istart+ivalues):
 	plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
-	plt.plot(ax2,ay2/T,label='Simulation')
+	plt.plot(ax3/T,ay2/T,label='Simulation')
 #plt.plot(ax2,spectrum(ax2,1/(4.748*10**(-3)),13),label='theory')
 #plt.plot(omega,background/T,'kx')
 	#plt.legend()

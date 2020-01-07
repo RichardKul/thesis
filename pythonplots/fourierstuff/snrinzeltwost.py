@@ -44,9 +44,9 @@ def comps(x,b,c,d):
 	return 3*b*x**2+2*c*x+d
 
 date3='realrinzel25o'
-date2='realfast19jjem2st'
+date2='realrinzel15ninv0'
 
-ivalues=10
+ivalues=11
 l=3
 D1=[]
 D3=[500]
@@ -63,7 +63,7 @@ paramsq=np.zeros(6)
 paramsqrate=np.zeros(6)
 for k2 in range(0,ivalues):
 	x=[]
-	ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/rate%s%d.txt' %(date3+'new'+date2,k2),'r')
+	ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/rate%s%d.txt' %(date3+date2,k2),'r')
 	for k4 in ratefile:
 		row=k4.split()
 		x.append(float(row[0]))
@@ -110,14 +110,14 @@ paramsqrate[3]=popt[0]
 paramsqrate[4]=popt[1]
 paramsqrate[5]=popt[2]
 
-t1=np.arange(-20,-9,0.1)
+t1=np.arange(-18,-9,0.1)
 plt.figure()
 plt.plot(xnew,params[1,:],'go',label='burst to eq')
 plt.plot(xnew,params[3,:],'ro',label='eq to burst')
 plt.plot(t1,qbarrier(t1,paramsq[0],paramsq[1],paramsq[2]),'g')
 plt.plot(t1,qbarrier(t1,paramsq[3],paramsq[4],paramsq[5]),'r')
 plt.legend()
-plt.savefig('barrierinzelfit3.pdf')
+plt.savefig('barrierinzelfit4.pdf')
 
 plt.figure()
 plt.plot(xnew,params[0,:],'go',label='burst to eq')
@@ -125,7 +125,7 @@ plt.plot(xnew,params[2,:],'ro',label='eq to burst')
 plt.plot(t1,qbarrier(t1,paramsqrate[0],paramsqrate[1],paramsqrate[2]),'g')
 plt.plot(t1,qbarrier(t1,paramsqrate[3],paramsqrate[4],paramsqrate[5]),'r')
 plt.legend()
-plt.savefig('raterinzelfit3.pdf')
+plt.savefig('raterinzelfit4.pdf')
 
 bp = 1.74
 ap = 5.64
@@ -134,19 +134,21 @@ bm = 3.15
 am = -10.76
 r0m = 0.012
 
-date='realrinzel20ninv0'
-date1='realrinzel15ninv0'
-D=[200,300]
-D1=[500]
+date='realrinzelpoi17dlong1'
+date1='realrinzelpoi17d1'
+D=[200]
+D1=[300,500]
 Dtot=D+D1
 l2=len(D)+len(D1)
 
 points=1000000
 length=500000
-ivalues=8
-istart=2
+ivalues=5
+istart=1
 SNR=np.zeros((l2,ivalues))
 scale=np.zeros((l2,ivalues))
+xvec=np.zeros((l2,ivalues))
+offset=np.zeros(l2,dtype=int)
 ii=0
 
 for c in D:
@@ -157,6 +159,9 @@ for c in D:
 			row=k.split()
 			x.append(float(row[0]))
 			y.append(float(row[1]))
+		if len(x) == 0:
+			offset[ii]=offset[ii]+1
+			continue
 		ax=np.array(x)
 		ay=np.array(y)
 		param=open('/home/richard/outhome/param%s%d%d.txt' %(date,c,z),"r")
@@ -178,12 +183,16 @@ for c in D:
 		epsilon=value[name.index('epsilon')]
 		omega=value[name.index('omega')]
 		T=N*repetitions*dt
-		scale[ii][z-istart]=epsilon**2*T
+		scale[ii][z-istart-offset[ii]]=epsilon**2*T
 		omegaind=round(omega*T)	
-		if c==200 and z==9:
-			omegaind=2105	
+		#if c==200 and z==9:
+		#	omegaind=2105	
 		#omegaind=141	
-		SNR[ii][z-istart]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
+		SNR[ii][z-istart-offset[ii]]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
+		iv=open('/home/richard/outhome/d%s%d%d.txt' %(date,c,z),"r")
+		for k in iv:
+			row=k.split()
+		xvec[ii][z-istart-offset[ii]]=float(row[0])
 	ii=ii+1
 
 for c1 in D1:
@@ -194,6 +203,9 @@ for c1 in D1:
 			row=k.split()
 			x.append(float(row[0]))
 			y.append(float(row[1]))
+		if len(x) == 0:
+			offset[ii]=offset[ii]+1
+			continue
 		ax=np.array(x)
 		ay=np.array(y)
 		param=open('/home/richard/outhome/param%s%d%d.txt' %(date1,c1,z),"r")
@@ -215,25 +227,29 @@ for c1 in D1:
 		epsilon=value[name.index('epsilon')]
 		omega=value[name.index('omega')]
 		T=N*repetitions*dt
-		scale[ii][z-istart]=epsilon**2*T
+		scale[ii][z-istart-offset[ii]]=epsilon**2*T
 		omegaind=round(omega*T)		
 		#omegaind=141
-		SNR[ii][z-istart]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
+		SNR[ii][z-istart-offset[ii]]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
+		iv=open('/home/richard/outhome/d%s%d%d.txt' %(date1,c1,z),"r")
+		for k in iv:
+			row=k.split()
+		xvec[ii][z-istart-offset[ii]]=float(row[0])
 	ii=ii+1
 
-
-dvalues=4
+params=4
+dvalues=6
 b=np.zeros(dvalues)
 c=np.zeros(dvalues)
 d=np.zeros(dvalues)
 e=np.zeros(dvalues)
 ii=0
 #xnew=np.arange(-0.19,0.31,0.01)
-eqfile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/detmocountparam.txt','r')
+eqfile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/detmocountparam5.txt','r')
 for k in eqfile:
 	col=[]
 	row=k.split()
-	for l in range(0,dvalues):	
+	for l in range(0,params):	
 		col.append(float(row[l]))
 	cola=np.array(col)
 	b[ii]=cola[0]
@@ -272,27 +288,30 @@ plt.figure()
 plt.xlabel('bias current')
 plt.ylabel('SNR')
 
-t=np.arange(-18,-9,0.1)
-xs=np.arange(-21.25+istart,-21.25+istart+ivalues)*0.8
+t=np.arange(-12,-8.5,0.1)
+#xs=np.arange(-21.25+istart,-21.25+istart+ivalues)*0.8
+xs=np.arange(-20+istart,-20+istart+ivalues)*0.6
 plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
-colorv=['y','g','b','r','c']
-
+#colorv=['r','y','c','g','k','b'] # 6 colors
+colorv=['y','g','b'] # 3 colors
 for n in range(0,l2):
-	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
+	nl=round(ivalues-offset[n])
+	plt.plot(xvec[n,0:nl],(SNR[n,0:nl]-1)/scale[n,0:nl],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
 for n in range(0,l2):
-	#bv=b[n+1]
-	#cv=c[n+1]
-	#dv=d[n+1]
-	#ev=e[n+1]
-	bv=b[3]
-	cv=c[3]
-	dv=d[3]
-	ev=e[3]	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,b[n+1],c[n+1],d[n+1]),comp(t,b[n+1],c[n+1],d[n+1],e[n+1]))/8,colorv[n])	
+	bv=b[2*n+1] # 3 plots
+	cv=c[2*n+1]
+	dv=d[2*n+1]
+	ev=e[2*n+1]
+	#bv=b[n] # all
+	#cv=c[n]
+	#dv=d[n]
+	#ev=e[n]	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,b[n+1],c[n+1],d[n+1]),comp(t,b[n+1],c[n+1],d[n+1],e[n+1]))/8,colorv[n])	
 	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,bv,cv,dv),comp(t,bv,cv,dv,ev))/8,colorv[n])
 	plt.plot(t,snr(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,bv,cv,dv),comp(t,bv,cv,dv,ev))/8,colorv[n])
+#plt.plot(t,snr(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[3]*0.1,comps(t,b[5],c[5],d[5]),comp(t,b[5],c[5],d[5],e[5]))/8,colorv[3])
 #plt.plot([0.163, 0.163], [10**(-7), 10], color='black', linestyle='-')
 #plt.plot([-0.02, -0.02], [10**(-7), 10], color='black', linestyle='-',label='$I_{crit}$')
 #plt.plot(xs,SNR[2,:],label='D=3')
@@ -302,5 +321,5 @@ for n in range(0,l2):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snrinzelcompsprate4.pdf')
+plt.savefig('snrinzelpoi6j17dshort.pdf')
 #plt.savefig('snrinzelonly.pdf')

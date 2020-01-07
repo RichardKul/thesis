@@ -9,10 +9,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-date='firingratestimesh'
-D=[150,200,300,500]
+
+D=[150,200,250,300,400,500]
 dvalues=len(D)
-T=25000
+T=10000000
 istart=-21
 irange=15
 ivalues=51
@@ -20,7 +20,7 @@ istep=irange/ivalues
 vec=np.zeros((dvalues,ivalues))
 ii=0
 
-file=open('/home/richard/NetBeansProjects/detrinzel/countrinzelnoise4.txt',"r")
+file=open('/home/richard/outhome/countrinzelrate.txt',"r")
 for k in file:
 	col=[]
 	row=k.split()
@@ -36,11 +36,11 @@ ivar=np.arange(istart,istart+irange,istep)
 #xs=np.arange(0.25,2,0.25)
 plt.xlabel('bias current I')
 plt.ylabel('firing rate')
-#plt.yscale('log')
+plt.yscale('log')
 #plt.xscale('log')
 for n in range(0,dvalues):
 	plt.plot(ivar,vec[n,:]/T,label='D=%s' %(D[n]/10))
 plt.legend()
-plt.savefig('firingraterinzelnoise3.pdf')
+plt.savefig('firingraterinzelnoiselonglog.pdf')
 
 

@@ -46,9 +46,9 @@ def comps(x,b,c,d):
 	return 3*b*x**2+2*c*x+d
 
 date3='realrinzel25o'
-date2='realfast19jjem2st'
+date2='realrinzel15ninv0'
 
-ivalues=10
+ivalues=11
 l=3
 D1=[]
 D3=[200,300,500]
@@ -66,7 +66,7 @@ paramsqrate=np.zeros(6)
 
 for k2 in range(0,ivalues):
 	x=[]
-	ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/rate%s%d.txt' %(date3+'new'+date2,k2),'r')
+	ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/rate%s%d.txt' %(date3+date2,k2),'r')
 	for k4 in ratefile:
 		row=k4.split()
 		x.append(float(row[0]))
@@ -113,8 +113,8 @@ paramsqrate[3]=popt[0]
 paramsqrate[4]=popt[1]
 paramsqrate[5]=popt[2]
 
-vec=np.zeros((l,10))
-vecx=np.zeros((l,10))
+vec=np.zeros((l,ivalues))
+vecx=np.zeros((l,ivalues))
 ii=0
 
 date='realrinzel25o'
@@ -126,7 +126,7 @@ l=len(D)+len(D1)
 
 for x in D:
 	col,colx=[],[]	
-	for y in range(1,11):
+	for y in range(istart,istart+ivalues):
 		file=open('/home/richard/outhome/d%s%d%d.txt' % (date,x,y),"r")
 		for k in file:
 			row=k.split()
@@ -134,7 +134,7 @@ for x in D:
 			col.append(float(row[1]))
 	colxa=np.array(colx)
 	cola=np.array(col)
-	for z in range(0,10):
+	for z in range(0,ivalues):
 		vec[ii][z]=cola[z]
 		vecx[ii][z]=colxa[z]
 	ii=ii+1
@@ -155,18 +155,19 @@ for x in D1:
 	ii=ii+1
 
 
-dvalues=4
+dvalues=6
+dparams=4
 b=np.zeros(dvalues)
 c=np.zeros(dvalues)
 d=np.zeros(dvalues)
 e=np.zeros(dvalues)
 ii=0
 #xnew=np.arange(-0.19,0.31,0.01)
-eqfile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/detmocountparam.txt','r')
+eqfile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/detmocountparam5.txt','r')
 for k in eqfile:
 	col=[]
 	row=k.split()
-	for l in range(0,dvalues):	
+	for l in range(0,dparams):	
 		col.append(float(row[l]))
 	cola=np.array(col)
 	b[ii]=cola[0]
@@ -205,8 +206,8 @@ plt.figure()
 plt.xlabel('bias current')
 plt.ylabel('firing rate')
 
-t=np.arange(-18,-10,0.1)
-xs=np.arange(-21.25+istart,-21.25+istart+ivalues)*0.8
+t=np.arange(-18,-9,0.1)
+xs=np.arange(-22.5+istart,-22.5+istart+ivalues)*0.8
 plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
@@ -216,10 +217,10 @@ colorv=['y','g','b','r','c']
 for n in range(0,l):
 	plt.plot(vecx[n,:],vec[n,:],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
 for n in range(0,l):
-	bv=b[n+1]
-	cv=c[n+1]
-	dv=d[n+1]
-	ev=e[n+1]	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,b[n+1],c[n+1],d[n+1]),comp(t,b[n+1],c[n+1],d[n+1],e[n+1]))/8,colorv[n])	
+	bv=b[2*n+1]
+	cv=c[2*n+1]
+	dv=d[2*n+1]
+	ev=e[2*n+1]	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,b[n+1],c[n+1],d[n+1]),comp(t,b[n+1],c[n+1],d[n+1],e[n+1]))/8,colorv[n])	
 	plt.plot(t,deffqana(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comp(t,bv,cv,dv,ev)),colorv[n])
 #plt.plot([0.163, 0.163], [10**(-7), 10], color='black', linestyle='-')
 #plt.plot([-0.02, -0.02], [10**(-7), 10], color='black', linestyle='-',label='$I_{crit}$')
@@ -230,4 +231,4 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('dcomprate25o.pdf')
+plt.savefig('dcomprate25o6j.pdf')

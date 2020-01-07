@@ -10,23 +10,23 @@ import matplotlib.pyplot as plt
 
 from scipy.fftpack import fft, ifft
 
-epsilon=1
-omega=10
+epsilon=0.01
+omega=0.01
 tau=1
-runs=1000
+runs=2000
 points=100000
 length=50000
-N=100000
+N=100000000
 dt=0.001
 T=N*dt
 T2=T*10
 S=np.zeros(length)
-amp=epsilon**2*T/(4*(1+(omega*tau)**2))
+amp=epsilon**2*T/(4*(1+((omega/2)*tau)**2))
 
 def spectrum(f,tau,sigma):
 	return (2*tau*sigma**2)/(1+(2*np.pi*f*tau)**2)
 
-file=open('/home/richard/NetBeansProjects/oup/xtraje5newwcav.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/oup/xtraje2j.txt',"r")
 x,y=[],[]
 for k in file:
 	row=k.split()
@@ -75,7 +75,7 @@ plt.xscale('log')
 #plt.xlim(4*10**(-4),100)
 plt.plot(ax2,ay2/T,label='sim')
 plt.plot(ax2,spectrum(ax2,1,1),label='theory')
-plt.plot(5/np.pi,amp,'o',label="delta")
+plt.plot(omega/2,amp+spectrum(omega/(4*np.pi),1,1),'x',label="delta")
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('oupcopye5theordelta.pdf')
+plt.savefig('oup2jtheo3.pdf')
