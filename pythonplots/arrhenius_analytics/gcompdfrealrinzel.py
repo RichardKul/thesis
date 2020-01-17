@@ -48,7 +48,7 @@ def comps(x,b,c,d):
 date3='realrinzel25o'
 date2='realrinzel15ninv0'
 
-ivalues=11
+ivalues=10
 l=3
 D1=[]
 D3=[200,300,500]
@@ -113,43 +113,49 @@ paramsqrate[3]=popt[0]
 paramsqrate[4]=popt[1]
 paramsqrate[5]=popt[2]
 
-vec=np.zeros((l,ivalues))
-vecx=np.zeros((l,ivalues))
+#ivalues=5
+
+
 ii=0
 
-date='realrinzel25o'
-date1='realrinzel15ninv0'
+date='realrinzel25o'#'realrinzelpoi17dlong1'
+date1='realrinzelpoi17d1'
 D=[200,300,500]
 D1=[]
 Dtot=D+D1
 l=len(D)+len(D1)
+vec=np.zeros((l,ivalues))
+vecx=np.zeros((l,ivalues))
+offset=np.zeros(l,dtype=int)
 
 for x in D:
 	col,colx=[],[]	
 	for y in range(istart,istart+ivalues):
-		file=open('/home/richard/outhome/d%s%d%d.txt' % (date,x,y),"r")
+		file=open('/home/richard/outhome/g%s%d%d.txt' % (date,x,y),"r")
 		for k in file:
 			row=k.split()
 			colx.append(float(row[0]))
 			col.append(float(row[1]))
 	colxa=np.array(colx)
 	cola=np.array(col)
-	for z in range(0,ivalues):
+	offset[ii]=ivalues-len(cola)
+	for z in range(0,ivalues-offset[ii]):
 		vec[ii][z]=cola[z]
 		vecx[ii][z]=colxa[z]
 	ii=ii+1
 
 for x in D1:
 	col,colx=[],[]	
-	for y in range(2,10):
-		file=open('/home/richard/outhome/d%s%d%d.txt' % (date1,x,y),"r")
+	for y in range(istart,istart+ivalues):
+		file=open('/home/richard/outhome/g%s%d%d.txt' % (date1,x,y),"r")
 		for k in file:
 			row=k.split()
 			colx.append(float(row[0]))
 			col.append(float(row[1]))
 	colxa=np.array(colx)
 	cola=np.array(col)
-	for z in range(0,8):
+	offset[ii]=ivalues-len(cola)
+	for z in range(0,ivalues-offset[ii]):
 		vec[ii][z]=cola[z]
 		vecx[ii][z]=colxa[z]
 	ii=ii+1
@@ -208,20 +214,20 @@ plt.ylabel('firing rate')
 
 t=np.arange(-18,-9,0.1)
 xs=np.arange(-22.5+istart,-22.5+istart+ivalues)*0.8
-plt.yscale('log')
+#plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
 colorv=['y','g','b','r','c']
 
 for n in range(0,l):
-	plt.plot(vecx[n,:],vec[n,:],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
+	plt.plot(vecx[n,0:(ivalues-offset[n])],vec[n,0:(ivalues-offset[n])],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
 for n in range(0,l):
 	bv=b[2*n+1]
 	cv=c[2*n+1]
 	dv=d[2*n+1]
 	ev=e[2*n+1]	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,b[n+1],c[n+1],d[n+1]),comp(t,b[n+1],c[n+1],d[n+1],e[n+1]))/8,colorv[n])	
-	plt.plot(t,deffqana(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comp(t,bv,cv,dv,ev)),colorv[n])
+	plt.plot(t,vqana(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comp(t,bv,cv,dv,ev)),colorv[n])
 #plt.plot([0.163, 0.163], [10**(-7), 10], color='black', linestyle='-')
 #plt.plot([-0.02, -0.02], [10**(-7), 10], color='black', linestyle='-',label='$I_{crit}$')
 #plt.plot(xs,SNR[2,:],label='D=3')
@@ -231,4 +237,4 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('dcomprate25o6j.pdf')
+plt.savefig('gcomprate25onologwlp.pdf')

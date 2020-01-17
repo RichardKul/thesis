@@ -40,6 +40,8 @@ eqtottime=np.zeros((l,ivalues))
 eqreltime=np.zeros((l,ivalues))
 btottime=np.zeros((l,ivalues))
 breltime=np.zeros((l,ivalues))
+intdelay=np.zeros((l,ivalues))
+
 ii=0
 dt=0.0005	
 N=220000000
@@ -105,23 +107,23 @@ for x in D1:
 			inteqt=np.zeros(counteq)
 			for c in range(0,counteq):
 				inteqt[c]=inteq[c]	
-		
+		intdelay[ii][y-istart]=sum(i < 500 for i in intbt)/countb
 		counts=counteq+countb
 		countsrel=counts/Ndiff
 		changespertime[ii][y-istart]=countsrel/(repetitions*runs)
 		plt.figure()	
-		plt.xlabel('interval length [ms]')
+		plt.xlabel('interval length [s]')
 		plt.ylabel('number of intervals')	
-		plt.hist(intbt, bins=50)
+		plt.hist(intbt/1000, bins=50)
 		plt.yscale('log')
-		plt.title("distribution of bursting time intervals")
-		plt.savefig('bdistajrj2%s%d%d.pdf' %(date1,x,y))
+		plt.title("running intervals at $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100))
+		plt.savefig('bdistajrj2%s%d%df.pdf' %(date1,x,y))
 		plt.figure()
-		plt.xlabel('interval length [ms]')
+		plt.xlabel('interval length [s]')
 		plt.ylabel('number of intervals')
-		plt.hist(inteqt, bins=50)
+		plt.hist(inteqt/1000, bins=50)
 		plt.yscale('log')
-		plt.title("distribution of equilibrium time intervals")
+		plt.title("equilibrium intervals at $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100))
 		plt.savefig('eqdistajrj2%s%d%d.pdf' %(date1,x,y))
 		eqtot=np.sum(inteqt)
 		btot=np.sum(intbt)
@@ -195,23 +197,23 @@ for x in D2:
 			inteqt=np.zeros(counteq)
 			for c in range(0,counteq):
 				inteqt[c]=inteq[c]	
-		
+		intdelay[ii][y-istart]=sum(i < 500 for i in intbt)/countb
 		counts=counteq+countb
 		countsrel=counts/Ndiff
 		changespertime[ii][y-istart]=countsrel/(repetitions*runs)
 		plt.figure()		
-		plt.xlabel('interval length [ms]')
+		plt.xlabel('interval length [s]')
 		plt.ylabel('number of intervals')	
-		plt.hist(intbt, bins=50)
+		plt.hist(intbt/1000, bins=50)
 		plt.yscale('log')
-		plt.title("distribution of bursting time intervals")
-		plt.savefig('bdistajrj2%s%d%d.pdf' %(date2,x,y))
+		plt.title("running intervals at $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100))
+		plt.savefig('bdistajrj2%s%d%df.pdf' %(date2,x,y))
 		plt.figure()
-		plt.xlabel('interval length [ms]')
+		plt.xlabel('interval length [s]')
 		plt.ylabel('number of intervals')	
-		plt.hist(inteqt, bins=50)
+		plt.hist(inteqt/1000, bins=50)
 		plt.yscale('log')
-		plt.title("distribution of equilibrium time intervals")
+		plt.title("equilibrium intervalsat $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100))
 		plt.savefig('eqdistajrj2%s%d%d.pdf' %(date2,x,y))
 		eqtot=np.sum(inteqt)
 		btot=np.sum(intbt)
@@ -282,23 +284,23 @@ for x in D3:
 			inteqt=np.zeros(counteq)
 			for c in range(0,counteq):
 				inteqt[c]=inteq[c]	
-		
+		intdelay[ii][y-istart]=sum(i < 500 for i in intbt)/countb
 		counts=counteq+countb
 		countsrel=counts/Ndiff
 		changespertime[ii][y-istart]=countsrel/(repetitions*runs)
 		plt.figure()		
-		plt.xlabel('interval length [ms]')
+		plt.xlabel('interval length [s]')
 		plt.ylabel('number of intervals')	
-		plt.hist(intbt, bins=50)
+		plt.hist(intbt/1000, bins=50)
 		plt.yscale('log')
-		plt.title("distribution of bursting time intervals")
-		plt.savefig('bdistajrj2%s%d%d.pdf' %(date3,x,y))
+		plt.title("running intervals at $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100))
+		plt.savefig('bdistajrj2%s%d%df.pdf' %(date3,x,y))
 		plt.figure()
-		plt.xlabel('interval length [ms]')
+		plt.xlabel('interval length [s]')
 		plt.ylabel('number of intervals')	
-		plt.hist(inteqt, bins=50)
+		plt.hist(inteqt/1000, bins=50)
 		plt.yscale('log')
-		plt.title("distribution of equilibrium time intervals")
+		plt.title("equilibrium intervals at $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100))
 		plt.savefig('eqdistajrj2%s%d%d.pdf' %(date3,x,y))
 		eqtot=np.sum(inteqt)
 		btot=np.sum(intbt)
@@ -382,23 +384,23 @@ for x in Dvar:
 				inteqt=np.zeros(counteq)
 				for c in range(0,counteq):
 					inteqt[c]=inteq[c]	
-			
+			intdelay[ii][y-istart]=sum(i < 500 for i in intbt)/countb
 			counts=counteq+countb
 			countsrel=counts/Ndiff
 			changespertime[ii][y-istart]=countsrel/(repetitions*runs)
 			plt.figure()		
-			plt.xlabel('interval length [ms]')
+			plt.xlabel('interval length [s]')
 			plt.ylabel('number of intervals')	
-			plt.hist(intbt, bins=50)
+			plt.hist(intbt/1000, bins=50)
 			plt.yscale('log')
-			plt.title("distribution of bursting time intervals")
-			plt.savefig('bdistajrj2%s%d%d.pdf' %(datevar[0],x,y))
+			plt.title("running intervals at $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100))
+			plt.savefig('bdistajrj2%s%d%df.pdf' %(datevar[0],x,y))
 			plt.figure()
-			plt.xlabel('interval length [ms]')
+			plt.xlabel('interval length [s]')
 			plt.ylabel('number of intervals')	
-			plt.hist(inteqt, bins=50)
+			plt.hist(inteqt/1000, bins=50)
 			plt.yscale('log')
-			plt.title("distribution of equilibrium time intervals")
+			plt.title("equilibrium intervals at $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100))
 			plt.savefig('eqdistajrj2%s%d%d.pdf' %(datevar[0],x,y))
 			eqtot=np.sum(inteqt)
 			btot=np.sum(intbt)
@@ -426,34 +428,41 @@ for x in Dvar:
 #plt.plot(xs,breltime[3,:],label='D=4,equilibrium')
 #	plt.legend()
 #	plt.savefig('arrhenius%d.pdf' %(k))
+intdelayfile=open('intdelay%s.txt'%(date1+date2),'w')
+for n in range(0,l):
+	for o in range(0,ivalues):
+		intdelayfile.write('%.6f '%intdelay[n][o])
+	intdelayfile.write('\n')
+intdelayfile.close()
+xold=np.arange(-5+istart,-5+istart+ivalues)*0.02
 if l > 1:
 	for k2 in range(0,ivalues):
 		plt.figure()
 		xs=np.zeros(l)
 		for xf in range(0,l):
 			xs[xf]=100/D[xf]
-		plt.suptitle('I=%.2f$\mu A/cm^2$' %(-0.1+0.02*k2))
+		plt.suptitle('I=%.2f$\mu A/cm^2$' %(-0.08+0.02*k2))
 		plt.xlabel('inverse noise intensity 1/D')
-		plt.ylabel('transition rate w $[10^3s^{-1}]$')
-		plt.yscale('log')
-		plt.plot(xs,1/btottime[:,k2],'bo',label='burst to eq')
+		plt.ylabel('ln of transition rate ln(w $[10^3s^{-1}]$)')
+		#plt.yscale('log')
+		plt.plot(xs,np.log(1/btottime[:,k2]),'bo',label='run to eq')
 #plt.plot(xs,breltime[1,:],label='D=3,burst')
 #plt.plot(xs,breltime[2,:],label='D=4,burst')
 #plt.plot(xs,eqreltime[3,:],label='D=4,burst')
-		plt.plot(xs,1/eqtottime[:,k2],'ro',label='eq to burst')
+		plt.plot(xs,np.log(1/eqtottime[:,k2]),'ro',label='eq to run')
 #plt.plot(xs,eqreltime[1,:],label='D=3,equilibrium')
 #plt.plot(xs,eqreltime[2,:],label='D=4,equilibrium')
 #plt.plot(xs,breltime[3,:],label='D=4,equilibrium')
 		popt,pcov = curve_fit(func, xs, 1/btottime[:,k2])
-		plt.plot(np.array(xs), func(np.array(xs), *popt), 'b-',label='fit burst to eq: r_0=%5.3f, U_+=%5.3f' % tuple(popt))
+		plt.plot(np.array(xs), np.log(func(np.array(xs), *popt)), 'b-',label='fit run to eq: r_0=%5.3f, U_+=%5.3f' % tuple(popt))
 		params[0][k2]=popt[0]
 		params[1][k2]=popt[1]
 		popt,pcov = curve_fit(func, xs, 1/eqtottime[:,k2])
-		plt.plot(np.array(xs), func(np.array(xs), *popt), 'r-',label='fiteq to burst: r_0=%5.3f, U_-=%5.3f' % tuple(popt))
+		plt.plot(np.array(xs), np.log(func(np.array(xs), *popt)), 'r-',label='fit eq to run: r_0=%5.3f, U_-=%5.3f' % tuple(popt))
 		params[2][k2]=popt[0]
 		params[3][k2]=popt[1]
 		plt.legend()
-		plt.savefig('arrheniustot%sfit%d.pdf' %(date1+date2,k2))
+		plt.savefig('arrheniustot%sfit%dfln.pdf' %(date1+date2,k2))
 		eqfile = open('param%s%d.txt' % (date1+date2,k2),'w')
 		for k3 in range(0,4): 
 			eqfile.write('%.6f\n'%params[k3][k2]) 
@@ -471,7 +480,7 @@ if l > 1:
 		plt.plot(xs,1/(1/btottime[:,k2]+1/eqtottime[:,k2]))
 		plt.savefig('cortime%s%d.pdf' %(date1+date2,k2))
 plt.figure()
-xold=np.arange(-5+istart,-5+istart+ivalues)*0.02
+
 plt.xlabel('bias current I')
 plt.ylabel('correlation time')
 plt.yscale('log')
@@ -485,19 +494,19 @@ plt.figure()
 xnew=np.arange(-5+istart,-5+istart+ivalues)*0.02
 plt.xlabel('bias current')
 plt.ylabel('prefactor')
-plt.plot(xnew,params[0,:],label='burst to eq')
-plt.plot(xnew,params[2,:],label='eq to burst')
+plt.plot(xnew,params[0,:],label='run to eq')
+plt.plot(xnew,params[2,:],label='eq to run')
 plt.legend()
 plt.savefig('prefac%s.pdf' %(date1+date2))
 plt.figure()
 plt.xlabel('bias current')
 plt.ylabel('potential barrier')
-plt.plot(xnew,params[1,:],label='burst to eq')
-plt.plot(xnew,params[3,:],label='eq to burst')
-plt.plot(xnew,2*params[1,:],label='2x burst to eq')
-plt.plot(xnew,2*params[3,:],label='2x eq to burst')
+plt.plot(xnew,params[1,:],label='run to eq')
+plt.plot(xnew,params[3,:],label='eq to run')
+plt.plot(xnew,2*params[1,:],label='2x run to eq')
+plt.plot(xnew,2*params[3,:],label='2x eq to run')
 plt.legend()
-plt.savefig('barrier2%s.pdf' %(date1+date2))
+plt.savefig('barrier2%sf.pdf' %(date1+date2))
 eqfile3 = open('barrierex%s.txt' %(date1+date2),'w')
 for k3 in range(0,ivalues): 
 	eqfile3.write('%.6f %.6f %.6f %.6f %.6f\n'%(xnew[k3],params[0][k3],params[1][k3],params[2][k3],params[3][k3])) 
@@ -526,13 +535,13 @@ plt.plot(t,func2(t,params2[0],params2[1]),'y')
 plt.plot(t,func2(t,params2[3],params2[4]),'y')
 plt.plot(t,2*func2(t,params2[0],params2[1]),'y')
 plt.plot(t,2*func2(t,params2[3],params2[4]),'y')
-plt.plot(xnew,params[1,:],label='burst to eq')
-plt.plot(xnew,params[3,:],label='eq to burst')
-plt.plot(xnew,2*params[1,:],label='2x burst to eq')
-plt.plot(xnew,2*params[3,:],label='2x eq to burst')
+plt.plot(xnew,params[1,:],label='run to eq')
+plt.plot(xnew,params[3,:],label='eq to run')
+plt.plot(xnew,2*params[1,:],label='2x run to eq')
+plt.plot(xnew,2*params[3,:],label='2x eq to run')
 
 plt.legend()
-plt.savefig('barriercomp%s.pdf' %(date1+date2))
+plt.savefig('barriercomp%sf.pdf' %(date1+date2))
 
 #plt.figure()
 #xs1=np.arange(-0.75,4.25,0.25)

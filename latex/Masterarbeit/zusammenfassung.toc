@@ -16,5 +16,6 @@
 \contentsline {subsubsection}{\numberline {3.4.1}Absch"atzung aus $D_{eff}$ und r}{31}% 
 \contentsline {subsection}{\numberline {3.5}SNR am Schnittpunkt}{70}% 
 \contentsline {subsubsection}{\numberline {3.5.1}Vergleich $D_{eff}$ Zwei-Zustands-Theorie}{74}% 
-\contentsline {subsubsection}{\numberline {3.5.2}\IeC {\"U}bergangsraten in Abh\IeC {\"a}ngigkeit vom Strom}{76}% 
-\contentsline {subsubsection}{\numberline {3.5.3}Verifikation: Spektrum eines OUP}{78}% 
+\contentsline {subsubsection}{\numberline {3.5.2}\IeC {\"U}bergangsraten in Abh\IeC {\"a}ngigkeit vom Strom}{78}% 
+\contentsline {subsubsection}{\numberline {3.5.3}Verifikation: Spektrum eines OUP}{80}% 
+\contentsline {subsubsection}{\numberline {3.5.4}Phasenraum}{81}% 

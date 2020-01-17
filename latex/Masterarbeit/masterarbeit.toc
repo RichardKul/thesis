@@ -1,22 +1,22 @@
 \babel@toc {english}{}
-\contentsline {section}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {2}Theory}{1}
-\contentsline {subsection}{\numberline {2.1}Quantities of interest}{1}
-\contentsline {subsection}{\numberline {2.2}Giant Diffusion}{2}
-\contentsline {subsection}{\numberline {2.3}Giant diffusion of Brownian Particles}{2}
-\contentsline {subsubsection}{\numberline {2.3.1}Active Brownian Particles}{2}
-\contentsline {subsubsection}{\numberline {2.3.2}Regular Brownian Particles in a tilted periodic potential}{4}
-\contentsline {subsection}{\numberline {2.4}Two-state theory}{7}
-\contentsline {section}{\numberline {3}Giant diffusion in a bursting neuron model}{9}
-\contentsline {subsection}{\numberline {3.1}Brownian motion and neuronal models}{9}
-\contentsline {subsection}{\numberline {3.2}Neuronal bursting}{9}
-\contentsline {subsection}{\numberline {3.3}The bursting neuron model}{9}
-\contentsline {subsection}{\numberline {3.4}Phase plane analysis}{10}
-\contentsline {subsubsection}{\numberline {3.4.1}Nullclines}{10}
-\contentsline {subsubsection}{\numberline {3.4.2}Jacobian matrix of the system}{11}
-\contentsline {subsection}{\numberline {3.5}Phenomenology}{12}
-\contentsline {section}{\numberline {4}Simulations}{15}
-\contentsline {subsection}{\numberline {4.1}Numerics}{15}
-\contentsline {subsection}{\numberline {4.2}Count statistics}{16}
-\contentsline {subsection}{\numberline {4.3}Transition rates between the states}{19}
-\contentsline {subsubsection}{\numberline {4.3.1}Distribution of time intervals}{20}
+\contentsline {section}{\numberline {1}Introduction}{1}% 
+\contentsline {section}{\numberline {2}Theory}{1}% 
+\contentsline {subsection}{\numberline {2.1}Quantities of interest}{1}% 
+\contentsline {subsection}{\numberline {2.2}Giant Diffusion}{2}% 
+\contentsline {subsection}{\numberline {2.3}Giant diffusion of Brownian Particles}{2}% 
+\contentsline {subsubsection}{\numberline {2.3.1}Active Brownian Particles}{2}% 
+\contentsline {subsubsection}{\numberline {2.3.2}Regular Brownian Particles in a tilted periodic potential}{4}% 
+\contentsline {subsection}{\numberline {2.4}Two-state theory}{7}% 
+\contentsline {section}{\numberline {3}Giant diffusion in a bursting neuron model}{9}% 
+\contentsline {subsection}{\numberline {3.1}Brownian motion and neuronal models}{9}% 
+\contentsline {subsection}{\numberline {3.2}Neuronal bursting}{9}% 
+\contentsline {subsection}{\numberline {3.3}The bursting neuron model}{9}% 
+\contentsline {subsection}{\numberline {3.4}Phase plane analysis}{10}% 
+\contentsline {subsubsection}{\numberline {3.4.1}Nullclines}{10}% 
+\contentsline {subsubsection}{\numberline {3.4.2}Jacobian matrix of the system}{11}% 
+\contentsline {subsection}{\numberline {3.5}Phenomenology}{12}% 
+\contentsline {section}{\numberline {4}Simulations}{15}% 
+\contentsline {subsection}{\numberline {4.1}Numerics}{15}% 
+\contentsline {subsection}{\numberline {4.2}Count statistics}{16}% 
+\contentsline {subsection}{\numberline {4.3}Transition rates between the states}{19}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Distribution of the state lifetimes}{20}% 

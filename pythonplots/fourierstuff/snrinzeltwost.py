@@ -134,10 +134,10 @@ bm = 3.15
 am = -10.76
 r0m = 0.012
 
-date='realrinzelpoi17dlong1'
-date1='realrinzelpoi17d1'
-D=[200]
-D1=[300,500]
+date='realrinzelpoi4d1'
+date1='realrinzelpoi13d1'
+D=[200,250,300]
+D1=[400,500]
 Dtot=D+D1
 l2=len(D)+len(D1)
 
@@ -296,19 +296,20 @@ plt.yscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
 #colorv=['r','y','c','g','k','b'] # 6 colors
-colorv=['y','g','b'] # 3 colors
+#colorv=['y','g','b'] # 3 colors
+colorv=['y','c','g','k','b'] # 5 colors
 for n in range(0,l2):
 	nl=round(ivalues-offset[n])
 	plt.plot(xvec[n,0:nl],(SNR[n,0:nl]-1)/scale[n,0:nl],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
 for n in range(0,l2):
-	bv=b[2*n+1] # 3 plots
-	cv=c[2*n+1]
-	dv=d[2*n+1]
-	ev=e[2*n+1]
-	#bv=b[n] # all
-	#cv=c[n]
-	#dv=d[n]
-	#ev=e[n]	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,b[n+1],c[n+1],d[n+1]),comp(t,b[n+1],c[n+1],d[n+1],e[n+1]))/8,colorv[n])	
+	#bv=b[2*n+1] # 3 plots
+	#cv=c[2*n+1]
+	#dv=d[2*n+1]
+	#ev=e[2*n+1]
+	bv=b[n+1] # 5
+	cv=c[n+1]
+	dv=d[n+1]
+	ev=e[n+1]	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,b[n+1],c[n+1],d[n+1]),comp(t,b[n+1],c[n+1],d[n+1],e[n+1]))/8,colorv[n])	
 	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,bv,cv,dv),comp(t,bv,cv,dv,ev))/8,colorv[n])
 	plt.plot(t,snr(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,bv,cv,dv),comp(t,bv,cv,dv,ev))/8,colorv[n])
 #plt.plot(t,snr(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[3]*0.1,comps(t,b[5],c[5],d[5]),comp(t,b[5],c[5],d[5],e[5]))/8,colorv[3])
@@ -321,5 +322,5 @@ for n in range(0,l2):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snrinzelpoi6j17dshort.pdf')
+plt.savefig('snrinzelpoi14d13d.pdf')
 #plt.savefig('snrinzelonly.pdf')

@@ -127,7 +127,7 @@ In this example, the Arrhenius fit as well as the Kramers fit yield good agreeme
 \begin{figure}[H]	\includegraphics[scale=0.5]{barrierplot.png}\caption{Plot of the effective potential barriers. The dotted curves are simply twice the solid curves of the same color. This plot is taken from \cite{bpp}}
 \end{figure}
 The plot shows that the points where one potential barrier equals twice the other roughly correspond to the critical forces, so the criterion applies as well to this case, where no potential barriers were present and only effective barriers could be calculated.
-\subsection{Two-state theory}
+\subsection{Two-state theory}\label{tst}
 In the case of low noise intensity, the transition times between the locked state and the running state will be much shorter than the periods of time that the particle stays in one of the two states. That is why it is practical to describe the behavior of the system in this regime with a two-state model. The following derivation applies to the Brownian Particle in a tilted periodic potential. The transition rates are assumed to obey an Arrhenius law:
 \begin{align*}
 r_{\pm}=r_{0,\pm}\exp\left(-\frac{\Delta U_{\pm}}{D}\right)
@@ -282,7 +282,7 @@ In addition to that, depending on the overall configuration, the system is usual
  	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$. In figure (d), a segment with a higher time resolution is shown in order to better illustrate the evolution of the voltage variable.}
  	\label{currentnoise} 
  \end{figure}
-In conclusion, the behavior of this two-dimensional bursting model displays the same characteristics as the Brownian particle in a tilted potential. Therefore, we expect to find similar count statistics and Giant Diffusion for this system as well. This question will be examined in the following chapter.
+In conclusion, the behavior of this two-dimensional bursting model displays the same characteristics as the Brownian particle in a tilted potential. Therefore, we expect to find similar count statistics and Giant Diffusion for this system as well. If this assumption is actually valid will be examined in the following chapter.
 
 \section{Simulations}
 \subsection{Numerics}
@@ -313,8 +313,38 @@ The mean firing rates start at zero, increase monotonically with the bias curren
 	\label{rate}
 \end{figure}
 \subsection{Transition rates between the states}
-While the spike count may be the most important quantity to determine, there are some other characteristics which should be investigated. An example for these are the transition rates between the states. Looking at the membrane voltage curve over time, both states can be clearly distinguished: in the running state, the voltage oscillates around a value of about -25 $V$, the resting state is characterized by random oscillations with an average voltage of -70 $V$ and the transitions only take a couple tens of microseconds. However, at a given point in time during the simulation, there is no information available about the next time steps, and the transition from one state into another is not entirely deterministic but underlies some noise. That is why simply defining a voltage threshold which needs to be crossed does not guarantee correct results for the transition rates. For this reason, another criterion needed to be found. Going back to the condition for counting a spike, a similar criterion can be found for the resting state. Once the system has crossed the resting equilibrium values of the voltage and gating variables in any order (and without firing a spike in between), it is considered to be in the resting state. While these criteria might identify the current state of the system with a slight delay with respect to the simple evaluation of the voltage curve, the overall transition times are much larger,especially in the low-noise limit, so that no error is introduced.
-\subsubsection{Distribution of time intervals}
+While the spike count may be the most important quantity to determine, there are some other characteristics which should be investigated. An example for these are the transition rates between the states. Looking at the membrane voltage curve over time, both states can be clearly distinguished: in the running state, the voltage oscillates around a value of about -25 $V$, the resting state is characterized by random oscillations with an average voltage of -70 $V$ and the transitions only take a couple tens of microseconds. However, at a given point in time during the simulation, there is no information available about the next time steps. Even more important is the fact that the transition from one state into another is not entirely deterministic but underlies noise. Therefore, a system near the threshold will theoretically undergo infinite transitions before ending up in one of the two states. That is why simply defining a voltage threshold which needs to be crossed does not guarantee correct results for the transition rates. Consequently, another criterion needed to be found. Going back to the condition for counting a spike, a similar criterion can be found for the resting state. Once the system has crossed the resting equilibrium values of the voltage and gating variables in any order (and without firing a spike in between), it is considered to be in the resting state. That way, the current state of the system could be identified much more stable in comparison to a mere voltage threshold.
+\subsubsection{Distribution of the state lifetimes}
+Now that criteria for transitions between the states have been found, it is possible to investigate the statistics of the running and resting time intervals. In the case of a high number of transitions, the equilibrium as well as the resting time intervals display a simple exponential distribution, indicating that the transitions are random and independent:
+\begin{figure}[H]
+	\hspace*{-0.5cm}
+	\subfigure[]{	\includegraphics[scale=0.5]{eqdistajrj2newrealfast11jjem2309.pdf}}
+	\subfigure[]{\includegraphics[scale=0.5]{bdistajrj2newrealfast19jjem2st459f.pdf}}
+	\caption{Distribution of equilibrium time intervals (left) and running time intervals at high switching rates}
+	\label{intdistgood}
+\end{figure}
+Depending on the noise intensity, the interval lengths can range from some seconds to a few minutes. As the number of events decreases with the interval length, the tail of the distribution gets less regular. Consequently, in the case of a small number of transitions, the whole distribution looks like the tails of the shown histograms.\\
+Due to the exponential (and thereby fast decaying) distribution of the intervals, one can now reasonably calculate transition rates.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{tranratesneur2.pdf}\caption{Transition rates between the states for a couple different noise intensities}
+	\label{tranrateneur}
+\end{figure}
+As expected, the transition rates grow with the noise intensity. Furthermore, the transition rates from running state to equilibrium decrease with the bias current, while the rates of the opposite transition grow. What this basically means is that the higher the bias current, the higher the likelihood of getting into the running state and the longer are the residence times in this state, which is consistent with the phenomenology of the system. The last observation to discuss here are the intersection points of the rates at the same noise intensity. These can all be found at a bias current of about 0.07 $\mu A/cm^2$, corresponding to the maxima of the effective diffusion coefficients in figure \ref{deff}.
+\\
+For a given bias current, the transition rates can be put into an Arrhenius plot.
+\begin{figure}[H]
+	\hspace*{-0.5cm}
+	\subfigure[]{	\includegraphics[scale=0.5]{arrheniustotnewrealfast11jjem2shnewrealfast19jjem2stfit7fln.pdf}}
+	\subfigure[]{\includegraphics[scale=0.5]{arrheniustotnewrealfast11jjem2shnewrealfast19jjem2stfit15fln.pdf}}
+	\caption{logarithm of the transition rates in the middle of the area with giant diffusion (a) and outside of it (b)}
+	\label{arrhplots}
+\end{figure}
+The logarithmic plots illustrate the exponential dependence of the transition rates on the noise intensity at any given bias current. In order to extract effective potential barriers, these data were fit with functions of the form
+\begin{align*}
+r_{\pm}=r_{0,\pm}\exp\left(-\frac{\Delta U_{\pm}}{D}\right)
+\end{align*}
+as introduced in section \ref{tst}. 
 \bibliography{quellen}
 \bibliographystyle{ieeetr}
 \include{other/declaration}

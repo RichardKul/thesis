@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.11)  6 JAN 2020 19:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.11)  16 JAN 2020 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1271,74 +1271,129 @@ Overfull \hbox (35.73549pt too wide) in paragraph at lines 547--547
  [][] 
  []
 
-<barrierinzelfit4.pdf, id=3874, 462.52798pt x 346.89601pt>
-File: barrierinzelfit4.pdf Graphic file (type pdf)
-<use barrierinzelfit4.pdf>
-Package pdftex.def Info: barrierinzelfit4.pdf  used on input line 552.
+<gcomprate25o6jnolog.pdf, id=3874, 462.52798pt x 346.89601pt>
+File: gcomprate25o6jnolog.pdf Graphic file (type pdf)
+<use gcomprate25o6jnolog.pdf>
+Package pdftex.def Info: gcomprate25o6jnolog.pdf  used on input line 552.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
 Overfull \hbox (35.73549pt too wide) in paragraph at lines 552--552
  [][] 
  []
 
-[73 <./snrinzelpoi6j17dshort.pdf>] [74 <./dcomprate25o6j.pdf>] [75 <./barrierin
-zelfit4.pdf>]
-<tranrates.pdf, id=3979, 462.52798pt x 346.89601pt>
+[73 <./snrinzelpoi6j17dshort.pdf>]
+<gcompratepoi17dnolog.pdf, id=3913, 462.52798pt x 346.89601pt>
+File: gcompratepoi17dnolog.pdf Graphic file (type pdf)
+<use gcompratepoi17dnolog.pdf>
+Package pdftex.def Info: gcompratepoi17dnolog.pdf  used on input line 557.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 557--557
+ [][] 
+ []
+
+[74 <./dcomprate25o6j.pdf>]
+<barrierinzelfit4.pdf, id=3951, 462.52798pt x 346.89601pt>
+File: barrierinzelfit4.pdf Graphic file (type pdf)
+<use barrierinzelfit4.pdf>
+Package pdftex.def Info: barrierinzelfit4.pdf  used on input line 562.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 562--562
+ [][] 
+ []
+
+[75 <./gcomprate25o6jnolog.pdf>] [76 <./gcompratepoi17dnolog.pdf>] [77 <./barri
+erinzelfit4.pdf>]
+<tranrates.pdf, id=4058, 462.52798pt x 346.89601pt>
 File: tranrates.pdf Graphic file (type pdf)
 <use tranrates.pdf>
-Package pdftex.def Info: tranrates.pdf  used on input line 559.
+Package pdftex.def Info: tranrates.pdf  used on input line 569.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 559--559
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 569--569
  [][] 
  []
 
-<tranratesneur.pdf, id=3980, 462.52798pt x 346.89601pt>
+<tranratesneur.pdf, id=4059, 462.52798pt x 346.89601pt>
 File: tranratesneur.pdf Graphic file (type pdf)
 <use tranratesneur.pdf>
-Package pdftex.def Info: tranratesneur.pdf  used on input line 564.
+Package pdftex.def Info: tranratesneur.pdf  used on input line 574.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 564--564
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 574--574
  [][] 
  []
 
-[76 <./tranrates.pdf>]
-<oup2jtheo3.pdf, id=4037, 462.52798pt x 346.89601pt>
+[78 <./tranrates.pdf>]
+<oup2jtheo3.pdf, id=4117, 462.52798pt x 346.89601pt>
 File: oup2jtheo3.pdf Graphic file (type pdf)
 <use oup2jtheo3.pdf>
-Package pdftex.def Info: oup2jtheo3.pdf  used on input line 570.
+Package pdftex.def Info: oup2jtheo3.pdf  used on input line 580.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 570--570
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 580--580
  [][] 
  []
 
-[77 <./tranratesneur.pdf>] [78 <./oup2jtheo3.pdf>] (./zusammenfassung.aux) ) 
+[79 <./tranratesneur.pdf>]
+<rinzelclines.pdf, id=4178, 462.52798pt x 346.89601pt>
+File: rinzelclines.pdf Graphic file (type pdf)
+<use rinzelclines.pdf>
+Package pdftex.def Info: rinzelclines.pdf  used on input line 586.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 586--586
+ [][] 
+ []
+
+<rinzelclinescor.pdf, id=4179, 462.52798pt x 346.89601pt>
+File: rinzelclinescor.pdf Graphic file (type pdf)
+<use rinzelclinescor.pdf>
+Package pdftex.def Info: rinzelclinescor.pdf  used on input line 591.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 591--591
+ [][] 
+ []
+
+[80 <./oup2jtheo3.pdf>]
+<rinzelclinescoredge2.pdf, id=4216, 462.52798pt x 346.89601pt>
+File: rinzelclinescoredge2.pdf Graphic file (type pdf)
+<use rinzelclinescoredge2.pdf>
+Package pdftex.def Info: rinzelclinescoredge2.pdf  used on input line 596.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 596--596
+ [][] 
+ []
+
+[81 <./rinzelclines.pdf>] [82 <./rinzelclinescor.pdf>] [83 <./rinzelclinescored
+ge2.pdf>] (./zusammenfassung.aux) ) 
 Here is how much of TeX's memory you used:
- 3929 strings out of 494508
- 61575 string characters out of 6175044
- 130156 words of memory out of 5000000
- 7461 multiletter control sequences out of 15000+600000
+ 3959 strings out of 494508
+ 62409 string characters out of 6175044
+ 130206 words of memory out of 5000000
+ 7486 multiletter control sequences out of 15000+600000
  8568 words of font info for 31 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,11n,25p,728b,250s stack positions out of 5000i,500n,10000p,200000b,80000s
-</u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on zusammenfassung.pdf (79 pages, 2289696 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb>
+Output written on zusammenfassung.pdf (84 pages, 2364768 bytes).
 PDF statistics:
- 4178 PDF objects out of 4296 (max. 8388607)
- 975 compressed objects within 10 object streams
+ 4374 PDF objects out of 5155 (max. 8388607)
+ 1015 compressed objects within 11 object streams
  0 named destinations out of 1000 (max. 500000)
- 456 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 481 words of extra memory for PDF output out of 10000 (max. 10000000)
 
