@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 
 from scipy.optimize import curve_fit
 
+matplotlib.rcParams.update({'font.size': 16})
+
 def qbarrier(x,a,b,c):
 	return a*x**2+b*x+c
 def func(x, a, b):
@@ -83,33 +85,46 @@ paramsqrate[5]=popt[2]
 
 t1=np.arange(-0.1,0.32,0.01)
 plt.figure()
-plt.xlabel('bias current')
-plt.ylabel('effective potential barrier')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('potential barrier')
 plt.plot(xnew,params[1,:],'go',label='run to eq')
 plt.plot(xnew,params[3,:],'ro',label='eq to run')
-plt.plot(t1,qbarrier(t1,paramsq[0],paramsq[1],paramsq[2]),'g')
-plt.plot(t1,qbarrier(t1,paramsq[3],paramsq[4],paramsq[5]),'r')
+plt.plot(xnew,params[1,:],'g')
+plt.plot(xnew,params[3,:],'r')
+#plt.plot(t1,qbarrier(t1,paramsq[0],paramsq[1],paramsq[2]),'g')
+#plt.plot(t1,qbarrier(t1,paramsq[3],paramsq[4],paramsq[5]),'r')
 plt.legend()
-plt.savefig('barrierealfit4.pdf')
+plt.tight_layout()
+plt.savefig('barriereal4linebig.pdf')
 
 plt.figure()
-plt.xlabel('bias current')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('rate prefactor')
 plt.plot(xnew,params[0,:],'go',label='run to eq')
 plt.plot(xnew,params[2,:],'ro',label='eq to run')
-plt.plot(t1,qbarrier(t1,paramsqrate[0],paramsqrate[1],paramsqrate[2]),'g')
-plt.plot(t1,qbarrier(t1,paramsqrate[3],paramsqrate[4],paramsqrate[5]),'r')
+plt.plot(xnew,params[0,:],'g')
+plt.plot(xnew,params[2,:],'r')
+#plt.plot(t1,qbarrier(t1,paramsqrate[0],paramsqrate[1],paramsqrate[2]),'g')
+#plt.plot(t1,qbarrier(t1,paramsqrate[3],paramsqrate[4],paramsqrate[5]),'r')
 plt.legend()
-plt.savefig('raterealfit4.pdf')
+plt.tight_layout()
+plt.savefig('ratereal4linebig.pdf')
 
 plt.figure()
-plt.xlabel('bias current')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('potential barrier')
-plt.plot(xnew,params[1,:],label='run to eq')
-plt.plot(xnew,params[3,:],label='eq to run')
-plt.plot(xnew,2*params[1,:],label='2x run to eq')
-plt.plot(xnew,2*params[3,:],label='2x eq to run')
+plt.plot(xnew,params[1,:],'g^',label='run to eq')
+plt.plot(xnew,params[3,:],'r^',label='eq to run')
+plt.plot(xnew,2*params[1,:],'gs',label='2x run to eq')
+plt.plot(xnew,2*params[3,:],'rs',label='2x eq to run')
+plt.plot(xnew,params[1,:],'g')
+plt.plot(xnew,params[3,:],'r')
+plt.plot(xnew,2*params[1,:],'g')
+plt.plot(xnew,2*params[3,:],'r')
+plt.plot([0.165, 0.165], [0,90], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([-0.022, -0.022], [0,90], color='black', linestyle='-')
 plt.legend()
-plt.savefig('barriercomprealfit4.pdf')
+plt.tight_layout()
+plt.savefig('barriercomprealfit4linecritbig.pdf')
 
 

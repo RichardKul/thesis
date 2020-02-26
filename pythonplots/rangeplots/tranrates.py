@@ -28,8 +28,8 @@ for k2 in range(0,ivalues):
 		x.append(float(row[0]))
 	ax=np.array(x)
 	for k in range(0,l):
-		btoeq[k][k2]=1/ax[k]
-		eqtob[k][k2]=1/ax[k+l]
+		btoeq[k][k2]=1000/ax[k]
+		eqtob[k][k2]=1000/ax[k+l]
 
 #xnew=np.arange(-22.5+istart,-22.5+istart+ivalues)*0.8
 xnew=np.arange(-5+istart,-5+istart+ivalues)*0.02
@@ -38,7 +38,7 @@ colorv=['b','r','k','g','y']
 plt.figure()
 plt.yscale('log')
 plt.xlabel('bias current I $[\mu A/cm^2]$')
-plt.ylabel('transition rate w $[10^3s^{-1}]$')
+plt.ylabel('transition rate r $[s^{-1}]$')
 for n in range(0,2):
 	plt.plot(xnew,btoeq[n,:],colorv[n]+'x',label='D=%.2f, run to eq'%(Da[n]*0.01))
 	plt.plot(xnew,btoeq[n,:],colorv[n])
@@ -53,4 +53,4 @@ for n in range(4,5):
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [2,0,1]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('tranratesneur2.pdf')
+plt.savefig('tranratesneur3.pdf')

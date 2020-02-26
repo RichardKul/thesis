@@ -12,11 +12,11 @@ from scipy.fftpack import fft, ifft
 
 epsilon=0.01
 omega=0.01
-tau=1
+tau=3
 runs=2000
 points=100000
 length=50000
-N=100000000
+N=10000000
 dt=0.001
 T=N*dt
 T2=T*10
@@ -26,7 +26,7 @@ amp=epsilon**2*T/(4*(1+((omega/2)*tau)**2))
 def spectrum(f,tau,sigma):
 	return (2*tau*sigma**2)/(1+(2*np.pi*f*tau)**2)
 
-file=open('/home/richard/mastergit/NetBeansProjects/oup/xtraje2j.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/oup/xtraje18f.txt',"r")
 x,y=[],[]
 for k in file:
 	row=k.split()
@@ -74,8 +74,8 @@ plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
 plt.plot(ax2,ay2/T,label='sim')
-plt.plot(ax2,spectrum(ax2,1,1),label='theory')
-plt.plot(omega/2,amp+spectrum(omega/(4*np.pi),1,1),'x',label="delta")
+plt.plot(ax2,spectrum(ax2,3,5),label='theory')
+plt.plot(omega/2,amp+spectrum(omega/(4*np.pi),3,5),'x',label="delta")
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('oup2jtheo3.pdf')
+plt.savefig('oup18ftheo3.pdf')

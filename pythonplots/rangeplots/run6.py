@@ -8,7 +8,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-file=open('/home/richard/mastergit/NetBeansProjects/realstatevar/realstatevar145.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/realstatevar/realstate125.txt',"r")
 x,y,z,a=[],[],[],[]
 for k in file:
 	row=k.split()
@@ -18,16 +18,22 @@ for k in file:
 	#a.append(float(row[4]))
 ax=np.array(x)
 ay=np.array(y)
-az=40*np.array(z)-65
+az=40*np.array(z)-50
 #aa=-np.array(a)/40
 
+matplotlib.rcParams.update({'font.size': 22})
+
 plt.figure()
-plt.suptitle('$I$=0.1$\mu A/cm^2$')
+axs = plt.subplot(111)
+plt.suptitle('$I$=-0.1$\mu A/cm^2$')
 #plt.suptitle('I=0')
 plt.xlabel('time [s]')
 plt.ylabel('membrane voltage [mV]')
-plt.xlim(0,2)
-plt.plot(ax/1000,ay,'black')
-plt.plot(ax/1000,az)
+plt.xlim(3.75,4.25)
+axs.plot(ax/1000,ay,'black')
+#plt.plot(ax/1000,az)
 #plt.plot(ax,aa)
-plt.savefig('realstatevar145wstate.pdf')
+axs.spines['right'].set_visible(False)
+axs.spines['top'].set_visible(False)
+plt.tight_layout()
+plt.savefig('realstatevar125vsh2.pdf')

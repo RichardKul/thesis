@@ -58,22 +58,30 @@ bm = 3.15
 am = -10.76
 r0m = 0.012
 
-date='realfast13aem2n4'
-date1='realfast9aem2sh'
-D=[25,30]
-D1=[35,45]
+#date='realfast13aem2n4'
+#date1='realfast9aem2sh'
+#D=[25,30]
+#D1=[35,45]
+date='realanhopf3fwsshort'
+date1='realanhopf7flog'
+D=[20,30]
+D1=[10]
 Dtot=D+D1
 l=len(D)+len(D1)
 
 points=1000000
 length=500000
+istart=1
 ivalues=20
 SNR=np.zeros((l,ivalues))
 scale=np.zeros((l,ivalues))
 ii=0
 
+xvec=np.zeros(ivalues)
+offset=np.zeros(1,dtype=int)
+
 for c in D:
-	for z in range(1,21):
+	for z in range(istart,istart+ivalues):
 		file=open('/home/richard/outhome/spike%s%d%d.txt' %(date,c,z),"r")
 		x,y=[],[]
 		for k in file:
@@ -107,13 +115,17 @@ for c in D:
 	ii=ii+1
 
 for c1 in D1:
-	for z in range(1,21):
+	for z in range(istart,istart+ivalues):
 		file=open('/home/richard/outhome/spike%s%d%d.txt' %(date1,c1,z),"r")
 		x,y=[],[]
 		for k in file:
 			row=k.split()
 			x.append(float(row[0]))
 			y.append(float(row[1]))
+		le=len(x)
+		if le == 0:
+			offset=offset+1
+			continue
 		ax=np.array(x)
 		ay=np.array(y)
 		param=open('/home/richard/outhome/param%s%d%d.txt' %(date1,c1,z),"r")
@@ -135,17 +147,27 @@ for c1 in D1:
 		epsilon=value[name.index('epsilon')]
 		omega=value[name.index('omega')]
 		T=N*repetitions*dt
-		scale[ii][z-1]=epsilon**2*T
-		omegaind=round(omega*T)		
-		SNR[ii][z-1]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
+		scale[ii][z-istart-offset]=epsilon**2*T
+		omegaind=le-6		
+		#omegaind=141
+		SNR[ii][z-istart-offset]=2*ay[omegaind]/np.mean(ay[omegaind-3:omegaind]+ay[omegaind+1:omegaind+4])
+		iv=open('/home/richard/outhome/d%s%d%d.txt' %(date1,c1,z),"r")
+		for k in iv:
+			row=k.split()
+		xvec[z-istart-offset]=float(row[0])
 	ii=ii+1
 
+snrealfile=open('snrealanhopffile.txt','w')
+for n in range(0,l):
+	for m in range(0,ivalues):
+		snrealfile.write('%.6f '%((SNR[n][m]-1)/scale[n][m]))
+	snrealfile.write('\n')
+snrealfile.close()
 
-
-D0=[25]
-D3=[35]
-D2=[45]
-Dvar=[30]
+D0=[]
+D3=[20,30,10]
+D2=[]
+Dvar=[]
 D=D0+Dvar+D3+D2
 Da=np.array(D)
 l0=len(D0)
@@ -153,7 +175,7 @@ l2=len(D2)
 l3=len(D3)
 lvar=len(Dvar)
 l=l2+l3+lvar+l0
-date3='realfast11jjem2sh'
+date3='realanhopf22j'
 date2='realfast19jjem2st'
 datevar=['realfast11jjem2','realfast11jjem2sh','realfast11jjem2']
 yvar=[4,13,3]
@@ -234,7 +256,7 @@ for x in D2:
 		vec[ii][z]=cola2[z]
 	ii=ii+1
 
-istep=0.02
+istep=0.25
 
 ii=0
 gvec=np.zeros((l,ivalues))
@@ -312,14 +334,14 @@ for x in D2:
 	ii=ii+1
 
 plt.figure()
-xsh=np.arange(-0.06,0.3,0.02)
+xsh=np.arange(43.5,48,0.25)
 plt.xlabel('bias current I')
 plt.ylabel('firing rate')
 plt.yscale('log')
 for n in range(0,l):
 	plt.plot(xsh,drdr[n,:],label='D=%s' %Dtot[n])
 plt.legend()
-plt.savefig('drdineurall.pdf')
+plt.savefig('drdineurallanhopf.pdf')
 #files=open('/home/richard/NetBeansProjects/oup/xtraje6newwcav2.txt',"r")
 #sx,sy=[],[]
 #for ks in files:
@@ -351,24 +373,26 @@ plt.xlabel('bias current')
 plt.ylabel('SNR')
 
 t=np.arange(-0.1,0.3,0.01)
-xs=np.arange(-0.08,0.32,0.02)
+xs=np.arange(43.25,48.25,0.25)
 
 plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
 colorv=['y','g','b','r']
-for n in range(0,l):
-	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.01))
+for n in range(0,l-1):
+	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
+for n in range(l-1,l):
+	plt.plot(xvec[0:offset[0]],(SNR[n,0:offset[0]]-1)/scale[n,0:offset[0]],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
 for n in range(0,l):	
 	plt.plot(xsh,snrmeas(drdr[n,:],f)/vec[n,1:19],colorv[n])
-plt.plot([0.163, 0.163], [2*10**(-5), 6*10**(-2)], color='black', linestyle='-')
-plt.plot([-0.02, -0.02], [2*10**(-5), 6*10**(-2)], color='black', linestyle='-',label='$I_{crit}$')
+#plt.plot([0.163, 0.163], [2*10**(-5), 6*10**(-2)], color='black', linestyle='-')
+#plt.plot([-0.02, -0.02], [2*10**(-5), 6*10**(-2)], color='black', linestyle='-',label='$I_{crit}$')
 #plt.plot(xs,SNR[2,:],label='D=3')
 #plt.plot(xs,SNR[1,:],label='D=2.5')
-#handles, labels = plt.gca().get_legend_handles_labels()
-#order = [0,2,1]
-#plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
+handles, labels = plt.gca().get_legend_handles_labels()
+order = [2,0,1]
+plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
-plt.legend()
-plt.savefig('snrangerealanameasspall.pdf')
+#plt.legend()
+plt.savefig('snrangerealanameasspallanhopf.pdf')

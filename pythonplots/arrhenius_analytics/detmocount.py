@@ -13,10 +13,10 @@ from scipy.optimize import curve_fit
 def comp(x,a,b):
 	return a*x+b
 
-N=5000000
+N=50000000
 dt=0.0005
 T=N*dt
-file=open('/home/richard/NetBeansProjects/detrinzel/countrinzel.txt',"r")
+file=open('/home/richard/NetBeansProjects/detmodel/countI9a.txt',"r")
 col,colx=[],[]
 for k in file:
 	row=k.split()
@@ -39,6 +39,6 @@ plt.ylabel('firing rate')
 plt.plot(colxa,cola/T)
 #plt.plot(t,comp(t,popt[0],popt[1]),label='linear appr %f %f'%(popt[0],popt[1]))
 #plt.legend()
-plt.savefig('detmocountrinzel.pdf')
+plt.savefig('detmocount.pdf')
 
 

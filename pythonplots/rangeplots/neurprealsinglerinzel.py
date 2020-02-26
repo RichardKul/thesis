@@ -15,12 +15,12 @@ import matplotlib.pyplot as plt
 #yvalues=len(yvar)
 
 
-date='realrinzel14n0'
-date1='realrinzel14n1'
-date2='realrinzel3n'
-D=[300,500]
-D1=[300,500]
-D2=[]
+date='realrinzelrangelong26d1'
+date1='realrinzelrange26d1'
+date2='realrinzelrangeshort26d1'
+D=[200]
+D1=[250,300]
+D2=[400,500]
 Dtot=D+D1+D2
 l=len(D)+len(D1)+len(D2)
 
@@ -98,7 +98,8 @@ plt.ylabel('$D_{eff}$ $[10^3s^{-1}]$')
 plt.yscale('log')
 #plt.xscale('log')
 for n in range(0,l):
-	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,ic%i' %(Dtot[n]/10,round(n/3)))
+#	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,ic%i' %(Dtot[n]/10,round(n/3)))
+	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f' %(Dtot[n]/10))
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [3,4,2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
@@ -182,7 +183,8 @@ plt.ylabel('Fano factor')
 plt.yscale('log')
 #plt.xscale('log')
 for n in range(0,l):
-	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,ic%i' %(Dtot[n]/10,round(n/3)))
+	#plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,ic%i' %(Dtot[n]/10,round(n/3)))
+	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f' %(Dtot[n]/10))
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [3,4,2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
@@ -279,7 +281,8 @@ plt.ylabel('firing rate')
 #plt.xscale('log')
 #plt.plot(xburst,cola/T,label='measured bursting rate',color='black')
 for n in range(0,l):
-	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,ic%i' %(Dtot[n]/10,round(n/3)))
+	#plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,ic%i' %(Dtot[n]/10,round(n/3)))
+	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f' %(Dtot[n]/10))
 #plt.plot(colxa,vec[0,:],label='D=%.2f' %(D[0]/100))
 
 #plt.plot(xs,vec[3,:],label='D=1.5')

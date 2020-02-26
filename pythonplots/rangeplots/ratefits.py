@@ -146,7 +146,7 @@ eqfile2.close()
 
 plt.figure()
 plt.xlabel('bias current I $[\mu A/cm^2]$')
-plt.ylabel('firing rate r $[10^3s^{-1}]$')
+plt.ylabel('average firing rate <v> $[10^3s^{-1}]$')
 #plt.yscale('log')
 
 colorv=['b','r','g','y','c']
@@ -156,9 +156,9 @@ xburst=np.arange(-0.20,0.31,0.01)
 #	plt.plot(t,r(t,avn[n],v0n[n],av[n],bv[n]),colorv[n])
 for n in range(0,l):
 	plt.plot(xg[n,:],g[n,:],colorv[n],label='D=%.2f' %(Da[n]/100))
-plt.plot(xburst,cola/T,label='measured bursting rate',color='black')
+plt.plot(xburst,cola/T,label='running firing rate $v_0$',color='black')
 plt.xlim(-0.1,0.3)
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [2,3,0,1,4]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('ganaburst13s%s.pdf' %(date1+date2))
+plt.savefig('ganaburst23j2%s.pdf' %(date1+date2))

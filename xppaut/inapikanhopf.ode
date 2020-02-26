@@ -1,0 +1,8 @@
+# I Na,p +I K  model
+p gL=1,EL=-78,gNa=4,ENa=60,gK=4,EK=-90,km=7,vm=-30,kn=5,vn=-45,tau=1,I=46
+ninf(V,k,Vh)=1/(1+exp((Vh-V)/k))
+v'=I-gL*(v-EL)-gNa*ninf(v,km,vm)*(v-ENa)-gK*nf*(v-EK)
+nf'=(ninf(v,kn,vn)-nf)/tau
+init v=-30,nf=0.2
+d
+

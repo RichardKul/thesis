@@ -31,10 +31,12 @@ def vana(r0p,r0m,ap,am,bp,bm,t,D,av,v0):
 def fanofun(x,rp,rm,v0,av):
 	return 2*deff(x,rp,rm,v0,av)/v(x,rp,rm,v0,av)
 
+matplotlib.rcParams.update({'font.size': 20})
+timefac=1000
 D1=[35]
-D3=[25]
+D3=[25,30]
 D2=[45]
-Dvar=[30]
+Dvar=[]
 D=D1+D2+D3+Dvar
 Da=np.array(D)
 l1=len(D1)
@@ -111,7 +113,7 @@ params2[1]=popt[1]
 popt,pcov = curve_fit(barrier, xnew, paramsav[3,:])
 params2[2]=popt[0]
 params2[3]=popt[1]
-eqfile2 = open('paramsdfnew%s.txt'%(date1+date2),'w')
+eqfile2 = open('paramsdfnewbig%s.txt'%(date1+date2),'w')
 for k4 in range(0,2): 
 	eqfile2.write('%.6f\n'%params2[k4]) 
 eqfile2.write('%.6f\n'%rbte) 
@@ -189,7 +191,7 @@ for x in D1:
 	colxa1=np.array(colx1)
 	cola1=np.array(col1)
 	for z in range(0,ivalues1):
-		vec[ii][z]=cola1[z]
+		vec[ii][z]=cola1[z]*timefac
 	ii=ii+1
 
 istart2=1
@@ -206,7 +208,7 @@ for x in D2:
 	colxa2=np.array(colx2)
 	cola2=np.array(col2)
 	for z in range(0,ivalues2):
-		vec[ii][z]=cola2[z]
+		vec[ii][z]=cola2[z]*timefac
 	ii=ii+1
 
 istart3=1
@@ -223,7 +225,7 @@ for x in D3:
 	colxa3=np.array(colx3)
 	cola3=np.array(col3)
 	for z in range(0,ivalues3):
-		vec[ii][z]=cola3[z]
+		vec[ii][z]=cola3[z]*timefac
 	ii=ii+1
 
 for x in Dvar:
@@ -243,14 +245,14 @@ for x in Dvar:
 	colxavar=np.array(colxvar)
 	colavar=np.array(colvar)
 	for z in range(0,20):
-		vec[ii][z]=colavar[z]
+		vec[ii][z]=colavar[z]*timefac
 	ii=ii+1
 
 xs=np.arange(-5+istart1,-5+istart1+ivalues1)*0.02
 pv=np.arange(0,ivalues)
 
 plt.xlabel('bias current I $[\mu A/cm^2]$')
-plt.ylabel('$D_{eff}$ [$10^3s^{-1}$]')
+plt.ylabel('$D_{eff}$ [$s^{-1}$]')
 #plt.xlim(0,3.5)
 #plt.ylim(5*10**(-2),2*10**3)
 plt.yscale('log')
@@ -268,7 +270,7 @@ for n in range(0,l):
 	else:
 		plt.plot(xs,vec[n,:],colorv[n]+'o',label='D=%.2f$^*$' %(Da[n]/100))
 for n in range(0,l):
-	plt.plot((pv-4)*0.02,deffred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],vvec[pv],Da[n]/100),colorv[n],label='D=%.2f'%(Da[n]/100))
+	plt.plot((pv-4)*0.02,deffred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],vvec[pv],Da[n]/100)*timefac,colorv[n],label='D=%.2f'%(Da[n]/100))
 	
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
@@ -277,8 +279,9 @@ for n in range(0,l):
 
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [2,3,0,1]
-plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('dcompdfpwnew%s.pdf' %(date1+date2))
+plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='upper right', bbox_to_anchor=(0.65, 0.55))
+plt.tight_layout()
+plt.savefig('dcompdfpwnewbig%s.pdf' %(date1+date2))
 
 g=np.zeros((l,ivalues1))
 ii=0
@@ -294,7 +297,7 @@ for x in D1:
 	colxa1=np.array(colx1)
 	cola1=np.array(col1)
 	for z in range(0,ivalues1):
-		g[ii][z]=cola1[z]
+		g[ii][z]=cola1[z]*timefac
 	ii=ii+1
 
 for x in D2:
@@ -308,7 +311,7 @@ for x in D2:
 	colxa2=np.array(colx2)
 	cola2=np.array(col2)
 	for z in range(0,ivalues2):
-		g[ii][z]=cola2[z]
+		g[ii][z]=cola2[z]*timefac
 	ii=ii+1
 
 for x in D3:
@@ -322,7 +325,7 @@ for x in D3:
 	colxa3=np.array(colx3)
 	cola3=np.array(col3)
 	for z in range(0,ivalues3):
-		g[ii][z]=cola3[z]
+		g[ii][z]=cola3[z]*timefac
 	ii=ii+1
 
 for x in Dvar:
@@ -342,12 +345,12 @@ for x in Dvar:
 	colxavar=np.array(colxvar)
 	colavar=np.array(colvar)
 	for z in range(0,20):
-		g[ii][z]=colavar[z]
+		g[ii][z]=colavar[z]*timefac
 	ii=ii+1
 
 plt.figure()
 plt.xlabel('bias current I $[\mu A/cm^2]$')
-plt.ylabel('firing rate r [$10^3s^{-1}$]')
+plt.ylabel('firing rate r [$s^{-1}$]')
 #plt.yscale('log')
 
 colorv=['b','r','g','y','c']
@@ -361,7 +364,7 @@ for n in range(0,l):
 	else:
 		plt.plot(xs,g[n,:],colorv[n]+'o',label='D=%.2f$^*$' %(Da[n]/100))
 for n in range(0,l):
-	plt.plot((pv-4)*0.02,vred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],vvec[pv],Da[n]/100),colorv[n],label='D=%.2f'%(Da[n]/100))
+	plt.plot((pv-4)*0.02,vred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],vvec[pv],Da[n]/100)*timefac,colorv[n],label='D=%.2f'%(Da[n]/100))
 
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
@@ -369,8 +372,9 @@ for n in range(0,l):
 
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [2,3,0,1]
-plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('gcompdfpwnew%s.pdf' %(date1+date2))
+plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower right')
+plt.tight_layout()
+plt.savefig('gcompdfpwnewbig%s.pdf' %(date1+date2))
 
 
 fano=np.zeros((l,ivalues1))
@@ -440,7 +444,7 @@ for x in Dvar:
 
 plt.figure()
 plt.xlabel('bias current I $[\mu A/cm^2]$')
-plt.ylabel('Fano factor')
+plt.ylabel('Fano factor F')
 plt.yscale('log')
 
 colorv=['b','r','g','y','c']
@@ -462,8 +466,9 @@ for n in range(0,l):
 
 handles, labels = plt.gca().get_legend_handles_labels()
 order = [2,3,0,1]
-plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('fcompdfpwnew%s.pdf' %(date1+date2))
+plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower left')
+plt.tight_layout()
+plt.savefig('fcompdfpwnewbig%s.pdf' %(date1+date2))
 
 t=np.arange(-0.1,0.3,0.001)
 plt.figure()
@@ -482,4 +487,4 @@ plt.plot(xs,params[3,:],colorv[1]+'o',label='eq to burst')
 plt.plot(xs,2*params[1,:],colorv[2]+'o',label='2x burst to eq')
 plt.plot(xs,2*params[3,:],colorv[3]+'o',label='2x eq to burst')
 plt.legend()
-plt.savefig('barriercompdfnew%s.pdf' %(date1+date2))
+plt.savefig('barriercompdfnewbig%s.pdf' %(date1+date2))

@@ -16,6 +16,10 @@ def func2(x, a, b):
 	return a * x + b
 def func3(x, a):
 	return a 
+def fund(x,a,b,alpha):
+	return a * (1/x)**alpha * np.exp(-b * x)
+
+timefac=1000
 
 D1=[35]
 D2=[45]
@@ -435,34 +439,64 @@ for n in range(0,l):
 	intdelayfile.write('\n')
 intdelayfile.close()
 xold=np.arange(-5+istart,-5+istart+ivalues)*0.02
+chifile=open('rsquare%s.txt' %(date1+date2),'w')
+
+matplotlib.rcParams.update({'font.size': 16})
+
 if l > 1:
 	for k2 in range(0,ivalues):
 		plt.figure()
+		axs = plt.subplot(111)
 		xs=np.zeros(l)
 		for xf in range(0,l):
 			xs[xf]=100/D[xf]
 		plt.suptitle('I=%.2f$\mu A/cm^2$' %(-0.08+0.02*k2))
 		plt.xlabel('inverse noise intensity 1/D')
-		plt.ylabel('ln of transition rate ln(w $[10^3s^{-1}]$)')
+		plt.ylabel('ln of transition rate ln(r $[s^{-1}]$)')
 		#plt.yscale('log')
-		plt.plot(xs,np.log(1/btottime[:,k2]),'bo',label='run to eq')
+		plt.plot(xs,np.log(timefac/btottime[:,k2]),'bo',label='run to eq')
 #plt.plot(xs,breltime[1,:],label='D=3,burst')
 #plt.plot(xs,breltime[2,:],label='D=4,burst')
 #plt.plot(xs,eqreltime[3,:],label='D=4,burst')
-		plt.plot(xs,np.log(1/eqtottime[:,k2]),'ro',label='eq to run')
+		plt.plot(xs,np.log(timefac/eqtottime[:,k2]),'ro',label='eq to run')
 #plt.plot(xs,eqreltime[1,:],label='D=3,equilibrium')
 #plt.plot(xs,eqreltime[2,:],label='D=4,equilibrium')
 #plt.plot(xs,breltime[3,:],label='D=4,equilibrium')
 		popt,pcov = curve_fit(func, xs, 1/btottime[:,k2])
-		plt.plot(np.array(xs), np.log(func(np.array(xs), *popt)), 'b-',label='fit run to eq: r_0=%5.3f, U_+=%5.3f' % tuple(popt))
+		plt.plot(np.array(xs), np.log(timefac*func(np.array(xs), *popt)), 'b-')#,label='fit run to eq: r_0=%5.3f, U_+=%5.3f' % tuple(popt))
 		params[0][k2]=popt[0]
 		params[1][k2]=popt[1]
+		yquer=np.mean(1/btottime[:,k2])
+		stot=np.sum((1/btottime[:,k2]-yquer)**2)
+		sres=np.sum((1/btottime[:,k2]-func(np.array(xs), *popt))**2)
+		rsquare=1-sres/stot
+		chifile.write('%.6f ' %rsquare)
+		popt,pcov = curve_fit(fund, xs, 1/btottime[:,k2])
+		yquer=np.mean(1/btottime[:,k2])
+		stot=np.sum((1/btottime[:,k2]-yquer)**2)
+		sres=np.sum((1/btottime[:,k2]-fund(np.array(xs), *popt))**2)
+		rsquare=1-sres/stot
+		chifile.write('%.6f ' %rsquare)
 		popt,pcov = curve_fit(func, xs, 1/eqtottime[:,k2])
-		plt.plot(np.array(xs), np.log(func(np.array(xs), *popt)), 'r-',label='fit eq to run: r_0=%5.3f, U_-=%5.3f' % tuple(popt))
+		plt.plot(np.array(xs), np.log(timefac*func(np.array(xs), *popt)), 'r-')#,label='fit eq to run: r_0=%5.3f, U_-=%5.3f' % tuple(popt))
 		params[2][k2]=popt[0]
 		params[3][k2]=popt[1]
+		yquer=np.mean(1/eqtottime[:,k2])
+		stot=np.sum((1/eqtottime[:,k2]-yquer)**2)
+		sres=np.sum((1/eqtottime[:,k2]-func(np.array(xs), *popt))**2)
+		rsquare=1-sres/stot
+		chifile.write('%.6f ' %rsquare)
+		popt,pcov = curve_fit(fund, xs, 1/eqtottime[:,k2])
+		yquer=np.mean(1/eqtottime[:,k2])
+		stot=np.sum((1/eqtottime[:,k2]-yquer)**2)
+		sres=np.sum((1/eqtottime[:,k2]-fund(np.array(xs), *popt))**2)
+		rsquare=1-sres/stot
+		chifile.write('%.6f\n' %rsquare)
 		plt.legend()
-		plt.savefig('arrheniustot%sfit%dfln.pdf' %(date1+date2,k2))
+		axs.spines['right'].set_visible(False)
+		axs.spines['top'].set_visible(False)
+		plt.tight_layout()
+		plt.savefig('arrheniustotbig%sfit%dfln.pdf' %(date1+date2,k2))
 		eqfile = open('param%s%d.txt' % (date1+date2,k2),'w')
 		for k3 in range(0,4): 
 			eqfile.write('%.6f\n'%params[k3][k2]) 
@@ -478,7 +512,8 @@ if l > 1:
 		plt.ylabel('correlation time')
 		plt.yscale('log')
 		plt.plot(xs,1/(1/btottime[:,k2]+1/eqtottime[:,k2]))
-		plt.savefig('cortime%s%d.pdf' %(date1+date2,k2))
+		plt.savefig('cortimebig%s%d.pdf' %(date1+date2,k2))
+chifile.close()
 plt.figure()
 
 plt.xlabel('bias current I')
@@ -488,7 +523,7 @@ for n in range(0,l1):
 	plt.plot(xold,1/(1/btottime[n,:]+1/eqtottime[n,:]),label='D=%f' %(D1[n]*0.01))
 for n in range(l1,l1+l2):
 	plt.plot(xold,1/(1/btottime[n,:]+1/eqtottime[n,:]),label='D=%f' %(D2[n-l1]*0.01))
-plt.savefig('altcortime%s.pdf' %(date1+date2))
+plt.savefig('altcortimebig%s.pdf' %(date1+date2))
 
 plt.figure()
 xnew=np.arange(-5+istart,-5+istart+ivalues)*0.02
@@ -497,7 +532,7 @@ plt.ylabel('prefactor')
 plt.plot(xnew,params[0,:],label='run to eq')
 plt.plot(xnew,params[2,:],label='eq to run')
 plt.legend()
-plt.savefig('prefac%s.pdf' %(date1+date2))
+plt.savefig('prefacbig%s.pdf' %(date1+date2))
 plt.figure()
 plt.xlabel('bias current')
 plt.ylabel('potential barrier')
@@ -506,7 +541,7 @@ plt.plot(xnew,params[3,:],label='eq to run')
 plt.plot(xnew,2*params[1,:],label='2x run to eq')
 plt.plot(xnew,2*params[3,:],label='2x eq to run')
 plt.legend()
-plt.savefig('barrier2%sf.pdf' %(date1+date2))
+plt.savefig('barrier2big%sf.pdf' %(date1+date2))
 eqfile3 = open('barrierex%s.txt' %(date1+date2),'w')
 for k3 in range(0,ivalues): 
 	eqfile3.write('%.6f %.6f %.6f %.6f %.6f\n'%(xnew[k3],params[0][k3],params[1][k3],params[2][k3],params[3][k3])) 
@@ -541,7 +576,7 @@ plt.plot(xnew,2*params[1,:],label='2x run to eq')
 plt.plot(xnew,2*params[3,:],label='2x eq to run')
 
 plt.legend()
-plt.savefig('barriercomp%sf.pdf' %(date1+date2))
+plt.savefig('barriercompbig%sf.pdf' %(date1+date2))
 
 #plt.figure()
 #xs1=np.arange(-0.75,4.25,0.25)

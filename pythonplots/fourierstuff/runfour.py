@@ -18,11 +18,11 @@ runs=50
 points=1000000
 length=500000
 
-date='realrinzelpoi17dlong1'
+date='realanhopf7flog'
 
-D=200
+D=10
 istart=1
-ivalues=3
+ivalues=10
 nr=9
 S=np.zeros(length)
 #omegaind=round(omega*T)
@@ -36,9 +36,14 @@ for z in range(istart,istart+ivalues):
 		y.append(float(row[1]))
 	ax=np.array(x)
 	ay=np.array(y)
+	if len(ax)==0:
+		continue
 	ax2=np.zeros(length) 
+	#ax2=np.zeros(points)
+	#ay2=np.zeros(points)
 	ay2=np.zeros(length)
 	for l in range(0,length):
+	#for l in range(0,points):
 		ax2[l]=ax[l]
 		ay2[l]=ay[l]
 	param=open('/home/richard/outhome/param%s%d%d.txt' %(date,D,z),"r")
@@ -58,7 +63,10 @@ for z in range(istart,istart+ivalues):
 	N=value[name.index('N')]-value[name.index('Neq')]
 	repetitions=value[name.index('repetitions')]
 	T=N*repetitions*dt
-
+	rate=open('/home/richard/outhome/g%s%d%d.txt' %(date,D,z),"r")
+	for k in rate:
+		row=k.split()
+		r=float(row[1])
 #background=np.mean([ay2[omegaind-1],ay2[omegaind-2],ay2[omegaind+1],ay2[omegaind+2],ay2[omegaind-3]])
 #SNR=ay2[omegaind]/background
 #files=open('/home/richard/NetBeansProjects/oup/xtraje6newwcav2.txt',"r")
@@ -89,7 +97,7 @@ for z in range(istart,istart+ivalues):
 #omega=np.arange(0,length)*2*np.pi/T
 	plt.figure()
 	#plt.suptitle('I=%.2f, D=%.2f' %(-0.1+z*0.02,D*0.01))
-	plt.suptitle('I=%.2f, D=%.2f' %(-12+z*0.6,D/10))
+	plt.suptitle('I=%.2f, D=%.2f' %(43+z*0.25,D/100))
 	plt.xlabel('Frequency $[10^3s^{-1}]$')
 	plt.ylabel('Spectral power')	
 	plt.yscale('log')
@@ -97,9 +105,10 @@ for z in range(istart,istart+ivalues):
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
 	plt.plot(ax3/T,ay2/T,label='Simulation')
+	plt.plot(ax3/T,r*np.ones(length),label='running firing rate')
 #plt.plot(ax2,spectrum(ax2,1/(4.748*10**(-3)),13),label='theory')
 #plt.plot(omega,background/T,'kx')
 	#plt.legend()
 #plt.plot(sax2,say2/T2,label='e6')
 	#plt.savefig('inapikrealfrange9aspD=%.2fI=%.2f.pdf' %(D*0.01,-0.1+z*0.02))
-	plt.savefig('inapik%sD=%.2fI=%.2f.pdf' %(date,D/10,-12+z*0.6))	
+	plt.savefig('inapikanhopf2%sfourierD=%.2fI=%.2f.pdf' %(date,D/100,43+z*0.25))	

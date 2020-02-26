@@ -19,3 +19,7 @@
 \contentsline {subsubsection}{\numberline {3.5.2}\IeC {\"U}bergangsraten in Abh\IeC {\"a}ngigkeit vom Strom}{78}% 
 \contentsline {subsubsection}{\numberline {3.5.3}Verifikation: Spektrum eines OUP}{80}% 
 \contentsline {subsubsection}{\numberline {3.5.4}Phasenraum}{81}% 
+\contentsline {subsection}{\numberline {3.6}Subkritische Andronov-Hopf Bifurkation}{85}% 
+\contentsline {subsection}{\numberline {3.7}SNR im subkritschen AH-Modell}{88}% 
+\contentsline {section}{\numberline {4}Log-Spektrum}{98}% 
+\contentsline {subsection}{\numberline {4.1}Kombination der Spektren}{102}% 
