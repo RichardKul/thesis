@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.11)  25 FEB 2020 15:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.11)  3 MAR 2020 13:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1638,32 +1638,123 @@ Overfull \hbox (35.73549pt too wide) in paragraph at lines 728--728
  [][] 
  []
 
-[106 <./twofoud20i4575ws.pdf>] [107 <./twofoud20i4725ws.pdf>] [108 <./twofoud25
-i4450ws.pdf>] (./zusammenfassung.aux) ) 
+[106 <./twofoud20i4575ws.pdf>] [107 <./twofoud20i4725ws.pdf>]
+<dneurrealanhopf21flogcornerrealanhopf19flog.pdf, id=5390, 462.52798pt x 346.89
+601pt>
+File: dneurrealanhopf21flogcornerrealanhopf19flog.pdf Graphic file (type pdf)
+<use dneurrealanhopf21flogcornerrealanhopf19flog.pdf>
+Package pdftex.def Info: dneurrealanhopf21flogcornerrealanhopf19flog.pdf  used 
+on input line 735.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 735--735
+ [][] 
+ []
+
+<fneurrealanhopf21flogcornerrealanhopf19flog.pdf, id=5391, 462.52798pt x 346.89
+601pt>
+File: fneurrealanhopf21flogcornerrealanhopf19flog.pdf Graphic file (type pdf)
+<use fneurrealanhopf21flogcornerrealanhopf19flog.pdf>
+Package pdftex.def Info: fneurrealanhopf21flogcornerrealanhopf19flog.pdf  used 
+on input line 740.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 740--740
+ [][] 
+ []
+
+[108 <./twofoud25i4450ws.pdf>] [109 <./dneurrealanhopf21flogcornerrealanhopf19f
+log.pdf>]
+<freq200.pdf, id=5487, 462.52798pt x 346.89601pt>
+File: freq200.pdf Graphic file (type pdf)
+<use freq200.pdf>
+Package pdftex.def Info: freq200.pdf  used on input line 746.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 746--746
+ [][] 
+ []
+
+<freq400.pdf, id=5488, 462.52798pt x 346.89601pt>
+File: freq400.pdf Graphic file (type pdf)
+<use freq400.pdf>
+Package pdftex.def Info: freq400.pdf  used on input line 751.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 751--751
+ [][] 
+ []
+
+[110 <./fneurrealanhopf21flogcornerrealanhopf19flog.pdf>]
+<freq800.pdf, id=5536, 462.52798pt x 346.89601pt>
+File: freq800.pdf Graphic file (type pdf)
+<use freq800.pdf>
+Package pdftex.def Info: freq800.pdf  used on input line 756.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 756--756
+ [][] 
+ []
+
+[111 <./freq200.pdf>]
+<freq1600.pdf, id=5581, 462.52798pt x 346.89601pt>
+File: freq1600.pdf Graphic file (type pdf)
+<use freq1600.pdf>
+Package pdftex.def Info: freq1600.pdf  used on input line 761.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 761--761
+ [][] 
+ []
+
+[112 <./freq400.pdf>]
+<freq4000.pdf, id=5626, 462.52798pt x 346.89601pt>
+File: freq4000.pdf Graphic file (type pdf)
+<use freq4000.pdf>
+Package pdftex.def Info: freq4000.pdf  used on input line 766.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 766--766
+ [][] 
+ []
+
+[113 <./freq800.pdf>] [114 <./freq1600.pdf>]
+<snrtwostateanhopf3m.pdf, id=5717, 462.52798pt x 346.89601pt>
+File: snrtwostateanhopf3m.pdf Graphic file (type pdf)
+<use snrtwostateanhopf3m.pdf>
+Package pdftex.def Info: snrtwostateanhopf3m.pdf  used on input line 772.
+(pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
+
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 772--772
+ [][] 
+ []
+
+[115 <./freq4000.pdf>] [116 <./snrtwostateanhopf3m.pdf>] (./zusammenfassung.aux
+) ) 
 Here is how much of TeX's memory you used:
- 4104 strings out of 494508
- 66348 string characters out of 6175044
- 130481 words of memory out of 5000000
- 7607 multiletter control sequences out of 15000+600000
- 8568 words of font info for 31 fonts, out of 8000000 for 9000
+ 4156 strings out of 494508
+ 67729 string characters out of 6175044
+ 131577 words of memory out of 5000000
+ 7651 multiletter control sequences out of 15000+600000
+ 9634 words of font info for 35 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,11n,25p,728b,250s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on zusammenfassung.pdf (109 pages, 3078353 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on zusammenfassung.pdf (117 pages, 3248525 bytes).
 PDF statistics:
- 5478 PDF objects out of 6186 (max. 8388607)
- 1295 compressed objects within 13 object streams
+ 5847 PDF objects out of 6186 (max. 8388607)
+ 1391 compressed objects within 14 object streams
  0 named destinations out of 1000 (max. 500000)
- 601 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 641 words of extra memory for PDF output out of 10000 (max. 10000000)
 

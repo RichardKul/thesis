@@ -36,107 +36,54 @@
 
 The human brain is one of the most investigated but still least understood subjects in scientific research. This comes as no surprise considering the huge variety of tasks it can perform efficiently and seemingly effortlessly: it constantly combines multiple sensory impressions and filters the most relevant of them to form a coherent image of the surroundings, it remembers information it has learned decades ago, it can produce the most complex thoughts and keep a whole organism working properly in the meantime. And despite the mayor improvement of processor performance and increasing interest in machine learning and artificial neural networks during the past couple of years, no technological implementation has even remotely managed to match the capability of the human brain.\\
 The basis for its high functionality lies in the huge number of neurons - around 100 Billions\cite{eqnum} - and their interconnectivity: neural cells usually receive inputs from more than 10.000 other neurons\cite{izi}. Thus, in order to be able to understand how the brain works and possibly derive future applications from that, it is crucial to examine neural cells and study their characteristics. \\
-Neural cells display a plethora of responses to their synaptic inputs. In general, neural activity can be divided into four mayor regimes: resting state, sub-threshold oscillations, spiking and bursting\cite{dnb}. This work will focus on bursting neurons. These exhibit phases of repetitive spiking followed by periods of quiescence. A comparable behaviour was observed for Brownian Particles underlying bistable velocity dynamics\cite{abp}\cite{bpp}, induced either via a velocity potential or movement in a biased cosine potential. In these systems, a specific range of parameters leads to diverging diffusion coefficients for vanishing noise intensity. This phenomenon is called \glqq Giant Diffusion \grqq. Applying this observation to neural cells, this could mean a large enhancement of the Signal-to-Noise Ratio through just a slight change in the system parameters. The goal of this thesis is to find out whether Giant Diffusion can be observed in a simple two-dimensional neuron model and which consequences this might have on the signal transmission, e.g. the Signal-to-Noise Ratio when the system is subject to an external stimulus.
+Neural cells display a plethora of responses to their synaptic inputs. In general, neural activity can be divided into four mayor regimes: resting state, sub-threshold oscillations, spiking and bursting\cite{dnb}. Often, multiple of these regimes can be found in a single neuron. Of particular interest is the bistability between resting and spiking activity. This has been observed in pacemaker\cite{pacemaker}, sensory \cite{sensory}\cite{sensorystm1} and motoneurons\cite{moto1}\cite{moto2} and is suggested to play important roles in short term memory and processing\cite{sensorystm1}\cite{stm1}\cite{stm2} as well as in shaping patterns of spindling oscillations\cite{spindle}.
+\\
+As each regime displays different voltage dynamics, a bistability in neural activity directly translates into a bistability of the membrane voltage. When noise is added to the system, the neuron will undergo transitions between the states. If the noise intensity is small in comparison to the other ionic currents, the membrane voltage takes on a rectangular shape. In the resting state, the voltage performs noise-driven oscillations around the stable equilibrium point and in the firing state, it may perform large oscillations around the same stable equilibrium or rotate around an unstable focus. This is illustrated in figure \ref{bistablevolt}. 
 
-\section{Theory}
-\subsection{Quantities of interest}
-In the context of Brownian Motion, there are two characteristic quantities: the ensemble of particles moves with a mean velocity
-\begin{equation}
-\left\langle v\right\rangle =\lim_{t\rightarrow\infty}\frac{\left\langle x(t)-x(0) \right\rangle}{t}
-\end{equation}
-and is subject to a diffusive spread around this average flow that can be described by the effective diffusion coefficient
-\begin{equation}
-D_{eff}=\lim_{t\rightarrow\infty}\frac{\left\langle x^2(t) \right\rangle-\left\langle x(t)\right\rangle ^2}{2t}
-\end{equation}
-For the investigation of neuron models, a third quantity needs to be considered, namely the Fano factor:
-\begin{align*}
-F=\frac{\left\langle \Delta N^2(t) \right\rangle}{\left\langle N(t)\right\rangle}
-\end{align*}
-In order to compare the neuron model with Brownian Particles, one may also define a Fano factor for mechanical systems:
-\begin{align*}
-F=\frac{2D_{eff}}{L\langle v\rangle}
-\end{align*}
-where $L$ can be chosen arbitrarily, e.g. a characteristic length of the system, so that $F$ becomes dimensionless.
-\subsection{Giant Diffusion}
-The term \glqq Giant Diffusion \grqq is short for \textit{Giant Enhancement of (thermal) diffusion} which was first observed around the turn of the millennium for Brownian Particles in a tilted periodic potential\cite{td}\cite{ga}\cite{dit}\cite{gd}. In general, these particles exhibit two stable velocity states. They can be \glqq trapped\grqq in a potential minimum - this is referred to as the \textit{locked state} - or they can be in the \textit{running state}. A particle gets into the running state if it has managed to overcome a hill and the frictional loss is low enough so that it is able to pass the adjacent hills as well. In the case of large friction or a strongly tilted potential, however, only one of these two states is present. If the potential is tilted in such a way that both states exist and the probabilities to be in either state are similar, many switchings between the states will occur. In the weak-noise-limit, half of the particles will be mainly in the locked state, while for the others the running state prevails. This behavior leads to diverging diffusion coefficients known as Giant Diffusion.
-\subsection{Giant diffusion of Brownian Particles}
-First observed by the botanist Robert Brown in 1828\cite{bm}, the term \textit{Brownian Motion} describes the irregular movement of particles in a viscous medium, whose apparently random changes of direction are caused by collisions with smaller particles or molecules.
-\\
-Ordinary Brownian Motion obeys a simple linear Langevin-equation:
-\begin{align*}
-\text{m}\dot{v}=-\lambda v+\xi(t)
-\end{align*}
-The evolution of the velocity $v$ of the particle is affected by a linear friction term with coefficient $\lambda$ and a random force $\xi(t)$. \\
-\\ 
-In the following, two different systems with Brownian Motion dynamics exhibiting Giant Diffusion are presented. These were the motivation for my research on bursting neuron models.
-\subsubsection{Active Brownian Particles}
-Active Brownian Motion can be observed on small organisms, like bacteria or cells, which are able to move on their own. In order to model the behaviour of such an object, a more general friction term needs to be introduced into the Langevin-equation:
-\begin{align*}
-\dot{v}=-f(v)+\xi(t)
-\end{align*}
-Here, the noise was assumed to be additive and the mass was omitted due to clarity.
-An accurate description of the self-propulsion can be accomplished by choosing the function $f$ in such a way that it attains negative values at small velocities and becomes greater than zero at large speed. Thus, at small velocities the particle will accelerate and with increasing velocity, regular friction will start to affect its motion.
-\\
-A system like this was studied by Lindner and Nicola in 2008\cite{abp}. They chose a cubic function for the friction term, $f(v)=v-v^3+F$, allowing them to write the equation of motion in terms of a quartic velocity potential $U(v)$:
-\begin{equation}
-\dot{v}=-U'(v)+\xi(t)
-\end{equation}
-with $U(v)=\frac{1}{4}v^4-\frac{1}{2}v^2-Fv$.
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=1]{velpot.pdf} 
-	\caption{tilted velocity potential of an Active Brownian Particle}
-	\label{velpot}
+\begin{figure}[H]	\subfigure[]{	\includegraphics[scale=0.45]{realstatevar14vsh2noleg.pdf}}	\subfigure[]{\includegraphics[scale=0.45]{realstatevar14v2noleg.pdf}} 
+	\caption{Example of bistable membrane voltage under the influence of noise. The amplification in (b) illustrates the different qualitative behaviors in both regimes.}
+	\label{bistablevolt} 
 \end{figure}
-This potential shows two minima at $v_\pm$, representing the stable velocity states \glqq forwards\grqq and \glqq backwards\grqq, and a maximum at $v_0$. In order to transition from $v_\pm$ into the other state, the particle needs to overcome a barrier of height $\Delta U\pm$.  
-\\
-Their simulations revealed a certain region of bias forces $F$, in which giant diffusion occurred.
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{mess08.png}\caption{Simulation of velocity and effective diffusion coefficient for Active Brownian Particles underlying a tilted velocity potential,taken from \cite{abp}}
-	\label{abpsim}
-\end{figure}
-Inside this region, the diffusion coefficients increase with decreasing noise intensity, while they decrease outside of this region. In other words, in the weak noise limit, the diffusion coefficients diverge in the critical region and vanish outside of it. The critical force lies at the border of this region and emerges from the intersection points of the diffusion coefficients for different noise levels. A simple criterion could be found for these intersection points: at the critical force, one potential barrier is twice as high as the other potential barrier. 
-Furthermore, it is remarkable that the reliable directed transport which takes place outside of the critical region appears much earlier than the monostability of the velocity potential, which is a obviously only a primitive criterion for reliable transport in one direction. 
-The mean velocity displays a more regular behavior. It is almost constant at a value less than zero up to small negative forces, then undergoes a sharp increase to a positive value and barely changes afterwards. They intersect as well, approximately at the position where the diffusion coefficient gets maximal.
-\subsubsection{Regular Brownian Particles in a tilted periodic potential}
-On their own, ordinary Brownian Particles do not exhibit bistable velocity dynamics which may lead to giant diffusion. But as mentioned before, this can be done by adding a periodic potential to the equation of motion:
+
+A similar bistability has been observed for Brownian Particles in a tilted periodic potential, obeying the following equations of motion\cite{bpp}: 
 \begin{equation}
 \dot{v}=-\gamma v-U'(x)+\sqrt{2\gamma kT}\xi(t)
 \end{equation}
-with $U(x)=-Fx-d\cos(x)$. This system was discussed with respect to giant diffusion in a paper by Lindner and Sokolov from 2016\cite{bpp}. Now, in contrast to the Active Brownian Particle, the evolution of the system is not governed by a velocity potential, but by a spatial potential:
+with the potential $U(x)=-Fx-d\cos(x)$. $\gamma$ is the friction coefficient, $kT$ the thermal energy which corresponds to the noise intensity and the bias force $F$ determines the tilt of the potential.
+\\
+Assuming that friction is low and $F$ is chosen such that the tilted potential keeps its minima and maxima, the Brownian particle can be in two different velocity states (figure \ref{veldynintro}). If it performs noise-induced oscillations near a minimum, it is in the so-called \textit{locked state}. After the Brownian particle has managed to overcome a hill and still has enough energy to pass the adjacent maxima as well, it is said to be in the \textit{running state}. While making its way down the washboard potential, the Brownian particle constantly switches between these states due to the influence of noise.
+
 \begin{figure}[H]
 	\subfigure[]{\includegraphics[width=0.5\textwidth]{veldynupper.png}} 
 	\subfigure[]{\includegraphics[width=0.5\textwidth]{veldynlower.png}} 
-	\caption{Figure (a) visualizes the motion of a Brownian Particle in a periodic potential, on the right one can see the bistable velocity dynamics. The oscillations thereby arise from local extrema of the potential.}
-	\label{veldyn} 
+	\caption{Figure (a) visualizes the two motional states of a Brownian Particle in a periodic potential, on the right one can see the bistable velocity dynamics. The oscillations in the locked state are noise-induced while they mainly arise from local extrema of the potential in the running state. These images have been taken from\cite{bpp}.}
+	\label{veldynintro} 
 \end{figure}
-Also for the Brownian Particles in a cosine potential, there was a finite range of bias forces, for which giant diffusion could be observed:
+
+In the case of large friction or a strongly tilted potential, however, the particle will barely move or move almost all of the time, respectively. In either configuration, one of the states prevails. When a couple of Brownian Particles are thrown into the system under these conditions, the majority of particles finds itself in the same state of motion. As a consequence, the particles move roughly as a group with only little spread around the mean velocity. Therefore, the effective diffusion coefficient $D_{eff}$ which quantifies the diffusional spread,
+\begin{equation}
+D_{eff}=\lim_{t\rightarrow\infty}\frac{\left\langle x^2(t) \right\rangle-\left\langle x(t)\right\rangle ^2}{2t}
+\end{equation}
+becomes very small. The other extreme case is reached when the parameters are chosen in such a way that both states are equally likely. Then, approximately half of the particles are resting while the others are in the running state, leading to a large $D_{eff}$. The lower the noise intensity, the fewer switchings occur and the higher is the effective diffusion coefficient. This phenomenon can be seen in figure (\ref{anbpsimintro}).
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{nbpsim1.png}\caption{Simulation of velocity and effective diffusion coefficient for Brownian Particles in a tilted periodic potential,taken from \cite{bpp}}
-	\label{anbpsim}
+	\label{anbpsimintro}
 \end{figure}
-Again, all curves of the diffusion coefficient intersect at two points and diverge in between those points for decreasing noise intensities while going to zero on the outside and the velocity curves intersect approximately at the maximum of the diffusion coefficient. And also here the region of giant diffusion is much smaller than the range of bias forces, where both states coexist. Two other variables that help characterize the system are the transition rates between the states, that is from the locked to the running state and vice versa. Even though there didn't exist actual potential barriers, these turned out to obey an Arrhenius or Kramers law, respectively, as can be seen from an Arrhenius plot:
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{kramerfit.png}\caption{Fits of the transition rates with both an Arrhenius and a Kramers law, taken from \cite{bpp}}
-	\label{bparr}
-\end{figure}
-In this example, the Arrhenius fit as well as the Kramers fit yield good agreements with the data. From these fits one can extract effective potential barriers. The relation found for the potential barriers of the Active Brownian Particle can be tested by plotting the effective barriers and twice their value:
-\begin{figure}[H]	\includegraphics[scale=0.5]{barrierplot.png}\caption{Plot of the effective potential barriers. The dotted curves are simply twice the solid curves of the same color. This plot is taken from \cite{bpp}}
-\end{figure}
-The plot shows that the points where one potential barrier equals twice the other roughly correspond to the critical forces, so the criterion applies as well to this case, where no potential barriers were present and only effective barriers could be calculated.
-\subsection{Two-state theory}\label{tst}
-In the case of low noise intensity, the transition times between the locked state and the running state will be much shorter than the periods of time that the particle stays in one of the two states. That is why it is practical to describe the behavior of the system in this regime with a two-state model. The following derivation applies to the Brownian Particle in a tilted periodic potential. The transition rates are assumed to obey an Arrhenius law:
-\begin{align*}
+
+The upper part of the picture shows the average velocity which naturally increases with the slope of the potential. Depending on the friction, there is a bias force - here denoted by $F_2$ - where frictional loss and acceleration via the potential annihilate each other. In the zero-noise limit, bias forces which are smaller than this value lead to a vanishing velocity, as the running state cannot be sustained without noise. The same argument can be made for $F>F_2$: as the running state cannot be stopped without noise, the maximum velocity is achieved. Consequently, all velocity curves make a jump and intersect each other at $F_2$.\\
+As explained above, the diffusion coefficient gets maximal when both states are occupied with equal probabilities, which obviously happens at $F_2$. Interestingly, the Giant Diffusion is not only restricted to this particular bias force, but extends over a finite area between the two intersection points of all curves, $F_{GD,\pm}$. Outside of this region, $D_{eff}$ decreases with the noise intensity. It should be noted that a motion with low diffusion as it occurs outside the region of Giant Diffusion does not require the disappearance of one of the states, but happens much earlier. Thus, not all particles need to be in the same motional state to accomplish a small diffusion.
+In order to better understand what happens in the bistable regime, a simplified description can be used. 
+In the case of low noise intensity, the transition times between the locked state and the running state will be much shorter than the periods of time that the particle stays in one of the two states. That is why it is practical to describe the behavior of the system with a two-state model. The results of this model are plotted as dotted curves and show good agreement with the data. The transition rates between the states are assumed to obey an Arrhenius law:
+\begin{align}\label{arrhlaw}
 r_{\pm}=r_{0,\pm}\exp\left(-\frac{\Delta U_{\pm}}{D}\right)
-\end{align*}
-where $r_-$ denotes the transition rate from locked to running state, and $r_+$ the rate for the other transition. $\Delta U_{\pm}$ is the corresponding potential barrier and $D$ the noise intensity. The effective diffusion coefficient can be calculated from the velocity $v_0$ in the running state and the transition rates: 
+\end{align}
+where $r_-$ denotes the transition rate from locked to running state, and $r_+$ the rate for the other transition. $\Delta U_{\pm}$ is the corresponding potential barrier that needs to be traversed and $D$ the noise intensity which previously was $kT$. The effective diffusion coefficient can be calculated from the velocity $v_0$ in the running state and the transition rates\cite{abp}: 
 \begin{align*}
 D_{\text{eff}}=\frac{v_0^2 r_+r_-}{(r_++r_-)^3}
 \end{align*}
-The first task is to find the intersection points of the diffusion coefficients. At these points, the diffusion coefficients become independent of the noise intensity.
+This formula allows us to find the intersection points of the diffusion coefficients. As the curves for all noise intensities go through these points, they become independent of the noise intensity there.
 It is
 \begin{align*}
 D_{\text{eff}}&=\frac{v_0^2r_{0,+}r_{0,-}\exp\left(-\frac{\Delta U_++\Delta U_-}{D}\right)}{\left[r_{0,+}\exp(\frac{-\Delta U_+}{D})+r_{0,-}\exp\left(\frac{-\Delta U_-}{D}\right)\right]^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left[r_{0,+}\exp\left(-\frac{3\Delta U_+-\Delta U_+-\Delta U_-}{3D}\right)+r_{0,-}\exp\left(-\frac{3\Delta U_--\Delta U_+ -\Delta U_-}{3D}\right)\right]^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left[r_{0,+}\exp\left(-\frac{2\Delta U_+-\Delta U_-}{3D}\right)+r_{0,-}\exp\left(-\frac{2\Delta U_--\Delta U_+}{3D}\right)\right]^3}
@@ -146,47 +93,39 @@ In the limes $D\rightarrow 0,\Delta U_+>U_-$ the first term in the denominator v
 D_{\text{eff}}=\frac{v_0^2r_{0,+}}{r_{0,-}^2}\exp\left(-\frac{\Delta U_+-2\Delta U_-}{D}\right)
 \end{align*}
 Under the assumption that the prefactors change slowly in comparison to the exponential function, the following condition arises:
-\begin{align*}
+\begin{align}\label{fcrit}
 \Delta U_+=2\Delta U_-
-\end{align*}
+\end{align}
 Due to symmetry of the problem, the opposing case $D\rightarrow 0,\Delta U_+<U_-$ yields:
 \begin{align*}
 \Delta U_-=2\Delta U_+
 \end{align*}
 In both cases, one potential barrier is twice as high as the other one.\\
-Next, we will examine whether the Fano factor displays similar features in the weak noise limit. As 
+The verification of this criterion requires knowledge of potential barriers. As there are no actual potential barriers in the system, it is only possible to derive effective barriers from the behavior of the system.
+These can be acquired by measuring transition rates at different noise intensities and fitting them with the Arrhenius law from (\ref{arrhlaw}), as it was done in Figure \ref{ratesintro}.
+\begin{figure}[H]
+	\subfigure[]{\includegraphics[width=0.5\textwidth]{kramerfit.png}} 
+	\subfigure[]{\includegraphics[width=0.5\textwidth]{barrierplot.png}} 
+	\caption{The left shows the transition rates for a fixed bias force over a range of different noise intensities. Fits were done with both an Arrhenius and a Kramers law but yielded similar results for the effective barriers. On the right one can see the effective potential barriers, where the dotted curves are simply twice the solid curves.  The images have been taken from \cite{bpp}.}
+	\label{ratesintro} 
+\end{figure}
+It can be seen that the Arrhenius-like behavior continues over a wide range of noise intensities, allowing to get reliable values for the effective potential barriers. According to the criterion from (\ref{fcrit}), the critical forces are expected to be at 0.68 and 0.76, which roughly corresponds to the actual intersection points.\\
+Consequently, the bistable system at hand could be well described by the two-state theory. This implies that other resembling systems might show similar behavior, as for example bistable neurons. The quantities corresponding to position and velocity would be spike count and firing rate, and the noise source wouldn't be the temperature anymore, but channel noise or random input from surrounding neurons.
+Instead of a critical bias force, there would be a critical bias current which needed to be crossed to reach Giant Diffusion. One of the most important aspects of this similarity would be signal transmission. If the system is driven by a slow cosine signal with amplitude $\epsilon$, the signal-to-noise ratio can be computed via
 \begin{align*}
-F=\frac{2D_{\text{eff}}}{L\langle v\rangle}
+SNR=\frac{\epsilon ^2T}{8}\frac{|\chi(0)|^2}{D_{eff}}
 \end{align*}
-an expression for the average velocity is required to compute the Fano factor. Taking into account that the average velocity is zero when the particle is in the locked state, one finds the following formula for the total mean velocity:
-\begin{align*}
-\langle v\rangle=v_0\frac{r_-}{r_++r_-}
-\end{align*}
-Therefore
-\begin{align*}
-F=\frac{2v_0r_+}{(r_++r_-)^2}=\frac{2v_0r_{0,+}\exp\left(\frac{-\Delta U_+}{D}\right)}{\left(r_{0,+}\exp\left(\frac{-\Delta U_+}{D}\right)+r_{0,-}\exp\left(-\frac{\Delta U_-}{D}\right)\right)^2}
-\end{align*}
-In the limes $D\ll1$ there are again two solutions. For $\Delta U_+ > \Delta U_-$:
-\begin{align*}
-F=\frac{2v_0r_{0,+}}{r_{0,-}^2}\exp\left(-\frac{\Delta U_+-2\Delta U_-}{D}\right) \rightarrow \Delta U_+=2\Delta U_-
-\end{align*}
-as well as for $\Delta U_+ < \Delta U_-$:
-\begin{align*}
-F=\frac{2v_0}{r_{0,+}}\exp\left(-\frac{\Delta U_+-2\Delta U_+}{D}\right) \rightarrow \Delta U_+=0
-\end{align*}
-The intersection point for $\Delta U_+ > \Delta U_-$ stays the same while at the other critical point the potential barrier from running to locked state needs to vanish. As the latter condition violates the requirements for the application of the two-state theory - because only one state would exist in this case - the second intersection point can't be determined via this two-state model.
-\section{Giant diffusion in a bursting neuron model}
-\subsection{Brownian motion and neuronal models}
-Brownian motion in periodic potentials has numerous applications among which one can find superionic conduction, rotation of a dipole in a static field or the description of a Josephson Tunneling junction\cite{fpe}. However, apart from these mechanical examples, Brownian motion in periodic potentials is also suited to describe a bursting neuron. If one counts every time the particle crosses a hill as a spike, the running state can be associated with tonic firing and the locked state with a stable equilibrium point. Because of the random noise, transition between the states will occur and the sustained spiking will be eventually terminated so that there is only a finite number of spikes within each burst. The position of the Brownian Particle then corresponds to the spike count of the neuron and its velocity to the firing rate. Thus, based on the similarities to Brownian motion, we expect to find a weak noise behavior comparable to giant diffusion also in bursting neurons.
-\subsection{Neuronal bursting}
-Depending on its physiology and the properties of the stimulus, a neuron doesn't always fire a single spike. A series of multiple spikes in a short time interval that is followed by a period of quiescence is called a burst\cite{izi}. Typically, bursting results from the interplay between two subsystems: a fast subsystem, that is responsible for the generation of the spikes within a burst, and a slow subsystem that modulates the bursting pattern and eventually terminates sustained spiking. However, a bursting neuron model that implements these slow and fast dynamics would at least have to be three-dimensional, as there would be a variable for the membrane voltage as well as for the fast and slow oscillations. One way to realize a bursting two-dimensional model and to make use of the various methods of phase plane analysis is to introduce noise into the system. Considering that any neuron is subject to some kind of noise, this is a justified assumption and was even proposed by Izhikevich as a way to make two-dimensional neuronal models burst\cite{izi}.
-\subsection{The bursting neuron model}
+where $T$ denotes th total simulation time. Near the critical current, the spike count diffusion would change by multiple orders of magnitude, leading to a similar change in the SNR. \\
+All in all, bistable neuron models are suggested to exhibit Giant Diffusion and therefore possess critical currents. When the system is near such a critical point, slight changes in the bias current can cause great changes in the SNR and possibly a large enhancement of signal transmission. The goal of this thesis is to find out whether Giant Diffusion exists for neuron models, to identify the critical currents and to investigate the system under the influence of slow periodic signals. 
+
+\section{Models and Methods}
+\subsection{The $I_{Na,p}+I_K$ model with saddle-node bifurcation}
 The main focus of this thesis lies on the study of the $I_{Na,p}+I_K$-model, the persistent sodium plus potassium model with additive noise:
 \begin{align}\label{Veq}
 C\dot{V} &= I - g_L(V-E_L) - g_{Na}m_{\infty}(V)(V-E_{Na}) - g_Kn(V-E_K)+\sqrt{2D}\xi(t)\\\label{neq}
 \dot{n} &= (n_{\infty}(V)-n)/\tau(V)
 \end{align}
-Here, $V$ denotes the mambrane voltage, $C$ is the capacitance, $I$ is the bias current, $g_i$ are conductances and $E_i$ the Nernst equilibrium potentials. The overall noise intensity is $D$. Lastly, $m_{\infty}$ is the activation variable of the instantaneous $Na^+$ current, while $n$ governs the variation of the slower $K^+$ current. The steady-state activation functions are approximated by the Boltzmann-function:
+Here, $V$ denotes the membrane voltage, $C$ is the capacitance, $I$ is the bias current, $g_i$ are conductances and $E_i$ the Nernst equilibrium potentials. The overall noise intensity is $D$. Lastly, $m_{\infty}$ is the activation variable of the instantaneous $Na^+$ current, while $n$ governs the variation of the slower $K^+$ current. The steady-state activation functions are approximated by the Boltzmann-function:
 \begin{align*}
 f_{\infty}(V) = \frac{1}{1+\exp\{(V_{1/2}-V)/k\}}
 \end{align*}
@@ -199,9 +138,8 @@ $C=1$ , $g_L=0.3$ , $E_L=-80$ , $g_{Na}=1$ , $E_{Na}=60$ , $g_K=0.4$ , $E_K=-90$
 \\
 \intertext{$K^+$ current:} k_n&=5 , V_{1/2,n}=-25 , \tau(V)=\text{const}=3.
 \end{align*}
-\subsection{Phase plane analysis}
-\subsubsection{Nullclines}
-For a system that depends on the evolution of two state variables, in this case $V$ and $n$, some qualitative and quantitative analysis can be carried out in the phase plane. A neat way to obtain information about an unknown system is to calculate its nullclines. The nullclines are curves in the phase plane, where one of the state variables remains constant. Thus, the $V$-nullcline is defined by the condition $\dot{V}=0$ and the $n$-nullcline follows from $\dot{n}=0$. By crossing one of the nullclines, the system changes its direction with respect to the corresponding variable. As a consequence, each nullcline separates the phase space into two regions where one variable evolves in opposite directions. Taken together, the nullclines define four different regions of directions: one region each where both variables decrease or increase and two regions where one variable increases and the other decreases. Depending on the specific shape of the nullclines, these regions do not necessarily have to be coherent.\\
+\subsubsection{Phase plane analysis}
+For a system that depends on the evolution of two state variables, in this case $V$ and $n$, some qualitative and quantitative analysis can be carried out in the phase plane. A neat way to obtain information about an unknown system is to calculate its nullclines. The nullclines are curves in the phase plane, where one of the state variables remains constant. Thus, the $V$-nullcline is defined by the condition $\dot{V}=0$ and the $n$-nullcline follows from $\dot{n}=0$. By crossing one of the nullclines, the system changes its direction of motion with respect to the corresponding variable. As a consequence, each nullcline separates the phase space into two regions where one of the variables evolves in opposite directions. Taken together, the nullclines define four different regions of directions: one region each where both variables decrease or increase and two regions where one variable increases and the other decreases. Depending on the specific shape of the nullclines, these regions do not necessarily have to be coherent.\\
 The $V$-nullcline can be obtained by setting the left side of equation (\ref{Veq}) to zero. In the $V$-$n$-plane, it can then be described by the function
 \begin{align}
 n(V)=\frac{I - g_L(V-E_L) - g_{Na}m_{\infty}(V)(V-E_{Na})}{g_K(V-E_K)}
@@ -214,7 +152,7 @@ The nullclines of the $I_{Na,p}+I_K$-model are shown in figure \ref{realnc}.\\
 A second aspect of the nullclines are their intersection points. As both state variables remain constant when the nullclines intersect, these points are equilibrium points.\\
 In general, there are three different types of equilibria: nodes, saddles and foci. These may be stable or unstable. Any trajectory in the phase space starting close enough to a stable equilibrium stays near it for all times. In contrast to that, an equilibrium is unstable, if at least one trajectory that starts arbitrarily close to it diverges from the equilibrium.
 If they are in the vicinity of a node, all trajectories either converge to or diverge from it. In the case of a saddle, most trajectories first approach the equilibrium point and then diverge from it. Trajectories that start near a focus rotate around the equilibrium point and thereby get closer to or farther away from it. 
-\subsubsection{Jacobian matrix of the system}
+%\subsubsection{Jacobian matrix of the system}
 The equilibrium points can be characterized by studying the Jacobian matrix of the system at these points. A two-dimensional system can be written in the form
 \begin{align}
 \dot{x}=f(x,y)\\
@@ -224,8 +162,8 @@ Utilizing the fact that the functions $f$ and $g$ can be linearized near the equ
 \begin{align}				
 \left(\begin{matrix}\dot{u}\\\dot{w}
 \end{matrix}\right)
-=\left(\begin{matrix}a b\\
-c d\end{matrix}\right)\left(\begin{matrix}u\\w\end{matrix}\right)=L\left(\begin{matrix}u\\w\end{matrix}\right)
+=\left(\begin{matrix}a\quad b\\
+c\quad d\end{matrix}\right)\left(\begin{matrix}u\\w\end{matrix}\right)=L\left(\begin{matrix}u\\w\end{matrix}\right)
 \end{align}
 where $u=x-x_0$, $w=y-y_0$, $L$ is the Jacobian matrix at equilibrium and the coefficients are the partial derivatives
 \begin{align}
@@ -252,7 +190,7 @@ Carrying out the phase plane analysis, one finds:
 \end{align*}
 This means that $P_1$ is a stable node, $P_2$ is a saddle point and $P_3$ is an unstable focus. Thus, in the bursting state, the phase vector will rotate around $P_3$, approach $P_2$ in $n$ - direction and then go away from $P_2$ in $V$ - direction in order to do another rotation around $P_3$.\\
 However, this applies only to the case of small bias currents. When $I\approx 0.36$, the saddle and the node fall together and the system undergoes a saddle-node bifurcation off invariant circle. In this case, the resting state vanishes and the neuron is in a state of tonic spiking.
-\subsection{Phenomenology}
+\subsubsection{Phenomenology}
 The qualitative behavior of the neural model can be best understood by first considering the noiseless system. Depending on the choice of initial conditions, the system will start in either the resting or the running state and will not change its behavior anymore after a short period of equilibration, as can be seen in figure \ref{subfig}. 
 \begin{figure}[H]
 	\subfigure[]{\includegraphics[scale=0.45]{inapreali20nbwnfont.pdf}} 
@@ -267,7 +205,7 @@ Analytically, it is hardly possible to determine whether a specific starting poi
 	\hspace*{-0.5cm}
 	\subfigure[]{	\includegraphics[scale=0.5]{contourtime01wn2.pdf}}
 	\subfigure[]{\includegraphics[scale=0.5]{contoureqtime01wn3.pdf}}
-
+	
 	\caption{Phase plane image of the neuron model with $I=0.1$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right picture, the equilibration times for both states were measured. The times to reach the stable node were multiplied with $-1$ so that a distinction between the states would be possible. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
 	\label{twodom}
 \end{figure}		
@@ -276,19 +214,193 @@ There are two distinct regions which can be separated by a monotonically increas
 When noise is brought into the system, the findings for the noiseless system still apply to a great extent. Starting in one of the two domains, the system will most likely first converge to the corresponding state, and the time it takes for that will be about the same as before. However, the system will not stay in this state forever, but constantly perform noise-driven transitions between the states. Thus, it will not be possible anymore to assign an end state to each set of initial conditions. Obviously, both transition rates, meaning from running to resting and in the opposite direction, will grow when the noise intensity $D$ increases. \\
 In addition to that, depending on the overall configuration, the system is usually biased towards one of the states. It is to be expected that at low bias current $I$, the resting state dominates and the running state is favored at high $I$. Considering the simulations (figure \ref{currentnoise}), this turns out to be a valid hypothesis: At $I=-0.1$, the neuron almost immediately returns to the resting state once it has gotten into the running state. At a slightly higher bias current of $I=0$, the periods of stay in both states are almost equal, and at $I=0.15$, the system is in the running state for the majority of time. The firing frequency in the running state lies at about 70 Hz.
 \begin{figure}[H]
- 	\subfigure[]{\includegraphics[scale=0.4]{realstatevar1252.pdf}} 
- 	\subfigure[]{	\includegraphics[scale=0.4]{realstatevar1352.pdf}}\\	\subfigure[]{\includegraphics[scale=0.4]{realstatevar152.pdf}} 
- 	\subfigure[]{	\includegraphics[scale=0.4]{realstatevar125vsh2.pdf}}
- 	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$. In figure (d), a segment with a higher time resolution is shown in order to better illustrate the evolution of the voltage variable.}
- 	\label{currentnoise} 
- \end{figure}
+	\subfigure[]{\includegraphics[scale=0.4]{realstatevar1252.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.4]{realstatevar1352.pdf}}\\	\subfigure[]{\includegraphics[scale=0.4]{realstatevar152.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.4]{realstatevar125vsh2.pdf}}
+	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$. In figure (d), a segment with a higher time resolution is shown in order to better illustrate the evolution of the voltage variable.}
+	\label{currentnoise} 
+\end{figure}
 In conclusion, the behavior of this two-dimensional bursting model displays the same characteristics as the Brownian particle in a tilted potential. Therefore, we expect to find similar count statistics and Giant Diffusion for this system as well. If this assumption is actually valid will be examined in the following chapter.
-
-\section{Simulations}
-\subsection{Numerics}
+\subsection{$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}
+As we have now observed the phenomenon of giant diffusion and its implications in a two-dimensional neuron model, it is of particular interest to confirm this behavior also for other bistable two-dimensional neuron models. Finding out in which cases giant diffusion occurs may help to determine conditions that need to be fulfilled and eventually lead to experiments supporting these findings. Therefore two more models will be discussed in this section.
+The first one is again the $I_{Na,p}+I_K$ model.
+This model is very versatile and displays a wide variety of qualitative and quantitative behavior upon parametric adjustments. Thus, its features can be tweaked such that the system undergoes an Andronov-Hopf bifurcation when the bias current passes a certain value. As presented in section 3, the system is decribed by equations \ref{Veq} and \ref{neq}. The parameters now were the following:\\\\
+$C=1$ , $g_L=1$ , $E_L=-78$ , $g_{Na}=4$ , $E_{Na}=60$ , $g_K=4$ , $E_K=-90$.
+\begin{align*}
+\intertext{Instantaneous $Na^+$ current:} k_m&=7 , V_{1/2,m}=-30. 
+\\
+\intertext{$K^+$ current:} k_n&=5 , V_{1/2,n}=-45 , \tau(V)=\text{const}=1.
+\end{align*}
+\subsubsection{Phase plane analysis}
+Due to the parameter adjustments one obtains a slightly different phase space picture:
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{inapikanhopfnc.pdf}\caption{Nullclines of the adjusted $I_{Na,p}+I_K$-model with $I=46$. The arrows indicate the direction of motion in the different regions.}
+	\label{anhopfnc}
+\end{figure}
+The new nullclines yield only one equilibrum point. Computing the Jacobian matrix, following eigenvalues arise for this point:
+\begin{align*}
+\lambda_+(P)&\approx -0.05 + 2.3i& \lambda_-(P)&\approx -0.05 - 2.3i
+\end{align*}
+Complex eigenvalues with negative real parts indicate a stable focus. As before, the system performs large oscillations around the focus when it is in the running state. When it is near the equilibrium, it converges fast to it, with the exception that it doesn't approach it directly but oscillates around it with decreasing radius.
+In contrast to the previous case, the system now not only consists of stable limit cycle and equilibrium but also an unstable limit cycle in between the two stable configurations. Considering that the system is under the influence of noise, it will not spend much time in the unstable state and quickly collapse into a stable configuration.\\
+Upon increase of the bias current, the unstable limit cycle shrinks. At $I\approx 48.9$, it falls together with the stable equilibrium and makes it lose stability. This transition is called a subcritical Andronov-Hopf bifurcation.
+\subsubsection{Phenomenology}
+with noise and without 
+\subsection{Rinzel model}
+\subsubsection{Phase plane analysis}
+\subsubsection{Phenomenology}
+\subsection{Quantities of interest}
+In the context of Brownian Motion, there are two characteristic quantities: the ensemble of particles moves with a mean velocity
+\begin{equation}
+\left\langle v\right\rangle =\lim_{t\rightarrow\infty}\frac{\left\langle x(t)-x(0) \right\rangle}{t}
+\end{equation}
+and is subject to a diffusive spread around this average flow that can be described by the effective diffusion coefficient
+\begin{equation}
+D_{eff}=\lim_{t\rightarrow\infty}\frac{\left\langle x^2(t) \right\rangle-\left\langle x(t)\right\rangle ^2}{2t}
+\end{equation}
+For the investigation of neuron models, a third quantity needs to be considered, namely the Fano factor:
+\begin{align*}
+F=\frac{\left\langle \Delta N^2(t) \right\rangle}{\left\langle N(t)\right\rangle}
+\end{align*}
+In order to compare the neuron model with Brownian Particles, one may also define a Fano factor for mechanical systems:
+\begin{align*}
+F=\frac{2D_{eff}}{L\langle v\rangle}
+\end{align*}
+where $L$ can be chosen arbitrarily, e.g. a characteristic length of the system, so that $F$ becomes dimensionless.
+%\subsection{Giant Diffusion}
+%The term \glqq Giant Diffusion \grqq is short for \textit{Giant Enhancement of (thermal) diffusion} which was first observed around the turn of the millennium for Brownian Particles in a tilted periodic potential\cite{td}\cite{ga}\cite{dit}\cite{gd}. In general, these particles exhibit two stable velocity states. They can be \glqq trapped\grqq in a potential minimum - this is referred to as the \textit{locked state} - or they can be in the \textit{running state}. A particle gets into the running state if it has managed to overcome a hill and the frictional loss is low enough so that it is able to pass the adjacent hills as well. In the case of large friction or a strongly tilted potential, however, only one of these two states is present. If the potential is tilted in such a way that both states exist and the probabilities to be in either state are similar, many switchings between the states will occur. In the weak-noise-limit, half of the particles will be mainly in the locked state, while for the others the running state prevails. This behavior leads to diverging diffusion coefficients known as Giant Diffusion.
+%\subsection{Giant diffusion of Brownian Particles}
+%First observed by the botanist Robert Brown in 1828\cite{bm}, the term \textit{Brownian Motion} describes the irregular movement of particles in a viscous medium, whose apparently random changes of direction are caused by collisions with smaller particles or molecules.
+%\\
+%Ordinary Brownian Motion obeys a simple linear Langevin-equation:
+%\begin{align*}
+%\text{m}\dot{v}=-\lambda v+\xi(t)
+%\end{align*}
+%The evolution of the velocity $v$ of the particle is affected by a linear friction term with coefficient $\lambda$ and a random force $\xi(t)$. \\
+%\\ 
+%In the following, two different systems with Brownian Motion dynamics exhibiting Giant Diffusion are presented. These were the motivation for my research on bursting neuron models.
+%\subsubsection{Active Brownian Particles}
+%Active Brownian Motion can be observed on small organisms, like bacteria or cells, which are able to move on their own. In order to model the behaviour of such an object, a more general friction term needs to be introduced into the Langevin-equation:
+%\begin{align*}
+%\dot{v}=-f(v)+\xi(t)
+%\end{align*}
+%Here, the noise was assumed to be additive and the mass was omitted due to clarity.
+%An accurate description of the self-propulsion can be accomplished by choosing the function $f$ in such a way that it attains negative values at small velocities and becomes greater than zero at large speed. Thus, at small velocities the particle will accelerate and with increasing velocity, regular friction will start to affect its motion.
+%\\
+%A system like this was studied by Lindner and Nicola in 2008\cite{abp}. They chose a cubic function for the friction term, $f(v)=v-v^3+F$, allowing them to write the equation of motion in terms of a quartic velocity potential $U(v)$:
+%\begin{equation}
+%\dot{v}=-U'(v)+\xi(t)
+%\end{equation}
+%with $U(v)=\frac{1}{4}v^4-\frac{1}{2}v^2-Fv$.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=1]{velpot.pdf} 
+%	\caption{tilted velocity potential of an Active Brownian Particle}
+%	\label{velpot}
+%\end{figure}
+%This potential shows two minima at $v_\pm$, representing the stable velocity states \glqq forwards\grqq and \glqq backwards\grqq, and a maximum at $v_0$. In order to transition from $v_\pm$ into the other state, the particle needs to overcome a barrier of height $\Delta U\pm$.  
+%\\
+%Their simulations revealed a certain region of bias forces $F$, in which giant diffusion occurred.
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=0.5]{mess08.png}\caption{Simulation of velocity and effective diffusion coefficient for Active Brownian Particles underlying a tilted velocity potential,taken from \cite{abp}}
+%	\label{abpsim}
+%\end{figure}
+%Inside this region, the diffusion coefficients increase with decreasing noise intensity, while they decrease outside of this region. In other words, in the weak noise limit, the diffusion coefficients diverge in the critical region and vanish outside of it. The critical force lies at the border of this region and emerges from the intersection points of the diffusion coefficients for different noise levels. A simple criterion could be found for these intersection points: at the critical force, one potential barrier is twice as high as the other potential barrier. 
+%Furthermore, it is remarkable that the reliable directed transport which takes place outside of the critical region appears much earlier than the monostability of the velocity potential, which is a obviously only a primitive criterion for reliable transport in one direction. 
+%The mean velocity displays a more regular behavior. It is almost constant at a value less than zero up to small negative forces, then undergoes a sharp increase to a positive value and barely changes afterwards. They intersect as well, approximately at the position where the diffusion coefficient gets maximal.
+%\subsubsection{Regular Brownian Particles in a tilted periodic potential}
+%On their own, ordinary Brownian Particles do not exhibit bistable velocity dynamics which may lead to giant diffusion. But as mentioned before, this can be done by adding a periodic potential to the equation of motion:
+%\begin{equation}
+%\dot{v}=-\gamma v-U'(x)+\sqrt{2\gamma kT}\xi(t)
+%\end{equation}
+%with $U(x)=-Fx-d\cos(x)$. This system was discussed with respect to giant diffusion in a paper by Lindner and Sokolov from 2016\cite{bpp}. Now, in contrast to the Active Brownian Particle, the evolution of the system is not governed by a velocity potential, but by a spatial potential:
+%\begin{figure}[H]
+%	\subfigure[]{\includegraphics[width=0.5\textwidth]{veldynupper.png}} 
+%	\subfigure[]{\includegraphics[width=0.5\textwidth]{veldynlower.png}} 
+%	\caption{Figure (a) visualizes the motion of a Brownian Particle in a periodic potential, on the right one can see the bistable velocity dynamics. The oscillations thereby arise from local extrema of the potential.}
+%	\label{veldyn} 
+%\end{figure}
+%Also for the Brownian Particles in a cosine potential, there was a finite range of bias forces, for which giant diffusion could be observed:
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=0.5]{nbpsim1.png}\caption{Simulation of velocity and effective diffusion coefficient for Brownian Particles in a tilted periodic potential,taken from \cite{bpp}}
+%	\label{anbpsim}
+%\end{figure}
+%Again, all curves of the diffusion coefficient intersect at two points and diverge in between those points for decreasing noise intensities while going to zero on the outside and the velocity curves intersect approximately at the maximum of the diffusion coefficient. And also here the region of giant diffusion is much smaller than the range of bias forces, where both states coexist. Two other variables that help characterize the system are the transition rates between the states, that is from the locked to the running state and vice versa. Even though there didn't exist actual potential barriers, these turned out to obey an Arrhenius or Kramers law, respectively, as can be seen from an Arrhenius plot:
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=0.5]{kramerfit.png}\caption{Fits of the transition rates with both an Arrhenius and a Kramers law, taken from \cite{bpp}}
+%	\label{bparr}
+%\end{figure}
+%In this example, the Arrhenius fit as well as the Kramers fit yield good agreements with the data. From these fits one can extract effective potential barriers. The relation found for the potential barriers of the Active Brownian Particle can be tested by plotting the effective barriers and twice their value:
+%\begin{figure}[H]	\includegraphics[scale=0.5]{barrierplot.png}\caption{Plot of the effective potential barriers. The dotted curves are simply twice the solid curves of the same color. This plot is taken from \cite{bpp}}
+%\end{figure}
+%The plot shows that the points where one potential barrier equals twice the other roughly correspond to the critical forces, so the criterion applies as well to this case, where no potential barriers were present and only effective barriers could be calculated.
+%\subsection{Two-state theory}\label{tst}
+%In the case of low noise intensity, the transition times between the locked state and the running state will be much shorter than the periods of time that the particle stays in one of the two states. That is why it is practical to describe the behavior of the system in this regime with a two-state model. The following derivation applies to the Brownian Particle in a tilted periodic potential. The transition rates are assumed to obey an Arrhenius law:
+%\begin{align*}
+%r_{\pm}=r_{0,\pm}\exp\left(-\frac{\Delta U_{\pm}}{D}\right)
+%\end{align*}
+%where $r_-$ denotes the transition rate from locked to running state, and $r_+$ the rate for the other transition. $\Delta U_{\pm}$ is the corresponding potential barrier and $D$ the noise intensity. The effective diffusion coefficient can be calculated from the velocity $v_0$ in the running state and the transition rates: 
+%\begin{align*}
+%D_{\text{eff}}=\frac{v_0^2 r_+r_-}{(r_++r_-)^3}
+%\end{align*}
+%The first task is to find the intersection points of the diffusion coefficients. At these points, the diffusion coefficients become independent of the noise intensity.
+%It is
+%\begin{align*}
+%D_{\text{eff}}&=\frac{v_0^2r_{0,+}r_{0,-}\exp\left(-\frac{\Delta U_++\Delta U_-}{D}\right)}{\left[r_{0,+}\exp(\frac{-\Delta U_+}{D})+r_{0,-}\exp\left(\frac{-\Delta U_-}{D}\right)\right]^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left[r_{0,+}\exp\left(-\frac{3\Delta U_+-\Delta U_+-\Delta U_-}{3D}\right)+r_{0,-}\exp\left(-\frac{3\Delta U_--\Delta U_+ -\Delta U_-}{3D}\right)\right]^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left[r_{0,+}\exp\left(-\frac{2\Delta U_+-\Delta U_-}{3D}\right)+r_{0,-}\exp\left(-\frac{2\Delta U_--\Delta U_+}{3D}\right)\right]^3}
+%\end{align*}
+%In the limes $D\rightarrow 0,\Delta U_+>U_-$ the first term in the denominator vanishes, resulting in:
+%\begin{align*}
+%D_{\text{eff}}=\frac{v_0^2r_{0,+}}{r_{0,-}^2}\exp\left(-\frac{\Delta U_+-2\Delta U_-}{D}\right)
+%\end{align*}
+%Under the assumption that the prefactors change slowly in comparison to the exponential function, the following condition arises:
+%\begin{align*}
+%\Delta U_+=2\Delta U_-
+%\end{align*}
+%Due to symmetry of the problem, the opposing case $D\rightarrow 0,\Delta U_+<U_-$ yields:
+%\begin{align*}
+%\Delta U_-=2\Delta U_+
+%\end{align*}
+%In both cases, one potential barrier is twice as high as the other one.\\
+\subsection{Two-state theory}
+Next, we will examine whether the Fano factor displays similar features in the weak noise limit. As 
+\begin{align*}
+F=\frac{2D_{\text{eff}}}{L\langle v\rangle}
+\end{align*}
+an expression for the average velocity is required to compute the Fano factor. Taking into account that the average velocity is zero when the particle is in the locked state, one finds the following formula for the total mean velocity:
+\begin{align*}
+\langle v\rangle=v_0\frac{r_-}{r_++r_-}
+\end{align*}
+Therefore
+\begin{align*}
+F=\frac{2v_0r_+}{(r_++r_-)^2}=\frac{2v_0r_{0,+}\exp\left(\frac{-\Delta U_+}{D}\right)}{\left(r_{0,+}\exp\left(\frac{-\Delta U_+}{D}\right)+r_{0,-}\exp\left(-\frac{\Delta U_-}{D}\right)\right)^2}
+\end{align*}
+In the limes $D\ll1$ there are again two solutions. For $\Delta U_+ > \Delta U_-$:
+\begin{align*}
+F=\frac{2v_0r_{0,+}}{r_{0,-}^2}\exp\left(-\frac{\Delta U_+-2\Delta U_-}{D}\right) \rightarrow \Delta U_+=2\Delta U_-
+\end{align*}
+as well as for $\Delta U_+ < \Delta U_-$:
+\begin{align*}
+F=\frac{2v_0}{r_{0,+}}\exp\left(-\frac{\Delta U_+-2\Delta U_+}{D}\right) \rightarrow \Delta U_+=0
+\end{align*}
+The intersection point for $\Delta U_+ > \Delta U_-$ stays the same while at the other critical point the potential barrier from running to locked state needs to vanish. As the latter condition violates the requirements for the application of the two-state theory - because only one state would exist in this case - the second intersection point can't be determined via this two-state model.
+%\section{Giant diffusion in a bursting neuron model}
+%\subsection{Brownian motion and neuronal models}
+%Brownian motion in periodic potentials has numerous applications among which one can find superionic conduction, rotation of a dipole in a static field or the description of a Josephson Tunneling junction\cite{fpe}. However, apart from these mechanical examples, Brownian motion in periodic potentials is also suited to describe a bursting neuron. If one counts every time the particle crosses a hill as a spike, the running state can be associated with tonic firing and the locked state with a stable equilibrium point. Because of the random noise, transition between the states will occur and the sustained spiking will be eventually terminated so that there is only a finite number of spikes within each burst. The position of the Brownian Particle then corresponds to the spike count of the neuron and its velocity to the firing rate. Thus, based on the similarities to Brownian motion, we expect to find a weak noise behavior comparable to giant diffusion also in bursting neurons.
+%\subsection{Neuronal bursting}
+%Depending on its physiology and the properties of the stimulus, a neuron doesn't always fire a single spike. A series of multiple spikes in a short time interval that is followed by a period of quiescence is called a burst\cite{izi}. Typically, bursting results from the interplay between two subsystems: a fast subsystem, that is responsible for the generation0 of the spikes within a burst, and a slow subsystem that modulates the bursting pattern and eventually terminates sustained spiking. However, a bursting neuron model that implements these slow and fast dynamics would at least have to be three-dimensional, as there would be a variable for the membrane voltage as well as for the fast and slow oscillations. One way to realize a bursting two-dimensional model and to make use of the various methods of phase plane analysis is to introduce noise into the system. Considering that any neuron is subject to some kind of noise, this is a justified assumption and was even proposed by Izhikevich as a way to make two-dimensional neuronal models burst\cite{izi}.
+%\subsection{The bursting neuron model}
+\subsection{Numerical implementation}
 The behavior of the two-dimensional neuron model can be investigated by conducting simulations with the parameters described above and evaluating the data in a couple different ways. The simulations were done by letting the system evolve almost freely with the only external influence being the white gaussian noise with intensity $D$. \\
 In all of the computations, only a single neuron was simulated over a long period of time. When investigating an ergodic system, this procedure ensures that the results are independent of the initial conditions if the simulation time is long enough. Furthermore, an ensemble of neurons would need to be equilibrated before starting any measurements so that the obtained results would be correct. This equilibration time can be omitted now, which saves some computation time. \\
 Mostly, the spike train was cut into 500 segments. Only for $D=0.25$, the number of neurons was set to 50 so that there would be a higher number of transitions in a single voltage curve. In all cases, the timestep was 0.5 $\mu$s. The total measurement time for each spike train ranged from $5\cdot10^5$ s for high noise intensities to $2\cdot 10^6$ s for the lowest noise intensities, yielding lengths between $10^3$ and $4\cdot10^4$ for the segments.
+
+
+\section{Critical currents in the Fano factor}
+
 \subsection{Count statistics}
 The most characteristic feature of a neuron -from a mathematical point of view- is its spike count. Using the phase space description, the neuron produces a spike each time it performs a complete rotation around the instable equilibrium point or focus, respectively. This fact conveniently provides us with a numerical criterion for a spike:
 every time the membrane voltage crosses the equilibrium value from below before the gating variable crosses its equilibrium value (also from below), a spike will be counted. \\
@@ -393,25 +505,11 @@ now allows to make predictions for lower noise intensities.
 \end{figure}
 At lower noise intensities, the qualitative behavior of the measured quantities does not change much. All curves of $D_{eff}$ intersect at two points and thereby define the region where exponential growth occurs. As before, the curves go to zero outside of this region. Here it is important to note that the curves intersect slightly earlier with respect to the maximum. This implies that the limit of $D\rightarrow$ has not yet been reached numerically and requires a reduction in $D$ of about an order of magnitude compared to the conducted simulations. However, even further decreases in $D$ do not yield a different intersection point. \\
 Similar to the simulations, the fano factor only has one intersection point at the right border of giant diffusion, and even though it gets maximal at the same point where $D_{eff}$ reaches its highest value, the curves again do not seem to have a second intersection point.
-\subsubsection{Spectrum and SNR}
+\section{Consequences for Signal transmission}
+\subsection{Frequency Spectrum}
 The great decrease of $D_{eff}$ outside the critical region leads to the conclusion, that signal transmission is improved equally well when the system changes from giant diffusion of the spike count to a more regular firing pattern.
-\section{Other two-dimensional Neuron models}
-As we have now observed the phenomenon of giant diffusion and its implications in a two-dimensional neuron model, it is of particular interest to confirm this behavior also for other bistable two-dimensional neuron models. Finding out in which cases giant diffusion occurs may help to determine conditions that need to be fulfilled and eventually lead to experiments supporting these findings. Therefore two more models will be discussed in this section.
-\subsection{$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}
-The $I_{Na,p}*I_K$ model is very versatile and displays a wide variety of qualitative and quantitative behavior upon parametric adjustments. Thus, its features can be tweaked such that the system undergoes an Andronov-Hopf bifurcation when the bias current passes a certain value. As presented in section 3, the system is decribed by equations \ref{Veq} and \ref{neq}. The parameters now were the following:\\\\
-$C=1$ , $g_L=1$ , $E_L=-78$ , $g_{Na}=4$ , $E_{Na}=60$ , $g_K=4$ , $E_K=-90$.
-\begin{align*}
-\intertext{Instantaneous $Na^+$ current:} k_m&=7 , V_{1/2,m}=-30. 
-\\
-\intertext{$K^+$ current:} k_n&=5 , V_{1/2,n}=-45 , \tau(V)=\text{const}=1.
-\end{align*}
-This leads to a slightly different phase space picture:
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.5]{inapikanhopfnc.pdf}\caption{Nullclines of the adjusted $I_{Na,p}+I_K$-model with $I=46$. The arrows indicate the direction of motion in the different regions.}
-	\label{anhopfnc}
-\end{figure}
-In contrast to the previous case, the system now not only consists of a stable limit cycle and a stable node but also an unstable limit cycle in between the two stable configurations. Upon increase of the bias current, the unstable limit cycle shrinks and makes the node lose stability.
+\subsection{SNR}
+\section{Conclusions}
 \bibliography{quellen}
 \bibliographystyle{ieeetr}
 \include{other/declaration}

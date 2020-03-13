@@ -16,11 +16,11 @@ import matplotlib.pyplot as plt
 
 
 date='realanhopf11flog'
-date1='realanhopf22j'
+date1='realanhopf19flog'
 date2='realrinzel15ninv0'
 date3='realrinzel15ninv1'
 D=[10]
-D1=[20,30]
+D1=[20,30,35]
 D2=[]
 D3=[]
 Dtot=D+D1+D2+D3
@@ -125,6 +125,7 @@ plt.yscale('log')
 for n in range(0,l):
 	nl=round(ivalues-offset[n])
 	plt.plot(vecx[n,0:nl],vec[n,0:nl],label='D=%.2f' %(Dtot[n]/10))
+plt.plot([46.1, 46.1], [10**(-6), 10**3], color='black', linestyle='-')
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
@@ -231,6 +232,7 @@ plt.yscale('log')
 for n in range(0,l):
 	nl=round(ivalues-offset2[n])
 	plt.plot(vecx[n,0:nl],vec[n,0:nl],label='D=%.2f' %(Dtot[n]/10))
+plt.plot([46.1, 46.1], [10**(-4), 10**5], color='black', linestyle='-')
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])

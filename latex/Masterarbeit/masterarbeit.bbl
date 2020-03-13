@@ -13,6 +13,41 @@
 {Gennady S. Cymbalyuk}, ``{Dynamics of neuronal bursting},'' {\em J Biol Phys
   37}, 2011.
 
+\bibitem{pacemaker}
+{J. Jalife and C. Antzelevitch}, ``{Phase resetting and annihilation of
+  pacemaker activity in cardiac tissue},'' {\em Science Vol. 206, Issue 4419},
+  1979.
+
+\bibitem{sensory}
+{G. V. Di Prisco et al.}, ``{Role of Sensory-Evoked NMDA Plateau Potentials in
+  the Initiation of Locomotion},'' {\em Science Vol. 278, Issue 5340}, 1997.
+
+\bibitem{sensorystm1}
+{Y. Loewenstein et al.}, ``{Bistability of cerebellar Purkinje cells modulated
+  by sensory stimulation},'' {\em Nature Neuroscience 8}, 2005.
+
+\bibitem{moto1}
+{Chie-Fang Hsiao et al.}, ``{Ionic Basis for Serotonin-Induced Bistable
+  Membrane Properties in Guinea Pig Trigeminal Motoneurons},'' {\em J.
+  Neurophysiol. 79}, 1998.
+
+\bibitem{moto2}
+{Jorn Hounsgaard and Ole Kiehn}, ``{Serotonin-induced bistability of turtle
+  motoneurones caused by a nifedipine-sensitive calcium plateau potential},''
+  {\em J. Physiol. 414}, 1989.
+
+\bibitem{stm1}
+{E. Marder et al.}, ``{Memory from the dynamics of intrinsic membrane
+  currents},'' {\em PNAS 93}, 1996.
+
+\bibitem{stm2}
+{A. V. Egorov et al.}, ``{Graded persistent activity in entorhinal cortex
+  neurons},'' {\em Nature 420}, 2002.
+
+\bibitem{spindle}
+{Pablo Fuentealba et al.}, ``{Membrane Bistability in Thalamic Reticular
+  Neurons During SpindleOscillations},'' {\em J. Neurophysiol. 93}, 2005.
+
 \bibitem{abp}
 {B. Lindner and E. M. Nicola}, ``{Critical Asymmetry for Giant Diffusion of
   Active Brownian Particles},'' {\em PRL 101}, 2008.

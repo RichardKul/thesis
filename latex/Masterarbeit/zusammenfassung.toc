@@ -23,3 +23,7 @@
 \contentsline {subsection}{\numberline {3.7}SNR im subkritschen AH-Modell}{88}% 
 \contentsline {section}{\numberline {4}Log-Spektrum}{98}% 
 \contentsline {subsection}{\numberline {4.1}Kombination der Spektren}{102}% 
+\contentsline {subsection}{\numberline {4.2}$I_{Na,p}+I_K$ Modell mit Andronov-Hopf Bifurkation}{109}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Ecke bei $D=0.1$}{109}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Verbesserung der Frequenzaufl\IeC {\"o}sung im Spektrum}{111}% 
+\contentsline {subsubsection}{\numberline {4.2.3}SNR und Zwei-Zustands-Theorie}{116}% 
