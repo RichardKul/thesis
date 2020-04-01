@@ -8,7 +8,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-file=open('/home/richard/mastergit/NetBeansProjects/realstatevar/realstate14.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/realstatevar/realstateanhopf52.txt',"r")
 x,y,z,a=[],[],[],[]
 for k in file:
 	row=k.split()
@@ -25,15 +25,15 @@ matplotlib.rcParams.update({'font.size': 22})
 
 plt.figure()
 axs = plt.subplot(111)
-#plt.suptitle('$I$=0.05$\mu A/cm^2$')
+plt.suptitle('$I$=45$\mu A/cm^2$')
 #plt.suptitle('I=0')
 plt.xlabel('time [s]')
 plt.ylabel('membrane voltage [mV]')
-plt.xlim(6,6.6)
+plt.xlim(39.97,40.17)
 axs.plot(ax/1000,ay,'black')
 #plt.plot(ax/1000,az)
 #plt.plot(ax,aa)
 axs.spines['right'].set_visible(False)
 axs.spines['top'].set_visible(False)
 plt.tight_layout()
-plt.savefig('realstatevar14v2noleg.pdf')
+plt.savefig('realstateanhopf52sh.pdf')

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.11)  12 MAR 2020 21:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.11)  1 APR 2020 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -415,42 +415,42 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--136
 <inapikrealncwnp.pdf, id=123, 462.52798pt x 346.89601pt>
 File: inapikrealncwnp.pdf Graphic file (type pdf)
 <use inapikrealncwnp.pdf>
-Package pdftex.def Info: inapikrealncwnp.pdf  used on input line 182.
+Package pdftex.def Info: inapikrealncwnp.pdf  used on input line 184.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
  [7]
 <inapreali20nbwnfont.pdf, id=130, 462.52798pt x 346.89601pt>
 File: inapreali20nbwnfont.pdf Graphic file (type pdf)
 <use inapreali20nbwnfont.pdf>
-Package pdftex.def Info: inapreali20nbwnfont.pdf  used on input line 196.
+Package pdftex.def Info: inapreali20nbwnfont.pdf  used on input line 198.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
 <inapreali20wnfont.pdf, id=131, 462.52798pt x 346.89601pt>
 File: inapreali20wnfont.pdf Graphic file (type pdf)
 <use inapreali20wnfont.pdf>
-Package pdftex.def Info: inapreali20wnfont.pdf  used on input line 197.
+Package pdftex.def Info: inapreali20wnfont.pdf  used on input line 199.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
 <inapreali20nbvfont.pdf, id=132, 462.52798pt x 346.89601pt>
 File: inapreali20nbvfont.pdf Graphic file (type pdf)
 <use inapreali20nbvfont.pdf>
-Package pdftex.def Info: inapreali20nbvfont.pdf  used on input line 197.
+Package pdftex.def Info: inapreali20nbvfont.pdf  used on input line 199.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
 <inapreali20vfont.pdf, id=133, 462.52798pt x 346.89601pt>
 File: inapreali20vfont.pdf Graphic file (type pdf)
 <use inapreali20vfont.pdf>
-Package pdftex.def Info: inapreali20vfont.pdf  used on input line 198.
+Package pdftex.def Info: inapreali20vfont.pdf  used on input line 200.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
  [8 <./inapikrealncwnp.pdf>]
 <contourtime01wn2.pdf, id=176, 462.52798pt x 346.89601pt>
 File: contourtime01wn2.pdf Graphic file (type pdf)
 <use contourtime01wn2.pdf>
-Package pdftex.def Info: contourtime01wn2.pdf  used on input line 206.
+Package pdftex.def Info: contourtime01wn2.pdf  used on input line 208.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 <contoureqtime01wn3.pdf, id=177, 462.52798pt x 346.89601pt>
 File: contoureqtime01wn3.pdf Graphic file (type pdf)
 <use contoureqtime01wn3.pdf>
-Package pdftex.def Info: contoureqtime01wn3.pdf  used on input line 207.
+Package pdftex.def Info: contoureqtime01wn3.pdf  used on input line 209.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \hbox (30.6479pt too wide) in paragraph at lines 205--208
+Overfull \hbox (30.6479pt too wide) in paragraph at lines 207--210
 []|  [] [] 
  []
 
@@ -470,29 +470,29 @@ pdfTeX warning: /usr/bin/pdflatex (file ./inapreali20vfont.pdf): PDF inclusion:
 <realstatevar1252.pdf, id=300, 462.52798pt x 346.89601pt>
 File: realstatevar1252.pdf Graphic file (type pdf)
 <use realstatevar1252.pdf>
-Package pdftex.def Info: realstatevar1252.pdf  used on input line 217.
+Package pdftex.def Info: realstatevar1252.pdf  used on input line 219.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 <realstatevar1352.pdf, id=301, 462.52798pt x 346.89601pt>
 File: realstatevar1352.pdf Graphic file (type pdf)
 <use realstatevar1352.pdf>
-Package pdftex.def Info: realstatevar1352.pdf  used on input line 218.
+Package pdftex.def Info: realstatevar1352.pdf  used on input line 220.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 <realstatevar152.pdf, id=302, 462.52798pt x 346.89601pt>
 File: realstatevar152.pdf Graphic file (type pdf)
 <use realstatevar152.pdf>
-Package pdftex.def Info: realstatevar152.pdf  used on input line 218.
+Package pdftex.def Info: realstatevar152.pdf  used on input line 220.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
 <realstatevar125vsh2.pdf, id=303, 462.52798pt x 346.89601pt>
 File: realstatevar125vsh2.pdf Graphic file (type pdf)
 <use realstatevar125vsh2.pdf>
-Package pdftex.def Info: realstatevar125vsh2.pdf  used on input line 219.
+Package pdftex.def Info: realstatevar125vsh2.pdf  used on input line 221.
 (pdftex.def)             Requested size: 185.0079pt x 138.75594pt.
  [10 <./contourtime01wn2.pdf> <./contoureqtime01wn3.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./contoureqtime01wn3.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 225--229
+Underfull \hbox (badness 10000) in paragraph at lines 228--232
 
  []
 
@@ -512,177 +512,277 @@ on: multiple pdfs with page group included in a single page
 <inapikanhopfnc.pdf, id=550, 462.52798pt x 346.89601pt>
 File: inapikanhopfnc.pdf Graphic file (type pdf)
 <use inapikanhopfnc.pdf>
-Package pdftex.def Info: inapikanhopfnc.pdf  used on input line 238.
+Package pdftex.def Info: inapikanhopfnc.pdf  used on input line 241.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
- [12 <./inapikanhopfnc.pdf>] [13] [14]
-<dneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf, id=601, 46
-2.52798pt x 346.89601pt>
+<inaprealanhopfnb.pdf, id=551, 462.52798pt x 346.89601pt>
+File: inaprealanhopfnb.pdf Graphic file (type pdf)
+<use inaprealanhopfnb.pdf>
+Package pdftex.def Info: inaprealanhopfnb.pdf  used on input line 253.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+<inaprealanhopf.pdf, id=552, 462.52798pt x 346.89601pt>
+File: inaprealanhopf.pdf Graphic file (type pdf)
+<use inaprealanhopf.pdf>
+Package pdftex.def Info: inaprealanhopf.pdf  used on input line 254.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+<inaprealanhopfnbvt.pdf, id=553, 462.52798pt x 346.89601pt>
+File: inaprealanhopfnbvt.pdf Graphic file (type pdf)
+<use inaprealanhopfnbvt.pdf>
+Package pdftex.def Info: inaprealanhopfnbvt.pdf  used on input line 254.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+<inaprealanhopfvt.pdf, id=554, 462.52798pt x 346.89601pt>
+File: inaprealanhopfvt.pdf Graphic file (type pdf)
+<use inaprealanhopfvt.pdf>
+Package pdftex.def Info: inaprealanhopfvt.pdf  used on input line 255.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+ [12 <./inapikanhopfnc.pdf>]
+<inaprealanhopfunstablewn2.pdf, id=599, 462.52798pt x 346.89601pt>
+File: inaprealanhopfunstablewn2.pdf Graphic file (type pdf)
+<use inaprealanhopfunstablewn2.pdf>
+Package pdftex.def Info: inaprealanhopfunstablewn2.pdf  used on input line 261.
+
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+<inaprealanhopfunstablevt.pdf, id=600, 462.52798pt x 346.89601pt>
+File: inaprealanhopfunstablevt.pdf Graphic file (type pdf)
+<use inaprealanhopfunstablevt.pdf>
+Package pdftex.def Info: inaprealanhopfunstablevt.pdf  used on input line 262.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+ [13 <./inaprealanhopfnb.pdf> <./inaprealanhopf.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./inaprealanhopf.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+> <./inaprealanhopfnbvt.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./inaprealanhopfnbvt.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <./inaprealanhopfvt.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./inaprealanhopfvt.pdf): PDF inclusion:
+ multiple pdfs with page group included in a single page
+>]
+<inaprealanhopfnb2vt.pdf, id=726, 462.52798pt x 346.89601pt>
+File: inaprealanhopfnb2vt.pdf Graphic file (type pdf)
+<use inaprealanhopfnb2vt.pdf>
+Package pdftex.def Info: inaprealanhopfnb2vt.pdf  used on input line 268.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+<inaprealanhopfunstable2.pdf, id=727, 462.52798pt x 346.89601pt>
+File: inaprealanhopfunstable2.pdf Graphic file (type pdf)
+<use inaprealanhopfunstable2.pdf>
+Package pdftex.def Info: inaprealanhopfunstable2.pdf  used on input line 269.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+<realstateanhopf45full.pdf, id=728, 462.52798pt x 346.89601pt>
+File: realstateanhopf45full.pdf Graphic file (type pdf)
+<use realstateanhopf45full.pdf>
+Package pdftex.def Info: realstateanhopf45full.pdf  used on input line 276.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+<realstateanhopf55full.pdf, id=729, 462.52798pt x 346.89601pt>
+File: realstateanhopf55full.pdf Graphic file (type pdf)
+<use realstateanhopf55full.pdf>
+Package pdftex.def Info: realstateanhopf55full.pdf  used on input line 277.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+<realstateanhopf5sh3.pdf, id=730, 462.52798pt x 346.89601pt>
+File: realstateanhopf5sh3.pdf Graphic file (type pdf)
+<use realstateanhopf5sh3.pdf>
+Package pdftex.def Info: realstateanhopf5sh3.pdf  used on input line 277.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+<realstateanhopf52sh.pdf, id=731, 462.52798pt x 346.89601pt>
+File: realstateanhopf52sh.pdf Graphic file (type pdf)
+<use realstateanhopf52sh.pdf>
+Package pdftex.def Info: realstateanhopf52sh.pdf  used on input line 278.
+(pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
+ [14 <./inaprealanhopfunstablewn2.pdf> <./inaprealanhopfunstablevt.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./inaprealanhopfunstablevt.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+> <./inaprealanhopfnb2vt.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./inaprealanhopfnb2vt.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+> <./inaprealanhopfunstable2.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./inaprealanhopfunstable2.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>] [15 <./realstateanhopf45full.pdf> <./realstateanhopf55full.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./realstateanhopf55full.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+> <./realstateanhopf5sh3.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./realstateanhopf5sh3.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+> <./realstateanhopf52sh.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./realstateanhopf52sh.pdf): PDF inclusi
+on: multiple pdfs with page group included in a single page
+>] [16]
+<dneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf, id=1027, 4
+62.52798pt x 346.89601pt>
 File: dneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf Graphi
 c file (type pdf)
 <use dneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf>
 Package pdftex.def Info: dneurcrit3shrealfast19jjem2strealfast13aem2n4realfast1
-1jjem2sh.pdf  used on input line 416.
+1jjem2sh.pdf  used on input line 449.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 416--416
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 449--449
  [][] 
  []
 
-<fneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf, id=602, 46
-2.52798pt x 346.89601pt>
+[17]
+<fneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf, id=1032, 4
+62.52798pt x 346.89601pt>
 File: fneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf Graphi
 c file (type pdf)
 <use fneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf>
 Package pdftex.def Info: fneurcrit3shrealfast19jjem2strealfast13aem2n4realfast1
-1jjem2sh.pdf  used on input line 422.
+1jjem2sh.pdf  used on input line 455.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 422--422
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 455--455
  [][] 
  []
 
-[15 <./dneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf>]
-<gneursh3realfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf, id=654, 462.52
-798pt x 346.89601pt>
+[18 <./dneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf>]
+<gneursh3realfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf, id=1083, 462.5
+2798pt x 346.89601pt>
 File: gneursh3realfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf Graphic fi
 le (type pdf)
 <use gneursh3realfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf>
 Package pdftex.def Info: gneursh3realfast19jjem2strealfast13aem2n4realfast11jje
-m2sh.pdf  used on input line 428.
+m2sh.pdf  used on input line 461.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 428--428
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 461--461
  [][] 
  []
 
-[16 <./fneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf>]
-<eqdistplotmaster.pdf, id=705, 462.52798pt x 346.89601pt>
+[19 <./fneurcrit3shrealfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf>]
+<eqdistplotmaster.pdf, id=1133, 462.52798pt x 346.89601pt>
 File: eqdistplotmaster.pdf Graphic file (type pdf)
 <use eqdistplotmaster.pdf>
-Package pdftex.def Info: eqdistplotmaster.pdf  used on input line 437.
+Package pdftex.def Info: eqdistplotmaster.pdf  used on input line 470.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<bdistplotmaster.pdf, id=706, 462.52798pt x 346.89601pt>
+<bdistplotmaster.pdf, id=1134, 462.52798pt x 346.89601pt>
 File: bdistplotmaster.pdf Graphic file (type pdf)
 <use bdistplotmaster.pdf>
-Package pdftex.def Info: bdistplotmaster.pdf  used on input line 438.
+Package pdftex.def Info: bdistplotmaster.pdf  used on input line 471.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \hbox (30.6479pt too wide) in paragraph at lines 436--439
+Overfull \hbox (30.6479pt too wide) in paragraph at lines 469--472
 []|  [] [] 
  []
 
-[17 <./gneursh3realfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf>]
-<tranratesneur3.pdf, id=758, 462.52798pt x 346.89601pt>
+[20 <./gneursh3realfast19jjem2strealfast13aem2n4realfast11jjem2sh.pdf>]
+<tranratesneur3.pdf, id=1186, 462.52798pt x 346.89601pt>
 File: tranratesneur3.pdf Graphic file (type pdf)
 <use tranratesneur3.pdf>
-Package pdftex.def Info: tranratesneur3.pdf  used on input line 447.
+Package pdftex.def Info: tranratesneur3.pdf  used on input line 480.
 (pdftex.def)             Requested size: 462.52684pt x 346.89516pt.
 
-Overfull \hbox (35.73549pt too wide) in paragraph at lines 447--447
+Overfull \hbox (35.73549pt too wide) in paragraph at lines 480--480
  [][] 
  []
 
-[18 <./eqdistplotmaster.pdf> <./bdistplotmaster.pdf
+[21 <./eqdistplotmaster.pdf> <./bdistplotmaster.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./bdistplotmaster.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
-<arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2stfit7fln.pdf, id=844, 46
-2.52798pt x 346.89601pt>
+<arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2stfit7fln.pdf, id=1271, 4
+62.52798pt x 346.89601pt>
 File: arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2stfit7fln.pdf Graphi
 c file (type pdf)
 <use arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2stfit7fln.pdf>
 Package pdftex.def Info: arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2s
-tfit7fln.pdf  used on input line 455.
+tfit7fln.pdf  used on input line 488.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2stfit15fln.pdf, id=845, 4
-62.52798pt x 346.89601pt>
+<arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2stfit15fln.pdf, id=1272, 
+462.52798pt x 346.89601pt>
 File: arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2stfit15fln.pdf Graph
 ic file (type pdf)
 <use arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2stfit15fln.pdf>
 Package pdftex.def Info: arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2s
-tfit15fln.pdf  used on input line 456.
+tfit15fln.pdf  used on input line 489.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \hbox (30.6479pt too wide) in paragraph at lines 454--457
+Overfull \hbox (30.6479pt too wide) in paragraph at lines 487--490
 []|  [] [] 
  []
 
-[19 <./tranratesneur3.pdf>]
+[22 <./tranratesneur3.pdf>]
 
-LaTeX Warning: Reference `tst' on page 20 undefined on input line 464.
+LaTeX Warning: Reference `tst' on page 23 undefined on input line 497.
 
-<barriereal4linebig.pdf, id=898, 462.52798pt x 346.89601pt>
+<barriereal4linebig.pdf, id=1326, 462.52798pt x 346.89601pt>
 File: barriereal4linebig.pdf Graphic file (type pdf)
 <use barriereal4linebig.pdf>
-Package pdftex.def Info: barriereal4linebig.pdf  used on input line 474.
+Package pdftex.def Info: barriereal4linebig.pdf  used on input line 507.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<barriercomprealfit4linecritbig.pdf, id=899, 462.52798pt x 346.89601pt>
+<barriercomprealfit4linecritbig.pdf, id=1327, 462.52798pt x 346.89601pt>
 File: barriercomprealfit4linecritbig.pdf Graphic file (type pdf)
 <use barriercomprealfit4linecritbig.pdf>
 Package pdftex.def Info: barriercomprealfit4linecritbig.pdf  used on input line
- 475.
+ 508.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \hbox (38.48116pt too wide) in paragraph at lines 471--476
+Overfull \hbox (38.48116pt too wide) in paragraph at lines 504--509
 []|  [] [] 
  []
 
-[20 <./arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2stfit7fln.pdf> <./a
+[23 <./arrheniustotbignewrealfast11jjem2shnewrealfast19jjem2stfit7fln.pdf> <./a
 rrheniustotbignewrealfast11jjem2shnewrealfast19jjem2stfit15fln.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./arrheniustotbignewrealfast11jjem2shne
 wrealfast19jjem2stfit15fln.pdf): PDF inclusion: multiple pdfs with page group i
 ncluded in a single page
 >]
-<dcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf, id=1003, 462.52798pt x 
+<dcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf, id=1432, 462.52798pt x 
 346.89601pt>
 File: dcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf Graphic file (type 
 pdf)
 <use dcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf>
 Package pdftex.def Info: dcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf 
- used on input line 489.
+ used on input line 522.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<fcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf, id=1004, 462.52798pt x 
+<fcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf, id=1433, 462.52798pt x 
 346.89601pt>
 File: fcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf Graphic file (type 
 pdf)
 <use fcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf>
 Package pdftex.def Info: fcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf 
- used on input line 490.
+ used on input line 523.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \hbox (38.48116pt too wide) in paragraph at lines 486--491
+Overfull \hbox (38.48116pt too wide) in paragraph at lines 519--524
 []|  [] [] 
  []
 
-[21 <./barriereal4linebig.pdf> <./barriercomprealfit4linecritbig.pdf
+[24 <./barriereal4linebig.pdf> <./barriercomprealfit4linecritbig.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./barriercomprealfit4linecritbig.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<dcompdfpwnewpredrealfast11jjem2shrealfast19jjem2st.pdf, id=1098, 462.52798pt x
+<dcompdfpwnewpredrealfast11jjem2shrealfast19jjem2st.pdf, id=1527, 462.52798pt x
  346.89601pt>
 File: dcompdfpwnewpredrealfast11jjem2shrealfast19jjem2st.pdf Graphic file (type
  pdf)
 <use dcompdfpwnewpredrealfast11jjem2shrealfast19jjem2st.pdf>
 Package pdftex.def Info: dcompdfpwnewpredrealfast11jjem2shrealfast19jjem2st.pdf
-  used on input line 501.
+  used on input line 534.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
-<fcompdfpwnewpredrealfast11jjem2shrealfast19jjem2st.pdf, id=1099, 462.52798pt x
+<fcompdfpwnewpredrealfast11jjem2shrealfast19jjem2st.pdf, id=1528, 462.52798pt x
  346.89601pt>
 File: fcompdfpwnewpredrealfast11jjem2shrealfast19jjem2st.pdf Graphic file (type
  pdf)
 <use fcompdfpwnewpredrealfast11jjem2shrealfast19jjem2st.pdf>
 Package pdftex.def Info: fcompdfpwnewpredrealfast11jjem2shrealfast19jjem2st.pdf
-  used on input line 503.
+  used on input line 536.
 (pdftex.def)             Requested size: 231.26341pt x 173.44757pt.
 
-Overfull \hbox (42.39778pt too wide) in paragraph at lines 498--504
+Overfull \hbox (42.39778pt too wide) in paragraph at lines 531--537
 []|  [] [] 
  []
 
-[22 <./dcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf> <./fcompdfpwnewbi
+[25 <./dcompdfpwnewbigrealfast11jjem2shrealfast19jjem2st.pdf> <./fcompdfpwnewbi
 grealfast11jjem2shrealfast19jjem2st.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./fcompdfpwnewbigrealfast11jjem2shrealf
@@ -698,10 +798,10 @@ single page
 pdfTeX warning: /usr/bin/pdflatex (file ./fcompdfpwnewpredrealfast11jjem2shreal
 fast19jjem2st.pdf): PDF inclusion: multiple pdfs with page group included in a 
 single page
->] (./masterarbeit.bbl [23]) [24]
+>] (./masterarbeit.bbl [26]) [27]
 \openout2 = `other/declaration.aux'.
 
- (./other/declaration.tex) [25
+ (./other/declaration.tex) [28
 
 ]
 (./masterarbeit.aux (./other/titlepage.aux) (./other/abstract.aux)
@@ -711,10 +811,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3837 strings out of 494508
- 56295 string characters out of 6175044
- 136961 words of memory out of 5000000
- 7370 multiletter control sequences out of 15000+600000
+ 3901 strings out of 494508
+ 58266 string characters out of 6175044
+ 137001 words of memory out of 5000000
+ 7422 multiletter control sequences out of 15000+600000
  16151 words of font info for 56 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,15n,25p,1533b,251s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -736,10 +836,10 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on masterarbeit.pdf (28 pages, 2189342 bytes).
+Output written on masterarbeit.pdf (31 pages, 3566805 bytes).
 PDF statistics:
- 1363 PDF objects out of 1440 (max. 8388607)
- 366 compressed objects within 4 object streams
+ 1792 PDF objects out of 2073 (max. 8388607)
+ 452 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

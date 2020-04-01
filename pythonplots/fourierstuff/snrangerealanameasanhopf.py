@@ -33,21 +33,22 @@ f=1
 #date1='realfast9aem2sh'
 #D=[25,30]
 #D1=[35,45]
-
+date2='realanhopf3mlog'
 date='realanhopf26flog'
 date1='realanhopf21flog'
 date0='realanhopf4flog'
 
+D2=[10]
 D=[15]
 D1=[20,25]
 D0=[30]
-Dtot=D+D1+D0
-l2=len(D)+len(D1)+len(D0)
+Dtot=D2+D+D1+D0
+l2=len(D2)+len(D)+len(D1)+len(D0)
 
 #points=1000000
 #length=500000
-ivalues=20
-istart=1
+ivalues=19
+istart=2
 SNR=np.zeros((l2,ivalues))
 scale=np.zeros((l2,ivalues))
 xvec=np.zeros((l2,ivalues))
@@ -98,6 +99,50 @@ ii=0
 #		xvec[ii][z-istart-offset[ii]]=float(row[0])
 #	ii=ii+1
 #
+for c in D2:
+	for z in range(istart,istart+ivalues):
+		file=open('/home/richard/outhome/spike%s%d%d.txt' %(date2,c,z),"r")
+		x,y=[],[]
+		for k in file:
+			row=k.split()
+			x.append(float(row[0]))
+			y.append(float(row[1]))
+		le=len(x)
+		if le == 0:
+			offset[ii]=offset[ii]+1
+			continue
+		ax=np.array(x)
+		ay=np.array(y)
+		param=open('/home/richard/outhome/param%s%d%d.txt' %(date2,c,z),"r")
+		ll=0
+		name,value=[],[]
+		for k in param:
+			row=k.split()
+			lp=len(row)
+			if ll<1:
+				for jj in range(0,lp):
+					name.append(row[jj])
+			else:
+				for kk in range(0,lp):
+					value.append(float(row[kk]))
+			ll=ll+1
+		dt=value[name.index('dt')]
+		N=value[name.index('N')]-value[name.index('Neq')]
+		repetitions=value[name.index('repetitions')]
+		epsilon=value[name.index('epsilon')]
+		omega=value[name.index('omega')]
+		T=N*repetitions*dt
+		scale[ii][z-istart-offset[ii]]=epsilon**2*T
+		#omegaind=round(omega*T)
+		omegaind=le-6		
+		#omegaind=141
+		SNR[ii][z-istart-offset[ii]]=2*ay[omegaind]/np.mean(ay[omegaind-3:omegaind]+ay[omegaind+1:omegaind+4])
+		iv=open('/home/richard/outhome/d%s%d%d.txt' %(date2,c,z),"r")
+		for k in iv:
+			row=k.split()
+		xvec[ii][z-istart-offset[ii]]=float(row[0])
+	ii=ii+1
+
 for c in D:
 	for z in range(istart,istart+ivalues):
 		file=open('/home/richard/outhome/spike%s%d%d.txt' %(date,c,z),"r")
@@ -230,7 +275,7 @@ for c0 in D0:
 		xvec[ii][z-istart-offset[ii]]=float(row[0])
 	ii=ii+1
 
-snrealfile=open('snrealanhopffile2.txt','w')
+snrealfile=open('snrealanhopffile3.txt','w')
 for n in range(0,l2):
 	for m in range(0,ivalues):
 		snrealfile.write('%.6f '%((SNR[n][m]-1)/scale[n][m]))
@@ -248,7 +293,7 @@ l2=len(D2)
 l3=len(D3)
 lvar=len(Dvar)
 l=l2+l3+lvar+l0
-Date0=
+Date0='realanhopf6mlog'
 date3='realanhopf21flog'
 date2='realanhopf4flog'
 datevar=['realfast11jjem2','realfast11jjem2sh','realfast11jjem2']
@@ -259,7 +304,7 @@ yvalues=len(yvar)
 ii=0
 
 istart0=1
-ivalues0=20
+ivalues0=19
 istart2=1
 ivalues2=20
 vec=np.zeros((l,ivalues))
@@ -474,4 +519,4 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snrangerealanameasspallanhopf3m.pdf')
+plt.savefig('snrangerealanameasspallanhopf11m.pdf')

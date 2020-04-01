@@ -38,7 +38,7 @@ The human brain is one of the most investigated but still least understood subje
 The basis for its high functionality lies in the huge number of neurons - around 100 Billions\cite{eqnum} - and their interconnectivity: neural cells usually receive inputs from more than 10.000 other neurons\cite{izi}. Thus, in order to be able to understand how the brain works and possibly derive future applications from that, it is crucial to examine neural cells and study their characteristics. \\
 Neural cells display a plethora of responses to their synaptic inputs. In general, neural activity can be divided into four mayor regimes: resting state, sub-threshold oscillations, spiking and bursting\cite{dnb}. Often, multiple of these regimes can be found in a single neuron. Of particular interest is the bistability between resting and spiking activity. This has been observed in pacemaker\cite{pacemaker}, sensory \cite{sensory}\cite{sensorystm1} and motoneurons\cite{moto1}\cite{moto2} and is suggested to play important roles in short term memory and processing\cite{sensorystm1}\cite{stm1}\cite{stm2} as well as in shaping patterns of spindling oscillations\cite{spindle}.
 \\
-As each regime displays different voltage dynamics, a bistability in neural activity directly translates into a bistability of the membrane voltage. When noise is added to the system, the neuron will undergo transitions between the states. If the noise intensity is small in comparison to the other ionic currents, the membrane voltage takes on a rectangular shape. In the resting state, the voltage performs noise-driven oscillations around the stable equilibrium point and in the firing state, it may perform large oscillations around the same stable equilibrium or rotate around an unstable focus. This is illustrated in figure \ref{bistablevolt}. 
+As each regime displays different voltage dynamics, a bistability in neural activity directly translates into a bistability of the membrane voltage. When noise is added to the system, stochastic switchings between the states will occur. That way, the bistable system is turned into a stochastically bursting neuron model. If the noise intensity is small in comparison to the other ionic currents, the membrane voltage takes on a rectangular shape. In the resting state, the voltage performs noise-driven oscillations around the stable equilibrium point and in the firing state, it may perform large oscillations around the same stable equilibrium or rotate around an unstable focus. This is illustrated in figure \ref{bistablevolt}. 
 
 \begin{figure}[H]	\subfigure[]{	\includegraphics[scale=0.45]{realstatevar14vsh2noleg.pdf}}	\subfigure[]{\includegraphics[scale=0.45]{realstatevar14v2noleg.pdf}} 
 	\caption{Example of bistable membrane voltage under the influence of noise. The amplification in (b) illustrates the different qualitative behaviors in both regimes.}
@@ -138,7 +138,9 @@ $C=1$ , $g_L=0.3$ , $E_L=-80$ , $g_{Na}=1$ , $E_{Na}=60$ , $g_K=0.4$ , $E_K=-90$
 \\
 \intertext{$K^+$ current:} k_n&=5 , V_{1/2,n}=-25 , \tau(V)=\text{const}=3.
 \end{align*}
-\subsubsection{Phase plane analysis}
+%\subsubsection{Phase plane analysis}
+\subsubsection{System without noise}
+The qualitative behavior of the neural model can be best understood by first considering the noiseless system.
 For a system that depends on the evolution of two state variables, in this case $V$ and $n$, some qualitative and quantitative analysis can be carried out in the phase plane. A neat way to obtain information about an unknown system is to calculate its nullclines. The nullclines are curves in the phase plane, where one of the state variables remains constant. Thus, the $V$-nullcline is defined by the condition $\dot{V}=0$ and the $n$-nullcline follows from $\dot{n}=0$. By crossing one of the nullclines, the system changes its direction of motion with respect to the corresponding variable. As a consequence, each nullcline separates the phase space into two regions where one of the variables evolves in opposite directions. Taken together, the nullclines define four different regions of directions: one region each where both variables decrease or increase and two regions where one variable increases and the other decreases. Depending on the specific shape of the nullclines, these regions do not necessarily have to be coherent.\\
 The $V$-nullcline can be obtained by setting the left side of equation (\ref{Veq}) to zero. In the $V$-$n$-plane, it can then be described by the function
 \begin{align}
@@ -190,8 +192,8 @@ Carrying out the phase plane analysis, one finds:
 \end{align*}
 This means that $P_1$ is a stable node, $P_2$ is a saddle point and $P_3$ is an unstable focus. Thus, in the bursting state, the phase vector will rotate around $P_3$, approach $P_2$ in $n$ - direction and then go away from $P_2$ in $V$ - direction in order to do another rotation around $P_3$.\\
 However, this applies only to the case of small bias currents. When $I\approx 0.36$, the saddle and the node fall together and the system undergoes a saddle-node bifurcation off invariant circle. In this case, the resting state vanishes and the neuron is in a state of tonic spiking.
-\subsubsection{Phenomenology}
-The qualitative behavior of the neural model can be best understood by first considering the noiseless system. Depending on the choice of initial conditions, the system will start in either the resting or the running state and will not change its behavior anymore after a short period of equilibration, as can be seen in figure \ref{subfig}. 
+\\
+Provided that we are in the bistable regime, a system with arbitrary initial conditions will either go to the resting or the running state and will not change its behavior anymore after a short period of equilibration, as can be seen in figure \ref{subfig}. 
 \begin{figure}[H]
 	\subfigure[]{\includegraphics[scale=0.45]{inapreali20nbwnfont.pdf}} 
 	\subfigure[]{	\includegraphics[scale=0.45]{inapreali20wnfont.pdf}}\\	\subfigure[]{\includegraphics[scale=0.45]{inapreali20nbvfont.pdf}} 
@@ -210,7 +212,7 @@ Analytically, it is hardly possible to determine whether a specific starting poi
 	\label{twodom}
 \end{figure}		
 There are two distinct regions which can be separated by a monotonically increasing curve that passes through the saddle point. In figure \ref{twodom}b one can see a small intermediate area of large equilibration times. If the system parameters lie in the vicinity of this transition area, a small perturbation suffices to bring the system into either state. Remarkably, most of this area is made up by starting points leading to the stable equilibrium while only a small streak consists of bursting initial conditions. Consequently, the running state is reached much faster than the resting state.
-\\
+\subsubsection{System with noise}
 When noise is brought into the system, the findings for the noiseless system still apply to a great extent. Starting in one of the two domains, the system will most likely first converge to the corresponding state, and the time it takes for that will be about the same as before. However, the system will not stay in this state forever, but constantly perform noise-driven transitions between the states. Thus, it will not be possible anymore to assign an end state to each set of initial conditions. Obviously, both transition rates, meaning from running to resting and in the opposite direction, will grow when the noise intensity $D$ increases. \\
 In addition to that, depending on the overall configuration, the system is usually biased towards one of the states. It is to be expected that at low bias current $I$, the resting state dominates and the running state is favored at high $I$. Considering the simulations (figure \ref{currentnoise}), this turns out to be a valid hypothesis: At $I=-0.1$, the neuron almost immediately returns to the resting state once it has gotten into the running state. At a slightly higher bias current of $I=0$, the periods of stay in both states are almost equal, and at $I=0.15$, the system is in the running state for the majority of time. The firing frequency in the running state lies at about 70 Hz.
 \begin{figure}[H]
@@ -221,6 +223,7 @@ In addition to that, depending on the overall configuration, the system is usual
 	\label{currentnoise} 
 \end{figure}
 In conclusion, the behavior of this two-dimensional bursting model displays the same characteristics as the Brownian particle in a tilted potential. Therefore, we expect to find similar count statistics and Giant Diffusion for this system as well. If this assumption is actually valid will be examined in the following chapter.
+\subsubsection{System with periodic signal}
 \subsection{$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}
 As we have now observed the phenomenon of giant diffusion and its implications in a two-dimensional neuron model, it is of particular interest to confirm this behavior also for other bistable two-dimensional neuron models. Finding out in which cases giant diffusion occurs may help to determine conditions that need to be fulfilled and eventually lead to experiments supporting these findings. Therefore two more models will be discussed in this section.
 The first one is again the $I_{Na,p}+I_K$ model.
@@ -231,7 +234,7 @@ $C=1$ , $g_L=1$ , $E_L=-78$ , $g_{Na}=4$ , $E_{Na}=60$ , $g_K=4$ , $E_K=-90$.
 \\
 \intertext{$K^+$ current:} k_n&=5 , V_{1/2,n}=-45 , \tau(V)=\text{const}=1.
 \end{align*}
-\subsubsection{Phase plane analysis}
+\subsubsection{System without noise}
 Due to the parameter adjustments one obtains a slightly different phase space picture:
 \begin{figure}[H]
 	\centering
@@ -244,9 +247,39 @@ The new nullclines yield only one equilibrum point. Computing the Jacobian matri
 \end{align*}
 Complex eigenvalues with negative real parts indicate a stable focus. As before, the system performs large oscillations around the focus when it is in the running state. When it is near the equilibrium, it converges fast to it, with the exception that it doesn't approach it directly but oscillates around it with decreasing radius.
 In contrast to the previous case, the system now not only consists of stable limit cycle and equilibrium but also an unstable limit cycle in between the two stable configurations. Considering that the system is under the influence of noise, it will not spend much time in the unstable state and quickly collapse into a stable configuration.\\
-Upon increase of the bias current, the unstable limit cycle shrinks. At $I\approx 48.9$, it falls together with the stable equilibrium and makes it lose stability. This transition is called a subcritical Andronov-Hopf bifurcation.
-\subsubsection{Phenomenology}
-with noise and without 
+Upon increase of the bias current, the unstable limit cycle shrinks. At $I\approx 48.9$, it falls together with the stable equilibrium and makes it lose stability. This transition is called a subcritical Andronov-Hopf bifurcation.\\
+While in the first model the states were characterized by oscillations around different equilibria, the state vector now only rotates around one equilibrium point. The current state can thereby be identified via the radius of the oscillations. Resting initial conditions result in a small radius and asymptotic convergence to the focus and spiking initial conditions just lead to regular firing with a larger radius, as can be seen in figure \ref{subfigah}.
+\begin{figure}[H]
+	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfnb.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopf.pdf}}\\	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfnbvt.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfvt.pdf}}
+	\caption{Evolution of the phase vector (first row) and the membrane voltage over time (second row). The left side shows the evolution of the system with resting ICs, and on the right one can see the behavior under spiking ICs.}
+	\label{subfigah} 
+\end{figure}
+Both regimes are separated by the unstable limit cycle. By crossing this ellipse from within or from the outside, the system goes over into the firing or resting state, respectively. The course of the unstable limit cycle can be seen in figure \ref{unstable}. These images were obtained by simulating the neuron model with negative time steps. That way, unstable regions are turned into stable ones and vice versa. 
+\begin{figure}[H]
+	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfunstablewn2.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfunstablevt.pdf}}
+	\caption{Evolution of the system on the unstable limit cycle. The left side shows the phase plane picture and on the right one can see the membrane voltage over time.}
+	\label{unstable} 
+\end{figure}
+Due to the numerical impossibility to put the system exactly onto the unstable limit cycle, any time-forward simulation starting on the unstable cycle will eventually collapse into either stable configuration, as shown in figure \ref{divergent}.
+\begin{figure}[H]
+	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfnb2vt.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfunstable2.pdf}}
+	\caption{Evolution of the membrane voltage if the system is started near the unstable limit cycle. After a couple of circulations, the system quickly converges to a stable state.}
+	\label{divergent} 
+\end{figure}
+\subsubsection{System with noise}
+Considering that even in the noiseless system, the unstable limit cycle only lasts a few ms, it will not play any role in the noise-driven neuron. Therefore, the noise again just switches the system between spiking and resting state. The probability of each state can be influenced by tuning the bias current $I$, as can be seen in figure \ref{ahnoise}.
+\begin{figure}[H]
+	\subfigure[]{\includegraphics[scale=0.45]{realstateanhopf45full.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{realstateanhopf55full.pdf}}\\	\subfigure[]{\includegraphics[scale=0.45]{realstateanhopf5sh3.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{realstateanhopf52sh.pdf}}
+	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$ at $D=0.3$. On the bottom, one can see the behavior of the system with a higher time resolution. The small oscillations near equilibrum in (d) are subthreshold oscillations.}
+	\label{ahnoise} 
+\end{figure}
+Over a range of $1\mu A/cm^2$, the neuron switches from barely spiking to basically only spiking.
 \subsection{Rinzel model}
 \subsubsection{Phase plane analysis}
 \subsubsection{Phenomenology}

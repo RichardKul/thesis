@@ -1,0 +1,8 @@
+\babel@toc {ngerman}{}
+\beamer@sectionintoc {1}{Introduction}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Neurophysics}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Topic}{3}{0}{1}
+\beamer@sectionintoc {2}{Neuron model}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{$I_{Na,p}+I_K$ model}{4}{0}{2}
+\beamer@sectionintoc {3}{Measurements}{7}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{10}{0}{4}

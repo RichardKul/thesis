@@ -213,8 +213,8 @@ for c1 in D1:
 
 #omega=np.arange(0,length)*2*np.pi/T
 plt.figure()
-plt.xlabel('bias current')
-plt.ylabel('SNR')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('Signal-to-noise ratio SNR')
 
 t=np.arange(-0.1,0.3,0.01)
 xs=np.arange(-0.08,0.32,0.02)
@@ -222,13 +222,13 @@ plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
-colorv=['y','g','b','r','c']
+colorv=['g','y','b','r','c']
 for n in range(0,l):
-	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.01))
-for n in range(0,l):	
-	plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.01,av,v0)/8,colorv[n])
-plt.plot([0.163, 0.163], [10**(-7), 10], color='black', linestyle='-')
-plt.plot([-0.02, -0.02], [10**(-7), 10], color='black', linestyle='-',label='$I_{crit}$')
+	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n],label='D=%.2f' %(Dtot[n]*0.01))
+#for n in range(0,l):	
+#	plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.01,av,v0)/8,colorv[n])
+#plt.plot([0.163, 0.163], [10**(-7), 10], color='black', linestyle='-')
+#plt.plot([-0.02, -0.02], [10**(-7), 10], color='black', linestyle='-',label='$I_{crit}$')
 #plt.plot(xs,SNR[2,:],label='D=3')
 #plt.plot(xs,SNR[1,:],label='D=2.5')
 #handles, labels = plt.gca().get_legend_handles_labels()
@@ -236,4 +236,4 @@ plt.plot([-0.02, -0.02], [10**(-7), 10], color='black', linestyle='-',label='$I_
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snrautoreal13a25snrsp.pdf')
+plt.savefig('snrealonly.pdf')

@@ -20,12 +20,12 @@ runs=50
 points=1000000
 length=500000
 
-date='realfast13aem2n4'
+date='realfast9aem2sh'
 
 I0=-0.1
 di=0.02
 
-D=30
+D=45
 istart=1
 ivalues=20
 nr=9

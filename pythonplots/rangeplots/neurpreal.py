@@ -108,13 +108,13 @@ for n in range(l1+lvar,l1+lvar+l0):
 	plt.plot(colxa0,vec[n,:],colorv[n],label='D=%.2f' %(D0[n-lvar-l1]/100))
 for n in range(l1+lvar+l0,ltot):
 	plt.plot(colxa,vec[n,:],colorv[n],label='D=%.2f' %(D[n-lvar-l1-l0]/100))
-plt.plot([0.165, 0.165], [5*10**(-1), 50000], color='black', linestyle='-',label='$I_{crit}$')
-plt.plot([-0.022, -0.022], [5*10**(-1), 50000], color='black', linestyle='-')
+#plt.plot([0.165, 0.165], [5*10**(-1), 50000], color='black', linestyle='-',label='$I_{crit}$')
+#plt.plot([-0.022, -0.022], [5*10**(-1), 50000], color='black', linestyle='-')
 #plt.legend()
 handles, labels = plt.gca().get_legend_handles_labels()
-order = [1,0,2,3,4]
+order = [1,0,2,3]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('dneurcrit3sh%s.pdf' %datefull)
+plt.savefig('dneur3sh%s.pdf' %datefull)
 
 vec=np.zeros((ltot,20))
 ii=0
@@ -198,17 +198,17 @@ for n in range(l1+lvar,l1+lvar+l0):
 	plt.plot(colxa0,vec[n,:],colorv[n],label='D=%.2f' %(D0[n-lvar-l1]/100))
 for n in range(l1+lvar+l0,ltot):
 	plt.plot(colxa,vec[n,:],colorv[n],label='D=%.2f' %(D[n-lvar-l1-l0]/100))
-plt.plot([0.165, 0.165], [10**(-2), 10**4], color='black', linestyle='-', label='$I_{crit}$')
-plt.plot([-0.022, -0.022], [10**(-2), 10**4], color='black', linestyle='-')
+#plt.plot([0.165, 0.165], [10**(-2), 10**4], color='black', linestyle='-', label='$I_{crit}$')
+#plt.plot([-0.022, -0.022], [10**(-2), 10**4], color='black', linestyle='-')
 #plt.plot(xs,vec[3,:],label='D=1.5')
 #plt.plot(xs,vec[0,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
 #plt.plot(colxa,cola,label='D=3e-3')
 #plt.legend()
 handles, labels = plt.gca().get_legend_handles_labels()
-order = [1,0,2,3,4]
+order = [1,0,2,3]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('fneurcrit3sh%s.pdf' %datefull)
+plt.savefig('fneur3sh%s.pdf' %datefull)
 
 vec=np.zeros((ltot,20))
 ii=0

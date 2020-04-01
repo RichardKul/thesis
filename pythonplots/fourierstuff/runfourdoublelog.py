@@ -18,12 +18,12 @@ runs=50
 
 timefac=1000
 
-date='realanhopf19flog'
+date='realfast15mtf'
 
 mode='spike'
-D=35
+D=45
 istart=1
-ivalues=20
+ivalues=15
 nr=9
 
 for z in range(istart,istart+ivalues):
@@ -72,7 +72,7 @@ for z in range(istart,istart+ivalues):
 	for k in rate:
 		row=k.split()
 		r=float(row[1])
-	rate0=open('/home/richard/outhome/grealanhopf22j3020.txt',"r")
+	rate0=open('/home/richard/outhome/grealfast3jje02020.txt',"r")
 	for k in rate0:
 		row=k.split()
 		r0=float(row[1])
@@ -107,8 +107,8 @@ for z in range(istart,istart+ivalues):
 #	S[l]=abs(ys[l])*abs(ys[l])/T
 #omega=np.arange(0,length)*2*np.pi/T
 	plt.figure()
-	#plt.suptitle('I=%.2f, D=%.2f' %(-0.1+z*0.02,D*0.01))
-	plt.suptitle('I=%.2f, D=%.2f' %(43+z*0.25,D/100))
+	plt.suptitle('I=%.2f, D=%.2f' %(-0.1+z*0.02,D*0.01))
+	#plt.suptitle('I=%.2f, D=%.2f' %(43+z*0.25,D/100))
 	plt.xlabel('Frequency $[s^{-1}]$')
 	plt.ylabel('Spectral power')	
 	plt.yscale('log')
@@ -126,5 +126,5 @@ for z in range(istart,istart+ivalues):
 #plt.plot(omega,background/T,'kx')
 	#plt.legend()
 #plt.plot(sax2,say2/T2,label='e6')
-	#plt.savefig('inapikrealfrange9aspD=%.2fI=%.2f.pdf' %(D*0.01,-0.1+z*0.02))
-	plt.savefig('inapikanhopf%s2%sfourierD=%.2fI=%.2f.pdf' %(mode,date,D/100,43+z*0.25))	
+	plt.savefig('inapikrealfast%s%sD=%.2fI=%.2f.pdf' %(mode,date,D*0.01,-0.1+z*0.02))
+	#plt.savefig('inapikanhopf%s2%sfourierD=%.2fI=%.2f.pdf' %(mode,date,D/100,43+z*0.25))	

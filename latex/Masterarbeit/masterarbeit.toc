@@ -2,25 +2,26 @@
 \contentsline {section}{\numberline {1}Introduction}{1}% 
 \contentsline {section}{\numberline {2}Models and Methods}{6}% 
 \contentsline {subsection}{\numberline {2.1}The $I_{Na,p}+I_K$ model with saddle-node bifurcation}{6}% 
-\contentsline {subsubsection}{\numberline {2.1.1}Phase plane analysis}{6}% 
-\contentsline {subsubsection}{\numberline {2.1.2}Phenomenology}{8}% 
+\contentsline {subsubsection}{\numberline {2.1.1}System without noise}{6}% 
+\contentsline {subsubsection}{\numberline {2.1.2}System with noise}{10}% 
+\contentsline {subsubsection}{\numberline {2.1.3}System with periodic signal}{11}% 
 \contentsline {subsection}{\numberline {2.2}$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}{11}% 
-\contentsline {subsubsection}{\numberline {2.2.1}Phase plane analysis}{12}% 
-\contentsline {subsubsection}{\numberline {2.2.2}Phenomenology}{12}% 
-\contentsline {subsection}{\numberline {2.3}Rinzel model}{13}% 
-\contentsline {subsubsection}{\numberline {2.3.1}Phase plane analysis}{13}% 
-\contentsline {subsubsection}{\numberline {2.3.2}Phenomenology}{13}% 
-\contentsline {subsection}{\numberline {2.4}Quantities of interest}{13}% 
-\contentsline {subsection}{\numberline {2.5}Two-state theory}{13}% 
-\contentsline {subsection}{\numberline {2.6}Numerical implementation}{14}% 
-\contentsline {section}{\numberline {3}Critical currents in the Fano factor}{14}% 
-\contentsline {subsection}{\numberline {3.1}Count statistics}{14}% 
-\contentsline {subsection}{\numberline {3.2}Transition rates between the states}{17}% 
-\contentsline {subsubsection}{\numberline {3.2.1}Distribution of the state lifetimes}{18}% 
-\contentsline {subsubsection}{\numberline {3.2.2}Transition rates at different noise intensities}{18}% 
-\contentsline {subsubsection}{\numberline {3.2.3}Arrhenius Plots and effective potential barriers}{19}% 
-\contentsline {subsubsection}{\numberline {3.2.4}Comparison with two-state theory}{21}% 
-\contentsline {section}{\numberline {4}Consequences for Signal transmission}{23}% 
-\contentsline {subsection}{\numberline {4.1}Frequency Spectrum}{23}% 
-\contentsline {subsection}{\numberline {4.2}SNR}{23}% 
-\contentsline {section}{\numberline {5}Conclusions}{23}% 
+\contentsline {subsubsection}{\numberline {2.2.1}System without noise}{12}% 
+\contentsline {subsubsection}{\numberline {2.2.2}System with noise}{14}% 
+\contentsline {subsection}{\numberline {2.3}Rinzel model}{15}% 
+\contentsline {subsubsection}{\numberline {2.3.1}Phase plane analysis}{15}% 
+\contentsline {subsubsection}{\numberline {2.3.2}Phenomenology}{15}% 
+\contentsline {subsection}{\numberline {2.4}Quantities of interest}{15}% 
+\contentsline {subsection}{\numberline {2.5}Two-state theory}{16}% 
+\contentsline {subsection}{\numberline {2.6}Numerical implementation}{17}% 
+\contentsline {section}{\numberline {3}Critical currents in the Fano factor}{17}% 
+\contentsline {subsection}{\numberline {3.1}Count statistics}{17}% 
+\contentsline {subsection}{\numberline {3.2}Transition rates between the states}{20}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Distribution of the state lifetimes}{21}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Transition rates at different noise intensities}{21}% 
+\contentsline {subsubsection}{\numberline {3.2.3}Arrhenius Plots and effective potential barriers}{22}% 
+\contentsline {subsubsection}{\numberline {3.2.4}Comparison with two-state theory}{24}% 
+\contentsline {section}{\numberline {4}Consequences for Signal transmission}{26}% 
+\contentsline {subsection}{\numberline {4.1}Frequency Spectrum}{26}% 
+\contentsline {subsection}{\numberline {4.2}SNR}{26}% 
+\contentsline {section}{\numberline {5}Conclusions}{26}% 

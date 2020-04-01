@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 points=100000
 
-file=open('/home/richard/mastergit/NetBeansProjects/inapik/inapreali20nb.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/inapik/inaprealanhopfnb.txt',"r")
 x,y,z,a=[],[],[],[]
 for k in file:
 	row=k.split()
@@ -26,9 +26,9 @@ area=(np.sum(ay)-min(ay)*points)*0.003/360
 plt.figure()
 plt.xlabel('time [s]')
 plt.ylabel('membrane voltage [mV]')
-plt.xlim(0,0.5)
+plt.xlim(0,0.1)
 #plt.plot(ax,ay,label='%.6f' %area)
 plt.plot(ax/1000,ay)
 #plt.plot(ax,aa)
 #plt.legend()
-plt.savefig('inapreali20nbv.pdf')
+plt.savefig('inaprealanhopfnbvt.pdf')

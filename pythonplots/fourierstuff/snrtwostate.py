@@ -128,7 +128,8 @@ colorv=['r','y','c','g','k','b'] # 6 colors
 for n in range(0,l2):
 	plt.plot(xnew,SNR[n,:],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.01))
 	plt.plot(xnew[1:ivalues-1],snrcor(params[0,1:ivalues-1],params[2,1:ivalues-1],params[1,1:ivalues-1],params[3,1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])
+plt.xlim(-0.06,0.28)
 	#plt.plot(xnew,ratenew,colorv[n])
 plt.legend()
-plt.savefig('snrtwostateneurcor.pdf')
+plt.savefig('snrtwostateneurcorsh.pdf')
 #plt.savefig('snrinzelonly.pdf')

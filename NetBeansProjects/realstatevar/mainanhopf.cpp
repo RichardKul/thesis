@@ -28,15 +28,15 @@ int main(int argc, char** argv) {
     ofstream myfile;
     ofstream myfile2;
     //ofstream myfile3;
-    myfile.open ("realstateanhopf5.txt");
-    myfile2.open ("paramsanhopf5.txt");
+    myfile.open ("realstateanhopf45.txt");
+    myfile2.open ("paramsanhopf45.txt");
     //myfile3.open (argv[4]
      
     std::random_device rd;
     std::mt19937 gen(rd());
     std::normal_distribution<> n(0,1);
     
-    double I0=45; // 0
+    double I0=44.5; // 0
     double dI=0.5;
     double gL=1; // 8
     double EL=-78; // -80  

@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     ofstream myfile;
     //ofstream myfile2;
     //ofstream myfile3;
-    myfile.open ("inapreali20nb.txt");
+    myfile.open ("inapreali20nbtest.txt");
     //myfile2.open ("statechange.txt");
     //myfile3.open (argv[4]
      
