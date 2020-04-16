@@ -25,7 +25,7 @@ void init(double x[],int n);
 int main(int argc, char** argv) {
     
     ofstream myfile;
-    myfile.open ("countanhopf17.txt");
+    myfile.open ("countanhopfa16.txt");
     
     double I0=43; // 0
     double gL=1; // 8
@@ -55,8 +55,8 @@ int main(int argc, char** argv) {
     dt0=0.00005; 
     init(count,runs);
 for(int a=0;a<runs;a++){
-    dt=dt0*(a+1);
-int N=round(N0/(a+1));
+    dt=dt0*pow(1.1,a);
+int N=round(N0/(pow(1.1,a)));
 for(j=0;j<N;j++){
     v=I0*dt+vs-gL*(vs-EL)*dt-gNa*ninf(vs,km,vm)*(vs-ENa)*dt-gK*nfs*(vs-EK)*dt;
     nf=nfs+(ninf(vs,kn,vn)-nfs)*dt/tau;
@@ -68,7 +68,7 @@ nfs=nf;
 }
 }
 for(f=0;f<runs;f++){
-myfile << dt0*f << " " << count[f] << "\n";
+myfile << dt0*pow(1.1,f) << " " << count[f] << "\n";
 }
  myfile.close();   
     return 0;

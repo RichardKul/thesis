@@ -31,7 +31,7 @@ int main(int argc, char** argv) {
     ofstream myfile;
     //ofstream myfile2;
     //ofstream myfile3;
-    myfile.open ("realstaterinzel.txt");
+    myfile.open ("realstaterinzel12100.txt");
     //myfile2.open ("statechange.txt");
     //myfile3.open (argv[4]
      
@@ -39,7 +39,7 @@ int main(int argc, char** argv) {
     std::mt19937 gen(rd());
     std::normal_distribution<> n(0,1);
     
-    double I=-15; // 0
+    double I=-12; // 0
     double S=1.27;
     double phi=3.82;
     double dI=0.5;
@@ -56,12 +56,12 @@ int main(int argc, char** argv) {
     double tauM=30; // 20*/ 
     //Na current
     //int N=500000;
-    int Neq=30000000;
+    int Neq=3000000;
     int points=100000;
     int sampling=Neq/points;
     int j,f;
-    double dt=0.05;
-    double D=35;
+    double dt=0.001;
+    double D=100;
     //int spikes=100;
     //double* spike=new double[spikes];
     int runs=1;
@@ -77,7 +77,7 @@ int main(int argc, char** argv) {
 //for(s=0;s<Ivalues;s++){
     //initd(nfs,runs);
     wfs[0]=0.2;
-    vs[0]=20;
+    vs[0]=10.1;
 for(j=0;j<Neq;j++){ 
     for(int a=0;a<runs;a++){ 
     v[a]=I*dt+vs[a]-gL*(vs[a]-EL)*dt-gNa*pow(minf(v[a]),3)*(1-wfs[a])*(vs[a]-ENa)*dt-gK*pow(wfs[a]/S,4)*(vs[a]-EK)*dt+sqrt(2*D*dt)*n(gen);

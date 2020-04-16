@@ -1,5 +1,5 @@
 # Rinzel  model
-p gL=0.3,VL=10,gNa=120,VNa=115,gK=36,VK=12,phi=3.82,Iapp=-6,h0=0.596,n0=0.318,S=1.27
+p gL=0.3,VL=10,gNa=120,VNa=115,gK=36,VK=12,phi=3.82,Iapp=-6,S=1.27
 an(V)=(10-V)/(100*(exp((10-V)/10)-1))
 am(V)=(25-V)/(10*(exp((25-V)/10)-1))
 ah(V)=7*exp(-V/20)/100

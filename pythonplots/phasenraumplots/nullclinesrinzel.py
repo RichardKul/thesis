@@ -38,7 +38,7 @@ VNa=115
 gK=36
 VK=12 #12
 phi=3.82
-Iapp=-10 #-12
+Iapp=-15 #-12
 SV=1.27
 
 def viso(W,V):
@@ -46,28 +46,60 @@ def viso(W,V):
 
 v=np.arange(-50,150,0.01)
 lv=len(v)
-w=np.arange(0,1,0.0001)
+w=np.arange(-0.1,1.1,0.0001)
 
 vvalues=np.zeros(lv)
+edgepoints=np.zeros(4,dtype=int)
+ii=0
 
+vold=0
 eqpoifile = open('eqpointsrinzelcorI%d.txt' %Iapp, 'w')
 
 for k in range(0,lv):
 	vnew=w[np.where(abs(viso(w,v[k]))==min(abs(viso(w,v[k]))))[0][0]]
-	if abs(viso(vnew,v[k]))<0.01:
+	if abs(viso(vnew,v[k]))<0.1:
 		vvalues[k]=vnew
 	else:
-		vvalues[k]=0
+		vvalues[k]=vold
 	if k>0:
-		if (winf(SV,v[k])-vold)*(winf(SV,v[k])-vnew)<0:
-			eqpoifile.write('%.2f\n'%v[k]) 	
+		#if (winf(SV,v[k])-vold)*(winf(SV,v[k])-vnew)<0:
+		#	eqpoifile.write('%.2f\n'%v[k])
+		if (winf(SV,v[k])-vvalues[k])*(winf(SV,v[k-1])-vvalues[k-1])<=0:
+			eqpoifile.write('%.2f\n'%v[k])
+	if ii==0:
+		if vold<0 and vnew>0 and v[k]<-10:
+			edgepoints[ii]=k
+			ii=ii+1
+	if ii==1:
+		if vold>0 and vnew<0 and v[k]>0:
+			edgepoints[ii]=k+1
+			ii=ii+1
+	if ii==2:
+		if vold<1 and vnew>1 and v[k]>10:
+			edgepoints[ii]=k
+			ii=ii+1
+	if ii==3:
+		if vold>0 and vnew<0 and v[k]>100:
+			edgepoints[ii]=k	
 	vold=vnew
+
 eqpoifile.close() 
+vrinzelfile = open('vncrinzel%d.txt' %Iapp, "w")
+for kk in range(0,lv):
+	vrinzelfile.write('%.4f %.4f\n'%(v[kk],vvalues[kk]))
+vrinzelfile.close()
+edgepointfile= open('edgerinzel%d.txt' %Iapp, "w")
+for ll in range(0,4):
+	edgepointfile.write('%d\n' %edgepoints[ll])
+edgepointfile.close()
+
 plt.figure()
 plt.xlabel('membrane voltage V')
 plt.ylabel('recovery variable W')
 plt.plot(v,winf(SV,v),label='W-nullcline')
-plt.plot(v,vvalues,label='V-nullcline')
+plt.plot(v[edgepoints[0]:edgepoints[1]],vvalues[edgepoints[0]:edgepoints[1]],'orange',label='V-nullcline')
+plt.plot(v[edgepoints[2]:edgepoints[3]],vvalues[edgepoints[2]:edgepoints[3]],'orange')
+plt.ylim(0,1)
 plt.legend()
-plt.savefig('rinzelclinescor10.pdf')
+plt.savefig('rinzelclinescorm15a62.pdf')
 

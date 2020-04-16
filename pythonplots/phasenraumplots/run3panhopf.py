@@ -26,31 +26,32 @@ kn=5
 vn=-45
 tau=1 
 
-file=open('/home/richard/mastergit/NetBeansProjects/inapik/inaprealanhopfunstable2.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/inapik/inaprealanhopfnb.txt',"r")
 x,y=[],[]
 for k in file:
 	row=k.split()
-	x.append(float(row[0]))
-	y.append(float(row[1]))
+	x.append(float(row[1]))
+	y.append(float(row[2]))
 ax=np.array(x)
 ay=np.array(y)
 #ayi=ay[::-1]
 
-t=np.arange(-70,-30,0.1)
+t=np.arange(-55,-45,0.1)
 
 matplotlib.rcParams.update({'font.size': 22})
 
 plt.figure()
-plt.xlabel('time [s]')
-plt.ylabel('membrane voltage V [mV]')
-#plt.ylabel('gating variable n')
-#plt.plot(t,vnc(t,I,vm,km,gL,EL,gNa,ENa,gK,EK),label='v-nullcline')
-#plt.plot(t,finf(t,vn,kn),label='n-nullcline')
+#plt.xlabel('time [s]')
+plt.xlabel('membrane voltage V [mV]')
+plt.ylabel('gating variable n')
+plt.plot(t,vnc(t,I,vm,km,gL,EL,gNa,ENa,gK,EK),label='v-nullcline')
+plt.plot(t,finf(t,vn,kn),label='n-nullcline')
 #plt.gcf().subplots_adjust(left=0.15)
-#plt.plot(abs(ax[0:1000])/1000,ayi[0:1000])
-plt.plot(ax[0:1000]/1000,ay[0:1000])
+#plt.plot(abs(ax[0:1000])/1000,ayi[0:1000],'black')
+plt.plot(ax[0:1000],ay[0:1000],'black')
 #plt.xlim(0,0.2)
 #plt.xlim(0,0.05)
+plt.ylim(0.1,0.4)
 #plt.legend()
 plt.tight_layout()
-plt.savefig('inaprealanhopfunstable2.pdf')
+plt.savefig('inaprealanhopfnbblack.pdf')

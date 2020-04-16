@@ -43,7 +43,7 @@ int main(int argc, char** argv) {
     double vn=-25; // -20 
     double tau=3; // 0.152  
     int N0;
-    N0=500000000;
+    N0=50000000;
     int runs=50;
     double count[runs];
     double v,vs,nf,nfs;
@@ -52,7 +52,7 @@ int main(int argc, char** argv) {
     nfs=0.2;
     int j,f;
     double dt,dt0;
-    dt0=0.00005; 
+    dt0=0.0005; 
     init(count,runs);
 for(int a=0;a<runs;a++){
     dt=dt0*(a+1);
@@ -68,7 +68,7 @@ nfs=nf;
 }
 }
 for(f=0;f<runs;f++){
-myfile << dt0*f << " " << count[f] << "\n";
+myfile << dt0*(f+1) << " " << count[f] << "\n";
 }
  myfile.close();   
     return 0;

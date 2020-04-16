@@ -139,7 +139,7 @@ $C=1$ , $g_L=0.3$ , $E_L=-80$ , $g_{Na}=1$ , $E_{Na}=60$ , $g_K=0.4$ , $E_K=-90$
 \intertext{$K^+$ current:} k_n&=5 , V_{1/2,n}=-25 , \tau(V)=\text{const}=3.
 \end{align*}
 %\subsubsection{Phase plane analysis}
-\subsubsection{System without noise}
+\subsubsection{System without noise}\label{mod1won}
 The qualitative behavior of the neural model can be best understood by first considering the noiseless system.
 For a system that depends on the evolution of two state variables, in this case $V$ and $n$, some qualitative and quantitative analysis can be carried out in the phase plane. A neat way to obtain information about an unknown system is to calculate its nullclines. The nullclines are curves in the phase plane, where one of the state variables remains constant. Thus, the $V$-nullcline is defined by the condition $\dot{V}=0$ and the $n$-nullcline follows from $\dot{n}=0$. By crossing one of the nullclines, the system changes its direction of motion with respect to the corresponding variable. As a consequence, each nullcline separates the phase space into two regions where one of the variables evolves in opposite directions. Taken together, the nullclines define four different regions of directions: one region each where both variables decrease or increase and two regions where one variable increases and the other decreases. Depending on the specific shape of the nullclines, these regions do not necessarily have to be coherent.\\
 The $V$-nullcline can be obtained by setting the left side of equation (\ref{Veq}) to zero. In the $V$-$n$-plane, it can then be described by the function
@@ -195,9 +195,9 @@ However, this applies only to the case of small bias currents. When $I\approx 0.
 \\
 Provided that we are in the bistable regime, a system with arbitrary initial conditions will either go to the resting or the running state and will not change its behavior anymore after a short period of equilibration, as can be seen in figure \ref{subfig}. 
 \begin{figure}[H]
-	\subfigure[]{\includegraphics[scale=0.45]{inapreali20nbwnfont.pdf}} 
-	\subfigure[]{	\includegraphics[scale=0.45]{inapreali20wnfont.pdf}}\\	\subfigure[]{\includegraphics[scale=0.45]{inapreali20nbvfont.pdf}} 
-	\subfigure[]{	\includegraphics[scale=0.45]{inapreali20vfont.pdf}}
+	\subfigure[]{\includegraphics[scale=0.45]{inapreali20nbfontblack.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{inapreali20fontblack.pdf}}\\	\subfigure[]{\includegraphics[scale=0.45]{inapreali20nbvfontblack.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{inapreali20vfontblack.pdf}}
 	\caption{Evolution of the phase vector (first row) and the membrane voltage over time (second row).
 		The left side shows the evolution of the system with resting ICs, and on the right one can see the behavior under spiking ICs.}
 	\label{subfig} 
@@ -208,7 +208,7 @@ Analytically, it is hardly possible to determine whether a specific starting poi
 	\subfigure[]{	\includegraphics[scale=0.5]{contourtime01wn2.pdf}}
 	\subfigure[]{\includegraphics[scale=0.5]{contoureqtime01wn3.pdf}}
 	
-	\caption{Phase plane image of the neuron model with $I=0.1$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right picture, the equilibration times for both states were measured. The times to reach the stable node were multiplied with $-1$ so that a distinction between the states would be possible. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
+	\caption{Phase plane image of the neuron model with $I=0.1$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right picture, the equilibration times for both states were measured. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
 	\label{twodom}
 \end{figure}		
 There are two distinct regions which can be separated by a monotonically increasing curve that passes through the saddle point. In figure \ref{twodom}b one can see a small intermediate area of large equilibration times. If the system parameters lie in the vicinity of this transition area, a small perturbation suffices to bring the system into either state. Remarkably, most of this area is made up by starting points leading to the stable equilibrium while only a small streak consists of bursting initial conditions. Consequently, the running state is reached much faster than the resting state.
@@ -250,23 +250,32 @@ In contrast to the previous case, the system now not only consists of stable lim
 Upon increase of the bias current, the unstable limit cycle shrinks. At $I\approx 48.9$, it falls together with the stable equilibrium and makes it lose stability. This transition is called a subcritical Andronov-Hopf bifurcation.\\
 While in the first model the states were characterized by oscillations around different equilibria, the state vector now only rotates around one equilibrium point. The current state can thereby be identified via the radius of the oscillations. Resting initial conditions result in a small radius and asymptotic convergence to the focus and spiking initial conditions just lead to regular firing with a larger radius, as can be seen in figure \ref{subfigah}.
 \begin{figure}[H]
-	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfnb.pdf}} 
-	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopf.pdf}}\\	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfnbvt.pdf}} 
-	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfvt.pdf}}
+	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfnbblack.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfblack.pdf}}\\	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfnbvtblack.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfvtblack.pdf}}
 	\caption{Evolution of the phase vector (first row) and the membrane voltage over time (second row). The left side shows the evolution of the system with resting ICs, and on the right one can see the behavior under spiking ICs.}
 	\label{subfigah} 
 \end{figure}
-Both regimes are separated by the unstable limit cycle. By crossing this ellipse from within or from the outside, the system goes over into the firing or resting state, respectively. The course of the unstable limit cycle can be seen in figure \ref{unstable}. These images were obtained by simulating the neuron model with negative time steps. That way, unstable regions are turned into stable ones and vice versa. 
+In order to be able to distinguish between spiking and resting initial conditions, one may simulate the system at different starting points and see how it evolves, as has been done in section \ref{mod1won}.
 \begin{figure}[H]
-	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfunstablewn2.pdf}} 
-	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfunstablevt.pdf}}
+	\hspace*{-0.5cm}
+	\subfigure[]{	\includegraphics[scale=0.5]{contouranhopfa2sh.pdf}}
+	\subfigure[]{\includegraphics[scale=0.5]{contouranhopfa2time.pdf}}
+	
+	\caption{Phase plane image of the neuron model with $I=46$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right picture, the equilibration times for both states were measured. In both images one can see the shape of the unstable limit cycle that separates both domains. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
+	\label{twodom2}
+\end{figure}
+The area of resting initial conditions is completely enclosed by the spiking regime. Near the border, the system takes longer to equilibrate. This is due to the unstable limit cycle which separates both regimes. By crossing this ellipse from within or from the outside, the system goes over into the firing or resting state, respectively. The course of the unstable limit cycle can be seen in figure \ref{unstable}. These images were obtained by simulating the neuron model with negative time steps. That way, unstable regions are turned into stable ones and vice versa. 
+\begin{figure}[H]
+	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfunstablewn2black.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfunstablevtblack.pdf}}
 	\caption{Evolution of the system on the unstable limit cycle. The left side shows the phase plane picture and on the right one can see the membrane voltage over time.}
 	\label{unstable} 
 \end{figure}
 Due to the numerical impossibility to put the system exactly onto the unstable limit cycle, any time-forward simulation starting on the unstable cycle will eventually collapse into either stable configuration, as shown in figure \ref{divergent}.
 \begin{figure}[H]
-	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfnb2vt.pdf}} 
-	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfunstable2.pdf}}
+	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfnb2black.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfunstable2black.pdf}}
 	\caption{Evolution of the membrane voltage if the system is started near the unstable limit cycle. After a couple of circulations, the system quickly converges to a stable state.}
 	\label{divergent} 
 \end{figure}
@@ -279,12 +288,89 @@ Considering that even in the noiseless system, the unstable limit cycle only las
 	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$ at $D=0.3$. On the bottom, one can see the behavior of the system with a higher time resolution. The small oscillations near equilibrum in (d) are subthreshold oscillations.}
 	\label{ahnoise} 
 \end{figure}
-Over a range of $1\mu A/cm^2$, the neuron switches from barely spiking to basically only spiking.
+Over a range of $1\mu A/cm^2$, the neuron switches from barely spiking to basically only spiking. Due to the oscillatory properties of the system, small disturbances suffice to induce a change of state, if they occur at the right moment, as can be seen in 13 (c): Even though the state vector should be attracted to the stable focus, appropriate noise can slowly increase the amplitude of rotation until the spiking limit cycle is reached. In connection to this there exists another interesting phenomenon which is visible in (d): If the pulse amplitude is too small to make the neuron spike, it oscillates back to the focus with a high frequency. These subthreshold oscillations are a general characteristic of neurons with oscillatory potentials.
 \subsection{Rinzel model}
-\subsubsection{Phase plane analysis}
-\subsubsection{Phenomenology}
+The last model is a two-dimensional approximation of the Hodgkin-Huxley model, proposed by Rinzel in 1985 \cite{rinzel}. By assuming instantaneous $Na^+$ dynamics and expressing the two gating variables $h$ and $n$ by a single recovery variable $W$, Rinzel got the following model:
+\begin{align*}
+C\dot{V}&=I-g_{Na}m_\infty^3(V)(1-W)(V-E_{Na})-g_K(W/S)^4(V-E_K)-g_L(V-E_L)\\
+\dot{W}&=\left[W_\infty(V)-W\right]/\tau(V)
+\end{align*}
+It has to be noted that for our simulations, white gaussian noise with intensity $D$ was added to the first equation.
+However, the notation is almost similar to he $I_{na,p}+I_K$ model: $I$ denotes again the bias current, $C$ the capacitance, $V$ the membrane voltage, $g_i$ are conductances, $E_i$ the Nernst equilibrium potentials and $m_{\infty}$ the activation variable of the instantaneous $Na^+$ current. Inactivation of $Na^+$ and activation of $K^+$ are both governed by $W$. Its steady-state activation function $W_\infty$ is a linear combination of $n_\infty$ and $h_\infty$
+\begin{align*}
+W_\infty(V)=S\left(n_\infty(V)+S\left[1-h_\infty(V)\right]\right)/(1+S^2)\end{align*}
+and $\tau$ comes from averaging the time constants of the gating variables
+\begin{align*}
+\tau(V)=\frac{5\exp[-(V+10)^2/55^2 ]+1}{3.82}
+\end{align*}
+The parameters were taken from the original Hodgkin-Huxley model:\\\\
+$C=1$ , $g_L=0.3$ , $E_L=10$ , $g_{Na}=120$ , $E_{Na}=115$ , $g_K=36$ , $E_K=12$.\\\\
+$S$ can be obtained from the resting values of $h$ and $n$
+\begin{align*}
+S=\frac{(1-h_\infty(0))}{n_\infty(0)}=1.27,
+\end{align*}
+and
+\begin{align*}
+k_\infty=\frac{\alpha_k}{\alpha_k+\beta_k}
+\end{align*}
+with
+\begin{align*}
+\alpha_n(V)&=0.01\frac{10-V}{\exp\left(\frac{10-V}{10}\right)-1}
+&\beta_n(V)&=0.125\exp\left(\frac{-V}{80}\right)\\
+\alpha_m(V)&=0.1\frac{25-V}{\exp\left(\frac{25-V}{10}\right)-1}
+&\beta_m(V)&=4\exp\left(\frac{-V}{18}\right)\\
+\alpha_h(V)&=0.07\exp\left(\frac{-V}{20}\right)
+&\beta_h(V)&=\frac{1}{\exp\left(\frac{30-V}{10}\right)+1}
+\end{align*}
+
+\subsubsection{System without noise}
+The first step in the phase plane analysis would again be determining the nullclines. Unfortunately, the variable $W$ not only appears linearly, but also in 4th power. This makes it analytically difficult to find a simple equation for the nullclines. Therefore, the nullclines were determined numerically:
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{rinzelclinesarrowwp.pdf}\caption{Nullclines of the Rinzel model with $I=-10$. The arrows indicate the direction of motion in the different regions.}
+	\label{rinzelnc}
+\end{figure}
+Considering that this model is not a genuine two-dimensional neuron model, but just the result of a couple of simplifications carried out on the Hodgkin-Huxley model, the phase plane image can be understood as the 2-D projection of the 4-dimensional Hodgkin-Huxley model. Therefore, it comes as no surprise that the nullclines take on a more complex shape, consisting of a hill and an n-shaped part, both separated by a singularity at $V=10\text{mV}$. However, this does not change the fact that there are still 4 regions of different directions of motion, which are marked by arrows in figure \ref{rinzelnc}. \\
+The numerical evaluation of the Jacobian matrix yields:
+\begin{align*}
+\lambda_+(P_1)&\approx-0.3 & \lambda_-(P_1)&\approx-0.7\\
+\lambda_+(P_2)&\approx 0.5& \lambda_-(P_2)&\approx -1.4\\
+\lambda_+(P_3)&\approx 6.3& \lambda_-(P_3)&\approx 0.5
+\end{align*}
+This means that there is a stable node at $P_1$, a saddle at $P_2$ and an unstable node at $P_3$. Upon increase of $I$, the hill will move downwards, eventually leading to a merger of $P_1$ and $P_2$ at $I\approx -5.91$ when the system undergoes a saddle-node bifurcation and is no longer in the bistable regime.\\
+When it is in the bistable regime, there are two sets of initial conditions, leading either to quiescence or repetitive firing as shown in figure \ref{subfigrinzel}.
+\begin{figure}[H]
+	\subfigure[]{\includegraphics[scale=0.45]{realstatedetrinzelpnb2wnblack.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{realstatedetrinzelpnbwnblack.pdf}}\\	\subfigure[]{\includegraphics[scale=0.45]{realstatedetrinzelpnb2.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{realstatedetrinzelpnb.pdf}}
+	\caption{Evolution of the phase vector (first row) and the membrane voltage over time (second row). The left side shows the evolution of the system with resting ICs, and on the right one can see the behavior under spiking ICs.}
+	\label{subfigrinzel} 
+\end{figure}
+Apparently, it is only a matter of a couple tens of microseconds to reach a stable configuration: the system converges exponentially to the stable equilibrium or after an initial spike, it goes around on the spiking limit cycle, respectively.\\
+The two sets of initial conditions can once again be distinguished by letting the system evolve without noise from different starting points:
+\begin{figure}[H]
+	\hspace*{-0.5cm}
+	\subfigure[]{	\includegraphics[scale=0.5]{contourrinzela12shalt3.pdf}}
+	\subfigure[]{\includegraphics[scale=0.5]{contourrinzela12time.pdf}}
+	
+	\caption{Phase plane image of the neuron model with $I=-10$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right picture, the equilibration times for both states were measured. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
+	\label{twodomrinzel}
+\end{figure}
+Even though the nullclines have a more complex shape, the sets of initial conditions are again separated by a single line.
+Interestingly, the plots in figure \ref{twodomrinzel} look inverse to each other. This means that the firing state is reached much faster than the resting state, almost independent of the starting point. Similarly to the $I_{Na,p}+I_K$-model, the border goes, as expected, through the saddle point.
+\subsubsection{System with noise}
+Now that the model has been understood in the phase plane, the influence of noise can be investigated.
+\begin{figure}[H]
+	\subfigure[]{\includegraphics[scale=0.45]{realstatedetrinzel16100.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{realstatedetrinzel12100.pdf}}\\	\subfigure[]{\includegraphics[scale=0.45]{realstatedetrinzel16100sh2.pdf}} 
+	\subfigure[]{	\includegraphics[scale=0.45]{realstatedetrinzel12100sh.pdf}}
+	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$ at $D=100$. On the bottom, one can see the behavior of the system with a higher time resolution.}
+	\label{rinzelnoise} 
+\end{figure}
+Here, too, the bias current $I$ is the parameter that controls whether resting or spiking state is preferred. At intermediate $I$, the neuron fires irregularly and the noise has a high impact on its behavior. At high bias currents, the neuron barely goes into the resting state, and even that only for a short period of time before going back to tonic spiking. The major impact of noise in this regime lies in the modulation of firing rate and spike height, clearly visible in \ref{rinzelnoise} (d).
 \subsection{Quantities of interest}
-In the context of Brownian Motion, there are two characteristic quantities: the ensemble of particles moves with a mean velocity
+\subsubsection{System without signal}
+In the context of Brownian Motion, there were two characteristic quantities: the ensemble of particles moves with a mean velocity
 \begin{equation}
 \left\langle v\right\rangle =\lim_{t\rightarrow\infty}\frac{\left\langle x(t)-x(0) \right\rangle}{t}
 \end{equation}
@@ -292,15 +378,31 @@ and is subject to a diffusive spread around this average flow that can be descri
 \begin{equation}
 D_{eff}=\lim_{t\rightarrow\infty}\frac{\left\langle x^2(t) \right\rangle-\left\langle x(t)\right\rangle ^2}{2t}
 \end{equation}
-For the investigation of neuron models, a third quantity needs to be considered, namely the Fano factor:
+In the context of neuron models, similar quantities can be defined. The most important event with regard to signal transmission is the generation of a spike. Therefore, it is often useful to approximate the voltage curve by a spike train where every spike is assumed to be a Dirac-delta function,
+\begin{equation}
+x(t)=\sum_{i}\delta(t-t_i)
+\end{equation}
+The most relevant quantity is the spike count $N(t)$ which describes the number of spikes fired after a time $t$. This can be easily found by integrating the spike train over time:
+\begin{equation}
+N(t)=\int_{0}^{t}dt'x(t')=\sum_{t_i<t} 1
+\end{equation}
+Instead of the mean velocity, one can ask for the average firing rate
+\begin{equation}
+\left\langle v\right\rangle =\lim_{t\rightarrow\infty}\frac{\left\langle N(t) \right\rangle}{t}
+\end{equation} 
+and the diffusive spread of the spike count
+\begin{equation}
+D_{eff}=\lim_{t\rightarrow\infty}\frac{\left\langle N^2(t) \right\rangle-\left\langle N(t)\right\rangle ^2}{2t}
+\end{equation}
+A more common way to measure spiking variability in neurons is the Fano factor:
 \begin{align*}
-F=\frac{\left\langle \Delta N^2(t) \right\rangle}{\left\langle N(t)\right\rangle}
+F=\frac{\left\langle \Delta N^2(t) \right\rangle}{\left\langle N(t)\right\rangle}=\frac{2D_{eff}}{\langle v\rangle}
 \end{align*}
-In order to compare the neuron model with Brownian Particles, one may also define a Fano factor for mechanical systems:
-\begin{align*}
-F=\frac{2D_{eff}}{L\langle v\rangle}
-\end{align*}
-where $L$ can be chosen arbitrarily, e.g. a characteristic length of the system, so that $F$ becomes dimensionless.
+\subsubsection{System with signal}
+When bistable neurons are subjected to a periodic stimulus, they should change their firing pattern accordingly. This is best visible in the power spectrum of the spike train, 
+\begin{equation}
+S(f)=\lim_{T\rightarrow\infty}\frac{\langle|\tilde{x}|^2\rangle}{T}
+\end{equation}
 %\subsection{Giant Diffusion}
 %The term \glqq Giant Diffusion \grqq is short for \textit{Giant Enhancement of (thermal) diffusion} which was first observed around the turn of the millennium for Brownian Particles in a tilted periodic potential\cite{td}\cite{ga}\cite{dit}\cite{gd}. In general, these particles exhibit two stable velocity states. They can be \glqq trapped\grqq in a potential minimum - this is referred to as the \textit{locked state} - or they can be in the \textit{running state}. A particle gets into the running state if it has managed to overcome a hill and the frictional loss is low enough so that it is able to pass the adjacent hills as well. In the case of large friction or a strongly tilted potential, however, only one of these two states is present. If the potential is tilted in such a way that both states exist and the probabilities to be in either state are similar, many switchings between the states will occur. In the weak-noise-limit, half of the particles will be mainly in the locked state, while for the others the running state prevails. This behavior leads to diverging diffusion coefficients known as Giant Diffusion.
 %\subsection{Giant diffusion of Brownian Particles}

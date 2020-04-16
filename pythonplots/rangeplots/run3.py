@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 points=100000
 
-file=open('/home/richard/mastergit/NetBeansProjects/inapik/inaprealanhopfnb.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/inapik/inaprealanhopf.txt',"r")
 x,y,z,a=[],[],[],[]
 for k in file:
 	row=k.split()
@@ -28,7 +28,7 @@ plt.xlabel('time [s]')
 plt.ylabel('membrane voltage [mV]')
 plt.xlim(0,0.1)
 #plt.plot(ax,ay,label='%.6f' %area)
-plt.plot(ax/1000,ay)
+plt.plot(ax/1000,ay,'black')
 #plt.plot(ax,aa)
 #plt.legend()
-plt.savefig('inaprealanhopfnbvt.pdf')
+plt.savefig('inaprealanhopfvtblack.pdf')
