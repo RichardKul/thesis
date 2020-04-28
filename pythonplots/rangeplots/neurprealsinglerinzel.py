@@ -14,6 +14,7 @@ import matplotlib.pyplot as plt
 #yvar=[4,13,3]
 #yvalues=len(yvar)
 
+timefac=1000
 
 date='realrinzelrangelong26d1'
 date1='realrinzelrange26d1'
@@ -94,17 +95,18 @@ for x in D2:
 #xs=np.arange(-0.75,4.25,0.25)
 #xs=np.arange(0.25,2,0.25)
 plt.xlabel('bias current I $[\mu A/cm^2]$')
-plt.ylabel('$D_{eff}$ $[10^3s^{-1}]$')
+plt.ylabel('$D_{eff}$ $[s^{-1}]$')
 plt.yscale('log')
 #plt.xscale('log')
 for n in range(0,l):
 #	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,ic%i' %(Dtot[n]/10,round(n/3)))
-	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f' %(Dtot[n]/10))
+	plt.plot(vecx[n,:],vec[n,:]*timefac,label='D=%.0f' %(Dtot[n]/10))
+plt.plot([-10.8, -10.8], [10, 10**5], color='black', linestyle='-',label='$I_{crit}$')
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [3,4,2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
-plt.savefig('dneursingle%s.pdf' %(date+date1))
+plt.savefig('dneursinglecrit%s.pdf' %(date+date1))
 
 vec=np.zeros((l,10))
 vecx=np.zeros((l,10))
@@ -184,12 +186,13 @@ plt.yscale('log')
 #plt.xscale('log')
 for n in range(0,l):
 	#plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,ic%i' %(Dtot[n]/10,round(n/3)))
-	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f' %(Dtot[n]/10))
+	plt.plot(vecx[n,:],vec[n,:],label='D=%.0f' %(Dtot[n]/10))
+plt.plot([-10.8, -10.8], [0.1, 10**3], color='black', linestyle='-',label='$I_{crit}$')
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [3,4,2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
-plt.savefig('fneursingle%s.pdf' %(date+date1))
+plt.savefig('fneursinglecrit%s.pdf' %(date+date1))
 
 vec=np.zeros((l,10))
 vecx=np.zeros((l,10))
@@ -276,13 +279,13 @@ plt.figure()
 #xs=np.arange(-0.75,4.25,0.25)
 #xs=np.arange(0.25,2,0.25)
 plt.xlabel('bias current I')
-plt.ylabel('firing rate')
+plt.ylabel('firing rate [$s^{-1}$]')
 #plt.yscale('log')
 #plt.xscale('log')
 #plt.plot(xburst,cola/T,label='measured bursting rate',color='black')
 for n in range(0,l):
 	#plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,ic%i' %(Dtot[n]/10,round(n/3)))
-	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f' %(Dtot[n]/10))
+	plt.plot(vecx[n,:],vec[n,:]*timefac,label='D=%.0f' %(Dtot[n]/10))
 #plt.plot(colxa,vec[0,:],label='D=%.2f' %(D[0]/100))
 
 #plt.plot(xs,vec[3,:],label='D=1.5')
@@ -290,6 +293,6 @@ for n in range(0,l):
 #plt.plot(xs,vec[5,:],label='D=3')
 #plt.plot(colxa,cola,label='D=3e-3')
 plt.legend()
-plt.savefig('gneursingle%s.pdf' %(date+date1))
+plt.savefig('gneursingle3%s.pdf' %(date+date1))
 
 

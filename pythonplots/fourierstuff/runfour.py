@@ -18,11 +18,11 @@ runs=50
 points=1000000
 length=500000
 
-date='realanhopf7flog'
+date='realfast13aem2n4'
 
-D=10
+D=25
 istart=1
-ivalues=10
+ivalues=20
 nr=9
 S=np.zeros(length)
 #omegaind=round(omega*T)
@@ -97,7 +97,7 @@ for z in range(istart,istart+ivalues):
 #omega=np.arange(0,length)*2*np.pi/T
 	plt.figure()
 	#plt.suptitle('I=%.2f, D=%.2f' %(-0.1+z*0.02,D*0.01))
-	plt.suptitle('I=%.2f, D=%.2f' %(43+z*0.25,D/100))
+	plt.suptitle('I=%.2f, D=%.2f' %(-0.2+z*0.02,D/100))
 	plt.xlabel('Frequency $[10^3s^{-1}]$')
 	plt.ylabel('Spectral power')	
 	plt.yscale('log')
@@ -111,4 +111,4 @@ for z in range(istart,istart+ivalues):
 	#plt.legend()
 #plt.plot(sax2,say2/T2,label='e6')
 	#plt.savefig('inapikrealfrange9aspD=%.2fI=%.2f.pdf' %(D*0.01,-0.1+z*0.02))
-	plt.savefig('inapikanhopf2%sfourierD=%.2fI=%.2f.pdf' %(date,D/100,43+z*0.25))	
+	plt.savefig('inapikanhopf2%sfourierD=%.2fI=%.2f.pdf' %(date,D/100,-0.2+z*0.02))	

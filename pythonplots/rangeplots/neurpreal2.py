@@ -233,6 +233,17 @@ for x in D:
 		vecx[ii][z]=colxa[z]
 	ii=ii+1
 
+N=50000000
+dt=0.0005
+T=N*dt
+file=open('/home/richard/mastergit/NetBeansProjects/detmodel/countI9a.txt',"r")
+col=[]
+for k in file:
+	row=k.split()
+	col.append(float(row[1]))
+cola=np.array(col)*timefac
+xburst=np.arange(-0.20,0.31,0.01)
+
 plt.figure()
 colorv=['y','g','b','r','c']
 #xs=np.arange(-0.75,4.25,0.25)
@@ -241,14 +252,16 @@ plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('average firing rate <v>$[s^{-1}]$')
 #plt.yscale('log')
 #plt.xscale('log')
+plt.plot(xburst[12:51],cola[12:51]/T,label='running firing rate $v_0$',color='black')
 for n in range(0,ltot):
 	nl=round(ivalues-offset[n])
-	plt.plot(vecx[n,0:nl],vec[n,0:nl],colorv[n],label='D=%.2f' %(Dtot[n]/100))
+	plt.plot(vecx[n,0:nl],vec[n,0:nl],colorv[n])#,label='D=%.2f' %(Dtot[n]/100))
 #plt.plot([0.165, 0.165], [5*10**(-1), 50000], color='black', linestyle='-',label='$I_{crit}$')
 #plt.plot([-0.022, -0.022], [5*10**(-1), 50000], color='black', linestyle='-')
-#plt.legend()
-handles, labels = plt.gca().get_legend_handles_labels()
-order = [1,0,2,3]
-plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
+#plt.xlim(-0.08,0.3)
+plt.legend()
+#handles, labels = plt.gca().get_legend_handles_labels()
+#order = [1,0,2,3]
+#plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.savefig('gneur%s.pdf' %datefull)
 

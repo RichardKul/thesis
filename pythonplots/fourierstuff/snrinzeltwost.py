@@ -137,12 +137,14 @@ r0m = 0.012
 date='realrinzelrangelong26d1'
 date1='realrinzelrange26d1'
 date0='realrinzelrangeshort26d1'
+date2='realrinzel13sig1'
 
-D=[150,200]
+D=[200]
 D1=[250,300]
 D0=[400,500]
-Dtot=D+D1+D0
-l2=len(D)+len(D1)+len(D0)
+D2=[]
+Dtot=D+D1+D0+D2
+l2=len(D)+len(D1)+len(D0)+len(D2)
 
 points=1000000
 length=500000
@@ -282,6 +284,48 @@ for c0 in D0:
 		xvec[ii][z-istart-offset[ii]]=float(row[0])
 	ii=ii+1
 
+for c2 in D2:
+	for z in range(istart,istart+ivalues):
+		file=open('/home/richard/outhome/spike%s%d%d.txt' %(date2,c2,z),"r")
+		x,y=[],[]
+		for k in file:
+			row=k.split()
+			x.append(float(row[0]))
+			y.append(float(row[1]))
+		if len(x) == 0:
+			offset[ii]=offset[ii]+1
+			continue
+		ax=np.array(x)
+		ay=np.array(y)
+		param=open('/home/richard/outhome/param%s%d%d.txt' %(date2,c2,z),"r")
+		ll=0
+		name,value=[],[]
+		for k in param:
+			row=k.split()
+			lp=len(row)
+			if ll<1:
+				for jj in range(0,lp):
+					name.append(row[jj])
+			else:
+				for kk in range(0,lp):
+					value.append(float(row[kk]))
+			ll=ll+1
+		dt=value[name.index('dt')]
+		N=value[name.index('N')]-value[name.index('Neq')]
+		repetitions=value[name.index('repetitions')]
+		epsilon=value[name.index('epsilon')]
+		omega=value[name.index('omega')]
+		T=N*repetitions*dt
+		scale[ii][z-istart-offset[ii]]=epsilon**2*T
+		omegaind=round(omega*T)		
+		#omegaind=141
+		SNR[ii][z-istart-offset[ii]]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
+		iv=open('/home/richard/outhome/d%s%d%d.txt' %(date2,c2,z),"r")
+		for k in iv:
+			row=k.split()
+		xvec[ii][z-istart-offset[ii]]=float(row[0])
+	ii=ii+1
+
 params=4
 dvalues=6
 b=np.zeros(dvalues)
@@ -345,18 +389,19 @@ colorv=['r','y','c','g','k','b'] # 6 colors
 #colorv=['y','c','g','k','b'] # 5 colors
 for n in range(0,l2):
 	nl=round(ivalues-offset[n])
-	plt.plot(xvec[n,0:nl],(SNR[n,0:nl]-1)/scale[n,0:nl],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
+	#plt.plot(xvec[n,0:nl],(SNR[n,0:nl]-1)/scale[n,0:nl],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
+	plt.plot(xvec[n,0:nl],abs((SNR[n,0:nl]-1))/scale[n,0:nl],label='D=%.2f' %(Dtot[n]*0.1))
 for n in range(0,l2):
 	#bv=b[2*n+1] # 3 plots
 	#cv=c[2*n+1]
 	#dv=d[2*n+1]
 	#ev=e[2*n+1]
-	bv=b[n] # 6
-	cv=c[n]
-	dv=d[n]
-	ev=e[n]	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,b[n+1],c[n+1],d[n+1]),comp(t,b[n+1],c[n+1],d[n+1],e[n+1]))/8,colorv[n])	
+	bv=b[n+1] # 5
+	cv=c[n+1]
+	dv=d[n+1]
+	ev=e[n+1]	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,b[n+1],c[n+1],d[n+1]),comp(t,b[n+1],c[n+1],d[n+1],e[n+1]))/8,colorv[n])	
 	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,bv,cv,dv),comp(t,bv,cv,dv,ev))/8,colorv[n])
-	plt.plot(t,snr(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,bv,cv,dv),comp(t,bv,cv,dv,ev))/8,colorv[n])
+	#plt.plot(t,snr(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,bv,cv,dv),comp(t,bv,cv,dv,ev))/8,colorv[n])
 #plt.plot(t,snr(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[3]*0.1,comps(t,b[5],c[5],d[5]),comp(t,b[5],c[5],d[5],e[5]))/8,colorv[3])
 #plt.plot([0.163, 0.163], [10**(-7), 10], color='black', linestyle='-')
 #plt.plot([-0.02, -0.02], [10**(-7), 10], color='black', linestyle='-',label='$I_{crit}$')
@@ -366,6 +411,7 @@ for n in range(0,l2):
 #order = [0,2,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
+plt.plot([-10.8, -10.8], [10**(-8), 10**(-3)], color='black', linestyle='-',label='$I_{crit}$')
 plt.legend()
-plt.savefig('snrinzelrange26dcomplete.pdf')
+plt.savefig('snrinzelrange26dcompletecrit.pdf')
 #plt.savefig('snrinzelonly.pdf')

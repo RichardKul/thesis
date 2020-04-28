@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.11)  3 MAR 2020 13:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2019.12.11)  23 APR 2020 21:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1732,10 +1732,10 @@ Overfull \hbox (35.73549pt too wide) in paragraph at lines 772--772
 [115 <./freq4000.pdf>] [116 <./snrtwostateanhopf3m.pdf>] (./zusammenfassung.aux
 ) ) 
 Here is how much of TeX's memory you used:
- 4156 strings out of 494508
- 67729 string characters out of 6175044
- 131577 words of memory out of 5000000
- 7651 multiletter control sequences out of 15000+600000
+ 4157 strings out of 494508
+ 67735 string characters out of 6175044
+ 131589 words of memory out of 5000000
+ 7652 multiletter control sequences out of 15000+600000
  9634 words of font info for 35 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,11n,25p,728b,250s stack positions out of 5000i,500n,10000p,200000b,80000s

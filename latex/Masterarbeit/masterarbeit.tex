@@ -80,9 +80,9 @@ In the case of low noise intensity, the transition times between the locked stat
 r_{\pm}=r_{0,\pm}\exp\left(-\frac{\Delta U_{\pm}}{D}\right)
 \end{align}
 where $r_-$ denotes the transition rate from locked to running state, and $r_+$ the rate for the other transition. $\Delta U_{\pm}$ is the corresponding potential barrier that needs to be traversed and $D$ the noise intensity which previously was $kT$. The effective diffusion coefficient can be calculated from the velocity $v_0$ in the running state and the transition rates\cite{abp}: 
-\begin{align*}
+\begin{align}\label{Deff}
 D_{\text{eff}}=\frac{v_0^2 r_+r_-}{(r_++r_-)^3}
-\end{align*}
+\end{align}
 This formula allows us to find the intersection points of the diffusion coefficients. As the curves for all noise intensities go through these points, they become independent of the noise intensity there.
 It is
 \begin{align*}
@@ -403,6 +403,15 @@ When bistable neurons are subjected to a periodic stimulus, they should change t
 \begin{equation}
 S(f)=\lim_{T\rightarrow\infty}\frac{\langle|\tilde{x}|^2\rangle}{T}
 \end{equation}
+The quality of signal transmission is measured by the signal-to-noise ratio (SNR). The stronger the system changes its behavior in response to the signal, the higher should be the signal-zo-noise ratio. It is calculated by comparing the spectral power at signal frequency $f_s$ with the noise, i.e. the spectral power of the background,
+\begin{equation}
+SNR=\frac{S(f_{s})-S_{bg}(f_{s})}{S_{bg}(f_{s})}
+\end{equation}
+The background power can be obtained by averaging the spectral power of a couple of points near the signal frequency while excluding the signal frequency itself. In the case of a weak and very slow signal, some simplifications can be made. First, it can be assumed that apart from a peak at the signal frequency, the power spectrum looks similar to the unperturbed one, yielding $S_{bg}(f_s)=S_0(f_s)$. In the low-frequency-limit, this simplifies even further to $S_{0}(f_s)=S_0(0)$. Lastly, the susceptibility $\chi$ which quantifies the modulation of the firing rate can be approximated with the derivative of the firing rate $\left<v\right>$ by the control parameter, in our case this is the bias current $I$. All in all, one then gets
+\begin{align}\label{snrweaksig}
+SNR=\frac{\epsilon ^2T}{4}\frac{|\chi(\omega)|^2}{S_0(\omega)}=\frac{\epsilon^2T|d\left<v\right>/dI|^2}{8\cdot D_{eff}}
+\end{align}
+where $\epsilon$ is the signal amplitude and $T$ the total simulation time.
 %\subsection{Giant Diffusion}
 %The term \glqq Giant Diffusion \grqq is short for \textit{Giant Enhancement of (thermal) diffusion} which was first observed around the turn of the millennium for Brownian Particles in a tilted periodic potential\cite{td}\cite{ga}\cite{dit}\cite{gd}. In general, these particles exhibit two stable velocity states. They can be \glqq trapped\grqq in a potential minimum - this is referred to as the \textit{locked state} - or they can be in the \textit{running state}. A particle gets into the running state if it has managed to overcome a hill and the frictional loss is low enough so that it is able to pass the adjacent hills as well. In the case of large friction or a strongly tilted potential, however, only one of these two states is present. If the potential is tilted in such a way that both states exist and the probabilities to be in either state are similar, many switchings between the states will occur. In the weak-noise-limit, half of the particles will be mainly in the locked state, while for the others the running state prevails. This behavior leads to diverging diffusion coefficients known as Giant Diffusion.
 %\subsection{Giant diffusion of Brownian Particles}
@@ -501,11 +510,20 @@ S(f)=\lim_{T\rightarrow\infty}\frac{\langle|\tilde{x}|^2\rangle}{T}
 %\end{align*}
 %In both cases, one potential barrier is twice as high as the other one.\\
 \subsection{Two-state theory}
-Next, we will examine whether the Fano factor displays similar features in the weak noise limit. As 
+\subsubsection{Fano factor in weak noise limit}
+In the introduction we were able to describe the firing behavior of the neuron by using an Arrhenius-like description of the transition rates:
 \begin{align*}
-F=\frac{2D_{\text{eff}}}{L\langle v\rangle}
+r_{\pm}=r_{0,\pm}\exp\left(-\frac{\Delta U_{\pm}}{D}\right)
 \end{align*}
-an expression for the average velocity is required to compute the Fano factor. Taking into account that the average velocity is zero when the particle is in the locked state, one finds the following formula for the total mean velocity:
+This allowed us to define the effective diffusion coefficient:
+\begin{align*}
+D_{\text{eff}}=\frac{v_0^2 r_+r_-}{(r_++r_-)^3}
+\end{align*}
+As mentioned before, the calculation of a Fano factor is a more common way to describe the spiking characteristics of a neuron. Therefore, we will examine whether the Fano factor displays similar features in the weak noise limit as the effective diffusion coefficient. As 
+\begin{align*}
+F=\frac{2D_{\text{eff}}}{\langle v\rangle}
+\end{align*}
+an expression for the average firing rate is required to compute the Fano factor. Taking into account that the firing rate is zero when the particle is in the locked state, one finds the following formula for the total mean firing rate:
 \begin{align*}
 \langle v\rangle=v_0\frac{r_-}{r_++r_-}
 \end{align*}
@@ -522,6 +540,17 @@ as well as for $\Delta U_+ < \Delta U_-$:
 F=\frac{2v_0}{r_{0,+}}\exp\left(-\frac{\Delta U_+-2\Delta U_+}{D}\right) \rightarrow \Delta U_+=0
 \end{align*}
 The intersection point for $\Delta U_+ > \Delta U_-$ stays the same while at the other critical point the potential barrier from running to locked state needs to vanish. As the latter condition violates the requirements for the application of the two-state theory - because only one state would exist in this case - the second intersection point can't be determined via this two-state model.
+\subsubsection{Behavior of SNR}
+Formula (\ref{snrweaksig}) allows to compute the SNR from $D_{eff}$ and the derivative of the firing rate. As the effective diffusion coefficient can already be expressed via the transition rates, only $d\left<v\right>/dI$ is missing. This can be found as follows:
+\begin{align*}
+\frac{d\left<v\right>}{dI}&=\frac{d}{dI}\left(\frac{v_0r_-}{r_++r_-}\right)=\frac{v_0'r_-}{r_++r_-}+\frac{v_0r_-'}{r_++r_-}-\frac{v_0r_-(r_+'+r_-')}{(r_++r_-)^2}\\
+&=\frac{v_0'r_-}{r_++r_-}+\frac{v_0(r_+r_-'-r_-r_+')}{(r_++r_-)^2}
+\end{align*}
+The derivative of $v_0$ is already known from simulations of the noiseless system, and the derivatives of the rates are given by
+\begin{align*}
+r_\pm'=\frac{r_{0,\pm}'}{r_{0,\pm}}r_\pm-\frac{\Delta U_\pm'}{D}r_\pm=\left(\frac{r_{0,\pm}'}{r_{0,\pm}}-\frac{\Delta U_\pm'}{D}\right)r_\pm
+\end{align*}
+Once again, the missing derivatives can now be calculated numerically.
 %\section{Giant diffusion in a bursting neuron model}
 %\subsection{Brownian motion and neuronal models}
 %Brownian motion in periodic potentials has numerous applications among which one can find superionic conduction, rotation of a dipole in a static field or the description of a Josephson Tunneling junction\cite{fpe}. However, apart from these mechanical examples, Brownian motion in periodic potentials is also suited to describe a bursting neuron. If one counts every time the particle crosses a hill as a spike, the running state can be associated with tonic firing and the locked state with a stable equilibrium point. Because of the random noise, transition between the states will occur and the sustained spiking will be eventually terminated so that there is only a finite number of spikes within each burst. The position of the Brownian Particle then corresponds to the spike count of the neuron and its velocity to the firing rate. Thus, based on the similarities to Brownian motion, we expect to find a weak noise behavior comparable to giant diffusion also in bursting neurons.
@@ -530,9 +559,23 @@ The intersection point for $\Delta U_+ > \Delta U_-$ stays the same while at the
 %\subsection{The bursting neuron model}
 \subsection{Numerical implementation}
 The behavior of the two-dimensional neuron model can be investigated by conducting simulations with the parameters described above and evaluating the data in a couple different ways. The simulations were done by letting the system evolve almost freely with the only external influence being the white gaussian noise with intensity $D$. \\
-In all of the computations, only a single neuron was simulated over a long period of time. When investigating an ergodic system, this procedure ensures that the results are independent of the initial conditions if the simulation time is long enough. Furthermore, an ensemble of neurons would need to be equilibrated before starting any measurements so that the obtained results would be correct. This equilibration time can be omitted now, which saves some computation time. \\
-Mostly, the spike train was cut into 500 segments. Only for $D=0.25$, the number of neurons was set to 50 so that there would be a higher number of transitions in a single voltage curve. In all cases, the timestep was 0.5 $\mu$s. The total measurement time for each spike train ranged from $5\cdot10^5$ s for high noise intensities to $2\cdot 10^6$ s for the lowest noise intensities, yielding lengths between $10^3$ and $4\cdot10^4$ for the segments.
-
+In all of the computations, only a single neuron was simulated over a long period of time. The ensemble of neurons was created by cutting this long simulations into multiple segments. When investigating an ergodic system, this procedure ensures that the results are independent of the initial conditions if the simulation time is long enough. Furthermore, an ensemble of neurons would need to be equilibrated before starting any measurements so that the obtained results would be correct. This equilibration time can be omitted now, which saves some computation time. \\
+In all of the cases, the spike train was cut into 50 segments, which corresponds to an ensemble of 50 neurons. The other relevant parameters are shown in table \ref{params}.
+\begin{tabular}{l|l|l|l}
+	\label{params}
+	 & $I_{Na,p}+I_K$ model with  & $I_{Na,p}+I_K$ model with  & \\ parameter & saddle-node bifurcation& Andronov-Hopf bifurcation &Rinzel model\\
+	\hline
+	length of timestep&$5\cdot 10^{-4}$&$5\cdot10^{-3}$&$10^{-2}$\\\hline
+	number of timesteps&$4\cdot10^{10}-10^{11}$&$5\cdot10^9-5\cdot10^{10}$&$5\cdot10^9-6\cdot10^{10}$\\\hline
+	range of $I$&$[-0.08,0.2]$&$[43.25,48]$&$[-17.2,-9]$\\\hline
+	range of $D$&$0.25-0.45$&$0.1-0.35$&$20-50$
+\end{tabular}
+Longer simulation times have been used for smaller noise intensities. The ranges of $I$ have been chosen in such a way that they lie completely in the bistable regime. For a bias current outside of that regime, the system would not switch anymore between the states and therefore also not exhibit stochastic bursting, which is required for our investigations. The noise intensities $D$ were as small as practically feasible. At very low noise intensities, the number of transitions was too low to observe enough switchings even in week-long simulations and thereby lower limits for $D$ were set.\\The ideal timestep was determined by simulating the system in the running state without noise. If the timestep was too large, the spike count would keep changing until finally approaching a minimum or maximum value, as can be seen in figure \ref{dtanhopf}. It can be argued, however, that in the presence of noise, there is no deterministic behavior. This means that possibly larger timesteps would give the same results.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{detmotimeanhopf4.pdf}\caption{Determination of the ideal timestep for the $I_{Na,p}+I_K$ model. Shown is the deterministic spike count at different time steps.}
+	\label{dtanhopf}
+\end{figure}
 
 \section{Critical currents in the Fano factor}
 

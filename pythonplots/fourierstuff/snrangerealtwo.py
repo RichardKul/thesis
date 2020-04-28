@@ -227,8 +227,8 @@ for n in range(0,l):
 	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],colorv[n],label='D=%.2f' %(Dtot[n]*0.01))
 #for n in range(0,l):	
 #	plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.01,av,v0)/8,colorv[n])
-#plt.plot([0.163, 0.163], [10**(-7), 10], color='black', linestyle='-')
-#plt.plot([-0.02, -0.02], [10**(-7), 10], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([0.163, 0.163], [10**(-7), 10], color='black', linestyle='-',label='$I_{crit}$')
+#plt.plot([-0.02, -0.02], [10**(-7), 10], color='black', linestyle='-')
 #plt.plot(xs,SNR[2,:],label='D=3')
 #plt.plot(xs,SNR[1,:],label='D=2.5')
 #handles, labels = plt.gca().get_legend_handles_labels()
@@ -236,4 +236,4 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snrealonly.pdf')
+plt.savefig('snrealonlycrit.pdf')

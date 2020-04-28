@@ -127,10 +127,10 @@ plt.yscale('log')
 colorv=['r','y','c','g','k','b'] # 6 colors
 #colorv=['y','g','b'] # 3 colors
 #colorv=['y','c','g','k','b'] # 5 colors
-for n in range(0,l2):
-	plt.plot(xnew,SNR[n,:],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.01))
-	plt.plot(xnew[1:ivalues-1],snrcor(params[0,1:ivalues-1],params[2,1:ivalues-1],params[1,1:ivalues-1],params[3,1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])#plt.plot(xnew,ratenew,colorv[n])
-plt.plot([46.1, 46.1], [10**(-6), 10**2], color='black', linestyle='-',label='$I_{crit}$')
+for n in range(1,l2):
+	plt.plot(xnew,SNR[n,:],label='D=%.2f' %(Dtot[n]*0.01))
+	#plt.plot(xnew[1:ivalues-1],snrcor(params[0,1:ivalues-1],params[2,1:ivalues-1],params[1,1:ivalues-1],params[3,1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])#plt.plot(xnew,ratenew,colorv[n])
+plt.plot([46.1, 46.1], [10**(-6), 10**(-2)], color='black', linestyle='-',label='$I_{crit}$')
 plt.legend()
-plt.savefig('snrtwostateanhopf17m.pdf')
+plt.savefig('snrtwostateanhopf17mnofitcrit.pdf')
 #plt.savefig('snrinzelonly.pdf')

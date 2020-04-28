@@ -25,7 +25,7 @@ void init(double x[],int n);
 int main(int argc, char** argv) {
     
     ofstream myfile;
-    myfile.open ("countInew2.txt");
+    myfile.open ("countInew3.txt");
     
     double I0=0; // 0
     double gL=0.3; // 8
@@ -52,7 +52,7 @@ int main(int argc, char** argv) {
     nfs=0.2;
     int j,f;
     double dt,dt0;
-    dt0=0.0005; 
+    dt0=0.0001; 
     init(count,runs);
 for(int a=0;a<runs;a++){
     dt=dt0*(a+1);

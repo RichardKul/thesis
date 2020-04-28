@@ -14,16 +14,18 @@
 \contentsline {subsection}{\numberline {2.4}Quantities of interest}{21}% 
 \contentsline {subsubsection}{\numberline {2.4.1}System without signal}{21}% 
 \contentsline {subsubsection}{\numberline {2.4.2}System with signal}{22}% 
-\contentsline {subsection}{\numberline {2.5}Two-state theory}{22}% 
-\contentsline {subsection}{\numberline {2.6}Numerical implementation}{23}% 
-\contentsline {section}{\numberline {3}Critical currents in the Fano factor}{23}% 
-\contentsline {subsection}{\numberline {3.1}Count statistics}{23}% 
-\contentsline {subsection}{\numberline {3.2}Transition rates between the states}{26}% 
-\contentsline {subsubsection}{\numberline {3.2.1}Distribution of the state lifetimes}{27}% 
-\contentsline {subsubsection}{\numberline {3.2.2}Transition rates at different noise intensities}{27}% 
-\contentsline {subsubsection}{\numberline {3.2.3}Arrhenius Plots and effective potential barriers}{28}% 
-\contentsline {subsubsection}{\numberline {3.2.4}Comparison with two-state theory}{30}% 
-\contentsline {section}{\numberline {4}Consequences for Signal transmission}{32}% 
-\contentsline {subsection}{\numberline {4.1}Frequency Spectrum}{32}% 
-\contentsline {subsection}{\numberline {4.2}SNR}{32}% 
-\contentsline {section}{\numberline {5}Conclusions}{32}% 
+\contentsline {subsection}{\numberline {2.5}Two-state theory}{23}% 
+\contentsline {subsubsection}{\numberline {2.5.1}Fano factor in weak noise limit}{23}% 
+\contentsline {subsubsection}{\numberline {2.5.2}Behavior of SNR}{24}% 
+\contentsline {subsection}{\numberline {2.6}Numerical implementation}{24}% 
+\contentsline {section}{\numberline {3}Critical currents in the Fano factor}{25}% 
+\contentsline {subsection}{\numberline {3.1}Count statistics}{25}% 
+\contentsline {subsection}{\numberline {3.2}Transition rates between the states}{28}% 
+\contentsline {subsubsection}{\numberline {3.2.1}Distribution of the state lifetimes}{29}% 
+\contentsline {subsubsection}{\numberline {3.2.2}Transition rates at different noise intensities}{29}% 
+\contentsline {subsubsection}{\numberline {3.2.3}Arrhenius Plots and effective potential barriers}{30}% 
+\contentsline {subsubsection}{\numberline {3.2.4}Comparison with two-state theory}{32}% 
+\contentsline {section}{\numberline {4}Consequences for Signal transmission}{34}% 
+\contentsline {subsection}{\numberline {4.1}Frequency Spectrum}{34}% 
+\contentsline {subsection}{\numberline {4.2}SNR}{34}% 
+\contentsline {section}{\numberline {5}Conclusions}{34}% 

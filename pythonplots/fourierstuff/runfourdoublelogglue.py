@@ -22,7 +22,7 @@ date='realfast15mtf'
 
 mode='spike'
 D=45
-istart=13
+istart=6
 ivalues=1
 nr=9
 
@@ -98,7 +98,7 @@ for z in range(istart,istart+ivalues):
 #plt.plot(ax,ay)
 #plt.plot(ax,aa)
 #plt.savefig('oub.pdf')
-	axmax=np.argmin(abs(ax-ax2[0]))+1
+	axmax=np.argmin(abs(ax-ax2[10]))+1
 	ind11=np.argmin(abs(ax-r0))
 	ind21=np.argmin(abs(ax2-r0))
 	ind1=np.argmax(ay[ind11-5:ind11+5])+ind11-5	
@@ -109,7 +109,7 @@ for z in range(istart,istart+ivalues):
 #omega=np.arange(0,length)*2*np.pi/T
 	plt.figure()
 	plot1 = plt.subplot(111)
-	#plt.suptitle('I=%.2f, D=%.2f' %(-0.1+z*0.02,D*0.01))
+	plt.suptitle('I=%.2f, D=%.2f' %(-0.1+z*0.02,D*0.01))
 	#plt.suptitle('I=%.2f, D=%.2f' %(43+z*0.25,D/100))
 	plt.xlabel('Frequency $[s^{-1}]$')
 	plt.ylabel('Spectral power $[s^{-1}]$')	
@@ -119,25 +119,33 @@ for z in range(istart,istart+ivalues):
 #plt.xlim(4*10**(-4),100)
 	plt.plot(ax[0:axmax]*timefac,ay[0:axmax]*ax[0]*timefac,'blue')#,label='Simulation')
 	plt.plot(ax[l-11:l]*timefac,ay[l-11:l]*ax[0]*timefac,'blue')
-	plt.plot(ax2*timefac,ay2*ax2[0]*timefac,'blue')#,label='Simulation')
+	plt.plot(ax2[10:-1]*timefac,ay2[10:-1]*ax2[0]*timefac,'blue')#,label='Simulation')
 	#plt.plot(ax[ind1]*timefac,ay[ind1]*timefac*ax[0],'x',color='blue')
 	#plt.plot(ax2[ind2]*timefac,ay2[ind2]*timefac*ax2[0],'x',color='orange')
-	plt.plot(ax[0:axmax]*timefac,r*np.ones(axmax)*timefac,'g',label='average firing rate')
+	plt.plot(ax[0:axmax]*timefac,r*np.ones(axmax)*timefac,'g',label='overall firing rate')
 	plt.plot(ax2[0:l2]*timefac,r*np.ones(l2)*timefac,'g')
-	plt.plot(ax[0:axmax]*timefac,420*np.ones(axmax),'r--',label='background')
-	plt.plot(ax2[0:l2]*timefac,420*np.ones(l2),'r--')
+	plt.plot(ax[0:axmax]*timefac,5200*np.ones(axmax),'r--',label='background')
+	plt.plot(ax2[0:l2]*timefac,5200*np.ones(l2),'r--')
+	#plt.plot(ax[0:axmax]*timefac,3*np.ones(axmax),'r--',label='background')
+	#plt.plot(ax2[0:l2]*timefac,3*np.ones(l2),'r--')
 	#plt.arrow(5*10**(-3),300,0,-299,length_includes_head=True)
-	plt.arrow(0.223, 0.65, 0, -0.65, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
-	plt.text(10**(-2),10,'signal')
-	plt.text(10**(-2),6,'frequency')
+	plt.arrow(0.222, 0.75, 0, -0.75, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
+	#plt.arrow(0.222, 0.23, 0, -0.23, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
+	#plt.text(10**(-2),1,'signal')
+	#plt.text(10**(-2),0.7,'frequency')
+	plt.text(10**(-2),0.5,'signal')
+	plt.text(10**(-2),0.2,'frequency')
 	#plt.arrow(70,10,0,-9,length_includes_head=True)
-	plt.arrow(0.5865, 0.5, 0, -0.5, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
-	plt.text(10**2,6,'spiking')
-	plt.text(10**(2),3,'frequency')
+	#plt.arrow(0.5862, 0.6, 0, -0.6, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
+	plt.arrow(0.5862, 0.3, 0, -0.3, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
+	#plt.text(10**2,1,'firing rate')
+	#plt.text(10**(2),0.7,'in spiking state')
+	plt.text(10**2,0.5,'firing rate')
+	plt.text(10**(2),0.2,'in spiking state')
 #plt.plot(ax2,spectrum(ax2,1/(4.748*10**(-3)),13),label='theory')
 #plt.plot(omega,background/T,'kx')
 	plt.legend()
 #plt.plot(sax2,say2/T2,label='e6')
 	#plt.savefig('specglue%s%sD=%.2fI=%.2f.pdf' %(mode,date,D*0.01,-0.1+z*0.02))
-	plt.savefig('specimprs.pdf')
+	plt.savefig('specpaper3.pdf')
 	#plt.savefig('inapikanhopf%s2%sfourierD=%.2fI=%.2f.pdf' %(mode,date,D/100,43+z*0.25))	
