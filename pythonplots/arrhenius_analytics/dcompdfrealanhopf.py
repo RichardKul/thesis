@@ -31,6 +31,8 @@ def vana(r0p,r0m,ap,am,bp,bm,t,D,av,v0):
 def fanofun(x,rp,rm,v0,av):
 	return 2*deff(x,rp,rm,v0,av)/v(x,rp,rm,v0,av)
 
+matplotlib.rcParams.update({'font.size': 18})
+
 D1=[20,25,30,35]
 D3=[]
 D2=[]

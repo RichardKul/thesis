@@ -236,4 +236,4 @@ plt.plot([0.163, 0.163], [10**(-7), 10], color='black', linestyle='-',label='$I_
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snrealonlycrit.pdf')
+plt.savefig('snrealonlycrit2.pdf')

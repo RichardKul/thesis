@@ -12,6 +12,8 @@ from scipy.fftpack import fft, ifft
 
 from scipy.optimize import curve_fit
 
+matplotlib.rcParams.update({'font.size': 16})
+
 def barrier(a,b,x):
 	return a * x + b
 def r(r0,a,b,t,D):

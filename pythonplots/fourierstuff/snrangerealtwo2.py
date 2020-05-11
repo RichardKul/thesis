@@ -12,6 +12,8 @@ from scipy.fftpack import fft, ifft
 
 from scipy.optimize import curve_fit
 
+matplotlib.rcParams.update({'font.size': 14})
+
 def barrier(a,b,x):
 	return a * x + b
 def r(r0,a,b,t,D):
@@ -202,4 +204,5 @@ plt.plot([0.163, 0.163], [5*10**(-5), 5*10**(-2)], color='black', linestyle='-',
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
-plt.savefig('snrealonly2crit.pdf')
+plt.tight_layout()
+plt.savefig('snrealonly2crit2.pdf')

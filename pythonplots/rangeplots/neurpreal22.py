@@ -55,13 +55,13 @@ plt.yscale('log')
 for n in range(0,l):
 	nl=round(ivalues-offset[n])
 	plt.plot(vecx[n,0:nl],vec[n,0:nl],label='D=%.2f' %(D[n]/100))
-#plt.plot([0.165, 0.165], [5*10**(-1), 50000], color='black', linestyle='-',label='$I_{crit}$')
-#plt.plot([-0.022, -0.022], [5*10**(-1), 50000], color='black', linestyle='-')
+plt.plot([0.16, 0.16], [5*10**(-1), 50000], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([-0.01, -0.01], [5*10**(-1), 50000], color='black', linestyle='-')
 plt.legend()
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [1,0,2,3]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('dneur23%s.pdf' %(date[0]+date[1]))
+plt.savefig('dneur25crit%s.pdf' %(date[0]+date[1]))
 
 vec=np.zeros((l,20))
 vecx=np.zeros((l,ivalues))
@@ -82,7 +82,7 @@ for m in range(0,l):
 	colxa=np.array(colx)
 	cola=np.array(col)
 	for z in range(0,20-offset[ii]):
-		vec[ii][z]=cola[z]*timefac
+		vec[ii][z]=cola[z]
 		vecx[ii][z]=colxa[z]
 	ii=ii+1
 
@@ -96,13 +96,13 @@ plt.yscale('log')
 for n in range(0,l):
 	nl=round(ivalues-offset[n])
 	plt.plot(vecx[n,0:nl],vec[n,0:nl],label='D=%.2f' %(D[n]/100))
-#plt.plot([0.165, 0.165], [5*10**(-1), 50000], color='black', linestyle='-',label='$I_{crit}$')
-#plt.plot([-0.022, -0.022], [5*10**(-1), 50000], color='black', linestyle='-')
+plt.plot([0.16, 0.16], [10**(-2), 30000], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([-0.01, -0.01], [10**(-2), 30000], color='black', linestyle='-')
 plt.legend()
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [1,0,2,3]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('fneur23%s.pdf' %(date[0]+date[1]))
+plt.savefig('fneur25crit%s.pdf' %(date[0]+date[1]))
 
 vec=np.zeros((l,20))
 vecx=np.zeros((l,ivalues))
@@ -149,7 +149,7 @@ plt.ylabel('average firing rate <v>$[s^{-1}]$')
 plt.plot(xburst[12:51],cola[12:51]/T,label='running firing rate $v_0$',color='black')
 for n in range(0,l):
 	nl=round(ivalues-offset[n])
-	plt.plot(vecx[n,0:nl],vec[n,0:nl])#,colorv[n])#,label='D=%.2f' %(Dtot[n]/100))
+	plt.plot(vecx[n,0:nl],vec[n,0:nl],label='D=%.2f' %(D[n]/100))
 #plt.plot([0.165, 0.165], [5*10**(-1), 50000], color='black', linestyle='-',label='$I_{crit}$')
 #plt.plot([-0.022, -0.022], [5*10**(-1), 50000], color='black', linestyle='-')
 #plt.xlim(-0.08,0.3)
@@ -157,5 +157,5 @@ plt.legend()
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [1,0,2,3]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('gneur23%s.pdf' %(date[0]+date[1]))
+plt.savefig('gneur25crit%s.pdf' %(date[0]+date[1]))
 

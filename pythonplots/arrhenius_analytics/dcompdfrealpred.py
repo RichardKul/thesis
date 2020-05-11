@@ -31,7 +31,7 @@ def vana(r0p,r0m,ap,am,bp,bm,t,D,av,v0):
 def fanofun(x,rp,rm,v0,av):
 	return 2*deff(x,rp,rm,v0,av)/v(x,rp,rm,v0,av)
 
-matplotlib.rcParams.update({'font.size': 20})
+matplotlib.rcParams.update({'font.size': 18})
 timefac=1000
 D1=[35]
 D3=[25,30]
@@ -184,7 +184,8 @@ plt.ylabel('$D_{eff}$ [$s^{-1}$]')
 plt.yscale('log')
 plt.xlim(-0.08,0.2)
 Dvec=[2,3,4,5]
-colorv=['g','y','b','r','c']
+#colorv=['g','y','b','r','c']
+colorv=[ '#1f77b4', '#ff7f0e', '#2ca02c','#d62728','#9467bd']
 t=np.arange(-0.1,0.3,0.01)
 #for n in range(0,l):
 #	plt.plot(t,deffana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,v),colorv[n])
@@ -206,7 +207,7 @@ plt.plot([-0.022, -0.022], [10**(-35), 10**39], color='black', linestyle='-')
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='upper right', bbox_to_anchor=(0.65, 0.55))
 plt.legend(loc='upper right', bbox_to_anchor=(0.8, 0.67))
 plt.tight_layout()
-plt.savefig('dcompdfpwnewpred%s.pdf' %(date1+date2))
+plt.savefig('dcompdfpwnewpred2%s.pdf' %(date1+date2))
 
 
 plt.figure()
@@ -231,7 +232,7 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower right')
 plt.legend()
 plt.tight_layout()
-plt.savefig('gcompdfpwnewpred%s.pdf' %(date1+date2))
+plt.savefig('gcompdfpwnewpred2%s.pdf' %(date1+date2))
 
 
 plt.figure()
@@ -257,4 +258,4 @@ plt.plot([-0.022, -0.022], [10**(-20), 10**40], color='black', linestyle='-')
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower left')
 plt.legend()
 plt.tight_layout()
-plt.savefig('fcompdfpwnewpred%s.pdf' %(date1+date2))
+plt.savefig('fcompdfpwnewpred2%s.pdf' %(date1+date2))

@@ -20,7 +20,7 @@ def fund(x,a,b,alpha):
 	return a * (1/x)**alpha * np.exp(-b * x)
 
 D1=[35]
-D2=[45]
+D2=[30]
 D3=[40,50]
 Dvar=[30]
 D=D1+D2+D3+Dvar
@@ -29,8 +29,8 @@ l2=len(D2)
 l3=len(D3)
 lvar=len(Dvar)
 l=l1+l2+l3+lvar
-date1='new'+'realfast11jjem2sh'
-date2='new'+'realfast19jjem2st'
+date2='new'+'realfast11jjem2sh'
+date1='new'+'realfast19jjem2st'
 date3='new'+'realfast11jjem2st'
 datevar=['new'+'realfast11jjem2','new'+'realfast11jjem2sh','new'+'realfast11jjem2']
 istart=9
@@ -48,7 +48,7 @@ matplotlib.rcParams.update({'font.size': 22})
 
 ii=0
 dt=0.0005	
-N=120000000
+N=220000000
 Neq=20000000
 Ndiff=N-Neq
 runs=500
@@ -120,17 +120,17 @@ for x in D2:
 		plt.ylabel('number of intervals')	
 		plt.hist(intbt/1000, bins=50)
 		plt.yscale('log')
-		plt.title("run. intervals, $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100))
+		plt.title("run. intervals, $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100), fontsize=22)
 		plt.tight_layout()
-		plt.savefig('bdistplotmaster.pdf')# %(date1,x,y))
+		plt.savefig('bdistplotmaster2.pdf')# %(date1,x,y))
 		plt.figure()
 		plt.xlabel('interval length [s]')
 		plt.ylabel('number of intervals')
 		plt.hist(inteqt/1000, bins=50)
 		plt.yscale('log')
-		plt.title("eq. intervals, $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100))
+		plt.title("eq. intervals, $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100), fontsize=22)
 		plt.tight_layout()
-		plt.savefig('eqdistplotmaster.pdf')# %(date1,x,y))
+		plt.savefig('eqdistplotmaster2.pdf')# %(date1,x,y))
 		eqtot=np.sum(inteqt)
 		btot=np.sum(intbt)
 		eqrel=eqtot/(eqtot+btot)

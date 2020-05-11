@@ -101,7 +101,7 @@ plt.yscale('log')
 for n in range(0,l):
 #	plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,ic%i' %(Dtot[n]/10,round(n/3)))
 	plt.plot(vecx[n,:],vec[n,:]*timefac,label='D=%.0f' %(Dtot[n]/10))
-plt.plot([-10.8, -10.8], [10, 10**5], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([-10.8, -10.8], [10, 10**6], color='black', linestyle='-',label='$I_{crit}$')
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [3,4,2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
@@ -187,7 +187,7 @@ plt.yscale('log')
 for n in range(0,l):
 	#plt.plot(vecx[n,:],vec[n,:],label='D=%.2f,ic%i' %(Dtot[n]/10,round(n/3)))
 	plt.plot(vecx[n,:],vec[n,:],label='D=%.0f' %(Dtot[n]/10))
-plt.plot([-10.8, -10.8], [0.1, 10**3], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([-10.8, -10.8], [0.07, 10**4], color='black', linestyle='-',label='$I_{crit}$')
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [3,4,2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])

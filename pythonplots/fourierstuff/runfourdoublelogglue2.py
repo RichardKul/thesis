@@ -10,6 +10,8 @@ import matplotlib.pyplot as plt
 
 from scipy.fftpack import fft, ifft
 
+matplotlib.rcParams.update({'font.size': 16})
+
 def spectrum(f,tau,sigma):
 	return (2*tau*sigma**2)/(1+(2*np.pi*f*tau)**2)
 
@@ -131,14 +133,14 @@ for z in range(istart,istart+ivalues):
 	#plt.arrow(0.222, 0.75, 0, -0.75, transform=bx.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
 	plt.arrow(0.222, 0.23, 0, -0.23, transform=bx.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
 	plt.text(10**(-2),1,'signal')
-	plt.text(10**(-2),0.7,'frequency')
+	plt.text(10**(-2),0.6,'frequency')
 	#plt.text(10**(-2),0.5,'signal')
 	#plt.text(10**(-2),0.2,'frequency')
 	#plt.arrow(70,10,0,-9,length_includes_head=True)
 	plt.arrow(0.5862, 0.6, 0, -0.6, transform=bx.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
 	#plt.arrow(0.5862, 0.3, 0, -0.3, transform=bx.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
 	plt.text(10**2,1,'firing rate')
-	plt.text(10**(2),0.7,'in spiking state')
+	plt.text(10**(2),0.6,'in spiking state')
 	#plt.text(10**2,0.5,'firing rate')
 	#plt.text(10**(2),0.2,'in spiking state')
 #plt.plot(ax2,spectrum(ax2,1/(4.748*10**(-3)),13),label='theory')
@@ -148,12 +150,15 @@ for z in range(istart,istart+ivalues):
 	#plt.savefig('specglue%s%sD=%.2fI=%.2f.pdf' %(mode,date,D*0.01,-0.1+z*0.02))
 	bx.set_xscale("log")
 	bx.set_yscale("log")
-	locmaj = matplotlib.ticker.LogLocator(base=10.0, subs=(1.0, ), numticks=100)
-	bx.xaxis.set_major_locator(locmaj)
+	#locmaj = matplotlib.ticker.LogLocator(base=10.0, subs=(1.0, ), numticks=100)
+	#bx.xaxis.set_major_locator(locmaj)
 
-	locmin = matplotlib.ticker.LogLocator(base=10.0, subs=np.arange(2, 10) * .1,
-                                      numticks=100)
-	bx.xaxis.set_minor_locator(locmin)
-	bx.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+	#locmin = matplotlib.ticker.LogLocator(base=10.0, subs=np.arange(2, 10) * .1,
+         #                             numticks=100)
+	#bx.xaxis.set_minor_locator(locmin)
+	#bx.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+	plt.tight_layout()
+	bx.spines['right'].set_visible(False)
+	bx.spines['top'].set_visible(False)
 	plt.savefig('specpaper5.pdf')
 	#plt.savefig('inapikanhopf%s2%sfourierD=%.2fI=%.2f.pdf' %(mode,date,D/100,43+z*0.25))	

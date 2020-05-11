@@ -49,7 +49,7 @@ av=0.1/12
 v0=0.47
 xs=np.zeros(l)
 for b in range(0,l):
-	xs[b]=10/Da[b]
+	xs[b]=100/Da[b]
 for k2 in range(0,ivalues):
 	popt,pcov = curve_fit(func, xs, btoeq[:,k2])
 	params[0][k2]=popt[0]
@@ -121,8 +121,8 @@ plt.plot(xnew,params[1,:],'g')
 plt.plot(xnew,params[3,:],'r')
 plt.plot(xnew,2*params[1,:],'g')
 plt.plot(xnew,2*params[3,:],'r')
-plt.plot([0.165, 0.165], [0,90], color='black', linestyle='-',label='$I_{crit}$')
-plt.plot([-0.022, -0.022], [0,90], color='black', linestyle='-')
+plt.plot([0.165, 0.165], [0,9], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([-0.022, -0.022], [0,9], color='black', linestyle='-')
 plt.legend()
 plt.tight_layout()
 plt.savefig('barriercomprealfit4linecritbig.pdf')

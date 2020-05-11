@@ -13,6 +13,8 @@ from scipy.fftpack import fft, ifft
 def spectrum(f,tau,sigma):
 	return (2*tau*sigma**2)/(1+(2*np.pi*f*tau)**2)
 
+matplotlib.rcParams.update({'font.size': 16})
+
 omega=0.000005
 runs=50
 
@@ -108,7 +110,7 @@ for z in range(istart,istart+ivalues):
 #	S[l]=abs(ys[l])*abs(ys[l])/T
 #omega=np.arange(0,length)*2*np.pi/T
 	plt.figure()
-	plot1 = plt.subplot(111)
+	plot1= plt.subplot(111)
 	plt.suptitle('I=%.2f, D=%.2f' %(-0.1+z*0.02,D*0.01))
 	#plt.suptitle('I=%.2f, D=%.2f' %(43+z*0.25,D/100))
 	plt.xlabel('Frequency $[s^{-1}]$')
@@ -144,10 +146,11 @@ for z in range(istart,istart+ivalues):
 	plt.text(10**(2),0.2,'in spiking state')
 #plt.plot(ax2,spectrum(ax2,1/(4.748*10**(-3)),13),label='theory')
 #plt.plot(omega,background/T,'kx')
-	plt.legend()
+	plt.legend(bbox_to_anchor=(0.4, 0.65))
 #plt.plot(sax2,say2/T2,label='e6')
 	#plt.savefig('specglue%s%sD=%.2fI=%.2f.pdf' %(mode,date,D*0.01,-0.1+z*0.02))
-
-
+	plot1.spines['right'].set_visible(False)
+	plot1.spines['top'].set_visible(False)
+	plt.tight_layout()
 	plt.savefig('specpaper4.pdf')
 	#plt.savefig('inapikanhopf%s2%sfourierD=%.2fI=%.2f.pdf' %(mode,date,D/100,43+z*0.25))	

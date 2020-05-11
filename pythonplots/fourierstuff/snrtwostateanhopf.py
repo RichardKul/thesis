@@ -12,6 +12,7 @@ from scipy.fftpack import fft, ifft
 
 from scipy.optimize import curve_fit
 
+matplotlib.rcParams.update({'font.size': 14})
 
 def func(x, a, b):
 	return a * np.exp(-b * x)
@@ -113,8 +114,8 @@ for s in snrfile:
 	ll=ll+1
 
 plt.figure()
-plt.xlabel('bias current')
-plt.ylabel('SNR')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('Signal-to-noise ratio SNR')
 Dtot=np.array([10,15,20,25,30])
 l2=len(Dtot)
 t=np.arange(-18,-8,0.1)
@@ -132,5 +133,6 @@ for n in range(1,l2):
 	#plt.plot(xnew[1:ivalues-1],snrcor(params[0,1:ivalues-1],params[2,1:ivalues-1],params[1,1:ivalues-1],params[3,1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])#plt.plot(xnew,ratenew,colorv[n])
 plt.plot([46.1, 46.1], [10**(-6), 10**(-2)], color='black', linestyle='-',label='$I_{crit}$')
 plt.legend()
-plt.savefig('snrtwostateanhopf17mnofitcrit.pdf')
+plt.tight_layout()
+plt.savefig('snrtwostateanhopf7mnofitcrit.pdf')
 #plt.savefig('snrinzelonly.pdf')

@@ -17,8 +17,11 @@ def func2(x, a, b):
 def func3(x, a):
 	return a 
 
-D1=[]
-D2=[20,25,30,35]
+timefac=1000
+matplotlib.rcParams.update({'font.size': 22})
+
+D2=[]
+D1=[20,25,30,35]
 D3=[]
 Dvar=[]
 D=D1+D2+D3+Dvar
@@ -27,8 +30,8 @@ l2=len(D2)
 l3=len(D3)
 lvar=len(Dvar)
 l=l1+l2+l3+lvar
-date1='realanhopf11flog'
-date2='realanhopf19flog'
+date2='realanhopf11flog'
+date1='realanhopf19flog'
 date3='new'+'realfast11jjem2st'
 datevar=['new'+'realfast11jjem2','new'+'realfast11jjem2sh','new'+'realfast11jjem2']
 istart=4
@@ -122,18 +125,20 @@ for x in D1:
 		countsrel=counts/Ndiff
 		changespertime[ii][y-istart]=countsrel/(repetitions*runs)
 		plt.figure()	
-		plt.xlabel('interval length [ms]')
+		plt.xlabel('interval length [s]')
 		plt.ylabel('number of intervals')	
-		plt.hist(intbt, bins=50)
+		plt.hist(intbt/timefac, bins=50)
 		plt.yscale('log')
-		plt.title("distribution of bursting time intervals")
+		plt.title("run. intervals, $I=%.2f$, $D=%.2f$" %(43+0.25*y,x/100), fontsize=22)
+		plt.tight_layout()
 		plt.savefig('bdistajrj2%s%d%d.pdf' %(date1,x,y))
 		plt.figure()
-		plt.xlabel('interval length [ms]')
+		plt.xlabel('interval length [s]')
 		plt.ylabel('number of intervals')
-		plt.hist(inteqt, bins=50)
+		plt.hist(inteqt/timefac, bins=50)
 		plt.yscale('log')
-		plt.title("distribution of equilibrium time intervals")
+		plt.title("eq. intervals, $I=%.2f$, $D=%.2f$" %(43+0.25*y,x/100),fontsize=22)
+		plt.tight_layout()
 		plt.savefig('eqdistajrj2%s%d%d.pdf' %(date1,x,y))
 		eqtot=np.sum(inteqt)
 		btot=np.sum(intbt)
@@ -230,14 +235,14 @@ for x in D2:
 		plt.hist(intbt, bins=50)
 		plt.yscale('log')
 		plt.title("distribution of bursting time intervals")
-		plt.savefig('bdistajrj2%s%d%d.pdf' %(date2,x,y))
+		plt.savefig('bdistajrj2big%s%d%d.pdf' %(date2,x,y))
 		plt.figure()
 		plt.xlabel('interval length [ms]')
 		plt.ylabel('number of intervals')
 		plt.hist(inteqt, bins=50)
 		plt.yscale('log')
 		plt.title("distribution of equilibrium time intervals")
-		plt.savefig('eqdistajrj2%s%d%d.pdf' %(date2,x,y))
+		plt.savefig('eqdistajrj2big%s%d%d.pdf' %(date2,x,y))
 		eqtot=np.sum(inteqt)
 		btot=np.sum(intbt)
 		eqrel=eqtot/(eqtot+btot)
@@ -264,34 +269,40 @@ for x in D2:
 #plt.plot(xs,breltime[3,:],label='D=4,equilibrium')
 #	plt.legend()
 #	plt.savefig('arrhenius%d.pdf' %(k))
+matplotlib.rcParams.update({'font.size': 16})
+
 if l > 1:
 	for k2 in range(0,ivalues):
 		plt.figure()
+		axs = plt.subplot(111)
 		xs=np.zeros(l)
 		for xf in range(0,l):
 			xs[xf]=100/D[xf]
 		plt.suptitle('I=%.2f$\mu A/cm^2$' %(43+0.25*(k2+istart)))
 		plt.xlabel('inverse noise intensity 1/D')
-		plt.ylabel('transition rate w $[10^3s^{-1}]$')
-		plt.yscale('log')
-		plt.plot(xs,1/btottime[:,k2],'bo',label='burst to eq')
+		plt.ylabel('ln of transition rate ln(r $[s^{-1}]$)')
+		#plt.yscale('log')
+		plt.plot(xs,np.log(timefac/btottime[:,k2]),'bo',label='burst to eq')
 #plt.plot(xs,breltime[1,:],label='D=3,burst')
 #plt.plot(xs,breltime[2,:],label='D=4,burst')
 #plt.plot(xs,eqreltime[3,:],label='D=4,burst')
-		plt.plot(xs,1/eqtottime[:,k2],'ro',label='eq to burst')
+		plt.plot(xs,np.log(timefac/eqtottime[:,k2]),'ro',label='eq to burst')
 #plt.plot(xs,eqreltime[1,:],label='D=3,equilibrium')
 #plt.plot(xs,eqreltime[2,:],label='D=4,equilibrium')
 #plt.plot(xs,breltime[3,:],label='D=4,equilibrium')
 		popt,pcov = curve_fit(func, xs, 1/btottime[:,k2])
-		plt.plot(np.array(xs), func(np.array(xs), *popt), 'b-',label='fit burst to eq: r_0=%5.3f, U_+=%5.3f' % tuple(popt))
+		plt.plot(np.array(xs), np.log(timefac*func(np.array(xs), *popt)), 'b-')#,label='fit burst to eq: r_0=%5.3f, U_+=%5.3f' % tuple(popt))
 		params[0][k2]=popt[0]
 		params[1][k2]=popt[1]
 		popt,pcov = curve_fit(func, xs, 1/eqtottime[:,k2])
-		plt.plot(np.array(xs), func(np.array(xs), *popt), 'r-',label='fiteq to burst: r_0=%5.3f, U_-=%5.3f' % tuple(popt))
+		plt.plot(np.array(xs), np.log(timefac*func(np.array(xs), *popt)), 'r-')#,label='fit eq to burst: r_0=%5.3f, U_-=%5.3f' % tuple(popt))
 		params[2][k2]=popt[0]
 		params[3][k2]=popt[1]
 		plt.legend()
-		plt.savefig('arrheniustot%sfit%d.pdf' %(date1+date2,k2))
+		axs.spines['right'].set_visible(False)
+		axs.spines['top'].set_visible(False)
+		plt.tight_layout()
+		plt.savefig('arrheniustotbig%sfit%d.pdf' %(date1+date2,k2))
 		eqfile = open('param%s%d.txt' % (date1+date2,k2),'w')
 		for k3 in range(0,4): 
 			eqfile.write('%.6f\n'%params[k3][k2]) 
@@ -307,7 +318,7 @@ if l > 1:
 		plt.ylabel('correlation time')
 		plt.yscale('log')
 		plt.plot(xs,1/(1/btottime[:,k2]+1/eqtottime[:,k2]))
-		plt.savefig('cortime%s%d.pdf' %(date1+date2,k2))
+		plt.savefig('cortimebig%s%d.pdf' %(date1+date2,k2))
 plt.figure()
 #xold=np.arange(-21.25+istart,-21.25+istart+ivalues)*0.8
 xold=np.arange(172+istart,172+istart+ivalues)*0.25
@@ -318,7 +329,7 @@ for n in range(0,l1):
 	plt.plot(xold,1/(1/btottime[n,:]+1/eqtottime[n,:]),label='D=%f' %(D1[n]*0.01))
 for n in range(l1,l1+l2):
 	plt.plot(xold,1/(1/btottime[n,:]+1/eqtottime[n,:]),label='D=%f' %(D2[n-l1]*0.01))
-plt.savefig('altcortime%s.pdf' %(date1+date2))
+plt.savefig('altcortimebig%s.pdf' %(date1+date2))
 
 plt.figure()
 #xnew=np.arange(-21.25+istart,-21.25+istart+ivalues)*0.8
@@ -328,7 +339,7 @@ plt.ylabel('prefactor')
 plt.plot(xnew,params[0,:],label='burst to eq')
 plt.plot(xnew,params[2,:],label='eq to burst')
 plt.legend()
-plt.savefig('prefac%s.pdf' %(date1+date2))
+plt.savefig('prefacbig%s.pdf' %(date1+date2))
 plt.figure()
 plt.xlabel('bias current')
 plt.ylabel('potential barrier')
@@ -337,7 +348,7 @@ plt.plot(xnew,params[3,:],label='eq to burst')
 plt.plot(xnew,2*params[1,:],label='2x burst to eq')
 plt.plot(xnew,2*params[3,:],label='2x eq to burst')
 plt.legend()
-plt.savefig('barrier2%s.pdf' %(date1+date2))
+plt.savefig('barrierbig2%s.pdf' %(date1+date2))
 eqfile3 = open('barrierex%s.txt' %(date1+date2),'w')
 for k3 in range(0,ivalues): 
 	eqfile3.write('%.6f %.6f %.6f %.6f %.6f\n'%(xnew[k3],params[0][k3],params[1][k3],params[2][k3],params[3][k3])) 
@@ -372,7 +383,7 @@ plt.plot(xnew,2*params[1,:],label='2x burst to eq')
 plt.plot(xnew,2*params[3,:],label='2x eq to burst')
 
 plt.legend()
-plt.savefig('barriercomp%s.pdf' %(date1+date2))
+plt.savefig('barrierbigcomp%s.pdf' %(date1+date2))
 
 #plt.figure()
 #xs1=np.arange(-0.75,4.25,0.25)

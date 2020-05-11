@@ -29,14 +29,15 @@
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{2}\protected@file@percent }
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{2}\protected@file@percent }
 \newlabel{veldynintro}{{2}{2}}
-\citation{abp}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Simulation of velocity and effective diffusion coefficient for Brownian Particles in a tilted periodic potential,taken from \cite  {bpp}}}{3}\protected@file@percent }
 \newlabel{anbpsimintro}{{3}{3}}
-\newlabel{arrhlaw}{{3}{3}}
+\citation{abp}
 \citation{bpp}
 \citation{bpp}
+\newlabel{arrhlaw}{{3}{4}}
 \newlabel{Deff}{{4}{4}}
 \newlabel{fcrit}{{5}{4}}
+\citation{snr}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces The left shows the transition rates for a fixed bias force over a range of different noise intensities. Fits were done with both an Arrhenius and a Kramers law but yielded similar results for the effective barriers. On the right one can see the effective potential barriers, where the dotted curves are simply twice the solid curves. The images have been taken from \cite  {bpp}.}}{5}\protected@file@percent }
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{5}\protected@file@percent }
 \@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{5}\protected@file@percent }
@@ -127,11 +128,13 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Quantities of interest}{21}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.1}System without signal}{21}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.4.2}System with signal}{22}\protected@file@percent }
-\newlabel{snrweaksig}{{24}{22}}
+\newlabel{snrweaksig}{{24}{23}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Two-state theory}{23}\protected@file@percent }
+\newlabel{tst}{{2.5}{23}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.1}Fano factor in weak noise limit}{23}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.5.2}Behavior of SNR}{24}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.6}Numerical implementation}{24}\protected@file@percent }
+\newlabel{numerics}{{2.6}{24}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.1}Simulation parameters}{24}\protected@file@percent }
 \newlabel{params}{{2.6.1}{24}}
 \@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces Determination of the ideal timestep for the $I_{Na,p}+I_K$ model. Shown is the deterministic spike count at different time steps.}}{25}\protected@file@percent }
@@ -139,45 +142,110 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2.6.2}Numerical subtleties}{25}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {3}Critical currents in the Fano factor}{26}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Count statistics}{26}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.1}$I_{Na,p}+I_K$-model with saddle-node bifurcation}{26}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Effective diffusion coefficients for different noise intensities. The vertical lines mark the intersection points of the curves. The curve for $D=0.25$ displays some irregularities at negative currents because the number of changes between both states was not high enough to yield good statistics.}}{27}\protected@file@percent }
 \newlabel{deff}{{20}{27}}
 \@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Fano factors for different noise intensities. The vertical lines mark the critical value of $I$ determined from the curves of $D_{eff}$ (Figure \ref  {deff})}}{28}\protected@file@percent }
 \newlabel{fano}{{21}{28}}
 \@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Average firing rates for different noise intensities. The black curve denotes the firing rate in the running state which was obtained from a simulation of the system without noise.}}{29}\protected@file@percent }
 \newlabel{rate}{{22}{29}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Transition rates between the states}{29}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Distribution of the state lifetimes}{30}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Distribution of equilibrium time intervals (left) and running time intervals at high switching rates}}{30}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{30}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{30}\protected@file@percent }
-\newlabel{intdistgood}{{23}{30}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Transition rates at different noise intensities}{30}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Transition rates between the states for a couple different noise intensities}}{31}\protected@file@percent }
-\newlabel{tranrateneur}{{24}{31}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Arrhenius Plots and effective potential barriers}{31}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces logarithm of the transition rates in the middle of the area with giant diffusion (a) and outside of it (b). The respective potential barriers arise from the slope of the lines.}}{32}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{32}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{32}\protected@file@percent }
-\newlabel{arrhplots}{{25}{32}}
-\newlabel{tranratefor}{{25}{32}}
-\newlabel{neubarr}{{26(a)}{33}}
-\newlabel{sub@neubarr}{{(a)}{33}}
-\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Effective potential barriers for both transitions. As the running state is favored at high bias currents, $\Delta U_+$ increases, while the other one drops. The points where $\Delta U_i=2\Delta U_j$ correspond to the numerically computed intersection points from figure \ref  {deff} with only slight deviations.}}{33}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{33}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{33}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}Comparison with two-state theory}{33}\protected@file@percent }
-\newlabel{nofit}{{27(a)}{34}}
-\newlabel{sub@nofit}{{(a)}{34}}
-\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Point-for-point comparison of measured $D_{eff}$ (a) and $F$ (b) with the two-state theory based on the transition rates. The curves for $D=0.25$ were predicted from the transition rates for the other noise intensities.}}{34}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{34}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{34}\protected@file@percent }
-\newlabel{deffpred}{{28(a)}{34}}
-\newlabel{sub@deffpred}{{(a)}{34}}
-\newlabel{fanopred}{{28(b)}{34}}
-\newlabel{sub@fanopred}{{(b)}{34}}
-\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Point-for-point prediction of effective diffusion coefficient (\ref  {deffpred}) and Fano factor (\ref  {fanopred}) with the two-state theory}}{34}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{34}\protected@file@percent }
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{34}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.2}$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}{29}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Effective diffusion coefficients for different noise intensities. The vertical lines mark the intersection points of the curves.}}{30}\protected@file@percent }
+\newlabel{deffanhopf}{{23}{30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {24}{\ignorespaces Fano factors for different noise intensities. The vertical lines mark the critical values of $I$ determined from the curves of $D_{eff}$ (Figure \ref  {deffanhopf})}}{31}\protected@file@percent }
+\newlabel{fanoanhopf}{{24}{31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {25}{\ignorespaces Average firing rates for different noise intensities. The black curve denotes the firing rate in the running state which was obtained from a simulation of the system without noise.}}{32}\protected@file@percent }
+\newlabel{rateanhopf}{{25}{32}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.3}Rinzel model}{32}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {26}{\ignorespaces Average firing rates for different noise intensities. As the firing rate in the spiking state depends on the noise intensity, the reference curves were omitted for the sake of clarity.}}{33}\protected@file@percent }
+\newlabel{deffrinzel}{{26}{33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {27}{\ignorespaces Fano factors for different noise intensities. As the firing rate in the spiking state depends on the noise intensity, no reference curves could be determined.}}{34}\protected@file@percent }
+\newlabel{fanorinzel}{{27}{34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {28}{\ignorespaces Average firing rates for different noise intensities. As the firing rate in the spiking state depends on the noise intensity, the reference curves were omitted for the sake of clarity.}}{35}\protected@file@percent }
+\newlabel{raterinzel}{{28}{35}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.4}Influence of the initial conditions}{35}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {29}{\ignorespaces Simulations with starting and resting initial conditions. It can be clearly seen that the choice of starting parameters neither affects the effective diffusion coefficient nor the overall firing rate.}}{36}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{36}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{36}\protected@file@percent }
+\newlabel{icrinzel}{{29}{36}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.1.5}Conclusion}{36}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Transition rates in bistable neurons}{36}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}$I_{Na,p}+I_K$ model with saddle node bifurcation}{36}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Distribution of the state lifetimes}{36}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {30}{\ignorespaces Distribution of equilibrium time intervals (left) and running time intervals at high switching rates}}{37}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{37}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{37}\protected@file@percent }
+\newlabel{intdistgood}{{30}{37}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.2}Transition rates at different noise intensities}{37}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {31}{\ignorespaces Transition rates between the states for a couple different noise intensities}}{38}\protected@file@percent }
+\newlabel{tranrateneur}{{31}{38}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.3}Arrhenius Plots and effective potential barriers}{38}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {32}{\ignorespaces logarithm of the transition rates in the middle of the area with giant diffusion (a) and outside of it (b). The respective potential barriers arise from the slope of the lines.}}{39}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{39}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{39}\protected@file@percent }
+\newlabel{arrhplots}{{32}{39}}
+\newlabel{tranratefor}{{25}{39}}
+\newlabel{neubarr}{{33(a)}{40}}
+\newlabel{sub@neubarr}{{(a)}{40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {33}{\ignorespaces Effective potential barriers for both transitions. As the running state is favored at high bias currents, $\Delta U_+$ increases, while the other one drops. The points where $\Delta U_i=2\Delta U_j$ correspond to the numerically computed intersection points from figure \ref  {deff} with only slight deviations.}}{40}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{40}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{40}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.4}Comparison with two-state theory}{40}\protected@file@percent }
+\newlabel{nofit}{{34(a)}{41}}
+\newlabel{sub@nofit}{{(a)}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {34}{\ignorespaces Point-for-point comparison of measured $D_{eff}$ (a) and $F$ (b) with the two-state theory based on the transition rates. The curves for $D=0.25$ were predicted from the transition rates for the other noise intensities.}}{41}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{41}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{41}\protected@file@percent }
+\newlabel{deffpred}{{35(a)}{41}}
+\newlabel{sub@deffpred}{{(a)}{41}}
+\newlabel{fanopred}{{35(b)}{41}}
+\newlabel{sub@fanopred}{{(b)}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {35}{\ignorespaces Point-for-point prediction of effective diffusion coefficient (\ref  {deffpred}) and Fano factor (\ref  {fanopred}) with the two-state theory}}{41}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{41}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{41}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{42}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1}Distribution of the state lifetimes}{42}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {36}{\ignorespaces Distribution of equilibrium time intervals (left) and running time intervals at high switching rates}}{42}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{42}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{42}\protected@file@percent }
+\newlabel{intdistanhopf}{{36}{42}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.2}Transition rates at different noise intensities}{43}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {37}{\ignorespaces Transition rates between the states for a couple different noise intensities}}{43}\protected@file@percent }
+\newlabel{tranrateanhopf}{{37}{43}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.3}Arrhenius Plots and effective potential barriers}{43}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {38}{\ignorespaces logarithm of the transition rates in the middle of the area with giant diffusion (a) and outside of it (b). The respective potential barriers arise from the slope of the lines.}}{43}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{43}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{43}\protected@file@percent }
+\newlabel{arrhplotsanhopf}{{38}{43}}
+\newlabel{anhopfbarr}{{39(a)}{44}}
+\newlabel{sub@anhopfbarr}{{(a)}{44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {39}{\ignorespaces Effective potential barriers for both transitions. As the running state is favored at high bias currents, $\Delta U_+$ increases, while the other one drops. The points where $\Delta U_i=2\Delta U_j$ correspond to the numerically computed intersection points from figure \ref  {deff} with only slight deviations.}}{44}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{44}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{44}\protected@file@percent }
+\newlabel{nofitanhopf}{{40(a)}{44}}
+\newlabel{sub@nofitanhopf}{{(a)}{44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {40}{\ignorespaces Point-for-point comparison of measured $D_{eff}$ (a) and $F$ (b) with the two-state theory based on the transition rates. The curves for $D=0.15$ were predicted from the transition rates for the other noise intensities.}}{44}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{44}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{44}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Rinzel model with saddle-node bifurcation}{45}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {41}{\ignorespaces Distribution of equilibrium time intervals (left) and running time intervals at high switching rates}}{45}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{45}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{45}\protected@file@percent }
+\newlabel{intdistrinzel}{{41}{45}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1}Transition rates at different noise intensities}{45}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {42}{\ignorespaces Transition rates between the states for a couple different noise intensities}}{45}\protected@file@percent }
+\newlabel{tranratesrinzel}{{42}{45}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2}Arrhenius Plots and effective potential barriers}{46}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {43}{\ignorespaces logarithm of the transition rates in the middle of the area with giant diffusion (a) and outside of it (b). The respective potential barriers arise from the slope of the lines.}}{46}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{46}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{46}\protected@file@percent }
+\newlabel{arrhplotsrinzel}{{43}{46}}
+\newlabel{rinzelbarr}{{44(a)}{46}}
+\newlabel{sub@rinzelbarr}{{(a)}{46}}
+\@writefile{lof}{\contentsline {figure}{\numberline {44}{\ignorespaces Effective potential barriers for both transitions. As the running state is favored at high bias currents, $\Delta U_+$ increases, while the other one drops. The points where $\Delta U_i=2\Delta U_j$ correspond to the numerically computed intersection points from figure \ref  {deff} with only slight deviations.}}{46}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {}}}{46}\protected@file@percent }
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {}}}{46}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Consequences for Signal transmission}{46}\protected@file@percent }
 \bibdata{quellen}
 \bibcite{eqnum}{1}
 \bibcite{izi}{2}
@@ -190,16 +258,16 @@
 \bibcite{stm1}{9}
 \bibcite{stm2}{10}
 \bibcite{spindle}{11}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Consequences for Signal transmission}{35}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Frequency Spectrum}{35}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}SNR}{35}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusions}{35}\protected@file@percent }
 \bibcite{bpp}{12}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Frequency Spectrum}{47}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}SNR}{47}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusions}{47}\protected@file@percent }
 \bibcite{abp}{13}
-\bibcite{gamma}{14}
-\bibcite{gamma2}{15}
-\bibcite{burstneu}{16}
-\bibcite{burstneu2}{17}
-\bibcite{rinzel}{18}
+\bibcite{snr}{14}
+\bibcite{gamma}{15}
+\bibcite{gamma2}{16}
+\bibcite{burstneu}{17}
+\bibcite{burstneu2}{18}
+\bibcite{rinzel}{19}
 \bibstyle{ieeetr}
 \@input{other/declaration.aux}

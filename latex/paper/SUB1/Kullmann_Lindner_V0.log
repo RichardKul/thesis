@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  29 APR 2020 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  7 MAY 2020 15:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -569,48 +569,49 @@ Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 45.
 <FIGURES/vtmerge.pdf, id=36, 752.74413pt x 618.47357pt>
 File: FIGURES/vtmerge.pdf Graphic file (type pdf)
 <use FIGURES/vtmerge.pdf>
-Package pdftex.def Info: FIGURES/vtmerge.pdf  used on input line 74.
-(pdftex.def)             Requested size: 458.99689pt x 377.12675pt.
-<FIGURES/allsaddlenode_2.pdf, id=37, 462.52798pt x 346.89601pt>
-File: FIGURES/allsaddlenode_2.pdf Graphic file (type pdf)
-<use FIGURES/allsaddlenode_2.pdf>
-Package pdftex.def Info: FIGURES/allsaddlenode_2.pdf  used on input line 81.
-(pdftex.def)             Requested size: 229.49844pt x 172.12427pt.
-<FIGURES/allanhopf_2.pdf, id=38, 462.52798pt x 346.89601pt>
-File: FIGURES/allanhopf_2.pdf Graphic file (type pdf)
-<use FIGURES/allanhopf_2.pdf>
-Package pdftex.def Info: FIGURES/allanhopf_2.pdf  used on input line 88.
-(pdftex.def)             Requested size: 229.49844pt x 172.12427pt.
-<FIGURES/allrinzel_2.pdf, id=39, 462.52798pt x 346.89601pt>
-File: FIGURES/allrinzel_2.pdf Graphic file (type pdf)
-<use FIGURES/allrinzel_2.pdf>
-Package pdftex.def Info: FIGURES/allrinzel_2.pdf  used on input line 95.
-(pdftex.def)             Requested size: 229.49844pt x 172.12427pt.
+Package pdftex.def Info: FIGURES/vtmerge.pdf  used on input line 75.
+(pdftex.def)             Requested size: 356.99844pt x 293.32501pt.
+<FIGURES/allsaddlenode_2clip.pdf, id=37, 268.0718pt x 328.98329pt>
+File: FIGURES/allsaddlenode_2clip.pdf Graphic file (type pdf)
+<use FIGURES/allsaddlenode_2clip.pdf>
+Package pdftex.def Info: FIGURES/allsaddlenode_2clip.pdf  used on input line 84
+.
+(pdftex.def)             Requested size: 229.49844pt x 281.65009pt.
+<FIGURES/allanhopf_2clip.pdf, id=38, 285.5999pt x 344.48018pt>
+File: FIGURES/allanhopf_2clip.pdf Graphic file (type pdf)
+<use FIGURES/allanhopf_2clip.pdf>
+Package pdftex.def Info: FIGURES/allanhopf_2clip.pdf  used on input line 91.
+(pdftex.def)             Requested size: 229.49844pt x 276.81448pt.
+<FIGURES/allrinzel_2clip.pdf, id=39, 284.54214pt x 344.57516pt>
+File: FIGURES/allrinzel_2clip.pdf Graphic file (type pdf)
+<use FIGURES/allrinzel_2clip.pdf>
+Package pdftex.def Info: FIGURES/allrinzel_2clip.pdf  used on input line 98.
+(pdftex.def)             Requested size: 229.49844pt x 277.9266pt.
 <FIGURES/specpaper3.pdf, id=40, 462.52798pt x 346.89601pt>
 File: FIGURES/specpaper3.pdf Graphic file (type pdf)
 <use FIGURES/specpaper3.pdf>
-Package pdftex.def Info: FIGURES/specpaper3.pdf  used on input line 102.
+Package pdftex.def Info: FIGURES/specpaper3.pdf  used on input line 105.
 (pdftex.def)             Requested size: 229.49844pt x 172.12427pt.
 <FIGURES/specpaper2.pdf, id=41, 462.52798pt x 346.89601pt>
 File: FIGURES/specpaper2.pdf Graphic file (type pdf)
 <use FIGURES/specpaper2.pdf>
-Package pdftex.def Info: FIGURES/specpaper2.pdf  used on input line 109.
+Package pdftex.def Info: FIGURES/specpaper2.pdf  used on input line 112.
 (pdftex.def)             Requested size: 229.49844pt x 172.12427pt.
 <FIGURES/snrsaddlenodecrit.pdf, id=42, 462.52798pt x 346.89601pt>
 File: FIGURES/snrsaddlenodecrit.pdf Graphic file (type pdf)
 <use FIGURES/snrsaddlenodecrit.pdf>
-Package pdftex.def Info: FIGURES/snrsaddlenodecrit.pdf  used on input line 116.
+Package pdftex.def Info: FIGURES/snrsaddlenodecrit.pdf  used on input line 119.
 
 (pdftex.def)             Requested size: 229.49844pt x 172.12427pt.
 <FIGURES/snranhopfcrit.pdf, id=43, 462.52798pt x 346.89601pt>
 File: FIGURES/snranhopfcrit.pdf Graphic file (type pdf)
 <use FIGURES/snranhopfcrit.pdf>
-Package pdftex.def Info: FIGURES/snranhopfcrit.pdf  used on input line 123.
+Package pdftex.def Info: FIGURES/snranhopfcrit.pdf  used on input line 126.
 (pdftex.def)             Requested size: 229.49844pt x 172.12427pt.
 <FIGURES/snrinzelcrit.pdf, id=44, 462.52798pt x 346.89601pt>
 File: FIGURES/snrinzelcrit.pdf Graphic file (type pdf)
 <use FIGURES/snrinzelcrit.pdf>
-Package pdftex.def Info: FIGURES/snrinzelcrit.pdf  used on input line 130.
+Package pdftex.def Info: FIGURES/snrinzelcrit.pdf  used on input line 133.
 (pdftex.def)             Requested size: 229.49844pt x 172.12427pt.
 
 
@@ -641,35 +642,31 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: Reference `LastBibItem' on page 1 undefined on input line 9.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./FIGURES/vtmerge.pdf>]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 53.
 
-) [2 <./FIGURES/allsaddlenode_2.pdf> <./FIGURES/allanhopf_2.pdf
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./FIGURES/vtmerge.pdf>
+] [2 <./FIGURES/allsaddlenode_2clip.pdf> <./FIGURES/allanhopf_2clip.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./FIGURES/allanhopf_2.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
->] [3 <./FIGURES/allrinzel_2.pdf> <./FIGURES/specpaper3.pdf
+pdfTeX warning: /usr/bin/pdflatex (file ./FIGURES/allanhopf_2clip.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>] [3 <./FIGURES/allrinzel_2clip.pdf> <./FIGURES/specpaper3.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./FIGURES/specpaper3.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
-> <./FIGURES/specpaper2.pdf
+>] [4 <./FIGURES/specpaper2.pdf> <./FIGURES/snrsaddlenodecrit.pdf
 
-pdfTeX warning: /usr/bin/pdflatex (file ./FIGURES/specpaper2.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
->] [4 <./FIGURES/snrsaddlenodecrit.pdf> <./FIGURES/snranhopfcrit.pdf
+pdfTeX warning: /usr/bin/pdflatex (file ./FIGURES/snrsaddlenodecrit.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+> <./FIGURES/snranhopfcrit.pdf
 
 pdfTeX warning: /usr/bin/pdflatex (file ./FIGURES/snranhopfcrit.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
-> <./FIGURES/snrinzelcrit.pdf
-
-pdfTeX warning: /usr/bin/pdflatex (file ./FIGURES/snrinzelcrit.pdf): PDF inclus
-ion: multiple pdfs with page group included in a single page
->]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 140.
+>] [5 <./FIGURES/snrinzelcrit.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 143.
  (./Kullmann_Lindner_V0.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 140.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 140.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 143.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 143.
 Package rerunfilecheck Info: File `Kullmann_Lindner_V0.out' has not changed.
 (rerunfilecheck)             Checksum: 93268C17F41A231A71418E6BB7CA35AD;643.
 
@@ -678,13 +675,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 17923 strings out of 494500
- 313645 string characters out of 6174968
- 552452 words of memory out of 5000000
- 21497 multiletter control sequences out of 15000+600000
+ 17924 strings out of 494500
+ 313707 string characters out of 6174968
+ 553452 words of memory out of 5000000
+ 21496 multiletter control sequences out of 15000+600000
  536638 words of font info for 39 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 40i,6n,63p,254b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,6n,63p,254b,397s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texliv
@@ -692,10 +689,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmti9.pfb>
-Output written on Kullmann_Lindner_V0.pdf (4 pages, 386490 bytes).
+Output written on Kullmann_Lindner_V0.pdf (5 pages, 368280 bytes).
 PDF statistics:
- 502 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
- 20 named destinations out of 1000 (max. 500000)
+ 562 PDF objects out of 1000 (max. 8388607)
+ 285 compressed objects within 3 object streams
+ 22 named destinations out of 1000 (max. 500000)
  110 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -30,10 +30,14 @@ def vana(r0p,r0m,ap,am,bp,bm,t,D,av,v0):
 	return barrier(av,v0,t)*r(r0m,am,bm,t,D)/(r(r0p,ap,bp,t,D)+r(r0m,am,bm,t,D))
 def fanofun(x,rp,rm,v0,av):
 	return 2*deff(x,rp,rm,v0,av)/v(x,rp,rm,v0,av)
+def comp(x,b,c,d,e):
+	return b*x**3+c*x**2+d*x+e
 
-D1=[200,300,500]
-D3=[]
-D2=[]
+timefac=1000 
+
+D2=[250,300]
+D1=[200]
+D3=[400,500]
 Dvar=[]
 D=D1+D2+D3+Dvar
 Da=np.array(D)
@@ -42,9 +46,9 @@ l2=len(D2)
 l3=len(D3)
 lvar=len(Dvar)
 l=l1+l2+l3+lvar
-date1='realrinzel25o'
-date3='realfast13aem2n4'
-date2='realfast19jjem2st'
+date1='realrinzelrange26d1'
+date3=''
+date2='realrinzelrange26d1'
 datevar=['realfast11jjem2','realfast11jjem2sh','realfast11jjem2']
 yvar=[4,13,3]
 yvalues=len(yvar)
@@ -53,92 +57,27 @@ istart=1
 ivalues=10
 epsilon = 0.00001
 
-btoeq=np.zeros((l,ivalues))
-eqtob=np.zeros((l,ivalues))
-params=np.zeros((4,ivalues))
-paramsav=np.zeros((4,ivalues))
-params2=np.zeros(4)
-paramsq=np.zeros(6)
-for k2 in range(0,ivalues):
-	x=[]
-	ratefile = open('rate%s%d.txt' %(date1+'new'+date2,k2),'r')
-	for k4 in ratefile:
-		row=k4.split()
-		x.append(float(row[0]))
-	ax=np.array(x)
-	for k in range(0,l):
-		btoeq[k][k2]=1/ax[k]
-		eqtob[k][k2]=1/ax[k+l]
 
-av=0.013
-v0=0.0637
-xs=np.zeros(l)
-for b in range(0,l):
-	xs[b]=10/Da[b]
-for k2 in range(0,ivalues):
-	popt,pcov = curve_fit(func, xs, btoeq[:,k2])
-	params[0][k2]=popt[0]
-	params[1][k2]=popt[1]
-	popt,pcov = curve_fit(func, xs, eqtob[:,k2])
-	params[2][k2]=popt[0]
-	params[3][k2]=popt[1]
-rbte=np.mean(params[0,:])
-retb=np.mean(params[2,:])
-
-
-for k2 in range(0,ivalues):
-	popt,pcov = curve_fit(func, xs, btoeq[:,k2],bounds=((rbte-epsilon,-np.inf), (rbte+epsilon,np.inf)))
-	paramsav[0][k2]=popt[0]
-	paramsav[1][k2]=popt[1]
-	popt,pcov = curve_fit(func, xs, eqtob[:,k2],bounds=((retb-epsilon,-np.inf), (retb+epsilon,np.inf)))
-	paramsav[2][k2]=popt[0]
-	paramsav[3][k2]=popt[1]
-	
-xnew=np.arange(-5+istart,-5+istart+ivalues)*0.02
-
-popt,pcov = curve_fit(qbarrier, xnew, params[1,:])
-paramsq[0]=popt[0]
-paramsq[1]=popt[1]
-paramsq[2]=popt[2]
-popt,pcov = curve_fit(qbarrier, xnew, params[3,:])
-paramsq[3]=popt[0]
-paramsq[4]=popt[1]
-paramsq[5]=popt[2]
-
-popt,pcov = curve_fit(barrier, xnew, paramsav[1,:])
-params2[0]=popt[0]
-params2[1]=popt[1]
-popt,pcov = curve_fit(barrier, xnew, paramsav[3,:])
-params2[2]=popt[0]
-params2[3]=popt[1]
-eqfile2 = open('paramsdfnew%s.txt'%(date1+date2),'w')
-for k4 in range(0,2): 
-	eqfile2.write('%.6f\n'%params2[k4]) 
-eqfile2.write('%.6f\n'%rbte) 
-for k4 in range(2,4): 
-	eqfile2.write('%.6f\n'%params2[k4]) 
-eqfile2.write('%.6f\n'%retb) 
-eqfile2.close() 
-	
-paramfile = open('parambarrier%s.txt' %(date1+'new'+date2),'r')
-xx=[]
-for k4 in paramfile:
-	row=k4.split()
-	xx.append(float(row[0]))
-axx=np.array(xx)
-
-file=open('/home/richard/NetBeansProjects/detrinzel/countrinzel.txt',"r")
-col,colx=[],[]
-for k in file:
-    row=k.split()
-    col.append(float(row[1]))
-cola=np.array(col)
-N=5000000
-dt=0.0005
-T=N*dt
-vvec=np.zeros(ivalues)
-for ll in range(0,ivalues):
-	vvec[ll]=cola[round(2.5*ll)+14]/T
+params=4
+dvalues=6
+b=np.zeros(dvalues)
+c=np.zeros(dvalues)
+d=np.zeros(dvalues)
+e=np.zeros(dvalues)
+ii=0
+eqfile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/detmocountparam5.txt','r')
+for k in eqfile:
+	col=[]
+	row=k.split()
+	for lll in range(0,params):	
+		col.append(float(row[lll]))
+	cola=np.array(col)
+	b[ii]=cola[0]
+	c[ii]=cola[1]
+	d[ii]=cola[2]
+	e[ii]=cola[3]
+	ii=ii+1
+eqfile.close() 
 
 
 
@@ -151,7 +90,7 @@ ueqtob=np.zeros(ivalues)
 
 for k2 in range(0,ivalues):
     x=[]
-    ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/param%s%d.txt' %(date1+'new'+date2,k2),'r')
+    ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/param%s%d.txt' %(date1+date2,k2),'r')
     for k4 in ratefile:
         row=k4.split()
         x.append(float(row[0]))
@@ -170,9 +109,9 @@ def vred(rp,up,rm,um,v,D):
 def fanored(rp,up,rm,um,v,D):
 	return 2*deffred(rp,up,rm,um,v,D)/vred(rp,up,rm,um,v,D)
 
-date1='realrinzel25o'
-date2='realrinzel15ninv0'
-
+date2='realrinzelrange26d1'
+date3='realrinzelrangeshort26d1'
+date1='realrinzelrangelong26d1'
 ii=0
 
 istart1=1
@@ -194,8 +133,8 @@ for x in D1:
 		vec[ii][z]=cola1[z]
 	ii=ii+1
 
-istart2=2
-ivalues2=8
+istart2=1
+ivalues2=10
 
 for x in D2:
 	col2,colx2=[],[]	
@@ -248,7 +187,7 @@ for x in Dvar:
 		vec[ii][z]=colavar[z]
 	ii=ii+1
 
-xs=np.arange(-22.5+istart1,-22.5+istart1+ivalues1)*0.8
+xs=np.arange(-21.25+istart1,-21.25+istart1+ivalues1)*0.8
 pv=np.arange(0,ivalues)
 
 plt.xlabel('bias current I $[\mu A/cm^2]$')
@@ -257,16 +196,22 @@ plt.ylabel('$D_{eff}$ [$10^3s^{-1}$]')
 #plt.ylim(5*10**(-2),2*10**3)
 plt.yscale('log')
 
-colorv=['y','g','b','r','c']
+colorv=[ '#1f77b4', '#ff7f0e', '#2ca02c','#d62728','#9467bd']
 #for n in range(0,l):
 #	plt.plot(t,deffana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,v),colorv[n])
 #for n in range(0,l):
 #	plt.plot(t,deffana(axx[2],axx[5],axx[0],axx[3],axx[1],axx[4],t,Da[n]/100,av,v0),colorv[n])
 #plt.plot(xsh,veco[0,:],label='D=1.2')
+for n in range(0,1):
+		plt.plot(xs,vec[n,:]*timefac,'o',color=colorv[n],label='D=%.0f*' %(Da[n]/10))
+for n in range(1,l):
+		plt.plot(xs,vec[n,:]*timefac,'o',color=colorv[n],label='D=%.0f' %(Da[n]/10))
 for n in range(0,l):
-		plt.plot(xs,vec[n,:],colorv[n]+'o',label='D=%.2f' %(Da[n]/10))
-for n in range(0,l):
-	plt.plot((pv-21.5)*0.8,deffred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],vvec[pv],Da[n]/10),colorv[n])
+	bv=b[n+1]
+	cv=c[n+1]
+	dv=d[n+1]
+	ev=e[n+1]
+	plt.plot((pv-20.25)*0.8,deffred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],comp((pv-20.25)*0.8,bv,cv,dv,ev),Da[n]/10)*timefac,colorv[n])
 	
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
@@ -349,14 +294,20 @@ plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('firing rate r [$10^3s^{-1}$]')
 #plt.yscale('log')
 
-colorv=['y','g','b','r','c']
+colorv=[ '#1f77b4', '#ff7f0e', '#2ca02c','#d62728','#9467bd']
 #for n in range(0,l):
 #	plt.plot(t,vana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,v),colorv[n])
 #plt.plot(xsh,veco[0,:],label='D=1.2')
+for n in range(0,1):
+		plt.plot(xs,g[n,:]*timefac,'o',color=colorv[n],label='D=%.0f*' %(Da[n]/10))
+for n in range(1,l):
+		plt.plot(xs,g[n,:]*timefac,'o',color=colorv[n],label='D=%.0f' %(Da[n]/10))
 for n in range(0,l):
-		plt.plot(xs,g[n,:],colorv[n]+'o',label='D=%.2f' %(Da[n]/10))
-for n in range(0,l):
-	plt.plot((pv-21.5)*0.8,vred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],vvec[pv],Da[n]/10),colorv[n])
+	bv=b[n+1]
+	cv=c[n+1]
+	dv=d[n+1]
+	ev=e[n+1]
+	plt.plot((pv-20.25)*0.8,vred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],comp((pv-20.25)*0.8,bv,cv,dv,ev),Da[n]/10)*timefac,colorv[n])
 
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
@@ -439,15 +390,21 @@ plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('Fano factor')
 plt.yscale('log')
 
-colorv=['y','g','b','r','c']
+colorv=[ '#1f77b4', '#ff7f0e', '#2ca02c','#d62728','#9467bd']
 t=np.arange(-0.1,0.3,0.01)
 #for n in range(0,l):
 #	plt.plot(t,fanoana(rbte,retb,params2[1],params2[3],params2[0],params2[2],t,Da[n]/100,v),colorv[n])
 #plt.plot(xsh,veco[0,:],label='D=1.2')
+for n in range(0,1):
+		plt.plot(xs,fano[n,:],'o',color=colorv[n],label='D=%.0f*' %(Da[n]/10))
+for n in range(1,l):
+		plt.plot(xs,fano[n,:],'o',color=colorv[n],label='D=%.0f' %(Da[n]/10))
 for n in range(0,l):
-		plt.plot(xs,fano[n,:],colorv[n]+'o',label='D=%.2f' %(Da[n]/10))
-for n in range(0,l):
-	plt.plot((pv-21.5)*0.8,fanored(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],vvec[pv],Da[n]/10),colorv[n])
+	bv=b[n+1]
+	cv=c[n+1]
+	dv=d[n+1]
+	ev=e[n+1]
+	plt.plot((pv-20.25)*0.8,fanored(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],comp((pv-20.25)*0.8,bv,cv,dv,ev) ,Da[n]/10),colorv[n])
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
 #plt.plot(xs,vec[6,:],label='D=4')
