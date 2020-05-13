@@ -13,7 +13,7 @@ from scipy.optimize import curve_fit
 def comp(x,a,b):
 	return a/x+b
 
-D=np.array([20,25,30,40,50])
+D=np.array([25,30,40,50])
 
 params=4
 dvalues=6
@@ -32,9 +32,9 @@ for k in eqfile:
 eqfile.close() 
 a1=np.zeros(params)
 a2=np.zeros(params)
-eqfile = open('detmocountparamparam.txt','w')
+eqfile = open('detmocountparamparam2.txt','w')
 for n in range(0,params):
-	popt,pcov = curve_fit(comp, D, b[n,1:6])
+	popt,pcov = curve_fit(comp, D, b[n,2:6])
 	a1[n]=popt[0]
 	a2[n]=popt[1]
 	for k3 in range(0,2): 
@@ -50,13 +50,13 @@ plt.ylabel('firing rate')
 #plt.yscale('log')
 for n in range(0,params):
 	plt.figure()
-	plt.plot(D,b[n,1:6])
+	plt.plot(D,b[n,2:6])
 	plt.plot(t,comp(t,a1[n],a2[n]))
-	plt.savefig('detmocountrinzelparam%.0f.pdf' %n)
+	plt.savefig('detmocountrinzelparam2%.0f.pdf' %n)
 for n in range(0,params):
 	plt.figure()
 	plt.plot(1/t,comp(t,a1[n],a2[n]))
-	plt.plot(1/D,b[n,1:6])
-	plt.savefig('detmocountrinzelparaminv%.0f.pdf' %n)
+	plt.plot(1/D,b[n,2:6])
+	plt.savefig('detmocountrinzelparaminv2%.0f.pdf' %n)
 
 

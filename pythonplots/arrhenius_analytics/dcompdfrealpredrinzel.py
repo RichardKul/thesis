@@ -59,7 +59,7 @@ ivalues=10
 xnew=np.arange(172+istart,172+istart+ivalues)*0.25
 
 
-file=open('/home/richard/mastergit/pythonplots/arrhenius_analytics/detmocountparamparam.txt',"r")
+file=open('/home/richard/mastergit/pythonplots/arrhenius_analytics/detmocountparamparam2.txt',"r")
 col,colx=[],[]
 for k in file:
 	row=k.split()
@@ -133,7 +133,7 @@ plt.plot([-10.8, -10.8], [10**(-26), 10**22], color='black', linestyle='-',label
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='upper right', bbox_to_anchor=(0.65, 0.55))
 plt.legend()#(loc='upper right', bbox_to_anchor=(0.8, 0.67))
 plt.tight_layout()
-plt.savefig('dcompdfpwnewpred2%s.pdf' %(date1+date2))
+plt.savefig('dcompdfpwnewpred3%s.pdf' %(date1+date2))
 
 
 plt.figure()
@@ -158,7 +158,7 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower right')
 plt.legend()
 plt.tight_layout()
-plt.savefig('gcompdfpwnewpred2%s.pdf' %(date1+date2))
+plt.savefig('gcompdfpwnewpred3%s.pdf' %(date1+date2))
 
 
 plt.figure()
@@ -183,4 +183,4 @@ plt.plot([-10.8, -10.8], [10**(-14), 10**25], color='black', linestyle='-',label
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower left')
 plt.legend()
 plt.tight_layout()
-plt.savefig('fcompdfpwnewpred2%s.pdf' %(date1+date2))
+plt.savefig('fcompdfpwnewpred3%s.pdf' %(date1+date2))

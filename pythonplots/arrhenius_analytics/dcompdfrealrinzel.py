@@ -32,6 +32,8 @@ def fanofun(x,rp,rm,v0,av):
 	return 2*deff(x,rp,rm,v0,av)/v(x,rp,rm,v0,av)
 def comp(x,b,c,d,e):
 	return b*x**3+c*x**2+d*x+e
+def fit(x,a,b):
+	return a/x+b
 
 timefac=1000 
 
@@ -58,30 +60,36 @@ ivalues=10
 epsilon = 0.00001
 
 
-params=4
-dvalues=6
-b=np.zeros(dvalues)
-c=np.zeros(dvalues)
-d=np.zeros(dvalues)
-e=np.zeros(dvalues)
-ii=0
-eqfile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/detmocountparam5.txt','r')
-for k in eqfile:
-	col=[]
+#params=4
+#dvalues=6
+#b=np.zeros(dvalues)
+#c=np.zeros(dvalues)
+#d=np.zeros(dvalues)
+#e=np.zeros(dvalues)
+#ii=0
+#eqfile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/detmocountparam5.txt','r')
+#for k in eqfile:
+#	col=[]
+#	row=k.split()
+#	for lll in range(0,params):	
+#		col.append(float(row[lll]))
+#	cola=np.array(col)
+#	b[ii]=cola[0]
+#	c[ii]=cola[1]
+#	d[ii]=cola[2]
+#	e[ii]=cola[3]
+#	ii=ii+1
+#eqfile.close() 
+
+file=open('/home/richard/mastergit/pythonplots/arrhenius_analytics/detmocountparamparam.txt',"r")
+col,colx=[],[]
+for k in file:
 	row=k.split()
-	for lll in range(0,params):	
-		col.append(float(row[lll]))
-	cola=np.array(col)
-	b[ii]=cola[0]
-	c[ii]=cola[1]
-	d[ii]=cola[2]
-	e[ii]=cola[3]
-	ii=ii+1
-eqfile.close() 
+	colx.append(float(row[0]))
+	col.append(float(row[1]))
+cola=np.array(col)
+colxa=np.array(colx)
 
-
-
-ivalues=10
 
 rbtoeq=np.zeros(ivalues)
 ubtoeq=np.zeros(ivalues)
@@ -207,11 +215,11 @@ for n in range(0,1):
 for n in range(1,l):
 		plt.plot(xs,vec[n,:]*timefac,'o',color=colorv[n],label='D=%.0f' %(Da[n]/10))
 for n in range(0,l):
-	bv=b[n+1]
-	cv=c[n+1]
-	dv=d[n+1]
-	ev=e[n+1]
-	plt.plot((pv-20.25)*0.8,deffred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],comp((pv-20.25)*0.8,bv,cv,dv,ev),Da[n]/10)*timefac,colorv[n])
+	#bv=b[n+1]
+	#cv=c[n+1]
+	#dv=d[n+1]
+	#ev=e[n+1]
+	plt.plot((pv-20.25)*0.8,deffred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],comp((pv-20.25)*0.8,fit(Da[n]/10,colxa[0],cola[0]),fit(Da[n]/10,colxa[1],cola[1]),fit(Da[n]/10,colxa[2],cola[2]),fit(Da[n]/10,colxa[3],cola[3])),Da[n]/10)*timefac,colorv[n])
 	
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
@@ -222,7 +230,7 @@ for n in range(0,l):
 #order = [2,3,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
-plt.savefig('dcompdfpwnew%s.pdf' %(date1+date2))
+plt.savefig('dcompdfpwnew2%s.pdf' %(date1+date2))
 
 g=np.zeros((l,ivalues1))
 ii=0
@@ -303,11 +311,11 @@ for n in range(0,1):
 for n in range(1,l):
 		plt.plot(xs,g[n,:]*timefac,'o',color=colorv[n],label='D=%.0f' %(Da[n]/10))
 for n in range(0,l):
-	bv=b[n+1]
-	cv=c[n+1]
-	dv=d[n+1]
-	ev=e[n+1]
-	plt.plot((pv-20.25)*0.8,vred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],comp((pv-20.25)*0.8,bv,cv,dv,ev),Da[n]/10)*timefac,colorv[n])
+	#bv=b[n+1]
+	#cv=c[n+1]
+	#dv=d[n+1]
+	#ev=e[n+1]
+	plt.plot((pv-20.25)*0.8,vred(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],comp((pv-20.25)*0.8,fit(Da[n]/10,colxa[0],cola[0]),fit(Da[n]/10,colxa[1],cola[1]),fit(Da[n]/10,colxa[2],cola[2]),fit(Da[n]/10,colxa[3],cola[3])),Da[n]/10)*timefac,colorv[n])
 
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
@@ -317,7 +325,7 @@ for n in range(0,l):
 #order = [2,3,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
-plt.savefig('gcompdfpwnew%s.pdf' %(date1+date2))
+plt.savefig('gcompdfpwnew2%s.pdf' %(date1+date2))
 
 
 fano=np.zeros((l,ivalues1))
@@ -400,11 +408,11 @@ for n in range(0,1):
 for n in range(1,l):
 		plt.plot(xs,fano[n,:],'o',color=colorv[n],label='D=%.0f' %(Da[n]/10))
 for n in range(0,l):
-	bv=b[n+1]
-	cv=c[n+1]
-	dv=d[n+1]
-	ev=e[n+1]
-	plt.plot((pv-20.25)*0.8,fanored(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],comp((pv-20.25)*0.8,bv,cv,dv,ev) ,Da[n]/10),colorv[n])
+	#bv=b[n+1]
+	#cv=c[n+1]
+	#dv=d[n+1]
+	#ev=e[n+1]
+	plt.plot((pv-20.25)*0.8,fanored(rbtoeq[pv],ubtoeq[pv],reqtob[pv],ueqtob[pv],comp((pv-20.25)*0.8,fit(Da[n]/10,colxa[0],cola[0]),fit(Da[n]/10,colxa[1],cola[1]),fit(Da[n]/10,colxa[2],cola[2]),fit(Da[n]/10,colxa[3],cola[3])),Da[n]/10),colorv[n])
 #plt.plot(xs,vec[4,:],label='D=2')
 #plt.plot(xs,vec[5,:],label='D=3')
 #plt.plot(xs,vec[6,:],label='D=4')
@@ -414,7 +422,7 @@ for n in range(0,l):
 #order = [2,3,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
-plt.savefig('fcompdfpwnew%s.pdf' %(date1+date2))
+plt.savefig('fcompdfpwnew2%s.pdf' %(date1+date2))
 
 #t=np.arange(-12,-9,0.01)
 #plt.figure()

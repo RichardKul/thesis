@@ -823,10 +823,26 @@ In the previous chapter, we clearly observed Giant Diffusion in three different 
 \\
 From a phenomenological point of view, there are two possible effects that a periodic signal can have on a system near the critical current. First, the effective diffusion coefficient $D_{eff}$ is very susceptible to changes in the bias current near the critical point. Therefore, already a signal with a small amplitude may periodically shift the system from irregular firing to quite regular firing, which should be visible in the output.
 Secondly, one might assume that a neuron transmit information better when it is in a state of regular firing than when it fires stochastically and produces a noisy signal. Thus, the great decrease of $D_{eff}$ outside the critical region could lead to an equal enhancement of signal transmission as the system changes from giant diffusion of the spike count to a more regular firing pattern.
-All in all, it is to be expected that signal transmission improves greatly when the bias current crosses its critical value.
-\subsection{Frequency Spectrum}
-
-\subsection{SNR}
+All in all, it is to be expected that signal transmission improves greatly when the bias current crosses its critical value.\\\\
+%\subsection{Frequency Spectrum}
+The changes induced by a periodic stimulus can be best observed in the frequency domain. That is why we will mainly focus on the power spectrum of our signal,
+\begin{equation}\label{powerspec}
+S(f)=\lim_{T\rightarrow\infty}\frac{\langle|\tilde{x}(f)|^2\rangle}{T}
+\end{equation}
+where $\tilde{x}$ is the fourier transform of the spike train,
+\begin{equation}
+\tilde{x}(f)=\int_{0}^{T}dt \exp(2\pi ift)x(t)
+\end{equation}
+The averaging in equation \ref{powerspec} is again done by cutting the spike train in segments and doing a separate Fourier transform for each segment. Hereby we had to pay respect to the wide range of frequencies occurring in our simulations. This means that we chose a short and a longer segment length, corresponding to low-frequency and high-frequency analysis, respectively and put the spectra together at an intermediate frequency.
+\subsection{$I_{Na,p}+I_K$ model with saddle-node bifurcation}
+\begin{figure}[H]
+	\label{snspec}
+	\hspace*{-0.5cm}
+	\subfigure[]{
+		\includegraphics[scale=0.5]{specpaper6.pdf}}
+	\subfigure[]{	\includegraphics[scale=0.5]{specpaper7.pdf}}
+	\caption{Spike train power spectra for the $I_{Na,p}+I_K$ model with saddle-node bifurcation. Peaks at signal and spiking frequency as well the low- and high-frequency limits agree with the theory.}
+\end{figure}
 \section{Conclusions}
 \bibliography{quellen}
 \bibliographystyle{ieeetr}
