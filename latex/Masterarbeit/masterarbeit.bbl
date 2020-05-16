@@ -81,4 +81,14 @@
 {John Rinzel}, ``{Excitation dynamics: insights from simplified membrane
   models},'' {\em Federation Proc 44}, 1985.
 
+\bibitem{speclim}
+{R. F. O. Pena et al.}, ``{Self-Consistent Scheme for Spike-Train Power Spectra
+  in Heterogeneous Sparse Networks},'' {\em Frontiers in Comp. Neuroscience},
+  2018.
+
+\bibitem{speclim2}
+{S. Vellmer and B. Lindner}, ``{Theory of spike-train power spectra for
+  multidimensional integrate-and-fire neurons},'' {\em Phys. Rev. Research},
+  2019.
+
 \end{thebibliography}

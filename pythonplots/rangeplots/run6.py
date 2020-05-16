@@ -14,11 +14,11 @@ for k in file:
 	row=k.split()
 	x.append(float(row[0]))
 	y.append(float(row[1]))
-	z.append(float(row[3]))
+	z.append(float(row[2]))
 	#a.append(float(row[4]))
 ax=np.array(x)
 ay=np.array(y)
-az=40*np.array(z)-50
+az=np.array(z)
 #aa=-np.array(a)/40
 
 matplotlib.rcParams.update({'font.size': 22})
@@ -33,7 +33,7 @@ plt.xlim(39.97,40.17)
 axs.plot(ax/1000,ay,'black')
 #plt.plot(ax/1000,az)
 #plt.plot(ax,aa)
-axs.spines['right'].set_visible(False)
-axs.spines['top'].set_visible(False)
+#axs.spines['right'].set_visible(False)
+#axs.spines['top'].set_visible(False)
 plt.tight_layout()
 plt.savefig('realstateanhopf52sh.pdf')

@@ -114,6 +114,7 @@ plt.figure()
 plt.xlabel('bias current')
 plt.ylabel('SNR')
 Dtot=np.array([25,30,35,45])
+#Dtot=np.array([2,3,4,5])
 l2=len(Dtot)
 t=np.arange(-18,-8,0.1)
 #xs=np.arange(-21.25+istart,-21.25+istart+ivalues)*0.8
@@ -122,14 +123,21 @@ plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
-colorv=['r','y','c','g','k','b'] # 6 colors
+#colorv=['r','y','c','g','k','b'] # 6 colors
+colorv=['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728']
 #colorv=['y','g','b'] # 3 colors
 #colorv=['y','c','g','k','b'] # 5 colors
-for n in range(0,l2):
-	plt.plot(xnew,SNR[n,:],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.01))
-	plt.plot(xnew[1:ivalues-1],snrcor(params[0,1:ivalues-1],params[2,1:ivalues-1],params[1,1:ivalues-1],params[3,1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])
+for n in range(0,1):
+	plt.plot(xnew,SNR[n,:],'o',color=colorv[n],label='D=%.2f*' %(Dtot[n]*0.01))
+	plt.plot(xnew[1:ivalues-1],snrcor(params[0,1:ivalues-1],params[2,1:ivalues-1],params[1,1:ivalues-1],params[3,1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])#,label='D=%.2f' %(Dtot[n]*0.01))
+for n in range(1,l2):
+	plt.plot(xnew,SNR[n,:],'o',color=colorv[n],label='D=%.2f' %(Dtot[n]*0.01))
+	plt.plot(xnew[1:ivalues-1],snrcor(params[0,1:ivalues-1],params[2,1:ivalues-1],params[1,1:ivalues-1],params[3,1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])#,label='D=%.2f' %(Dtot[n]*0.01))
+
+#plt.plot([0.163, 0.163], [10**(-74), 10**(45)], color='black', linestyle='-',label='$I_{crit}$')
 plt.xlim(-0.06,0.28)
 	#plt.plot(xnew,ratenew,colorv[n])
 plt.legend()
-plt.savefig('snrtwostateneurcorsh.pdf')
+plt.savefig('snrtwostateneurcorsh3.pdf')
+#plt.savefig('snrpredneur.pdf')
 #plt.savefig('snrinzelonly.pdf')

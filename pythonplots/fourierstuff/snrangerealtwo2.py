@@ -12,7 +12,7 @@ from scipy.fftpack import fft, ifft
 
 from scipy.optimize import curve_fit
 
-matplotlib.rcParams.update({'font.size': 14})
+#matplotlib.rcParams.update({'font.size': 14})
 
 def barrier(a,b,x):
 	return a * x + b
@@ -192,7 +192,7 @@ plt.yscale('log')
 #plt.xlim(4*10**(-4),100)
 #colorv=['g','y','b','r','c']
 for n in range(0,l):
-	plt.plot(xs,(SNR[n,:]-1)/scale[n,:],label='D=%.2f' %(D[n]*0.01))
+	plt.plot(xs,abs(SNR[n,:]-1)/scale[n,:],label='D=%.2f' %(D[n]*0.01))
 #for n in range(0,l):	
 #	plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.01,av,v0)/8,colorv[n])
 plt.plot([0.163, 0.163], [5*10**(-5), 5*10**(-2)], color='black', linestyle='-',label='$I_{crit}$')
@@ -205,4 +205,4 @@ plt.plot([0.163, 0.163], [5*10**(-5), 5*10**(-2)], color='black', linestyle='-',
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
 plt.tight_layout()
-plt.savefig('snrealonly2crit2.pdf')
+plt.savefig('snrealonly2crit4.pdf')

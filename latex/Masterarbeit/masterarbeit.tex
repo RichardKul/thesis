@@ -235,7 +235,7 @@ $C=1$ , $g_L=1$ , $E_L=-78$ , $g_{Na}=4$ , $E_{Na}=60$ , $g_K=4$ , $E_K=-90$.
 \\
 \intertext{$K^+$ current:} k_n&=5 , V_{1/2,n}=-45 , \tau(V)=\text{const}=1.
 \end{align*}
-\subsubsection{System without noise}
+\subsubsection{System without noise}\label{anhopfwon}
 Due to the parameter adjustments one obtains a slightly different phase space picture:
 \begin{figure}[H]
 	\centering
@@ -249,7 +249,7 @@ The new nullclines yield only one equilibrum point. Computing the Jacobian matri
 Complex eigenvalues with negative real parts indicate a stable focus. As before, the system performs large oscillations around the focus when it is in the running state. When it is near the equilibrium, it converges fast to it, with the exception that it doesn't approach it directly but oscillates around it with decreasing radius.
 In contrast to the previous case, the system now not only consists of stable limit cycle and equilibrium but also an unstable limit cycle in between the two stable configurations. Considering that the system is under the influence of noise, it will not spend much time in the unstable state and quickly collapse into a stable configuration.\\
 Upon increase of the bias current, the unstable limit cycle shrinks. At $I\approx 48.9$, it falls together with the stable equilibrium and makes it lose stability. This transition is called a subcritical Andronov-Hopf bifurcation.\\
-While in the first model the states were characterized by oscillations around different equilibria, the state vector now only rotates around one equilibrium point. The current state can thereby be identified via the radius of the oscillations. Resting initial conditions result in a small radius and asymptotic convergence to the focus and spiking initial conditions just lead to regular firing with a larger radius, as can be seen in figure \ref{subfigah}.
+While in the first model the states were characterized by oscillations around different equilibria, the state vector now only rotates around one equilibrium point. The current state can thereby be identified via the radius of the oscillations. Resting initial conditions result in a small radius and asymptotic convergence to the focus and spiking initial conditions just lead to regular firing with a larger radius, as can be seen in figure \ref{subfigah}. Compared to the first model, the spiking limit cycle is not an ellipse anymore but displays some irregularities.
 \begin{figure}[H]
 	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfnbblack.pdf}} 
 	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfblack.pdf}}\\	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfnbvtblack.pdf}} 
@@ -399,7 +399,7 @@ A more common way to measure spiking variability in neurons is the Fano factor, 
 \begin{align*}
 F=\frac{\left\langle \Delta N^2(t) \right\rangle}{\left\langle N(t)\right\rangle}=\frac{2D_{eff}}{\langle v\rangle}
 \end{align*}
-\subsubsection{System with signal}
+\subsubsection{System with signal}\label{sws}
 When bistable neurons are subjected to a periodic stimulus, they should change their firing pattern accordingly. This is best visible in the power spectrum of the spike train, 
 \begin{equation}
 S(f)=\lim_{T\rightarrow\infty}\frac{\langle|\tilde{x}|^2\rangle}{T}
@@ -688,7 +688,7 @@ Due to the exponential (and thereby fast decaying) distribution of the resting a
 	\includegraphics[scale=1]{tranratesneur31.pdf}\caption{Transition rates between the states for a couple different noise intensities}
 	\label{tranrateneur}
 \end{figure}
-As expected, the transition rates grow with the noise intensity. Furthermore, the transition rates from running state to equilibrium decrease with the bias current, while the rates of the opposite transition grow. What this basically means is that the higher the bias current, the higher the likelihood of getting into the running state and the longer are the residence times in this state, which is consistent with the phenomenology of the system. The last observation to discuss here are the intersection points of the rates at the same noise intensity. These can all be found at a bias current of about 0.07 $\mu A/cm^2$, corresponding to the maxima of the effective diffusion coefficients in figure \ref{deff}.
+As expected, the transition rates grow with the noise intensity. Furthermore, the transition rates from running state to equilibrium decrease with the bias current, while the rates of the opposite transition grow. What this basically means is that the higher the bias current, the higher the likelihood of getting into the running state and the longer are the residence times in this state, which is consistent with the phenomenology of the system. The last observation to discuss here are the intersection points of the rates at the same noise intensity. These can all be found at a bias current of about 0.07 $\mu A/cm^2$, corresponding to the maxima of the effective diffusion coefficients in figure \ref{deff}. Thus, diffusion gets maximal when the transition rates are of equal size and the system stays in both states equally long, which agrees with our understanding of the system.
 \subsubsection{Arrhenius Plots and effective potential barriers}
 For a given bias current, the transition rates can be put into an Arrhenius plot.
 \begin{figure}[H]
@@ -833,8 +833,9 @@ where $\tilde{x}$ is the fourier transform of the spike train,
 \begin{equation}
 \tilde{x}(f)=\int_{0}^{T}dt \exp(2\pi ift)x(t)
 \end{equation}
-The averaging in equation \ref{powerspec} is again done by cutting the spike train in segments and doing a separate Fourier transform for each segment. Hereby we had to pay respect to the wide range of frequencies occurring in our simulations. This means that we chose a short and a longer segment length, corresponding to low-frequency and high-frequency analysis, respectively and put the spectra together at an intermediate frequency.
+The averaging in equation \ref{powerspec} is again done by cutting the spike train in segments and doing a separate Fourier transform for each segment. Hereby we had to pay respect to the wide range of frequencies occurring in our simulations. This means that we chose a short and a longer segment length, corresponding to low-frequency and high-frequency sampling, respectively and put the spectra together at an intermediate frequency.
 \subsection{$I_{Na,p}+I_K$ model with saddle-node bifurcation}
+A lot of the characteristics of the spike train power spectrum can be well understood using the spike count statistics. For a start, there is a visible maximum at the firing rate in the spiking state, followed by a few higher harmonics. Next, the zero-frequency limit should approximately match double the effective diffusion coefficient, $S(f\rightarrow0)\approx2D_{eff}$, and at high frequencies, the spectrum is expected to saturate at the overall firing rate $\left<r\right>$ \cite{speclim}\cite{speclim2}. Both of these predictions show good agreement with the spectra shown in figure \ref{snspec}. Lastly, one should mention that the membrane voltage was influenced by a periodic current, resulting in a small delta-peak at the signal frequency. The signal-to-noise ration SNR can now be calculated from the height of the delta peak and the background amplitude, which is simply the average spectral power in the vicinity of the signal peak.
 \begin{figure}[H]
 	\label{snspec}
 	\hspace*{-0.5cm}
@@ -843,6 +844,61 @@ The averaging in equation \ref{powerspec} is again done by cutting the spike tra
 	\subfigure[]{	\includegraphics[scale=0.5]{specpaper7.pdf}}
 	\caption{Spike train power spectra for the $I_{Na,p}+I_K$ model with saddle-node bifurcation. Peaks at signal and spiking frequency as well the low- and high-frequency limits agree with the theory.}
 \end{figure}
+The theory presented in section \ref{sws} required a weak and slow signal to find an estimate for the SNR. "Weak" in this case simply implies that the signal amplitude is small compared to the range of bias currents. Therefore, the perturbed system just slightly oscillates around the unperturbed configuration, instead of completely changing its behavior. What the keyword "slow" means, can be best seen in the power spectrum. The background amplitude shall be approximated by the zero-frequency limit. This is only valid if the signal peak lies on the plateau of the spectrum.\\
+Since these criteria are fulfilled, we can now take a look at the SNR we obtain from these spectra.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{snrealonly2crit3.pdf}\caption{Signal-to-noise ratio SNR for the $I_{Na,p}+I_K$ model with saddle-node bifurcation}
+	\label{specneur}
+\end{figure}
+To begin with, the SNR greatly increases after passing the critical current by up to two orders of magnitude, thereby confirming our assumptions. However, the curves do not intersect at this point but only at a higher value. This may indicate that the noise intensities are still too low, yielding some finite-size effects. Next, all curves exhibit a maximum at almost the same bias current as $D_{eff}$, where the inverse proportionality of SNR and $D_{eff}$ would imply a minimum. This can be explained by including the firing rate into our considerations. Near the maximal $D_{eff}$, the firing rate displays a very steep increase. Therefore, it is very susceptible to even small adjustments as induced by the signal. This effect outweighs the maximal diffusion in this case. The last aspect to discuss here is the vanishing SNR at low bias current. With regard to this observation, one has to keep in mind that neurons encode information in their spiking pattern. The neuron therefore needs to produce spikes to transport information. However, the spike count goes to zero at low bias currents, making signal transmission impossible and leading to a vanishing SNR.
+\\
+Fortunately, there is also a way to describe the SNR with the two-state theory, potentially leading to a deeper insight into our findings.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{snrtwostateneurcorsh3.pdf}\caption{Comparison of Two-State theory with measured SNR for the $I_{Na,p}+I_K$ model with saddle-node bifurcation. The curve for $D=0.25$ is a complete prediction using the transition rates of the other noise intensities.}
+	\label{specneurtst}
+\end{figure}
+The two-state theory is able to describe the curvature of the SNR up to a value of about $I=0.2$, even at low noise intensities. After that, the theory overestimates the SNR. This directly corresponds to the underestimation of $D_{eff}$ in the previous chapter, as we now have an anti-proportionality to $D_{eff}$.
+Because of the good agreement with the other data points and prediction of $D=0.25$, we can now try to predict the SNR at lower noise intensities with the Two-State Theory.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{snrpredneur.pdf}\caption{Prediction of SNR at low noise  using the Two-State Theory for the $I_{Na,p}+I_K$ model with saddle-node bifurcation.}
+	\label{snrpredsn}
+\end{figure}
+At low noise, the Two-State model predicts a monotone increase of the SNR. Furthermore, all curves now intersect at the same point where the predicted curves of $D_{eff}$ cross each other, so we have reached consistency in this regard. The fact that the curves seem to increase endlessly has to be considered carefully. After the system undergoes the saddle-node bifurcation, only the spiking state exists. At this point, the signal can not induce transitions between the two firing regimes anymore, so one should expect that the SNR saturates eventually.
+\subsection{$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}
+Seeing that signal transmission could be enhanced by multiple magnitudes near the critical current for one model, it would be interesting to find out whether this holds true for other models and which factors may have an impact there. The power spectra look similar to the first model: the curves start approximately at $2D_{eff}$, then decrease to a minimum shortly before the peak at the (maximal) firing rate appears, and finally converge to the overall firing rate. Furthermore, it is noticeable that the spectra display more maxima at higher frequencies than before, which may be due to the more irregular stable limit cycle, as mentioned in section \ref{anhopfwon}.
+\begin{figure}[H]
+	\label{anhopfspec}
+	\hspace*{-0.5cm}
+	\subfigure[]{
+		\includegraphics[scale=0.5]{specanhopf2.pdf}}
+	\subfigure[]{	\includegraphics[scale=0.5]{specanhopf3.pdf}}
+	\caption{Spike train power spectra for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation. Peaks at signal and spiking frequency as well the low- and high-frequency limits agree with the theory.}
+\end{figure}
+Finally, one should again note that the criterion of small signal frequencies is well fulfilled in this case, which leads us to the SNR over the whole range of bias currents in figure \ref{specanhopf}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{snranhopfcrit.pdf}\caption{Signal-to-noise ratio SNR for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}
+	\label{specanhopf}
+\end{figure}
+The N-shaped curvature is more pronounced than before, but apart from that, we have a similar picture. After the critical current, the SNR rises by up to three orders of magnitude and the intersection point is located left of $I_{crit}$. 
+\\
+Next, we will take a look at the Two-state theory to confirm the reliability of our measurements and predict the outcome at lower noise intensities $D$.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{snrtwostatecompanhopf7mnofit3.pdf}\caption{Comparison of Two-State Theory with measured SNR for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation. The curve for $D=0.15$ is a complete prediction using the transition rates of the other noise intensities.}
+ 	\label{specanhopftst}
+\end{figure}
+Almost over the whole range of bias currents, the Two-State Theory shows excellent agreement with our measurements. Only at the highest current, the theory gives slightly overestimates the SNR. This now allows to go to lower noise intensities.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{snranhopfpred.pdf}\caption{Prediction of SNR at low noise  using the Two-State Theory for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation.}
+	\label{snrpredanhopf}
+\end{figure}
+Surprisingly, the N-shape remains until $D=0.03$, before the curves finally become monotone. We see that the intersection point is now slightly left of the critical current, similarly to $D_{eff}$ at low noise. Even though the noise intensities has decreased by just an order of magnitude, the SNR now went up by more than 40 orders of magnitude after the critical current, underlining the potential that lies within these systems.
+\subsection{Rinzel model with saddle-node bifurcation}
 \section{Conclusions}
 \bibliography{quellen}
 \bibliographystyle{ieeetr}

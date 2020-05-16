@@ -25,8 +25,8 @@ def rprime(r0,r0s,Us,D):
 def snrcor(r0p,r0m,up,um,ups,ums,D,av,v0,r0ps,r0ms):
 	return ((av*r(r0m,um,D)*(r(r0m,um,D)+r(r0p,up,D))+v0*(rprime(r0m,r0ms,ums,D)-rprime(r0p,r0ps,ups,D))*r(r0p,up,D)*r(r0m,um,D))**2)/((r(r0p,up,D)+r(r0m,um,D))*v0**2*r(r0p,up,D)*r(r0m,um,D))
 
-date3='realanhopf11flog'
-date2='realanhopf19flog'
+date2='realanhopf11flog'
+date3='realanhopf19flog'
 
 ivalues=14
 
@@ -37,32 +37,50 @@ Dvar=[]
 D=D1+D2+D3+Dvar
 l=len(D1)
 Da=np.array(D)
-btoeq=np.zeros((l,ivalues))
-eqtob=np.zeros((l,ivalues))
-params=np.zeros((4,ivalues))
-for k2 in range(0,ivalues):
-	x=[]
-	ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/rate%s%d.txt' %(date3+date2,k2),'r')
-	for k4 in ratefile:
-		row=k4.split()
-		x.append(float(row[0]))
-	ax=np.array(x)
-	for k in range(0,l):
-		btoeq[k][k2]=1/ax[k]
-		eqtob[k][k2]=1/ax[k+l]
+#btoeq=np.zeros((l,ivalues))
+#eqtob=np.zeros((l,ivalues))
+#params=np.zeros((4,ivalues))
+#for k2 in range(0,ivalues):
+#	x=[]
+#	ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/rate%s%d.txt' %(date3+date2,k2),'r')
+#	for k4 in ratefile:
+#		row=k4.split()
+#		x.append(float(row[0]))
+#	ax=np.array(x)
+#	for k in range(0,l):
+#		btoeq[k][k2]=1/ax[k]
+#		eqtob[k][k2]=1/ax[k+l]
 
-xs=np.zeros(l)
-for b in range(0,l):
-	xs[b]=100/Da[b]
+#xs=np.zeros(l)
+#for b in range(0,l):
+#	xs[b]=100/Da[b]
+#for k2 in range(0,ivalues):
+#	popt,pcov = curve_fit(func, xs, btoeq[:,k2])
+#	params[0][k2]=popt[0]
+#	params[1][k2]=popt[1]
+#	popt,pcov = curve_fit(func, xs, eqtob[:,k2])
+#	params[2][k2]=popt[0]
+#	params[3][k2]=popt[1]
+#rbte=np.mean(params[0,:])
+#retb=np.mean(params[2,:])
+
+rbtoeq=np.zeros(ivalues)
+ubtoeq=np.zeros(ivalues)
+reqtob=np.zeros(ivalues)
+ueqtob=np.zeros(ivalues)
+
 for k2 in range(0,ivalues):
-	popt,pcov = curve_fit(func, xs, btoeq[:,k2])
-	params[0][k2]=popt[0]
-	params[1][k2]=popt[1]
-	popt,pcov = curve_fit(func, xs, eqtob[:,k2])
-	params[2][k2]=popt[0]
-	params[3][k2]=popt[1]
-rbte=np.mean(params[0,:])
-retb=np.mean(params[2,:])
+    x=[]
+    ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/param%s%d.txt' %(date3+date2,k2),'r')
+    for k4 in ratefile:
+        row=k4.split()
+        x.append(float(row[0]))
+    ax=np.array(x)
+    rbtoeq[k2]=x[0]
+    ubtoeq[k2]=x[1]
+    reqtob[k2]=x[2]
+    ueqtob[k2]=x[3]
+
 
 ups=np.zeros(ivalues-2)
 ums=np.zeros(ivalues-2)
@@ -74,10 +92,10 @@ istep=0.25
 xnew=np.arange(172+istart,172+istart+ivalues)*istep
 
 for k3 in range(0,ivalues-2):
-	ups[k3]=(params[1][k3+2]-params[1][k3])/(2*istep)
-	ums[k3]=(params[3][k3+2]-params[3][k3])/(2*istep)
-	r0ps[k3]=(params[0][k3+2]-params[0][k3])/(2*istep)
-	r0ms[k3]=(params[2][k3+2]-params[2][k3])/(2*istep)
+	ups[k3]=(ubtoeq[k3+2]-ubtoeq[k3])/(2*istep)
+	ums[k3]=(ueqtob[k3+2]-ueqtob[k3])/(2*istep)
+	r0ps[k3]=(rbtoeq[k3+2]-rbtoeq[k3])/(2*istep)
+	r0ms[k3]=(reqtob[k3+2]-reqtob[k3])/(2*istep)
 
 N0=50000000
 dt0=0.005
@@ -117,6 +135,7 @@ plt.figure()
 plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('Signal-to-noise ratio SNR')
 Dtot=np.array([10,15,20,25,30])
+#Dtot=np.array([1,2,3,4,5])
 l2=len(Dtot)
 t=np.arange(-18,-8,0.1)
 #xs=np.arange(-21.25+istart,-21.25+istart+ivalues)*0.8
@@ -125,14 +144,19 @@ plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
 #plt.xlim(4*10**(-4),100)
-colorv=['r','y','c','g','k','b'] # 6 colors
+colorv=['r','#1f77b4', '#ff7f0e', '#2ca02c', '#d62728'] # 6 colors
 #colorv=['y','g','b'] # 3 colors
 #colorv=['y','c','g','k','b'] # 5 colors
-for n in range(1,l2):
-	plt.plot(xnew,SNR[n,:],label='D=%.2f' %(Dtot[n]*0.01))
-	#plt.plot(xnew[1:ivalues-1],snrcor(params[0,1:ivalues-1],params[2,1:ivalues-1],params[1,1:ivalues-1],params[3,1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])#plt.plot(xnew,ratenew,colorv[n])
-plt.plot([46.1, 46.1], [10**(-6), 10**(-2)], color='black', linestyle='-',label='$I_{crit}$')
+for n in range(1,2):
+	plt.plot(xnew[1:ivalues-1],SNR[n,1:ivalues-1],'o',label='D=%.2f*' %(Dtot[n]*0.01))
+	plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])
+for n in range(2,l2):
+	plt.plot(xnew[1:ivalues-1],SNR[n,1:ivalues-1],'o',label='D=%.2f' %(Dtot[n]*0.01))
+	plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])
+#,label='D=%.2f' %(Dtot[n]*0.01))#plt.plot(xnew,ratenew,colorv[n])
+#plt.plot([46.1, 46.1], [10**(-48), 10**(37)], color='black', linestyle='-',label='$I_{crit}$')
 plt.legend()
 plt.tight_layout()
-plt.savefig('snrtwostateanhopf7mnofitcrit.pdf')
+plt.savefig('snrtwostatecompanhopf7mnofit3.pdf')
+#plt.savefig('snranhopfpred.pdf')
 #plt.savefig('snrinzelonly.pdf')

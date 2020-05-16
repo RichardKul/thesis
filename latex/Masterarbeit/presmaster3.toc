@@ -1,0 +1,14 @@
+\babel@toc {ngerman}{}
+\beamer@sectionintoc {1}{Motivation}{2}{0}{1}
+\beamer@sectionintoc {2}{Brownsche Teilchen im gekippten Kosinuspotential}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Theorie}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Simulation}{6}{0}{2}
+\beamer@sectionintoc {3}{Nervenmodell}{7}{0}{3}
+\beamer@sectionintoc {4}{$I_{Na,p}+I_K$-Modell mit Andronov-Hopf Bifurkation}{9}{0}{4}
+\beamer@subsectionintoc {4}{1}{Theorie}{10}{0}{4}
+\beamer@subsectionintoc {4}{2}{Simulation}{13}{0}{4}
+\beamer@sectionintoc {5}{Signal"ubertragung}{19}{0}{5}
+\beamer@sectionintoc {6}{$I_{Na,p}+I_K$-Modell mit Andronov-Hopf Bifurkation}{21}{0}{6}
+\beamer@sectionintoc {7}{Zusammenfassung}{26}{0}{7}
+\beamer@subsectionintoc {7}{1}{Zwei-Zustands-Theorie}{28}{0}{7}
+\beamer@subsectionintoc {7}{2}{Zwei-Zustands-Theorie}{35}{0}{7}
