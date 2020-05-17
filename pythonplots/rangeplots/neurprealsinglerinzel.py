@@ -17,9 +17,11 @@ import matplotlib.pyplot as plt
 timefac=1000
 
 date='realrinzelrangelong26d1'
+#date='realrinzelrangeshort1mtf1'
 date1='realrinzelrange26d1'
 date2='realrinzelrangeshort26d1'
 D=[200]
+#D=[50]
 D1=[250,300]
 D2=[400,500]
 Dtot=D+D1+D2
@@ -181,7 +183,7 @@ plt.figure()
 
 #xs=np.arange(0.25,2,0.25)
 plt.xlabel('bias current I $[\mu A/cm^2]$')
-plt.ylabel('Fano factor')
+plt.ylabel('Fano factor F')
 plt.yscale('log')
 #plt.xscale('log')
 for n in range(0,l):
@@ -278,8 +280,8 @@ xburst=np.arange(-0.20,0.31,0.01)
 plt.figure()
 #xs=np.arange(-0.75,4.25,0.25)
 #xs=np.arange(0.25,2,0.25)
-plt.xlabel('bias current I')
-plt.ylabel('firing rate [$s^{-1}$]')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('average firing rate <v> [$s^{-1}$]')
 #plt.yscale('log')
 #plt.xscale('log')
 #plt.plot(xburst,cola/T,label='measured bursting rate',color='black')

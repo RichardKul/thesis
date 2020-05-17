@@ -35,6 +35,8 @@ def comp(x,b,c,d,e):
 def fit(x,a,b):
 	return a/x+b
 
+matplotlib.rcParams.update({'font.size': 18})
+
 timefac=1000 
 
 D2=[250,300]
@@ -229,8 +231,9 @@ for n in range(0,l):
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [2,3,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.legend()
-plt.savefig('dcompdfpwnew2%s.pdf' %(date1+date2))
+plt.legend(bbox_to_anchor=(0.4, 0.6))
+plt.tight_layout()
+plt.savefig('dcompdfpwnew2big%s.pdf' %(date1+date2))
 
 g=np.zeros((l,ivalues1))
 ii=0
@@ -325,7 +328,8 @@ for n in range(0,l):
 #order = [2,3,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
-plt.savefig('gcompdfpwnew2%s.pdf' %(date1+date2))
+plt.tight_layout()
+plt.savefig('gcompdfpwnew2big%s.pdf' %(date1+date2))
 
 
 fano=np.zeros((l,ivalues1))
@@ -422,7 +426,8 @@ for n in range(0,l):
 #order = [2,3,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
-plt.savefig('fcompdfpwnew2%s.pdf' %(date1+date2))
+plt.tight_layout()
+plt.savefig('fcompdfpwnew2big%s.pdf' %(date1+date2))
 
 #t=np.arange(-12,-9,0.01)
 #plt.figure()

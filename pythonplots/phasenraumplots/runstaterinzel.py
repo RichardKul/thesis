@@ -49,27 +49,27 @@ for k2 in edgepointfile:
 	edge.append(int(row2[0]))
 
 
-date='rinzela12shalt3'
+date='rinzela12time'
 I=-10
 
-#v=open('/home/richard/cppworkshop/phasev%s%d.txt' %(date,I),"r")
-v=open('/home/richard/outhome/phasev%s%d.txt' %(date,I),"r")
+v=open('/home/richard/cppworkshop/phasev%s%d.txt' %(date,I),"r")
+#v=open('/home/richard/outhome/phasev%s%d.txt' %(date,I),"r")
 vv=[]
 for k in v:
  num = float(k.rstrip())
  vv.append(num)
 av=np.array(vv)
 vl=len(av)
-#n=open('/home/richard/cppworkshop/phasen%s%d.txt' %(date,I),"r")
-n=open('/home/richard/outhome/phasen%s%d.txt' %(date,I),"r")
+n=open('/home/richard/cppworkshop/phasen%s%d.txt' %(date,I),"r")
+#n=open('/home/richard/outhome/phasen%s%d.txt' %(date,I),"r")
 vn=[]
 for k2 in n:
  num = float(k2.rstrip())
  vn.append(num)
 avn=np.array(vn)
 nl=len(avn)
-#z=open('/home/richard/cppworkshop/phasez%s%d.txt' %(date,I),"r")
-z=open('/home/richard/outhome/phasez%s%d.txt' %(date,I),"r")
+z=open('/home/richard/cppworkshop/phasez%s%d.txt' %(date,I),"r")
+#z=open('/home/richard/outhome/phasez%s%d.txt' %(date,I),"r")
 
 vz=np.zeros((nl,vl))
 v=0
@@ -93,10 +93,10 @@ plt.plot(vec,winf(SV,vec),'orange',label='W-nullcline')
 #plt.plot(-62.5701,0.00054509, 'bo')
 plt.ylim(-0.1,avn[-1])
 #plt.xlim(8,12)
-#plt.suptitle('equil. time [ms]')
-plt.suptitle('spikes/starting point')
+plt.suptitle('equil. time [ms]')
+#plt.suptitle('spikes/starting point')
 plt.xlabel('initial $V_0$')
-plt.ylabel('initial $n_0$')
+plt.ylabel('initial $W_0$')
 plt.legend(loc='upper right')
 plt.tight_layout()
 plt.savefig('contour%s.pdf' %date)
