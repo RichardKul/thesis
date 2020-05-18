@@ -49,7 +49,7 @@ date3='realanhopf11flog'
 
 
 istart=4
-ivalues=14
+ivalues=12
 
 xnew=np.arange(172+istart,172+istart+ivalues)*0.25
 
@@ -77,7 +77,7 @@ for ls in range(0,ivalues):
 			break
 
 
-ivalues=14
+ivalues=12
 
 rbtoeq=np.zeros(ivalues)
 ubtoeq=np.zeros(ivalues)
@@ -111,7 +111,7 @@ date1='realanhopf26flog'
 ii=0
 
 istart1=4
-ivalues1=14
+ivalues1=12
 
 vec=np.zeros((l,ivalues1))
 
@@ -130,7 +130,7 @@ for x in D1:
 	ii=ii+1
 
 istart2=4
-ivalues2=14
+ivalues2=12
 
 for x in D2:
 	col2,colx2=[],[]	
@@ -216,7 +216,7 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
 plt.tight_layout()
-plt.savefig('dcompdfpwnew2%s.pdf' %(date1+date2))
+plt.savefig('dcompdfpwnew2sh%s.pdf' %(date1+date2))
 
 g=np.zeros((l,ivalues1))
 ii=0
@@ -309,7 +309,7 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
 plt.tight_layout()
-plt.savefig('gcompdfpwnew2%s.pdf' %(date1+date2))
+plt.savefig('gcompdfpwnew2sh%s.pdf' %(date1+date2))
 
 
 fano=np.zeros((l,ivalues1))
@@ -404,7 +404,7 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
 plt.tight_layout()
-plt.savefig('fcompdfpwnew2%s.pdf' %(date1+date2))
+plt.savefig('fcompdfpwnew2sh%s.pdf' %(date1+date2))
 
 #t=np.arange(-12,-9,0.01)
 #plt.figure()

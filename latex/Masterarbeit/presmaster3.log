@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  15 MAY 2020 13:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  18 MAY 2020 15:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1232,7 +1232,7 @@ n input line 553.
  [13
 
  <./gneur3critrealanhopf26flogrealanhopf19flog.pdf>]
-<dneur3critrealanhopf26flogrealanhopf19flog.pdf, id=879, 462.52798pt x 346.8960
+<dneur3critrealanhopf26flogrealanhopf19flog.pdf, id=884, 462.52798pt x 346.8960
 1pt>
 File: dneur3critrealanhopf26flogrealanhopf19flog.pdf Graphic file (type pdf)
 <use dneur3critrealanhopf26flogrealanhopf19flog.pdf>
@@ -1242,7 +1242,7 @@ n input line 557.
  [14
 
  <./dneur3critrealanhopf26flogrealanhopf19flog.pdf>]
-<fneur3critrealanhopf26flogrealanhopf19flog.pdf, id=957, 462.52798pt x 346.8960
+<fneur3critrealanhopf26flogrealanhopf19flog.pdf, id=962, 462.52798pt x 346.8960
 1pt>
 File: fneur3critrealanhopf26flogrealanhopf19flog.pdf Graphic file (type pdf)
 <use fneur3critrealanhopf26flogrealanhopf19flog.pdf>
@@ -1252,7 +1252,7 @@ n input line 561.
  [15
 
  <./fneur3critrealanhopf26flogrealanhopf19flog.pdf>]
-<dcompdfpwnew2realanhopf26flogrealanhopf19flog.pdf, id=1033, 462.52798pt x 346.
+<dcompdfpwnew2realanhopf26flogrealanhopf19flog.pdf, id=1038, 462.52798pt x 346.
 89601pt>
 File: dcompdfpwnew2realanhopf26flogrealanhopf19flog.pdf Graphic file (type pdf)
 
@@ -1263,7 +1263,7 @@ d on input line 566.
  [16
 
  <./dcompdfpwnew2realanhopf26flogrealanhopf19flog.pdf>]
-<fcompdfpwnew2realanhopf26flogrealanhopf19flog.pdf, id=1112, 462.52798pt x 346.
+<fcompdfpwnew2realanhopf26flogrealanhopf19flog.pdf, id=1117, 462.52798pt x 346.
 89601pt>
 File: fcompdfpwnew2realanhopf26flogrealanhopf19flog.pdf Graphic file (type pdf)
 
@@ -1275,7 +1275,7 @@ d on input line 570.
 [17
 
  <./fcompdfpwnew2realanhopf26flogrealanhopf19flog.pdf>]
-<dcompdfpwnewpred2realanhopf19flogrealanhopf11flog.pdf, id=1190, 462.52798pt x 
+<dcompdfpwnewpred2realanhopf19flogrealanhopf11flog.pdf, id=1195, 462.52798pt x 
 346.89601pt>
 File: dcompdfpwnewpred2realanhopf19flogrealanhopf11flog.pdf Graphic file (type 
 pdf)
@@ -1309,7 +1309,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [21
 
 ]
-<specanhopf2.pdf, id=1353, 462.52798pt x 346.89601pt>
+<specanhopf2.pdf, id=1358, 462.52798pt x 346.89601pt>
 File: specanhopf2.pdf Graphic file (type pdf)
 <use specanhopf2.pdf>
 Package pdftex.def Info: specanhopf2.pdf  used on input line 662.
@@ -1321,7 +1321,7 @@ Overfull \vbox (5.06895pt too high) detected at line 662
 [22
 
  <./specanhopf2.pdf>]
-<snranhopfcrit.pdf, id=1433, 462.52798pt x 346.89601pt>
+<snranhopfcrit.pdf, id=1438, 462.52798pt x 346.89601pt>
 File: snranhopfcrit.pdf Graphic file (type pdf)
 <use snranhopfcrit.pdf>
 Package pdftex.def Info: snranhopfcrit.pdf  used on input line 666.
@@ -1333,7 +1333,7 @@ Overfull \vbox (5.06895pt too high) detected at line 666
 [23
 
  <./snranhopfcrit.pdf>]
-<snrtwostatecompanhopf7mnofitcrit2.pdf, id=1503, 462.52798pt x 346.89601pt>
+<snrtwostatecompanhopf7mnofitcrit2.pdf, id=1508, 462.52798pt x 346.89601pt>
 File: snrtwostatecompanhopf7mnofitcrit2.pdf Graphic file (type pdf)
 <use snrtwostatecompanhopf7mnofitcrit2.pdf>
 Package pdftex.def Info: snrtwostatecompanhopf7mnofitcrit2.pdf  used on input l
@@ -1346,7 +1346,7 @@ Overfull \vbox (5.06895pt too high) detected at line 676
 [24
 
  <./snrtwostatecompanhopf7mnofitcrit2.pdf>]
-<snranhopfpred.pdf, id=1586, 462.52798pt x 346.89601pt>
+<snranhopfpred.pdf, id=1591, 462.52798pt x 346.89601pt>
 File: snranhopfpred.pdf Graphic file (type pdf)
 <use snranhopfpred.pdf>
 Package pdftex.def Info: snranhopfpred.pdf  used on input line 681.
@@ -1378,7 +1378,7 @@ Overfull \vbox (3.15826pt too high) detected at line 747
 ] [33
 
 ]
-<eqdistajrj2realanhopf19flog354.pdf, id=1893, 462.52798pt x 346.89601pt>
+<eqdistajrj2realanhopf19flog354.pdf, id=1898, 462.52798pt x 346.89601pt>
 File: eqdistajrj2realanhopf19flog354.pdf Graphic file (type pdf)
 <use eqdistajrj2realanhopf19flog354.pdf>
 Package pdftex.def Info: eqdistajrj2realanhopf19flog354.pdf  used on input line
@@ -1387,7 +1387,7 @@ Package pdftex.def Info: eqdistajrj2realanhopf19flog354.pdf  used on input line
  [34
 
  <./eqdistajrj2realanhopf19flog354.pdf>]
-<arrheniustotbigrealanhopf19flogrealanhopf11flogfit11.pdf, id=1962, 462.52798pt
+<arrheniustotbigrealanhopf19flogrealanhopf11flogfit11.pdf, id=1967, 462.52798pt
  x 346.89601pt>
 File: arrheniustotbigrealanhopf19flogrealanhopf11flogfit11.pdf Graphic file (ty
 pe pdf)
@@ -1398,7 +1398,7 @@ df  used on input line 804.
  [35
 
  <./arrheniustotbigrealanhopf19flogrealanhopf11flogfit11.pdf>]
-<barriercompanhopfcritbig.pdf, id=2042, 462.52798pt x 346.89601pt>
+<barriercompanhopfcritbig.pdf, id=2047, 462.52798pt x 346.89601pt>
 File: barriercompanhopfcritbig.pdf Graphic file (type pdf)
 <use barriercompanhopfcritbig.pdf>
 Package pdftex.def Info: barriercompanhopfcritbig.pdf  used on input line 808.
@@ -1443,9 +1443,9 @@ public/lm/lmsso12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsso17.pfb></usr
 nts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/sym
 bol/usyr.pfb>
-Output written on presmaster3.pdf (36 pages, 1099655 bytes).
+Output written on presmaster3.pdf (36 pages, 1101343 bytes).
 PDF statistics:
- 2189 PDF objects out of 2487 (max. 8388607)
+ 2194 PDF objects out of 2487 (max. 8388607)
  1302 compressed objects within 14 object streams
  86 named destinations out of 1000 (max. 500000)
  290 words of extra memory for PDF output out of 10000 (max. 10000000)

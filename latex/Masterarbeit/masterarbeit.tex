@@ -564,7 +564,7 @@ The behavior of the two-dimensional neuron model can be investigated by conducti
 In all of the computations, only a single neuron was simulated over a long period of time. The ensemble of neurons was created by cutting this long simulations into multiple segments. When investigating an ergodic system, this procedure ensures that the results are independent of the initial conditions if the simulation time is long enough. Furthermore, an ensemble of neurons would need to be equilibrated before starting any measurements so that the obtained results would be correct. This equilibration time can be omitted now, which saves some computation time. \\
 In all of the cases, the spike train was cut into $n_S=50$ segments, which corresponds to an ensemble of 50 neurons. Each segment was cut into $n_I=10^5$ intervals of length $T_I$. At each of these timepoints the spike count was combined with the spike counts from all the other segments in order to determine the effective diffusion coefficient $D_{eff}$ and the fano factor $F$. This means that these quantities were calculated as double sums over time and segment:
 \begin{align*}
-D_{eff}=\frac{1}{n_S}\sum_{1}^{n_S}\left(\frac{1}{n_I}\sum_{i=1}^{n_I}\frac{N^2(T_I\cdot i)}{2T_I\cdot i}-\left(\frac{1}{n_I}\sum_{j=1}^{n_I}\frac{N(T_I\cdot j)}{\sqrt{2T_I\cdot j}}\right)^2\right)\qquad F=\frac{2D_{eff}}{\left<v\right>}
+D_{eff}=\frac{1}{n_S}\sum_{1}^{n_S}\left(\frac{1}{n_I}\sum_{i=1}^{n_I}\frac{N^2(T_I\cdot i)}{2T_I\cdot i}\right)-\frac{1}{n_I}\sum_{j=1}^{n_I}\left(\frac{1}{n_S}\sum_{1}^{n_S}\frac{N(T_I\cdot j)}{\sqrt{2T_I\cdot j}}\right)^2\qquad F=\frac{2D_{eff}}{\left<v\right>}
 \end{align*}
 Obviously, the average firing rate follows from the quotient of spike count and time.\\
 The other relevant parameters are shown in table \ref{params}.
@@ -754,7 +754,7 @@ At lower noise intensities, the qualitative behavior of the measured quantities 
 Similar to the simulations, the fano factor only has one intersection point at the right border of giant diffusion, and even though it gets maximal at the same point where $D_{eff}$ reaches its highest value, the curves again do not seem to have a second intersection point.
 \subsection{$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}
 \subsubsection{Distribution of the state lifetimes}
-Again, we have to take a short look at the statistics of spiking and resting intervals first to make sure that our approach is justified. The spiking and resting intervals are clearly exponentially distributed again, so the process of changing the state is completely stochastic.
+Again, we have to take a short look at the statistics of spiking and resting intervals first to make sure that our approach is justified. The spiking and resting intervals are clearly exponentially distributed again, so the process of changing the state is completely stochastic. The second conclusion we can draw from this image is the validity of our criteria for the two states. If these criteria were too loose, meaning that they would account for a transition even though it has not been completed yet, one would register too many switchings in the intermediate area between both states, giving a clearly visible peak at the smallest interval size. As this is not the case here, our criteria seem to work fine.
 \begin{figure}[H]
 	\hspace*{-0.5cm}
 	\subfigure[]{	\includegraphics[scale=0.5]{eqdistajrj2realanhopf19flog354.pdf}}
@@ -763,20 +763,22 @@ Again, we have to take a short look at the statistics of spiking and resting int
 	\label{intdistanhopf}
 \end{figure}
 \subsubsection{Transition rates at different noise intensities}
-It comes as no surprise that the transition rates are monotonous again.
+The behavior of the transition rates is quite regular. The rate from resting to spiking state monotonically increases with $I$ and the opposite rate decreases, as the spiking state gets more and more probable. Additionally, higher noise leads to more transitions and thereby higher transitions rates. Different to the first model are the intersection points of the curves which get shifted to the right with decreasing noise. This indicates that we are not in the low-noise limit yet, because the intersection point would stay at the same position otherwise.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=1]{tranratesanhopf.pdf}\caption{Transition rates between the states for a couple different noise intensities}
 	\label{tranrateanhopf}
 \end{figure}
 \subsubsection{Arrhenius Plots and effective potential barriers}
+The logarithmic Arrhenius plots illustrate the exponential dependency between transition rates and inverse noise intensity. Additionally, the good agreement between data points and fits confirms the choice of the Arrhenius-equation as a fit model. The transition rates for $D=0.15$ were not included in the fits, so that we could make a completely unbiased prediction later, using the two-state theory.
 \begin{figure}[H]
 	\hspace*{-0.5cm}
 	\subfigure[]{	\includegraphics[scale=0.5]{arrheniustotbigrealanhopf19flogrealanhopf11flogfit3.pdf}}
 	\subfigure[]{\includegraphics[scale=0.5]{arrheniustotbigrealanhopf19flogrealanhopf11flogfit11.pdf}}
-	\caption{logarithm of the transition rates in the middle of the area with giant diffusion (a) and outside of it (b). The respective potential barriers arise from the slope of the lines.}
+	\caption{Logarithm of the transition rates left of the area with giant diffusion (a) and right of it (b). Lines are the fit functions, with the respective potential barriers arising from the slope of the lines. }
 	\label{arrhplotsanhopf}
 \end{figure}
+The effective potential barriers behave inversely to the transition rates, which is reasonable as high potential barriers lead to low transition rates and vice versa. The intersections of barriers with the double values of the other barrier are slightly offset inwards, once again implying that $D$ was not yet in the low-noise limit here. 
 \begin{figure}[H]
 	\hspace*{-0.5cm}
 	\subfigure[]{
@@ -785,15 +787,16 @@ It comes as no surprise that the transition rates are monotonous again.
 	\subfigure[]{	\includegraphics[scale=0.5]{barriercompanhopfcritbig.pdf}}
 	\caption{Effective potential barriers for both transitions. As the running state is favored at high bias currents, $\Delta U_+$ increases, while the other one drops. The points where $\Delta U_i=2\Delta U_j$ correspond to the numerically computed intersection points from figure \ref{deff} with only slight deviations.}
 \end{figure}
-
+Over the whole range of bias currents, there is a good agreement between data and theory, and even the prediction for $D=0.15$ looks similar to the measurements. Therefore, it is safe to assume that we can now predict the outcome of simulations at even lower noise intensities. 
 \begin{figure}[H]
 	\hspace*{-0.5cm}
 	\subfigure[]{
-		\includegraphics[scale=0.5]{dcompdfpwnew2realanhopf26flogrealanhopf19flog.pdf}
+		\includegraphics[scale=0.5]{dcompdfpwnew2shrealanhopf26flogrealanhopf19flog.pdf}
 		\label{nofitanhopf}}
-	\subfigure[]{	\includegraphics[scale=0.5]{fcompdfpwnew2realanhopf26flogrealanhopf19flog.pdf}}
-	\caption{Point-for-point comparison of measured $D_{eff}$ (a) and $F$ (b) with the two-state theory based on the transition rates. The curves for $D=0.15$ were predicted from the transition rates for the other noise intensities.}
+	\subfigure[]{	\includegraphics[scale=0.5]{fcompdfpwnew2shrealanhopf26flogrealanhopf19flog.pdf}}
+	\caption{Point-for-point comparison of measured $D_{eff}$ (a) and $F$ (b) with the two-state theory based on the transition rates, represented by the lines. The curves for $D=0.15$ were predicted from the transition rates for the other noise intensities.}
 \end{figure}
+Using the two-state theory to look at lower noise intensities, we get known results. The intersection points have moved a little towards the middle, which confirms our finite-noise presumption, and the overall change of $D_{eff}$ and $F$ are more much pronounced.
 \begin{figure}[H]
 	\hspace*{-0.5cm}
 	\subfigure[]{
@@ -823,7 +826,7 @@ It comes as no surprise that the transition rates are monotonous again.
 	\hspace*{-0.5cm}
 	\subfigure[]{	\includegraphics[scale=0.5]{arrheniustotbigrealrinzelrange26d1realrinzelrange26d1fit0.pdf}}
 	\subfigure[]{\includegraphics[scale=0.5]{arrheniustotbigrealrinzelrange26d1realrinzelrange26d1fit7.pdf}}
-	\caption{logarithm of the transition rates in the middle of the area with giant diffusion (a) and outside of it (b). The respective potential barriers arise from the slope of the lines.}
+	\caption{logarithm of the transition rates left of the area with giant diffusion (a) and right of it (b). The respective potential barriers arise from the slope of the lines.}
 	\label{arrhplotsrinzel}
 \end{figure}
 \begin{figure}[H]

@@ -52,7 +52,7 @@ yvar=[4,13,3]
 yvalues=len(yvar)
 
 istart=4
-ivalues=14
+ivalues=12
 epsilon = 0.00001
 
 btoeq=np.zeros((l,ivalues))
@@ -153,7 +153,7 @@ for ls in range(0,ivalues):
 			break
 
 
-ivalues=14
+ivalues=12
 
 rbtoeq=np.zeros(ivalues)
 ubtoeq=np.zeros(ivalues)
@@ -187,7 +187,7 @@ date2='realrinzel15ninv0'
 ii=0
 
 istart1=4
-ivalues1=14
+ivalues1=12
 
 vec=np.zeros((l,ivalues1))
 
@@ -288,7 +288,7 @@ for n in range(0,l):
 #order = [2,3,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
-plt.savefig('dcompdfpwnew%s.pdf' %(date1+date2))
+plt.savefig('dcompdfpwnewsh%s.pdf' %(date1+date2))
 
 g=np.zeros((l,ivalues1))
 ii=0
@@ -377,7 +377,7 @@ for n in range(0,l):
 #order = [2,3,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
-plt.savefig('gcompdfpwnew%s.pdf' %(date1+date2))
+plt.savefig('gcompdfpwnewsh%s.pdf' %(date1+date2))
 
 
 fano=np.zeros((l,ivalues1))
@@ -468,7 +468,7 @@ for n in range(0,l):
 #order = [2,3,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
-plt.savefig('fcompdfpwnew%s.pdf' %(date1+date2))
+plt.savefig('fcompdfpwnewsh%s.pdf' %(date1+date2))
 
 #t=np.arange(-12,-9,0.01)
 #plt.figure()
