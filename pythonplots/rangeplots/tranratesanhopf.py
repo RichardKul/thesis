@@ -43,7 +43,7 @@ plt.yscale('log')
 plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('transition rate r $[s^{-1}]$')
 for n in range(0,l-1):
-	plt.plot(xnew,btoeq[n,:],colorv[n+1],marker='x',label='D=%.2f, run to eq'%(Da[n]*0.01))
+	plt.plot(xnew,btoeq[n,:],colorv[n+1],marker='x',label='D=%.2f, sp. to eq.'%(Da[n]*0.01))
 	plt.plot(xnew,btoeq[n,:],colorv[n+1])
 	plt.plot(xnew,eqtob[n,:],colorv[n+1],marker='+')
 	plt.plot(xnew,eqtob[n,:],colorv[n+1])
@@ -52,4 +52,4 @@ for n in range(0,l-1):
 #order = [2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
-plt.savefig('tranratesanhopf.pdf')
+plt.savefig('tranratesanhopfsp.pdf')

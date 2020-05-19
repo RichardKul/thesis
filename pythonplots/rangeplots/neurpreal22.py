@@ -61,7 +61,7 @@ plt.legend()
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [1,0,2,3]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('dneur25crit%s.pdf' %(date[0]+date[1]))
+plt.savefig('dneur25critsp%s.pdf' %(date[0]+date[1]))
 
 vec=np.zeros((l,20))
 vecx=np.zeros((l,ivalues))
@@ -102,7 +102,7 @@ plt.legend()
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [1,0,2,3]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('fneur25crit%s.pdf' %(date[0]+date[1]))
+plt.savefig('fneur25critsp%s.pdf' %(date[0]+date[1]))
 
 vec=np.zeros((l,20))
 vecx=np.zeros((l,ivalues))
@@ -146,7 +146,7 @@ plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('average firing rate <v>$[s^{-1}]$')
 #plt.yscale('log')
 #plt.xscale('log')
-plt.plot(xburst[12:51],cola[12:51]/T,label='running firing rate $v_0$',color='black')
+plt.plot(xburst[12:51],cola[12:51]/T,label='spiking firing rate $v_0$',color='black')
 for n in range(0,l):
 	nl=round(ivalues-offset[n])
 	plt.plot(vecx[n,0:nl],vec[n,0:nl],label='D=%.2f' %(D[n]/100))
@@ -157,5 +157,5 @@ plt.legend()
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [1,0,2,3]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('gneur25crit%s.pdf' %(date[0]+date[1]))
+plt.savefig('gneur25critsp%s.pdf' %(date[0]+date[1]))
 

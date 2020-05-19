@@ -43,7 +43,7 @@ plt.yscale('log')
 plt.xlabel('bias current I $[\mu A/cm^2]$')
 plt.ylabel('transition rate r $[s^{-1}]$')
 for n in range(0,l):
-	plt.plot(xnew,btoeq[n,:],colorv[n+1],marker='x',label='D=%.0f, run to eq'%(Da[n]*0.1))
+	plt.plot(xnew,btoeq[n,:],colorv[n+1],marker='x',label='D=%.0f, sp. to eq.'%(Da[n]*0.1))
 	plt.plot(xnew,btoeq[n,:],colorv[n+1])
 	plt.plot(xnew,eqtob[n,:],colorv[n+1],marker='+')
 	plt.plot(xnew,eqtob[n,:],colorv[n+1])

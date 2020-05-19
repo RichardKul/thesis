@@ -343,7 +343,7 @@ plt.ylabel('average firing rate <v> [$s^{-1}$]')
 #plt.xlim(44,47)
 #plt.yscale('log')
 #plt.xscale('log')
-plt.plot(colxa[10:38],cola[10:38]/T*timefac,label='running firing rate',color='black')
+plt.plot(colxa[10:38],cola[10:38]/T*timefac,label='spiking firing rate $v_0$',color='black')
 for n in range(0,l):	
 	nl=round(ivalues-offset3[n])
 	plt.plot(vecx[n,0:nl],vec[n,0:nl]*timefac,label='D=%.2f' %(Dtot[n]/100))
@@ -358,6 +358,6 @@ plt.legend()
 #order = [3,1,2,0]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 
-plt.savefig('gneur3crit%s.pdf' %(date+date1))
+plt.savefig('gneur3critsp%s.pdf' %(date+date1))
 
 

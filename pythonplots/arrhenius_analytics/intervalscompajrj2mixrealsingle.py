@@ -20,7 +20,7 @@ def fund(x,a,b,alpha):
 	return a * (1/x)**alpha * np.exp(-b * x)
 
 D1=[35]
-D2=[30]
+D2=[45]
 D3=[40,50]
 Dvar=[30]
 D=D1+D2+D3+Dvar
@@ -29,7 +29,7 @@ l2=len(D2)
 l3=len(D3)
 lvar=len(Dvar)
 l=l1+l2+l3+lvar
-date2='new'+'realfast11jjem2sh'
+date2='realfast19mtf'
 date1='new'+'realfast19jjem2st'
 date3='new'+'realfast11jjem2st'
 datevar=['new'+'realfast11jjem2','new'+'realfast11jjem2sh','new'+'realfast11jjem2']
@@ -47,16 +47,11 @@ intdelay=np.zeros((l,ivalues))
 matplotlib.rcParams.update({'font.size': 22})
 
 ii=0
-dt=0.0005	
-N=220000000
-Neq=20000000
-Ndiff=N-Neq
-runs=500
-repetitions=20
+
 for x in D2:
 	for y in range(istart,istart+ivalues):
 		avalues,jrvalues,j2values,state=[],[],[],[]
-		file=open('/home/richard/outhome/time%s%d%d.txt' % (date2,x,y),"r")
+		file=open('/home/richard/outhome/timenew%s%d%d.txt' % (date2,x,y),"r")
 		for k in file:
 			row=k.split()
 			avalues.append(float(row[0]))
@@ -67,6 +62,23 @@ for x in D2:
 		jrvaluesa=np.array(jrvalues)
 		avaluesa=np.array(avalues)
 		statea=np.array(state)
+		param=open('/home/richard/outhome/param%s%d%d.txt' %(date2,x,y),"r")
+		ll=0
+		name,value=[],[]
+		for k in param:
+			row=k.split()
+			lp=len(row)
+			if ll<1:
+				for jj in range(0,lp):
+					name.append(row[jj])
+			else:
+				for kk in range(0,lp):
+					value.append(float(row[kk]))
+			ll=ll+1
+		dt=value[name.index('dt')]
+		Ndiff=value[name.index('N')]-value[name.index('Neq')]
+		repetitions=value[name.index('repetitions')]
+		runs=value[name.index('runs')]
 		countb=0
 		counteq=0
 		if statea[0]<0.5:
@@ -120,9 +132,9 @@ for x in D2:
 		plt.ylabel('number of intervals')	
 		plt.hist(intbt/1000, bins=50)
 		plt.yscale('log')
-		plt.title("run. intervals, $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100), fontsize=22)
+		plt.title("sp. intervals, $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100), fontsize=22)
 		plt.tight_layout()
-		plt.savefig('bdistplotmaster2.pdf')# %(date1,x,y))
+		plt.savefig('bdistplotmaster3.pdf')# %(date1,x,y))
 		plt.figure()
 		plt.xlabel('interval length [s]')
 		plt.ylabel('number of intervals')
@@ -130,7 +142,7 @@ for x in D2:
 		plt.yscale('log')
 		plt.title("eq. intervals, $I=%.2f$, $D=%.2f$" %((-5+y)*0.02,x/100), fontsize=22)
 		plt.tight_layout()
-		plt.savefig('eqdistplotmaster2.pdf')# %(date1,x,y))
+		plt.savefig('eqdistplotmaster3.pdf')# %(date1,x,y))
 		eqtot=np.sum(inteqt)
 		btot=np.sum(intbt)
 		eqrel=eqtot/(eqtot+btot)
