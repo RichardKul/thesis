@@ -375,6 +375,11 @@ eqfile.close()
 #	S[l]=abs(ys[l])*abs(ys[l])/T
 
 #omega=np.arange(0,length)*2*np.pi/T
+nlfile = open('nl%s.txt' % (date0+date1),'w')
+for k3 in range(0,l2): 
+	nlfile.write('%.0f\n'%offset[k3]) 
+nlfile.close() 
+
 plt.figure()
 plt.xlabel('bias current')
 plt.ylabel('SNR')
@@ -393,15 +398,15 @@ for n in range(0,l2):
 	nl=round(ivalues-offset[n])
 	#plt.plot(xvec[n,0:nl],(SNR[n,0:nl]-1)/scale[n,0:nl],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
 	plt.plot(xvec[n,0:nl],abs((SNR[n,0:nl]-1))/scale[n,0:nl],label='D=%.2f' %(Dtot[n]*0.1))
-for n in range(0,l2):
+#for n in range(0,l2):
 	#bv=b[2*n+1] # 3 plots
 	#cv=c[2*n+1]
 	#dv=d[2*n+1]
 	#ev=e[2*n+1]
-	bv=b[n+1] # 5
-	cv=c[n+1]
-	dv=d[n+1]
-	ev=e[n+1]	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,b[n+1],c[n+1],d[n+1]),comp(t,b[n+1],c[n+1],d[n+1],e[n+1]))/8,colorv[n])	
+	#bv=b[n+1] # 5
+	#cv=c[n+1]
+	#dv=d[n+1]
+	#ev=e[n+1]	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,b[n+1],c[n+1],d[n+1]),comp(t,b[n+1],c[n+1],d[n+1],e[n+1]))/8,colorv[n])	
 	#plt.plot(t,snr(rbte,retb,paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,bv,cv,dv),comp(t,bv,cv,dv,ev))/8,colorv[n])
 	#plt.plot(t,snr(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[n]*0.1,comps(t,bv,cv,dv),comp(t,bv,cv,dv,ev))/8,colorv[n])
 #plt.plot(t,snr(qbarrier(t,paramsqrate[0],paramsqrate[1],paramsqrate[2]),qbarrier(t,paramsqrate[3],paramsqrate[4],paramsqrate[5]),paramsq[0],paramsq[3],paramsq[1],paramsq[4],paramsq[2],paramsq[5],t,Dtot[3]*0.1,comps(t,b[5],c[5],d[5]),comp(t,b[5],c[5],d[5],e[5]))/8,colorv[3])

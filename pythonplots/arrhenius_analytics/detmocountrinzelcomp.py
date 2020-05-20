@@ -69,7 +69,7 @@ for m in range(0,l):
 colorv=['y','g','b','r','c','k']
 t=np.arange(-21,-6,0.1)
 plt.xlabel('bias current I')
-plt.ylabel('firing rate')
+plt.ylabel('firing rate <v>$')
 plt.xlim(-16.2,-9)
 #plt.ylim(1.2,1.4)
 #plt.yscale('log')

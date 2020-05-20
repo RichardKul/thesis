@@ -189,7 +189,7 @@ D0=[400,500]
 D2=[]
 Dto=D+D1+D0+D2
 Dtot=np.array(Dto)
-l2=len(D)+len(D1)+len(D0)+len(D2)
+l2=len(Dtot)
 
 points=1000000
 length=500000
@@ -419,15 +419,15 @@ for c2 in D2:
 
 #omega=np.arange(0,length)*2*np.pi/T
 plt.figure()
-plt.xlabel('bias current')
-plt.ylabel('SNR')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('Signal-to-noise ratio SNR')
 
 t=np.arange(-18,-8,0.1)
 #xs=np.arange(-21.25+istart,-21.25+istart+ivalues)*0.8
 xs=np.arange(-20+istart,-20+istart+ivalues)*0.6
 plt.yscale('log')
 #plt.xscale('log')
-#plt.xlim(4*10**(-3),5*10**3)
+plt.xlim(xnew[1]-0.4,xnew[ivalues-2]+0.4)
 #plt.xlim(4*10**(-4),100)
 #colorv=['r','y','c','g','k','b'] #6 colors
 colorv=[ '#1f77b4', '#ff7f0e', '#2ca02c','#d62728','#9467bd'] 
@@ -441,8 +441,10 @@ for n in range(1,l2):
 	nl=round(ivalues-offset[n])
 	#plt.plot(xvec[n,0:nl],(SNR[n,0:nl]-1)/scale[n,0:nl],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
 	plt.plot(xvec[n,0:nl],abs((SNR[n,0:nl]-1))/scale[n,0:nl],'o',label='D=%.0f' %(Dtot[n]*0.1))
+#Dtot=[15,20,25,30]
+#l2=len(Dtot)
 for n in range(0,l2):
-	plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.1,comps(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2])),comp(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2]),fit(Dtot[n]/10,colxa[3],cola[3])),r0ps,r0ms)/8,colorv[n])
+	plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.1,comps(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2])),comp(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2]),fit(Dtot[n]/10,colxa[3],cola[3])),r0ps,r0ms)/8,colorv[n],label='D=%.0f' %(Dtot[n]*0.1))
 	#bv=b[2*n+1] # 3 plots
 	#cv=c[2*n+1]
 	#dv=d[2*n+1]
@@ -463,6 +465,9 @@ for n in range(0,l2):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
 plt.plot([-10.8, -10.8], [10**(-8), 10**(-3)], color='black', linestyle='-',label='$I_{crit}$')
+#plt.plot([-10.8, -10.8], [10**(-38), 10**(5)], color='black', linestyle='-',label='$I_{crit}$')
 plt.legend()
-plt.savefig('snrinzelrange26dcompletecritnofit.pdf')
+plt.tight_layout()
+plt.savefig('snrinzelrange26dcompletecritnofit2.pdf')
+#plt.savefig('snrinzelpred2.pdf')
 #plt.savefig('snrinzelonly.pdf')

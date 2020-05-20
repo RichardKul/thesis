@@ -45,4 +45,4 @@
 \contentsline {subsection}{\numberline {5.1}$I_{Na,p}+I_K$ model with saddle-node bifurcation}{50}% 
 \contentsline {subsection}{\numberline {5.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{53}% 
 \contentsline {subsection}{\numberline {5.3}Rinzel model with saddle-node bifurcation}{56}% 
-\contentsline {section}{\numberline {6}Conclusions}{57}% 
+\contentsline {section}{\numberline {6}Conclusions}{59}% 
