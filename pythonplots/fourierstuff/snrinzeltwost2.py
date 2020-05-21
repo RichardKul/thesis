@@ -427,6 +427,7 @@ t=np.arange(-18,-8,0.1)
 xs=np.arange(-20+istart,-20+istart+ivalues)*0.6
 plt.yscale('log')
 #plt.xscale('log')
+plt.ylim(7*10**(-8),5*10**(-3))
 plt.xlim(xnew[1]-0.4,xnew[ivalues-2]+0.4)
 #plt.xlim(4*10**(-4),100)
 #colorv=['r','y','c','g','k','b'] #6 colors
@@ -444,7 +445,7 @@ for n in range(1,l2):
 #Dtot=[15,20,25,30]
 #l2=len(Dtot)
 for n in range(0,l2):
-	plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.1,comps(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2])),comp(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2]),fit(Dtot[n]/10,colxa[3],cola[3])),r0ps,r0ms)/8,colorv[n],label='D=%.0f' %(Dtot[n]*0.1))
+	plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.1,comps(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2])),comp(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2]),fit(Dtot[n]/10,colxa[3],cola[3])),r0ps,r0ms)/8,colorv[n])#,label='D=%.0f' %(Dtot[n]*0.1))
 	#bv=b[2*n+1] # 3 plots
 	#cv=c[2*n+1]
 	#dv=d[2*n+1]
@@ -464,7 +465,7 @@ for n in range(0,l2):
 #order = [0,2,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
-plt.plot([-10.8, -10.8], [10**(-8), 10**(-3)], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([-10.8, -10.8], [10**(-7), 10**(-3)], color='black', linestyle='-',label='$I_{crit}$')
 #plt.plot([-10.8, -10.8], [10**(-38), 10**(5)], color='black', linestyle='-',label='$I_{crit}$')
 plt.legend()
 plt.tight_layout()

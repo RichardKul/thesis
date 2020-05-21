@@ -397,7 +397,7 @@ colorv=['r','y','c','g','k','b'] # 6 colors
 for n in range(0,l2):
 	nl=round(ivalues-offset[n])
 	#plt.plot(xvec[n,0:nl],(SNR[n,0:nl]-1)/scale[n,0:nl],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
-	plt.plot(xvec[n,0:nl],abs((SNR[n,0:nl]-1))/scale[n,0:nl],label='D=%.2f' %(Dtot[n]*0.1))
+	plt.plot(xvec[n,0:nl],abs((SNR[n,0:nl]-1))/scale[n,0:nl],label='D=%.0f' %(Dtot[n]*0.1))
 #for n in range(0,l2):
 	#bv=b[2*n+1] # 3 plots
 	#cv=c[2*n+1]
@@ -420,5 +420,6 @@ for n in range(0,l2):
 #plt.plot(sax2,say2/T2,label='e6')
 plt.plot([-10.8, -10.8], [10**(-8), 10**(-3)], color='black', linestyle='-',label='$I_{crit}$')
 plt.legend()
+plt.tight_layout()
 plt.savefig('snrinzelrange26dcompletecrit.pdf')
 #plt.savefig('snrinzelonly.pdf')

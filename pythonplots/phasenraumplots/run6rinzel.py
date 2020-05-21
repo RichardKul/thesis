@@ -8,7 +8,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-file=open('/home/richard/mastergit/NetBeansProjects/realstatevar/realstaterinzelnb2.txt',"r")
+file=open('/home/richard/mastergit/NetBeansProjects/realstatevar/realstaterinzel16100.txt',"r")
 x,y=[],[]
 for k in file:
 	row=k.split()
@@ -42,7 +42,7 @@ phi=3.82
 Iapp=-15 #-12
 SV=1.27
 
-v=np.arange(-50,10,0.01)
+v=np.arange(-50,110,0.01)
 
 vrinzelfile = open('vncrinzel%d.txt' %Iapp, "r")
 colx,col=[],[]
@@ -60,7 +60,7 @@ matplotlib.rcParams.update({'font.size': 22})
 
 plt.figure()
 axs = plt.subplot(111)
-plt.suptitle('$I$=-15$\mu A/cm^2$')
+plt.suptitle('$I$=-16$\mu A/cm^2$')
 #plt.suptitle('I=0')
 #plt.xlabel('time [s]')
 plt.ylabel('recovery variable W')
@@ -68,10 +68,10 @@ plt.xlabel('membrane voltage V [mV]')
 plt.plot(colx[edge[0]:edge[1]],col[edge[0]:edge[1]],'blue',label='V-nullcline')
 plt.plot(colx[edge[2]:edge[3]],col[edge[2]:edge[3]],'blue')
 plt.plot(v,winf(SV,v),'orange',label='W-nullcline')
-plt.xlim(-50,10)
-axs.plot(ax,ay,'black')
-plt.legend()
+#plt.xlim(-50,10)
+axs.plot(ax[78334:81668],ay[78334:81668],'black')
+#plt.legend()
 axs.spines['right'].set_visible(False)
 axs.spines['top'].set_visible(False)
 plt.tight_layout()
-plt.savefig('realstatedetrinzelpnb2wnblack.pdf')
+plt.savefig('realstatedetrinzelp16100shnn.pdf')

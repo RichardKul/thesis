@@ -223,8 +223,19 @@ In addition to that, depending on the overall configuration, the system is usual
 	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$. In figure (d), a segment with a higher time resolution is shown in order to better illustrate the evolution of the voltage variable.}
 	\label{currentnoise} 
 \end{figure}
-In conclusion, the behavior of this two-dimensional bursting model displays the same characteristics as the Brownian particle in a tilted potential. Therefore, we expect to find similar count statistics and Giant Diffusion for this system as well. If this assumption is actually valid will be examined in the following chapter.
-\subsubsection{System with periodic signal}
+The picture with a higher time resolution illustrates he influence of noise on a system that is mainly composed of two states. Even though the neuron fires at a regular frequency in the firing state, the peak heights vary by up to 10 mV. Actually, the membrane voltage in the resting state is not really at rest but mostly fluctuates in a range of 20 mV, and also the transition between the states happens quite irregularly.\\
+This can be even better seen in the phase space.
+\begin{figure}[H]
+\hspace*{-0.5cm}
+\subfigure[]{	\includegraphics[scale=0.45]{realstatevar125vsh2.pdf}}
+\subfigure[]{\includegraphics[scale=0.45]{realstatep125vshbig.pdf}}
+
+\caption{Evolution of the membrane voltage over time (left) and the corresponding phase space picture.}
+\label{ppcompneur}
+\end{figure}
+One can see that all spikes correspond to rotations around the unstable equilibrium point. The first spike of the burst has a higher amplitude than the rest, corresponding to a larger radius of the limit cycle in the phase space. After that, there are three spikes of equal height (and phase space radius), followed by an even smaller spike. The last spike has a similar phase space trajectory until it reaches the V-nullcline, where it deviates towards a higher voltage, before it finally falls back to the resting state, giving it a larger amplitude again. This is somewhat counter-intuitive, as one would think that the system is more likely to go back to the resting state from a spike with lower amplitude. Apparently, cycles with small radii are more stable than those with large radii. Thus, in order to go into the resting state, the system needs to depart to the outside of the cycle, which may also result in a higher amplitude of the last spike in a burst.\\
+Interestingly, the resting neuron only seems to experiences changes in $V$, but not in $n$. This can be easily understood by taking another look at equation \ref{neq}. The variable directly influenced by noise is $V$. The changes are then carried on to $n$ via $n\infty(V)$. The equilibrium point is now so far on the left end of the n-nullcline, that even variations by tens of mV basically do not induce any change in $n\infty(V)$. Therefore, we only see fluctuations in the membrane voltage $V$ here. Of course the gating variable is still subject to perturbations, these just happen on a much smaller scale.
+%\subsubsection{System with periodic signal}
 \subsection{$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}
 If we observe Giant Diffusion in our simulations, it most certainly will not be restricted to only one neuron model. Therefore, it is of particular interest to possibly confirm this behavior also for other bistable two-dimensional neuron models. Finding out in which cases giant diffusion occurs may help to determine conditions that need to be fulfilled and eventually lead to experiments supporting these findings. Therefore two more models will be discussed in the following.
 The first one is again the $I_{Na,p}+I_K$ model.
@@ -289,7 +300,17 @@ Considering that even in the noiseless system, the unstable limit cycle only las
 	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$ at $D=0.3$. On the bottom, one can see the behavior of the system with a higher time resolution. The small oscillations near equilibrum in (d) are subthreshold oscillations.}
 	\label{ahnoise} 
 \end{figure}
-Over a range of $1\mu A/cm^2$, the neuron switches from barely spiking to basically only spiking. Due to the oscillatory properties of the system, small disturbances suffice to induce a change of state, if they occur at the right moment, as can be seen in 13 (c): Even though the state vector should be attracted to the stable focus, appropriate noise can slowly increase the amplitude of rotation until the spiking limit cycle is reached. In connection to this there exists another interesting phenomenon which is visible in (d): If the pulse amplitude is too small to make the neuron spike, it oscillates back to the focus with a high frequency. These subthreshold oscillations are a general characteristic of neurons with oscillatory potentials.
+Over a range of $1\mu A/cm^2$, the neuron switches from barely spiking to basically only spiking. Due to the oscillatory properties of the system, small disturbances suffice to induce a change of state, if they occur at the right moment, as can be seen in 13 (c): Even though the state vector should be attracted to the stable focus, appropriate noise can slowly increase the amplitude of rotation until the spiking limit cycle is reached. In connection to this there exists another interesting phenomenon which is visible in (d): If the pulse amplitude is too small to make the neuron spike, it oscillates back to the focus with a high frequency. These subthreshold oscillations are a general characteristic of neurons with oscillatory potentials.\\
+The phenomenological investigation of the model will be concluded with a comparison between phase space and evolution over time.
+\begin{figure}[H]
+	\hspace*{-0.5cm}
+	\subfigure[]{	\includegraphics[scale=0.45]{realstateanhopf5sh3.pdf}}
+	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfreal5psh.pdf}}
+	
+	\caption{Evolution of the membrane voltage over time (left) and the corresponding phase space picture.}
+	\label{ppcompanhopf}
+\end{figure}
+Here, we see a quite stable limit cycle with amplitude variations of less than 5 mV, representing only a couple percent of the whole voltage range of the system. On the other hand, the resting state is much more irregular than as observed for the saddle-node bifurcation. The reason for this lies in the nature of the equilibrium point. When near the focus, the state vector does not directly approach it. Instead, it performs oscillations with shrinking radius. It is helpful to consider once more the eigenvalues of the Jacobian matrix. The ratio between real and imaginary part was about 1:46, meaning that the system near the equilibrium would roughly need to perform 10 oscillations to halve he radius of these oscillations. Therefore, the system only slowly approaches the resting point and can b easily influenced in either direction by noise.
 \subsection{Rinzel model}
 The last model is a two-dimensional approximation of the Hodgkin-Huxley model, proposed by Rinzel in 1985 \cite{rinzel}. By assuming instantaneous $Na^+$ dynamics and expressing the two gating variables $h$ and $n$ by a single recovery variable $W$, Rinzel got the following model:
 \begin{align*}
@@ -368,7 +389,8 @@ Now that the model has been understood in the phase plane, the influence of nois
 	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$ at $D=100$. On the bottom, one can see the behavior of the system with a higher time resolution.}
 	\label{rinzelnoise} 
 \end{figure}
-Here, too, the bias current $I$ is the parameter that controls whether resting or spiking state is preferred. At intermediate $I$, the neuron fires irregularly and the noise has a high impact on its behavior. At high bias currents, the neuron barely goes into the resting state, and even that only for a short period of time before going back to tonic spiking. The major impact of noise in this regime lies in the modulation of firing rate and spike height, clearly visible in \ref{rinzelnoise} (d).
+Here, too, the bias current $I$ is the parameter that controls whether resting or spiking state is preferred. At intermediate $I$, the neuron fires irregularly and the noise has a high impact on its behavior. At high bias currents, the neuron barely goes into the resting state, and even that only for a short period of time before going back to tonic spiking. The major impact of noise in this regime lies in the modulation of firing rate and spike height, clearly visible in \ref{rinzelnoise} (d).\\
+In conclusion, both two-dimensional bursting neuron models display the same characteristics as the Brownian particle in a tilted potential. Therefore, we expect to find similar count statistics and Giant Diffusion for these systems as well. If this assumption is actually valid will be examined in the following chapter.
 \subsection{Quantities of interest}
 \subsubsection{System without signal}
 In the context of Brownian Motion, there were two characteristic quantities: the ensemble of particles moves with a mean velocity
@@ -945,7 +967,7 @@ Surprisingly, the N-shape remains until $D=0.03$, before the curves finally beco
 Surprisingly and despite its much more complex phase space picture, the spectrum for the Rinzel model looks familiar. The high-and low-frequency limits correspond to their theoretical predictions and there are peaks at signal and spiking frequency, including some higher harmonics for the latter.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1]{snrinzelcrit.pdf}\caption{Signal-to-noise ratio SNR for the Rinzel model with Saddle-node bifurcation}
+	\includegraphics[scale=1]{snrinzelrange26dcompletecrit.pdf}\caption{Signal-to-noise ratio SNR for the Rinzel model with Saddle-node bifurcation}
 	\label{specrinzel}
 \end{figure}
 Also the N-shape of the SNR resembles the previous models, except that it already increases before the critical current. Here, we see a maximum rise of a bit more than two orders of magnitude.  
