@@ -23,8 +23,8 @@ timefac=1000
 date='realrinzelrangeshort1mtf1'
 
 mode='spike'
-D=50
-istart=5
+D=500
+istart=3
 ivalues=1
 nr=9
 

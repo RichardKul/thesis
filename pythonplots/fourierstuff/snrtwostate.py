@@ -111,8 +111,8 @@ for s in snrfile:
 	ll=ll+1
 
 plt.figure()
-plt.xlabel('bias current')
-plt.ylabel('SNR')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('signal-to-noise ratio SNR')
 Dtot=np.array([25,30,35,45])
 #Dtot=np.array([2,3,4,5])
 l2=len(Dtot)

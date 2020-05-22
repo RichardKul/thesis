@@ -10,38 +10,38 @@
 \contentsline {subsection}{\numberline {2.3}Rinzel model}{18}% 
 \contentsline {subsubsection}{\numberline {2.3.1}System without noise}{19}% 
 \contentsline {subsubsection}{\numberline {2.3.2}System with noise}{21}% 
-\contentsline {subsection}{\numberline {2.4}Quantities of interest}{22}% 
-\contentsline {subsubsection}{\numberline {2.4.1}System without signal}{22}% 
-\contentsline {subsubsection}{\numberline {2.4.2}System with signal}{23}% 
-\contentsline {subsection}{\numberline {2.5}Two-state theory}{24}% 
-\contentsline {subsubsection}{\numberline {2.5.1}Fano factor in weak noise limit}{24}% 
-\contentsline {subsubsection}{\numberline {2.5.2}Behavior of SNR}{25}% 
-\contentsline {subsection}{\numberline {2.6}Numerical implementation}{25}% 
-\contentsline {subsubsection}{\numberline {2.6.1}Simulation parameters}{25}% 
+\contentsline {subsection}{\numberline {2.4}Quantities of interest}{23}% 
+\contentsline {subsubsection}{\numberline {2.4.1}System without signal}{23}% 
+\contentsline {subsubsection}{\numberline {2.4.2}System with signal}{24}% 
+\contentsline {subsection}{\numberline {2.5}Two-state theory}{25}% 
+\contentsline {subsubsection}{\numberline {2.5.1}Fano factor in weak noise limit}{25}% 
+\contentsline {subsubsection}{\numberline {2.5.2}Behavior of SNR}{26}% 
+\contentsline {subsection}{\numberline {2.6}Numerical implementation}{26}% 
+\contentsline {subsubsection}{\numberline {2.6.1}Simulation parameters}{26}% 
 \contentsline {subsubsection}{\numberline {2.6.2}Numerical subtleties}{27}% 
 \contentsline {section}{\numberline {3}Critical currents in the Fano factor}{28}% 
 \contentsline {subsection}{\numberline {3.1}Count statistics}{28}% 
 \contentsline {subsubsection}{\numberline {3.1.1}$I_{Na,p}+I_K$-model with saddle-node bifurcation}{28}% 
-\contentsline {subsubsection}{\numberline {3.1.2}$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}{30}% 
-\contentsline {subsubsection}{\numberline {3.1.3}Rinzel model}{33}% 
-\contentsline {subsubsection}{\numberline {3.1.4}Influence of the initial conditions}{36}% 
-\contentsline {subsubsection}{\numberline {3.1.5}Conclusion}{37}% 
-\contentsline {section}{\numberline {4}Transition rates in bistable neurons}{37}% 
-\contentsline {subsection}{\numberline {4.1}$I_{Na,p}+I_K$ model with saddle node bifurcation}{37}% 
-\contentsline {subsubsection}{\numberline {4.1.1}Distribution of the state lifetimes}{37}% 
-\contentsline {subsubsection}{\numberline {4.1.2}Transition rates at different noise intensities}{38}% 
-\contentsline {subsubsection}{\numberline {4.1.3}Arrhenius Plots and effective potential barriers}{39}% 
-\contentsline {subsubsection}{\numberline {4.1.4}Comparison with two-state theory}{41}% 
-\contentsline {subsection}{\numberline {4.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{43}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Distribution of the state lifetimes}{43}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Transition rates at different noise intensities}{43}% 
-\contentsline {subsubsection}{\numberline {4.2.3}Arrhenius Plots and effective potential barriers}{44}% 
-\contentsline {subsection}{\numberline {4.3}Rinzel model with saddle-node bifurcation}{46}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Distribution of the state lifetimes}{46}% 
-\contentsline {subsubsection}{\numberline {4.3.2}Transition rates at different noise intensities}{47}% 
-\contentsline {subsubsection}{\numberline {4.3.3}Arrhenius Plots and effective potential barriers}{48}% 
-\contentsline {section}{\numberline {5}Consequences for Signal transmission}{50}% 
-\contentsline {subsection}{\numberline {5.1}$I_{Na,p}+I_K$ model with saddle-node bifurcation}{51}% 
-\contentsline {subsection}{\numberline {5.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{54}% 
-\contentsline {subsection}{\numberline {5.3}Rinzel model with saddle-node bifurcation}{57}% 
-\contentsline {section}{\numberline {6}Conclusions}{60}% 
+\contentsline {subsubsection}{\numberline {3.1.2}$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}{31}% 
+\contentsline {subsubsection}{\numberline {3.1.3}Rinzel model}{34}% 
+\contentsline {subsubsection}{\numberline {3.1.4}Influence of the initial conditions}{37}% 
+\contentsline {subsubsection}{\numberline {3.1.5}Conclusion}{38}% 
+\contentsline {section}{\numberline {4}Transition rates in bistable neurons}{38}% 
+\contentsline {subsection}{\numberline {4.1}$I_{Na,p}+I_K$ model with saddle node bifurcation}{38}% 
+\contentsline {subsubsection}{\numberline {4.1.1}Distribution of the state lifetimes}{38}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Transition rates at different noise intensities}{39}% 
+\contentsline {subsubsection}{\numberline {4.1.3}Arrhenius Plots and effective potential barriers}{40}% 
+\contentsline {subsubsection}{\numberline {4.1.4}Comparison with two-state theory}{42}% 
+\contentsline {subsection}{\numberline {4.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{44}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Distribution of the state lifetimes}{44}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Transition rates at different noise intensities}{44}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Arrhenius Plots and effective potential barriers}{45}% 
+\contentsline {subsection}{\numberline {4.3}Rinzel model with saddle-node bifurcation}{47}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Distribution of the state lifetimes}{47}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Transition rates at different noise intensities}{48}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Arrhenius Plots and effective potential barriers}{49}% 
+\contentsline {section}{\numberline {5}Consequences for Signal transmission}{51}% 
+\contentsline {subsection}{\numberline {5.1}$I_{Na,p}+I_K$ model with saddle-node bifurcation}{52}% 
+\contentsline {subsection}{\numberline {5.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{55}% 
+\contentsline {subsection}{\numberline {5.3}Rinzel model with saddle-node bifurcation}{58}% 
+\contentsline {section}{\numberline {6}Conclusions}{62}% 

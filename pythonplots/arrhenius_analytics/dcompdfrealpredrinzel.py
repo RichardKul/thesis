@@ -109,7 +109,7 @@ plt.ylabel('$D_{eff}$ [$s^{-1}$]')
 #plt.ylim(5*10**(-2),2*10**3)
 plt.yscale('log')
 #plt.xlim(-0.08,0.2)
-Dvec=[3,4,5,6]
+Dvec=np.array([2,3,4,5])
 #colorv=['g','y','b','r','c']
 colorv=[ '#1f77b4', '#ff7f0e', '#2ca02c','#d62728','#9467bd']
 #t=np.arange(-0.1,0.3,0.01)
@@ -133,7 +133,7 @@ plt.plot([-10.8, -10.8], [10**(-26), 10**22], color='black', linestyle='-',label
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='upper right', bbox_to_anchor=(0.65, 0.55))
 plt.legend()#(loc='upper right', bbox_to_anchor=(0.8, 0.67))
 plt.tight_layout()
-plt.savefig('dcompdfpwnewpred3%s.pdf' %(date1+date2))
+plt.savefig('dcompdfpwnewpred4%s.pdf' %(date1+date2))
 
 
 plt.figure()
@@ -158,7 +158,7 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower right')
 plt.legend()
 plt.tight_layout()
-plt.savefig('gcompdfpwnewpred3%s.pdf' %(date1+date2))
+plt.savefig('gcompdfpwnewpred4%s.pdf' %(date1+date2))
 
 
 plt.figure()
@@ -183,4 +183,4 @@ plt.plot([-10.8, -10.8], [10**(-14), 10**25], color='black', linestyle='-',label
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower left')
 plt.legend()
 plt.tight_layout()
-plt.savefig('fcompdfpwnewpred3%s.pdf' %(date1+date2))
+plt.savefig('fcompdfpwnewpred4%s.pdf' %(date1+date2))

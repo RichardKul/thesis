@@ -310,7 +310,7 @@ The phenomenological investigation of the model will be concluded with a compari
 	\caption{Evolution of the membrane voltage over time (left) and the corresponding phase space picture.}
 	\label{ppcompanhopf}
 \end{figure}
-Here, we see a quite stable limit cycle with amplitude variations of less than 5 mV, representing only a couple percent of the whole voltage range of the system. On the other hand, the resting state is much more irregular than as observed for the saddle-node bifurcation. The reason for this lies in the nature of the equilibrium point. When near the focus, the state vector does not directly approach it. Instead, it performs oscillations with shrinking radius. It is helpful to consider once more the eigenvalues of the Jacobian matrix. The ratio between real and imaginary part was about 1:46, meaning that the system near the equilibrium would roughly need to perform 10 oscillations to halve he radius of these oscillations. Therefore, the system only slowly approaches the resting point and can b easily influenced in either direction by noise.
+Here, we see a quite stable limit cycle with amplitude variations of less than 5 mV, representing only a couple percent of the whole voltage range of the system. This is also clearly visible in the phase space: after crossing the V-nullcline near 0 mV in counterclockwise direction, all limit cycles practically overlap until they reach the n-nullcline at around 55 mV. On the other hand, the resting state is much more irregular than for the saddle-node bifurcation. The reason for this lies in the nature of the equilibrium point. When near the focus, the state vector does not directly approach it. Instead, it performs oscillations with shrinking radius. It is helpful to consider once more the eigenvalues of the Jacobian matrix. The ratio between real and imaginary part was about 1:46, meaning that the system near the equilibrium would roughly need to perform 10 oscillations to halve he radius of these oscillations. Therefore, the system only slowly approaches the resting point and can b easily influenced in either direction by noise.
 \subsection{Rinzel model}
 The last model is a two-dimensional approximation of the Hodgkin-Huxley model, proposed by Rinzel in 1985 \cite{rinzel}. By assuming instantaneous $Na^+$ dynamics and expressing the two gating variables $h$ and $n$ by a single recovery variable $W$, Rinzel got the following model:
 \begin{align*}
@@ -389,9 +389,19 @@ Now that the model has been understood in the phase plane, the influence of nois
 	\caption{Behavior of the membrane voltage for constant noise and changing bias current $I$ at $D=100$. On the bottom, one can see the behavior of the system with a higher time resolution.}
 	\label{rinzelnoise} 
 \end{figure}
-Here, too, the bias current $I$ is the parameter that controls whether resting or spiking state is preferred. At intermediate $I$, the neuron fires irregularly and the noise has a high impact on its behavior. At high bias currents, the neuron barely goes into the resting state, and even that only for a short period of time before going back to tonic spiking. The major impact of noise in this regime lies in the modulation of firing rate and spike height, clearly visible in \ref{rinzelnoise} (d).\\
-In conclusion, both two-dimensional bursting neuron models display the same characteristics as the Brownian particle in a tilted potential. Therefore, we expect to find similar count statistics and Giant Diffusion for these systems as well. If this assumption is actually valid will be examined in the following chapter.
-\subsection{Quantities of interest}
+Here, too, the bias current $I$ is the parameter that controls whether resting or spiking state is preferred. At intermediate $I$, the neuron fires irregularly and the noise has a high impact on its behavior. At high bias currents, the neuron barely goes into the resting state, and even that only for a short period of time before going back to tonic spiking. The major impact of noise in this regime lies in the modulation of firing rate and spike height, clearly visible in \ref{rinzelnoise} (d). This is a major difference to the other neuron models, where we observed a very regular firing with no visible variations of the firing rate. This might also have an influence on the count statistics and other relevant quantities as they are presented in section \ref{quant}.
+
+\begin{figure}[H]
+	\hspace*{-0.5cm}
+	\subfigure[]{	\includegraphics[scale=0.45]{realstatedetrinzel16100sh2.pdf}}
+	\subfigure[]{\includegraphics[scale=0.45]{realstatedetrinzelp16100shnn.pdf}}
+	
+	\caption{Evolution of the membrane voltage over time (left) and the corresponding phase space picture. The blue curves represent the V-nullcline, the orange one is the n-nullcline. }
+	\label{ppcomprinzel}
+\end{figure}
+The noise-induced fluctuations of the system can be even better observed in phase space. Here, one can see that resting and spiking state both are subject to variations in both variables. Considering that just in figure \ref{ppcomprinzel} there are 5 distinct limit cycles, there does not seem to be such a thing as a stable cycle. It comes as no surprise that the resting state is characterized by continuous jittering in W- and V-direction. The stable equilibrium is now much closer to $V_{1/2}$ of the W-nullcline than in the first model, so we can expect changes in both variables. Lastly, the transition from resting to spiking happens quite regularly, once the V-nullcline is crossed. However, the opposite transition is noisy the whole time. This indicates that the transition to the resting takes a longer time and therefore might also be less likely.\\\\
+In conclusion, all three two-dimensional bursting neuron models display the same characteristics as the Brownian particle in a tilted potential. Therefore, we expect to find similar count statistics and Giant Diffusion for these systems as well. If this assumption is actually valid will be examined in the following chapter.
+\subsection{Quantities of interest}\label{quant}
 \subsubsection{System without signal}
 In the context of Brownian Motion, there were two characteristic quantities: the ensemble of particles moves with a mean velocity
 \begin{equation}
@@ -942,10 +952,10 @@ Seeing that signal transmission could be enhanced by multiple magnitudes near th
 	\subfigure[]{	\includegraphics[scale=0.5]{specanhopf3.pdf}}
 	\caption{Spike train power spectra for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation. Peaks at signal and spiking frequency as well the low- and high-frequency limits agree with the theory.}
 \end{figure}
-Finally, one should again note that the criterion of small signal frequencies is well fulfilled in this case, which leads us to the SNR over the whole range of bias currents in figure \ref{specanhopf}.
+Finally, one should again note that the criterion of small signal frequencies is well fulfilled here. This already leads us to the SNR over the whole range of bias currents in figure \ref{specanhopf}.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1]{snranhopfcrit.pdf}\caption{Signal-to-noise ratio SNR for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}
+	\includegraphics[scale=1]{snranhopfcrit2.pdf}\caption{Signal-to-noise ratio SNR for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}
 	\label{specanhopf}
 \end{figure}
 The N-shaped curvature is more pronounced than before, but apart from that, we have a similar picture. After the critical current, the SNR rises by up to three orders of magnitude and the intersection point is located left of $I_{crit}$. 
@@ -953,13 +963,13 @@ The N-shaped curvature is more pronounced than before, but apart from that, we h
 Next, we will take a look at the Two-state theory to confirm the reliability of our measurements and predict the outcome at lower noise intensities $D$.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1]{snrtwostatecompanhopf7mnofit3.pdf}\caption{Comparison of Two-State Theory with measured SNR for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation. The curve for $D=0.15$ is a complete prediction using the transition rates of the other noise intensities.}
+	\includegraphics[scale=1]{snrtwostatecompanhopf7mnofit4.pdf}\caption{Comparison of Two-State Theory with measured SNR for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation. The curve for $D=0.15$ is a complete prediction using the transition rates of the other noise intensities.}
  	\label{specanhopftst}
 \end{figure}
 Almost over the whole range of bias currents, the Two-State Theory shows excellent agreement with our measurements. Only at the highest current, the theory gives slightly overestimates the SNR. This now allows to go to lower noise intensities.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1]{snranhopfpred.pdf}\caption{Prediction of SNR at low noise  using the Two-State Theory for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation.}
+	\includegraphics[scale=1]{snranhopfpred2.pdf}\caption{Prediction of SNR at low noise  using the Two-State Theory for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation.}
 	\label{snrpredanhopf}
 \end{figure}
 Surprisingly, the N-shape remains until $D=0.03$, before the curves finally become monotone. We see that the intersection point is now slightly left of the critical current, similarly to $D_{eff}$ at low noise. Even though the noise intensities has decreased by just an order of magnitude, the SNR now went up by more than 40 orders of magnitude after the critical current, underlinqing the potential that lies within these systems.
@@ -967,22 +977,32 @@ Surprisingly, the N-shape remains until $D=0.03$, before the curves finally beco
 Surprisingly and despite its much more complex phase space picture, the spectrum for the Rinzel model looks familiar. The high-and low-frequency limits correspond to their theoretical predictions and there are peaks at signal and spiking frequency, including some higher harmonics for the latter.
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1]{snrinzelrange26dcompletecrit.pdf}\caption{Signal-to-noise ratio SNR for the Rinzel model with Saddle-node bifurcation}
+	\includegraphics[scale=1]{snrinzelonlycrit.pdf}\caption{Signal-to-noise ratio SNR for the Rinzel model with Saddle-node bifurcation}
 	\label{specrinzel}
 \end{figure}
 Also the N-shape of the SNR resembles the previous models, except that it already increases before the critical current. Here, we see a maximum rise of a bit more than two orders of magnitude.  
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1]{snrinzelrange26dcompletecritnofit2.pdf}\caption{Comparison of Two-State Theory with measured SNR for the Rinzel model with Saddle-node bifurcation. The curve for $D=20$ is a complete prediction using the transition rates of the other noise intensities.}
+	\includegraphics[scale=1]{snrinzelrange26dcompletecritnofit3.pdf}\caption{Comparison of Two-State Theory with measured SNR for the Rinzel model with Saddle-node bifurcation. The curve for $D=20$ is a complete prediction using the transition rates of the other noise intensities.}
 	\label{specrinzeltst}
 \end{figure}
 The comparison with the Two-State Theory gives a similar picture to $D_{eff}$ and the fano factor. Up to $I\approx-11$, there is a good agreement between data and theory, and even the intersection point at $I\approx-10.5$ can be confirmed. After that, there is an overestimation of the SNR. Taking a look at even lower noise intensities, we reach monotonous behavior, and the intersection point is shifted to the left. This is surprising as it is not consistent with the low-noise cases of $D_{eff}$ and $F$, where the intersection point was shifted to the right, and also not consistent with the effective potential barriers. 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1]{snrinzelpred.pdf}\caption{Prediction of SNR at low noise  using the Two-State Theory for the Rinzel model with Saddle-node bifurcation.}
+	\includegraphics[scale=1]{snrinzelpred2.pdf}\caption{Prediction of SNR at low noise  using the Two-State Theory for the Rinzel model with Saddle-node bifurcation.}
 	\label{snrinzelpred}
 \end{figure}
+This is probably a finite-size effect and vanishes at even lower $D$:
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{snrinzelpred3.pdf}\caption{Prediction of SNR at low noise  using the Two-State Theory for the Rinzel model with Saddle-node bifurcation.}
+	\label{snrinzelpred2}
+\end{figure}
 \section{Conclusions}
+In this work, we examined three different two-dimensional bistable neuron models. We were able to induce constant stochastic transitions between the states by introducing noise into the system. For each model, we found a region of giant enhancement of spike count diffusion, which has shown in the effective diffusion coefficient $D_{eff}$ and the Fano factor $F$. From that we drew the conclusion that the only condition that needs to be fulfilled to observe Giant Diffusion is bistability and the ability to induce changes between the states by adding noise. This region of Giant Diffusion was defined by two critical currents. Near the critical current, the neuron models experience a great decrease of spike count diffusion. This observation lead to the conclusion that one should observe a great increase of the signal-to-noise ratio SNR at this point. Therefore, we added a periodic signal to the systems and did a spectral analysis of the spike trains. This showed an increase of the SNR by up to three orders of magnitude, thereby confirming our assumptions.\\
+A second focus of this thesis lies on the two-state theory. By simply defining the spiking state as a period of repetitive firing
+and the resting state as an interval of no firing, we broke the behavior down into bistable dynamics. Then, we would count the transitions between these states to obtain transition rates. These could be fit with an Arrhenius-equation to find effective potential barriers which would not depend on the noise intensity $D$ anymore. This is important because it not only allowed us to compare theory and measurements and see good agreement there, but also to predict the outcome at even lower noise intensities. These predictions showed that the curves qualitatively stayed the same and only experienced more drastic changes.\\
+Finally, we now would like to transfer these findings to real neurons. There have been conducted multiple studies on bistable neurons.
 \bibliography{quellen}
 \bibliographystyle{ieeetr}
 \include{other/declaration}
