@@ -674,7 +674,7 @@ Lastly we investigate the overall firing rate. all curves monotonically increase
 	\includegraphics[scale=1]{gneur3critsprealanhopf26flogrealanhopf19flog.pdf}\caption{Average firing rates for different noise intensities. The black curve denotes the firing rate in the running state which was obtained from a simulation of the system without noise.}
 	\label{rateanhopf}
 \end{figure}
-\subsubsection{Rinzel model}
+\subsubsection{Rinzel model}\label{rinzelmodel}
 Having observed Giant Diffusion in two variants of the $I_{Na,p}+I_K$ model, we will now answer the question whether the much more complex model proposed by Rinzel aligns with the simpler model. Once again we will start with the effective diffusion coefficient $D_{eff}$.\\
 At first glance, the image does not look too different from the previous models. All curves have maxima in the simulated range of bias currents, and they share a sharp intersection point at around $I\approx-11$. However, there is no clear intersection on the left side, so defining two critical currents would be ludicrous. In addition, the maxima visibly shift to the right with decreasing noise. This might suggest that the chosen noise intensities are still too far away from the low noise limit which is a requirement for sharp intersection points. Nevertheless, the diffusion coefficient increases with decreasing noise between the intersections, and decreases outside of this region, resulting in changes of 5 orders of magnitude. Consequently, Giant Diffsuion exists also in this model.
 \begin{figure}[H]
@@ -819,6 +819,7 @@ The effective potential barriers behave inversely to the transition rates, which
 	\subfigure[]{	\includegraphics[scale=0.5]{barriercompanhopfcritbig.pdf}}
 	\caption{Effective potential barriers for both transitions. As the running state is favored at high bias currents, $\Delta U_+$ increases, while the other one drops. The points where $\Delta U_i=2\Delta U_j$ correspond to the numerically computed intersection points from figure \ref{deff} with only slight deviations.}
 \end{figure}
+\subsubsection{Comparison with two-state theory}
 Over the whole range of bias currents, there is a good agreement between data and theory, and even the prediction for $D=0.15$ looks similar to the measurements. Therefore, it is safe to assume that we can now predict the outcome of simulations at even lower noise intensities. 
 \begin{figure}[H]
 	\hspace*{-0.5cm}
@@ -874,7 +875,41 @@ The behavior of the potential barriers corresponds to the transition rates. In c
 	\subfigure[]{	\includegraphics[scale=0.5]{barriercomprinzelcritbig.pdf}}
 	\caption{Effective potential barriers for both transitions. As the running state is favored at high bias currents, $\Delta U_+$ increases, while the other one drops. The points where $\Delta U_i=2\Delta U_j$ correspond to the numerically computed intersection points from figure \ref{deff} with only slight deviations.}
 \end{figure}
-The validity of the two-state theory can be seen in the comparison with the data. Here we see an excellent agreement up to a bias current of $I\approx-11$. After this point, the measured curves saturate, so that the theory underestimates the values of $D_{eff}$ and $F$. It is important to note that even the theory does not predict a clear intersection at the left. In conclusion, even though we did not yet reach the low-noise limit, we already observed a change in $D_{eff}$ of 6 orders of magnitude. This is an important finding, as it could be difficult to experimentally realize the low-noise limit for neurons.
+\subsubsection{Comparison with two-state theory}
+We saw in section \ref{rinzelmodel} that there was a noise-dependency of the firing rate in the spiking state. The spiking firing rates can be simply found by dividing the spike count by the time spent in the spiking state. As we have just determined the transition rates, this can be done with the already obtained data. However, a second independent measurement that confirms the first results can help us getting a consistent picture of the system, so that is what was done here. \\
+The firing rate in spiking state increases with the bias current and at the same time approaches the overall firing rate, as the spiking state dominates the behavior of the system. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{detmocountrinzelcompnew2.pdf}\caption{Comparison of overall firing rates $\left<v\right>$ with the noise-dependent firing rate in spiking state $v_0$ in black}
+	\label{detmocomp}
+\end{figure}
+Seeing that $v_0$ is in accordance with the overall firing rate, we now have a way to utilize the Two-state theory to confirm our results. Yet, this is not our only objective. In order to be able to predict the behavior for lower noise intensities, we need to identify the $D$-dependency of $v_0$.
+One way to do this is to fit the curves with an appropriate function to give us a parametric representation of the firing rate for each noise intensity, $v_0=f(I,params)$. A cubic polynomial is able to capture the essential properties of $v_0$, so the function of choice was 
+\begin{equation}
+v_0(I)=aI^3+bI^2+cI+d
+\end{equation}
+The fits are shown in figure \ref{detmocompfit}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{detmocountrinzelcomp6.pdf}\caption{Fits of the firing rate in spiking state $v_0$ with 3th order polynomials}
+	\label{detmocompfit}
+\end{figure}
+Next, we can try to find a $D$-dependency in our fit parameters. For this, we plot them over $D$ and try to describe them with the simplest possible functionality.
+\begin{figure}[H]
+	\hspace*{-0.5cm}
+	\subfigure[]{
+		\includegraphics[scale=0.45]{detmocountrinzelparam30.pdf}
+		\label{rinzelpar}}
+	\subfigure[]{	\includegraphics[scale=0.45]{detmocountrinzelparam32.pdf}}
+	\caption{Two fit parameters plotted over the range of $D$. Both were fit with curves of the form $a/x+b$.}
+\end{figure}  
+All plots reveal an inverse proportionality to $D$. Therefore, all fit parameters $p$ were fit with the function
+\begin{equation}
+p(D)=a/D+b
+\end{equation}
+giving us a second set of fit parameters. These parameters now capture the $I$- as well as the $D$-dependence of the spiking firing rate $v_0$.
+\\
+Now we can try to compare the Two-state theory with the data. Here we see an excellent agreement up to a bias current of $I\approx-11$. After this point, the measured curves saturate, so that the theory underestimates the values of $D_{eff}$ and $F$. It is important to note that even the theory does not predict a clear intersection at the left. In conclusion, even though we did not yet reach the low-noise limit, we already observed a change in $D_{eff}$ of 6 orders of magnitude. This is an important finding, as it could be difficult to experimentally realize the low-noise limit for neurons.
 \begin{figure}[H]
 	\hspace*{-0.5cm}
 	\subfigure[]{

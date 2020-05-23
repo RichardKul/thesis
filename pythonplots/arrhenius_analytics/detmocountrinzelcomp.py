@@ -68,8 +68,8 @@ for m in range(0,l):
 
 colorv=['y','g','b','r','c','k']
 t=np.arange(-21,-6,0.1)
-plt.xlabel('bias current I')
-plt.ylabel('firing rate <v>$')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('firing rate <v> [$s^{-1}$]')
 plt.xlim(-16.2,-9)
 #plt.ylim(1.2,1.4)
 #plt.yscale('log')
@@ -80,6 +80,6 @@ for n in range(0,dvalues-1):
 	#plt.plot(t,comp(t,b[n],c[n],d[n],e[n]),colorv[n])
 #plt.plot(t,comp(t,popt[0],popt[1]),label='linear appr %f %f'%(popt[0],popt[1]))
 plt.legend()
-plt.savefig('detmocountrinzelcompnew.pdf')
+plt.savefig('detmocountrinzelcompnew2.pdf')
 
 

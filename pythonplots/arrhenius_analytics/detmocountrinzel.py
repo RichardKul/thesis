@@ -42,7 +42,7 @@ c=np.zeros(dvalues)
 d=np.zeros(dvalues)
 e=np.zeros(dvalues)
 #xnew=np.arange(-0.19,0.31,0.01)
-eqfile = open('detmocountparam5.txt','w')
+eqfile = open('detmocountparam6.txt','w')
 for n in range(0,dvalues):
 	popt,pcov = curve_fit(comp, colxa, count[n,:]/T)
 #	a[n]=popt[0]
@@ -54,18 +54,19 @@ for n in range(0,dvalues):
 		eqfile.write('%.6f '%popt[k3])
 	eqfile.write('\n') 
 eqfile.close() 
-colorv=['y','g','b','r','c','k']
+#colorv=['y','g','b','r','c','k']
+colorv=[ '#1f77b4', '#ff7f0e', '#2ca02c','#d62728','#9467bd']
 t=np.arange(-21,-6,0.1)
-plt.xlabel('bias current I')
-plt.ylabel('firing rate')
+plt.xlabel('bias current I $[\mu A/cm^2]$')
+plt.ylabel('spiking firing rate $v_0$ [$s^{-1}$]')
 #plt.xlim(0,4)
 #plt.ylim(1.2,1.4)
 #plt.yscale('log')
-for n in range(0,dvalues):
-	plt.plot(colxa,count[n,:]/T,colorv[n]+'o',label='D=%s' %(D[n]/10))
-	plt.plot(t,comp(t,b[n],c[n],d[n],e[n]),colorv[n])
+for n in range(2,dvalues):
+	plt.plot(colxa,count[n,:]/T,'x',color=colorv[n-1],label='D=%.2s' %(D[n]/10))
+	plt.plot(t,comp(t,b[n],c[n],d[n],e[n]),colorv[n-1])
 #plt.plot(t,comp(t,popt[0],popt[1]),label='linear appr %f %f'%(popt[0],popt[1]))
 plt.legend()
-plt.savefig('detmocountrinzelcomp5.pdf')
+plt.savefig('detmocountrinzelcomp6.pdf')
 
 

@@ -36,12 +36,14 @@
 \contentsline {subsubsection}{\numberline {4.2.1}Distribution of the state lifetimes}{44}% 
 \contentsline {subsubsection}{\numberline {4.2.2}Transition rates at different noise intensities}{44}% 
 \contentsline {subsubsection}{\numberline {4.2.3}Arrhenius Plots and effective potential barriers}{45}% 
+\contentsline {subsubsection}{\numberline {4.2.4}Comparison with two-state theory}{46}% 
 \contentsline {subsection}{\numberline {4.3}Rinzel model with saddle-node bifurcation}{47}% 
 \contentsline {subsubsection}{\numberline {4.3.1}Distribution of the state lifetimes}{47}% 
 \contentsline {subsubsection}{\numberline {4.3.2}Transition rates at different noise intensities}{48}% 
 \contentsline {subsubsection}{\numberline {4.3.3}Arrhenius Plots and effective potential barriers}{49}% 
-\contentsline {section}{\numberline {5}Consequences for Signal transmission}{51}% 
-\contentsline {subsection}{\numberline {5.1}$I_{Na,p}+I_K$ model with saddle-node bifurcation}{52}% 
-\contentsline {subsection}{\numberline {5.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{55}% 
-\contentsline {subsection}{\numberline {5.3}Rinzel model with saddle-node bifurcation}{58}% 
-\contentsline {section}{\numberline {6}Conclusions}{62}% 
+\contentsline {subsubsection}{\numberline {4.3.4}Comparison with two-state theory}{50}% 
+\contentsline {section}{\numberline {5}Consequences for Signal transmission}{54}% 
+\contentsline {subsection}{\numberline {5.1}$I_{Na,p}+I_K$ model with saddle-node bifurcation}{55}% 
+\contentsline {subsection}{\numberline {5.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{58}% 
+\contentsline {subsection}{\numberline {5.3}Rinzel model with saddle-node bifurcation}{61}% 
+\contentsline {section}{\numberline {6}Conclusions}{65}% 
