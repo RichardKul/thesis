@@ -24,16 +24,20 @@ def rprime(r0,r0s,Us,D):
 def snrcor(r0p,r0m,up,um,ups,ums,D,av,v0,r0ps,r0ms):
 	return ((av*r(r0m,um,D)*(r(r0m,um,D)+r(r0p,up,D))+v0*(rprime(r0m,r0ms,ums,D)-rprime(r0p,r0ps,ups,D))*r(r0p,up,D)*r(r0m,um,D))**2)/((r(r0p,up,D)+r(r0m,um,D))*v0**2*r(r0p,up,D)*r(r0m,um,D))
 
-date3='newrealfast11jjem2sh'
-date2='newrealfast19jjem2st'
+#date3='newrealfast11jjem2sh'
+#date2='newrealfast19jjem2st'
+date3='realfast9acoarsetf'
+date2='realfast23mtf'
+
 
 ivalues=20
 l=5
-D1=[35]
-D2=[45]
-D3=[40,50]
-Dvar=[30]
-D=D1+D2+D3+Dvar
+#D1=[35]
+#D2=[45]
+#D3=[40,50]
+#Dvar=[30]
+#D=D1+D2+D3+Dvar
+D=[30,35,40,45,50]
 Da=np.array(D)
 btoeq=np.zeros((l,ivalues))
 eqtob=np.zeros((l,ivalues))
@@ -103,7 +107,7 @@ for ls in range(0,ivalues):
 
 ll=0
 SNR=np.zeros((l,ivalues))
-snrfile=open('snrealfile.txt','r')
+snrfile=open('snrealfile2.txt','r')
 for s in snrfile:
 	row=s.split()
 	for t in range(0,ivalues):
@@ -131,13 +135,13 @@ for n in range(0,1):
 	plt.plot(xnew,SNR[n,:],'o',color=colorv[n],label='D=%.2f*' %(Dtot[n]*0.01))
 	plt.plot(xnew[1:ivalues-1],snrcor(params[0,1:ivalues-1],params[2,1:ivalues-1],params[1,1:ivalues-1],params[3,1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])#,label='D=%.2f' %(Dtot[n]*0.01))
 for n in range(1,l2):
-	plt.plot(xnew,SNR[n,:],'o',color=colorv[n],label='D=%.2f' %(Dtot[n]*0.01))
+	plt.plot(xnew,abs(SNR[n,:]),'o',color=colorv[n],label='D=%.2f' %(Dtot[n]*0.01))
 	plt.plot(xnew[1:ivalues-1],snrcor(params[0,1:ivalues-1],params[2,1:ivalues-1],params[1,1:ivalues-1],params[3,1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])#,label='D=%.2f' %(Dtot[n]*0.01))
 
 #plt.plot([0.163, 0.163], [10**(-74), 10**(45)], color='black', linestyle='-',label='$I_{crit}$')
 plt.xlim(-0.06,0.28)
 	#plt.plot(xnew,ratenew,colorv[n])
 plt.legend()
-plt.savefig('snrtwostateneurcorsh3.pdf')
-#plt.savefig('snrpredneur.pdf')
+plt.savefig('snrtwostateneurcorsh5.pdf')
+#plt.savefig('snrpredneur2.pdf')
 #plt.savefig('snrinzelonly.pdf')

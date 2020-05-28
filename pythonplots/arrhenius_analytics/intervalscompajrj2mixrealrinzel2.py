@@ -33,6 +33,8 @@ eqtottime=np.zeros((l,ivalues))
 eqreltime=np.zeros((l,ivalues))
 btottime=np.zeros((l,ivalues))
 breltime=np.zeros((l,ivalues))
+cve=np.zeros((l,ivalues))
+cvb=np.zeros((l,ivalues))
 ii=0
 
 for m in range(0,l):
@@ -138,10 +140,23 @@ for m in range(0,l):
 		eqtottime[ii][y-istart]=eqtot/counteq
 		btottime[ii][y-istart]=btot/countb
 		eqreltime[ii][y-istart]=eqrel
-		breltime[ii][y-istart]=brel
+		breltime[ii][y-istart]=brel		
+		cve[ii][y-istart]=np.sqrt(np.sum(inteqt**2)/counteq-(np.sum(inteqt)/counteq)**2)/(np.sum(inteqt)/counteq)
+		cvb[ii][y-istart]=np.sqrt(np.sum(intbt**2)/countb-(np.sum(intbt)/countb)**2)/(np.sum(intbt)/countb)
 	ii=ii+1	
 
-
+cvbfile = open('cvb%s.txt' % (date[0]+date[1]),'w')
+for kh in range(0,l): 
+	for kl in range(0,ivalues): 
+		cvbfile.write('%.6f '%cvb[kh][kl]) 
+	cvbfile.write('\n')
+cvbfile.close() 
+cvefile = open('cve%s.txt' % (date[0]+date[1]),'w')
+for kh in range(0,l): 
+	for kl in range(0,ivalues): 
+		cvefile.write('%.6f '%cve[kh][kl]) 
+	cvefile.write('\n')
+cvefile.close() 
 #xs=np.arange(0.25,4.25,0.25)
 #for k in range(0,20):
 #	plt.figure()

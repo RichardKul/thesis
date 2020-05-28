@@ -24,11 +24,11 @@ a2=82/4
 
 t=np.arange(0,10,0.1)
 xs=np.arange(0,10,0.2)
-plt.xlabel('timestep')
+plt.xlabel('timestep [ms]')
 plt.ylabel('spike count')
 #plt.xlim(0,4)
 #plt.ylim(1.2,1.4)
-plt.yscale('log')
+#plt.yscale('log')
 plt.xscale('log')
 plt.plot(colxa,cola)
 #plt.plot(t,comp(t,a2,602)/500,label='linear appr')

@@ -20,11 +20,11 @@ runs=50
 
 timefac=1000
 
-date='realrinzelrangeshort1mtf1'
+date='realrinzelrange22mtf1'
 
 mode='spike'
 D=500
-istart=3
+istart=8
 ivalues=1
 nr=9
 
@@ -136,27 +136,33 @@ for z in range(istart,istart+ivalues):
 	#plt.plot(ax2[0:l2]*timefac,2*d*np.ones(l2)*timefac,'y')
 	#xdisplay, ydisplay = plot1.transAxes.transform_point((1, 2*d*timefac))
 	#plt.arrow(0.1, 0.1, -0.1, 0,transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
-	plt.plot(ax[0:axmax]*timefac,7.5*np.ones(axmax),'r--',label='background')
-	plt.plot(ax2[0:l2]*timefac,7.5*np.ones(l2),'r--')
+	#plt.plot(ax[0:axmax]*timefac,30000*np.ones(axmax),'r--',label='background')
+	#plt.plot(ax2[0:l2]*timefac,30000*np.ones(l2),'r--')
+	plt.plot(ax[0:axmax]*timefac,170*np.ones(axmax),'r--',label='background')
+	plt.plot(ax2[0:l2]*timefac,170*np.ones(l2),'r--')
 	#plt.arrow(5*10**(-3),300,0,-299,length_includes_head=True)
 	#plt.arrow(0.277, 0.83, 0, -0.83, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
-	plt.arrow(0.3457, 0.43, 0, -0.43, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
+	#plt.arrow(0.3457, 0.55, 0, -0.55, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
+	plt.arrow(0.3457, 0.26, 0, -0.26, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
 	plt.text(3*10**(-4),40,'signal')
 	plt.text(3*10**(-5),20,'frequency')
 	#plt.text(4*10**(-5),0.1,'signal')
 	#plt.text(4*10**(-5),0.04,'frequency')
 	#plt.arrow(70,10,0,-9,length_includes_head=True)
-	plt.arrow(0.7585, 0.6, 0, -0.6, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
+	#plt.arrow(0.765, 0.26, 0, -0.26, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
+	plt.arrow(0.768, 0.46, 0, -0.46, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
 	#plt.arrow(0.6857, 0.3, 0, -0.3, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
-	plt.text(1*10**(-1),40,'firing rate in')
-	plt.text(1*10**(-1),20.09,'spiking state')
+	#plt.text(1*10**(1),1500,'firing rate in')
+	#plt.text(1*10**(1),500,'spiking state')
+	plt.text(1*10**(1),3000,'firing rate in')
+	plt.text(1*10**(1),1500,'spiking state')
 	#plt.text(3*10**(-2),0.01,'firing rate')
 	#plt.text(3*10**(-2),0.004,'in spiking state')
 	#plt.text(8*10**(-7),2*d*timefac,'$2D_{eff}$')
-	plt.text(10**(-7),1.2*d*timefac,'$2D_{eff}$')
-	#plt.plot(10**(-4),2*d*timefac,'bx')
-	plt.arrow(0.10, 0.453, -0.10, 0,transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
-	#plt.arrow(0.10, 0.654, -0.10, 0,transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
+	plt.text(10**(-7),2*d*timefac,'$2D_{eff}$')
+	#plt.plot(10**(-5),2*d*timefac,'bx')
+	#plt.arrow(0.10, 0.5785, -0.10, 0,transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
+	plt.arrow(0.10, 0.294, -0.10, 0,transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
 #plt.plot(ax2,spectrum(ax2,1/(4.748*10**(-3)),13),label='theory')
 #plt.plot(omega,background/T,'kx')
 	#plt.legend(bbox_to_anchor=(0.4, 0.65))
@@ -168,5 +174,5 @@ for z in range(istart,istart+ivalues):
 	plot1.spines['right'].set_visible(False)
 	plot1.spines['top'].set_visible(False)
 	plt.tight_layout()
-	plt.savefig('specarinzel.pdf')
+	plt.savefig('specarinzelnew2.pdf')
 	#plt.savefig('inapikanhopf%s2%sfourierD=%.2fI=%.2f.pdf' %(mode,date,D/100,43+z*0.25))	

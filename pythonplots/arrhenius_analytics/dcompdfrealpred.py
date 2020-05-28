@@ -142,8 +142,10 @@ vvec=np.zeros(ivalues)
 for ll in range(0,ivalues):
 	vvec[ll]=cola[2*ll+12]/T
 
-date10='realfast11jjem2sh'
-date20='realfast19jjem2st'
+#date10='realfast11jjem2sh'
+#date20='realfast19jjem2st'
+date10='realfast9acoarsetf'
+date20='realfast23mtf'
 
 ivalues=20
 
@@ -154,7 +156,8 @@ ueqtob=np.zeros(ivalues)
 
 for k2 in range(0,ivalues):
     x=[]
-    ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/param%s%d.txt' %('new'+date10+'new'+date20,k2),'r')
+    #ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/param%s%d.txt' %('new'+date10+'new'+date20,k2),'r')
+    ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/param%s%d.txt' %(date10+date20,k2),'r')
     for k4 in ratefile:
         row=k4.split()
         x.append(float(row[0]))
@@ -207,7 +210,7 @@ plt.plot([-0.022, -0.022], [10**(-35), 10**39], color='black', linestyle='-')
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='upper right', bbox_to_anchor=(0.65, 0.55))
 plt.legend(loc='upper right', bbox_to_anchor=(0.8, 0.67))
 plt.tight_layout()
-plt.savefig('dcompdfpwnewpred2%s.pdf' %(date1+date2))
+plt.savefig('dcompdfpwnewpred3%s.pdf' %(date1+date2))
 
 
 plt.figure()
@@ -232,7 +235,7 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower right')
 plt.legend()
 plt.tight_layout()
-plt.savefig('gcompdfpwnewpred2%s.pdf' %(date1+date2))
+plt.savefig('gcompdfpwnewpred3%s.pdf' %(date1+date2))
 
 
 plt.figure()
@@ -258,4 +261,4 @@ plt.plot([-0.022, -0.022], [10**(-20), 10**40], color='black', linestyle='-')
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower left')
 plt.legend()
 plt.tight_layout()
-plt.savefig('fcompdfpwnewpred2%s.pdf' %(date1+date2))
+plt.savefig('fcompdfpwnewpred3%s.pdf' %(date1+date2))

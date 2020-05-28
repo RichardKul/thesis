@@ -53,9 +53,10 @@ vvec=np.zeros(ivalues)
 for ll in range(0,ivalues):
 	vvec[ll]=cola[2*ll+12]/T
 
-date10='realfast11jjem2sh'
-date20='realfast19jjem2st'
-
+#date10='realfast11jjem2sh'
+#date20='realfast19jjem2st'
+date10='realfast9acoarsetf'
+date20='realfast23mtf'
 
 
 rbtoeq=np.zeros(ivalues)
@@ -65,7 +66,8 @@ ueqtob=np.zeros(ivalues)
 
 for k2 in range(0,ivalues):
     x=[]
-    ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/param%s%d.txt' %('new'+date10+'new'+date20,k2),'r')
+    #ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/param%s%d.txt' %('new'+date10+'new'+date20,k2),'r')
+    ratefile = open('/home/richard/mastergit/pythonplots/arrhenius_analytics/param%s%d.txt' %(date10+date20,k2),'r')
     for k4 in ratefile:
         row=k4.split()
         x.append(float(row[0]))
@@ -141,7 +143,7 @@ handles, labels = plt.gca().get_legend_handles_labels()
 order = [2,3,0,1]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='upper right', bbox_to_anchor=(0.65, 0.55))
 plt.tight_layout()
-plt.savefig('dcompdfpwnewbig%s.pdf' %(date[0]+date[1]))
+plt.savefig('dcompdfpwnewbig2%s.pdf' %(date[0]+date[1]))
 
 g=np.zeros((l,ivalues1))
 ii=0
@@ -188,7 +190,7 @@ handles, labels = plt.gca().get_legend_handles_labels()
 order = [2,3,0,1]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower right')
 plt.tight_layout()
-plt.savefig('gcompdfpwnewbig%s.pdf' %(date[0]+date[1]))
+plt.savefig('gcompdfpwnewbig2%s.pdf' %(date[0]+date[1]))
 
 
 fano=np.zeros((l,ivalues1))
@@ -236,7 +238,7 @@ handles, labels = plt.gca().get_legend_handles_labels()
 order = [2,3,0,1]
 plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order],loc='lower left')
 plt.tight_layout()
-plt.savefig('fcompdfpwnewbig%s.pdf' %(date[0]+date[1]))
+plt.savefig('fcompdfpwnewbig2%s.pdf' %(date[0]+date[1]))
 
 #t=np.arange(-0.1,0.3,0.001)
 #plt.figure()

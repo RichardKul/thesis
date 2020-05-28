@@ -152,7 +152,12 @@ for m in range(0,l):
 		SNR[ii][z-1]=ay[omegaind]/np.mean([ay[omegaind-1],ay[omegaind-2],ay[omegaind+1],ay[omegaind+2],ay[omegaind-3]])
 	ii=ii+1
 
-
+snrealfile=open('snrealfile2.txt','w')
+for n in range(0,l):
+	for m in range(0,ivalues):
+		snrealfile.write('%.6f '%((SNR[n][m]-1)/scale[n][m]))
+	snrealfile.write('\n')
+snrealfile.close()
 
 #files=open('/home/richard/NetBeansProjects/oup/xtraje6newwcav2.txt',"r")
 #sx,sy=[],[]
@@ -189,7 +194,7 @@ xs=np.arange(-0.08,0.32,0.02)
 plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
-#plt.xlim(4*10**(-4),100)
+plt.ylim(1.5*10**(-5),7*10**(-2))
 #colorv=['g','y','b','r','c']
 for n in range(0,l):
 	plt.plot(xs,abs(SNR[n,:]-1)/scale[n,:],label='D=%.2f' %(D[n]*0.01))
@@ -205,4 +210,4 @@ plt.plot([0.163, 0.163], [5*10**(-5), 5*10**(-2)], color='black', linestyle='-',
 #plt.plot(sax2,say2/T2,label='e6')
 plt.legend()
 plt.tight_layout()
-plt.savefig('snrealonly2crit4.pdf')
+plt.savefig('snrealonly2crit5.pdf')

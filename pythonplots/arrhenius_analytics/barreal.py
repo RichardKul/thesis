@@ -18,14 +18,18 @@ def func(x, a, b):
 	return a * np.exp(-b * x)
 
 
-date3='new'+'realfast11jjem2sh'
-date2='new'+'realfast19jjem2st'
+#date3='new'+'realfast11jjem2sh'
+#date2='new'+'realfast19jjem2st'
+date3='realfast9acoarsetf'
+date2='realfast23mtf'
+
 
 ivalues=20
 l=5
 D1=[]
 D3=[]
-D2=[35,45,40,50,30]
+#D2=[35,45,40,50,30]
+D2=[30,35,40,45,50]
 Dvar=[]
 D=D1+D2+D3+Dvar
 Da=np.array(D)
@@ -95,7 +99,7 @@ plt.plot(xnew,params[3,:],'r')
 #plt.plot(t1,qbarrier(t1,paramsq[3],paramsq[4],paramsq[5]),'r')
 plt.legend()
 plt.tight_layout()
-plt.savefig('barriereal4linebig.pdf')
+plt.savefig('barriereal5linebig.pdf')
 
 plt.figure()
 plt.xlabel('bias current I $[\mu A/cm^2]$')
@@ -108,7 +112,7 @@ plt.plot(xnew,params[2,:],'r')
 #plt.plot(t1,qbarrier(t1,paramsqrate[3],paramsqrate[4],paramsqrate[5]),'r')
 plt.legend()
 plt.tight_layout()
-plt.savefig('ratereal4linebig.pdf')
+plt.savefig('ratereal5linebig.pdf')
 
 plt.figure()
 plt.xlabel('bias current I $[\mu A/cm^2]$')
@@ -125,6 +129,6 @@ plt.plot([0.165, 0.165], [0,9], color='black', linestyle='-',label='$I_{crit}$')
 plt.plot([-0.022, -0.022], [0,9], color='black', linestyle='-')
 plt.legend()
 plt.tight_layout()
-plt.savefig('barriercomprealfit4linecritbig.pdf')
+plt.savefig('barriercomprealfit5linecritbig.pdf')
 
 

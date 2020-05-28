@@ -91,4 +91,8 @@
   multidimensional integrate-and-fire neurons},'' {\em Phys. Rev. Research},
   2019.
 
+\bibitem{cvref}
+{A. Shpiro et al.}, ``{Balance between noise and adaptation in competition
+  models of perceptual bistability},'' {\em J Comput Neurosci 27}, 2009.
+
 \end{thebibliography}
