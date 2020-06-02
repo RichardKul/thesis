@@ -8,6 +8,8 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
+matplotlib.rcParams.update({'font.size': 20})
+
 def comp(x,a,b):
 	return a*x+b
 
@@ -24,6 +26,7 @@ a2=82/4
 
 t=np.arange(0,10,0.1)
 xs=np.arange(0,10,0.2)
+fig, ax=plt.subplots()
 plt.xlabel('timestep [ms]')
 plt.ylabel('spike count')
 #plt.xlim(0,4)
@@ -33,7 +36,8 @@ plt.xscale('log')
 plt.plot(colxa,cola)
 #plt.plot(t,comp(t,a2,602)/500,label='linear appr')
 #plt.legend()
+ax.yaxis.set_major_locator(plt.MaxNLocator(3))
 plt.tight_layout()
-plt.savefig('detmotimeanhopf4.pdf')
+plt.savefig('detmotimeanhopfbig2.pdf')
 
 

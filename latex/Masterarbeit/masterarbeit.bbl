@@ -6,12 +6,12 @@
   of Comparative Neurology 513}, 2009.
 
 \bibitem{izi}
-{Eugene M. Izhikevich}, {\em {Dynamical Systems in Neuroscience}}.
+{E. M. Izhikevich}, {\em {Dynamical Systems in Neuroscience}}.
 \newblock The MIT Press, 2007.
 
 \bibitem{dnb}
-{Gennady S. Cymbalyuk}, ``{Dynamics of neuronal bursting},'' {\em J Biol Phys
-  37}, 2011.
+{G. S. Cymbalyuk}, ``{Dynamics of neuronal bursting},'' {\em J Biol Phys 37},
+  2011.
 
 \bibitem{pacemaker}
 {J. Jalife and C. Antzelevitch}, ``{Phase resetting and annihilation of
@@ -27,12 +27,12 @@
   by sensory stimulation},'' {\em Nature Neuroscience 8}, 2005.
 
 \bibitem{moto1}
-{Chie-Fang Hsiao et al.}, ``{Ionic Basis for Serotonin-Induced Bistable
-  Membrane Properties in Guinea Pig Trigeminal Motoneurons},'' {\em J.
-  Neurophysiol. 79}, 1998.
+{C.-F. Hsiao et al.}, ``{Ionic Basis for Serotonin-Induced Bistable Membrane
+  Properties in Guinea Pig Trigeminal Motoneurons},'' {\em J. Neurophysiol.
+  79}, 1998.
 
 \bibitem{moto2}
-{Jorn Hounsgaard and Ole Kiehn}, ``{Serotonin-induced bistability of turtle
+{J. Hounsgaard and O. Kiehn}, ``{Serotonin-induced bistability of turtle
   motoneurones caused by a nifedipine-sensitive calcium plateau potential},''
   {\em J. Physiol. 414}, 1989.
 
@@ -45,12 +45,28 @@
   neurons},'' {\em Nature 420}, 2002.
 
 \bibitem{spindle}
-{Pablo Fuentealba et al.}, ``{Membrane Bistability in Thalamic Reticular
-  Neurons During SpindleOscillations},'' {\em J. Neurophysiol. 93}, 2005.
+{P. Fuentealba et al.}, ``{Membrane Bistability in Thalamic Reticular Neurons
+  During SpindleOscillations},'' {\em J. Neurophysiol. 93}, 2005.
 
 \bibitem{bpp}
 {B. Lindner and I. M. Sokolov}, ``{Giant diffusion of underdamped particles in
   a biased periodic potential},'' {\em PRE 93}, 2016.
+
+\bibitem{td}
+{G. Costantini and F. Marchesoni}, ``{Threshold diffusion in a tilted washboard
+  potential},'' {\em Europhys. Lett. 48}, 1999.
+
+\bibitem{ga}
+{P. Reimann et al.}, ``{Giant Acceleration of Free Diffusion by Use of Tilted
+  Periodic Potentials},'' {\em Physical Review Letters 87}, 2001.
+
+\bibitem{dit}
+{P. Reimann et al.}, ``{Diffusion in tilted periodic potentials: Enhancement,
+  universality, and scaling},'' {\em Physical Review E 65}, 2002.
+
+\bibitem{gd}
+{D. Dan and A. M. Jayannavar}, ``{Giant diffusion and coherent transport in
+  tilted periodic inhomogeneous systems},'' {\em Physical Review E 66}, 2002.
 
 \bibitem{abp}
 {B. Lindner and E. M. Nicola}, ``{Critical Asymmetry for Giant Diffusion of
@@ -78,7 +94,7 @@
   Comput Neurosci 36}, 2014.
 
 \bibitem{rinzel}
-{John Rinzel}, ``{Excitation dynamics: insights from simplified membrane
+{J. Rinzel}, ``{Excitation dynamics: insights from simplified membrane
   models},'' {\em Federation Proc 44}, 1985.
 
 \bibitem{speclim}

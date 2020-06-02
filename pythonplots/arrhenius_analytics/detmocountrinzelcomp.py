@@ -13,6 +13,8 @@ from scipy.optimize import curve_fit
 def comp(x,b,c,d,e):
 	return b*x**3+c*x**2+d*x+e
 
+matplotlib.rcParams.update({'font.size': 20})
+
 timefac=1000
 N=5000000
 dt=0.005
@@ -80,6 +82,7 @@ for n in range(0,dvalues-1):
 	#plt.plot(t,comp(t,b[n],c[n],d[n],e[n]),colorv[n])
 #plt.plot(t,comp(t,popt[0],popt[1]),label='linear appr %f %f'%(popt[0],popt[1]))
 plt.legend()
-plt.savefig('detmocountrinzelcompnew2.pdf')
+plt.tight_layout()
+plt.savefig('detmocountrinzelcompnew2big.pdf')
 
 
