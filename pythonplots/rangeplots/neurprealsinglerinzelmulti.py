@@ -14,7 +14,7 @@ import matplotlib.pyplot as plt
 #yvar=[4,13,3]
 #yvalues=len(yvar)
 
-matplotlib.rcParams.update({'font.size': 14})
+matplotlib.rcParams.update({'font.size': 22})
 timefac=1000
 
 date='realrinzel20ninv0'
@@ -335,7 +335,7 @@ plt.figure()
 #xs=np.arange(-0.75,4.25,0.25)
 #xs=np.arange(0.25,2,0.25)
 plt.xlabel('bias current I $[\mu A/cm^2]$')
-plt.ylabel('overall firing rate $<v> [s^{-1}]$')
+plt.ylabel('firing rate $<v> [s^{-1}]$')
 #plt.yscale('log')
 #plt.xscale('log')
 #plt.plot(xburst,cola/T,label='measured bursting rate',color='black')
