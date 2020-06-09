@@ -36,22 +36,27 @@
 
 The human brain is one of the most investigated but still least understood subjects in scientific research. This comes as no surprise considering the huge variety of tasks it can perform efficiently and seemingly effortlessly: it constantly combines multiple sensory impressions and filters the most relevant of them to form a coherent image of the surroundings, it remembers information it has learned decades ago, it can produce the most complex thoughts and keep a whole organism working properly in the meantime. And despite the mayor improvement of processor performance and increasing interest in machine learning and artificial neural networks during the past couple of years, no technological implementation has even remotely managed to match the capability of the human brain.\\
 The basis for its high functionality lies in the huge number of neurons - around 100 Billions\cite{eqnum} - and their interconnectivity: neural cells usually receive inputs from more than 10.000 other neurons\cite{izi}. Thus, in order to be able to understand how the brain works and possibly derive future applications from that, it is crucial to examine neural cells and study their characteristics. \\
-Information in neurons is mainly transmitted via spikes. A spike is an abrupt change of membrane voltage that propagates through the axon. Neural cells do not only produce spikes but display a plethora of responses to their synaptic inputs. In general, neural activity can be divided into four mayor regimes: resting state, sub-threshold oscillations, spiking and bursting\cite{dnb}. During resting-state and sub-threshold oscillations, the neuron does not spike, a spiking neuron fires spikes in regular intervals and a bursting neuron produces multiple spikes followed by periods of quiescence. Often, multiple of these regimes can be found in a single neuron. Of particular interest is the bistability between resting and spiking activity. This has been observed in pacemaker\cite{pacemaker}, sensory \cite{sensory}\cite{sensorystm1} and motoneurons\cite{moto1}\cite{moto2} and is suggested to play important roles in short term memory and processing\cite{sensorystm1}\cite{stm1}\cite{stm2} as well as in shaping patterns of spindling oscillations\cite{spindle}.
-\\
-As each regime displays different voltage dynamics, a bistability in neural activity directly translates into a bistability of the membrane voltage. When noise is added to the system, stochastic switchings between the states will occur. That way, the bistable system is turned into a stochastically bursting neuron model. If the noise intensity is small in comparison to the other ionic currents, the membrane voltage takes on a rectangular shape. In the resting state, the voltage performs noise-driven oscillations around the stable equilibrium point and in the firing state, it may perform large oscillations around the same stable equilibrium or rotate around an unstable focus. This is illustrated in figure \ref{bistablevolt}. 
+Information in neurons is mainly transmitted via spikes. A spike is an abrupt change of membrane voltage that propagates through the axon. Neural cells do not only produce spikes but display a plethora of responses to their synaptic inputs. In general, neural activity can be divided into four mayor regimes: resting state, sub-threshold oscillations, spiking and bursting\cite{dnb}. During resting-state and sub-threshold oscillations, the neuron does not spike, a spiking neuron fires spikes in regular intervals and a bursting neuron produces multiple spikes followed by periods of quiescence. Often, multiple of these regimes can be found in a single neuron. Of particular interest is the bistability between resting and spiking activity. This has been observed in pacemaker\cite{pacemaker}, sensory \cite{sensory}\cite{sensorystm1} and motoneurons\cite{moto1}\cite{moto2} and is suggested to play important roles in short term memory and processing\cite{sensorystm1}\cite{stm1}\cite{stm2} as well as in shaping patterns of so-called spindle oscillations\cite{spindle}. Some experimental data of bistable neurons are shown in figure \ref{expbistable}.
+\begin{figure}[H]
+	\subfigure[]{\includegraphics[width=0.6\textwidth]{bistableloewenstein.png}} 
+	\subfigure[]{\includegraphics[width=0.4\textwidth]{bistablespindle2.png}} 
+	\caption{Experimental observation of neural bistability. On the left side, recordings of rat Purkinje cells are shown\cite{sensorystm1} and the right image was obtained from cat RE neurons\cite{spindle}}
+	\label{expbistable} 
+\end{figure}
+As each regime displays different voltage dynamics, a bistability in neural activity directly translates into a bistability of the membrane voltage. When noise is added to the system, stochastic switchings between the states will occur. That way, the bistable system is turned into a stochastically bursting neuron model. If the influence of the noise is small in comparison to the other ionic currents, the membrane voltage takes on a rectangular shape. In the resting state, the voltage performs noise-driven oscillations around the stable equilibrium point and in the firing state, it may perform large oscillations around the same stable equilibrium or rotate around an unstable focus. The latter case is illustrated in figure \ref{bistablevolt}. 
 
 \begin{figure}[H]	\subfigure[]{	\includegraphics[scale=0.45]{realstatevar14vsh2noleg.pdf}}	\subfigure[]{\includegraphics[scale=0.45]{realstatevar14v2noleg.pdf}} 
-	\caption{Example of bistable membrane voltage under the influence of noise. The amplification in (b) illustrates the different qualitative behaviors in both regimes.}
+	\caption{Example of bistable membrane voltage under the influence of noise, obtained from simulations of the $I_{Na,p}+I_K$ model with saddle-node bifurcation with the parameters from section \ref{inapikwsn} and $D=1$. The amplification in (b) illustrates the different qualitative behaviors in both regimes.}
 	\label{bistablevolt} 
 \end{figure}
 
-A similar bistability has been observed for Brownian Particles in a tilted periodic potential, obeying the following equations of motion\cite{bpp}: 
+A similar bistability has been observed for Brownian Particles in a tilted periodic potential, obeying the following equation of motion\cite{bpp}: 
 \begin{equation*}
 \dot{v}=-\gamma v-U'(x)+\sqrt{2\gamma kT}\xi(t)
 \end{equation*}
 with the potential $U(x)=-Fx-d\cos(x)$. $\gamma$ is the friction coefficient, $kT$ the thermal energy which corresponds to the noise intensity and the bias force $F$ determines the tilt of the potential.
 \\
-Assuming that friction is low and $F$ is chosen such that the tilted potential keeps its minima and maxima, the Brownian particle can be in two different velocity states (figure \ref{veldynintro}). If it performs noise-induced oscillations near a minimum, it is in the so-called \textit{locked state}. After the Brownian particle has managed to overcome a hill and still has enough energy to pass the adjacent maxima as well, it is said to be in the \textit{running state}. While making its way down the washboard potential, the Brownian particle constantly switches between these states due to the influence of noise.
+Assuming that friction is low and $F$ is chosen such that the tilted potential keeps its minima and maxima, the Brownian particle can be in two different velocity states (figure \ref{veldynintro}). If it performs noise-induced oscillations near a minimum, it is in the so-called \textit{locked state}. 
 
 \begin{figure}[H]
 	\subfigure[]{\includegraphics[width=0.5\textwidth]{veldynupper.png}} 
@@ -59,8 +64,9 @@ Assuming that friction is low and $F$ is chosen such that the tilted potential k
 	\caption{Figure (a) visualizes the two motional states of a Brownian Particle in a periodic potential, on the right one can see the bistable velocity dynamics. The oscillations in the locked state are noise-induced while they mainly arise from local extrema of the potential in the running state. These images have been taken from\cite{bpp}.}
 	\label{veldynintro} 
 \end{figure}
-
-In the case of large friction or a strongly tilted potential, however, the particle will barely move or move almost all of the time, respectively. In either configuration, one of the states prevails. When a couple of Brownian Particles are thrown into the system under these conditions, the majority of particles finds itself in the same state of motion. As a consequence, the particles move roughly as a group with only little spread around the mean velocity. Therefore, the effective diffusion coefficient $D_{eff}$ which quantifies the diffusional spread,
+After the Brownian particle has managed to overcome a hill and still has enough energy to pass the adjacent maxima as well, it is said to be in the \textit{running state}.
+While making its way down the washboard potential, the Brownian particle switches between these states due to the influence of noise.
+In the case of large friction or a strongly tilted potential, however, the particle will barely move or move almost all of the time, respectively. In either configuration, one of the states prevails. When an ensemble of Brownian particles are thrown into the system under these conditions, the majority of particles finds itself in the same state of motion. As a consequence, the particles move roughly as a group with only little spread around the mean velocity. Therefore, the effective diffusion coefficient $D_{eff}$ which quantifies the diffusional spread,
 \begin{equation}
 D_{eff}=\lim_{t\rightarrow\infty}\frac{\left\langle x^2(t) \right\rangle-\left\langle x(t)\right\rangle ^2}{2t}
 \end{equation}
@@ -72,8 +78,8 @@ becomes very small. The other extreme case is reached when the parameters are ch
 	\label{anbpsimintro}
 \end{figure}
 
-The upper part of the picture shows the average velocity which naturally increases with the slope of the potential. Depending on the friction, there is a bias force - here denoted by $F_2$ - where frictional loss and acceleration via the potential annihilate each other. In the zero-noise limit, bias forces which are smaller than this value lead to a vanishing velocity, as the running state cannot be sustained without noise. The same argument can be made for $F>F_2$: as the running state cannot be stopped without noise, the maximum velocity is achieved. Consequently, all velocity curves make a jump and intersect each other at $F_2$.\\
-As explained above, the diffusion coefficient gets maximal when both states are occupied with equal probabilities, which obviously happens at $F_2$. Decreasing the noise results in a higher $D_{eff}$, so it can get arbitrarily large at low noise. This phenomenon is called giant diffusion, which is short for \textit{Giant Enhancement of (thermal) diffusion} and was first observed around the turn of the millennium for Brownian Particles in a tilted periodic potential\cite{td}\cite{ga}\cite{dit}\cite{gd}. %In general, giant diffusion occurs in systems with two stable velocity states. 
+The upper part of the figure shows the average velocity which naturally increases with the slope of the potential. The noise-dependent bias force where both states are equally likely is here denoted by $F_2$. In the zero-noise limit, bias forces which are smaller than this value lead to a vanishing velocity. As the resting state is more probable than the running state, the particles will eventually end up there. The same argument can be made for $F>F_2$: when the probability is higher to be in the running state than in the resting state, the maximum velocity is achieved. Consequently, all velocity curves make a jump and intersect each other at $F_2$.\\
+As explained above, the diffusion coefficient gets maximal when both states are occupied with equal probabilities, which happens at $F_2$. Decreasing the noise results in a higher $D_{eff}$, so it can get arbitrarily large at low noise. This phenomenon is called giant diffusion, which is short for \textit{Giant Enhancement of (thermal) diffusion} and was first observed around the turn of the millennium for Brownian Particles in a tilted periodic potential\cite{td}\cite{ga}\cite{dit}\cite{gd}. %In general, giant diffusion occurs in systems with two stable velocity states. 
 Interestingly, the diffusional growth is not only restricted to this particular bias force, but extends over a finite area between the two intersection points of all curves, $F_{GD,\pm}$. Outside of this region, $D_{eff}$ decreases with the noise intensity. Taking a closer look, one notices that the left intersection lies slightly above the right one. \\
 It should be noted that a motion with low diffusion as it occurs outside the region of giant diffusion does not require the disappearance of one of the states, but happens much earlier. Thus, not all particles need to be in the same motional state to accomplish a small diffusion.\\
 In order to better understand what happens in the bistable regime, a simplified description can be used. 
@@ -85,16 +91,16 @@ where $r_-$ denotes the transition rate from locked to running state, and $r_+$ 
 \begin{align}\label{Deff}
 D_{\text{eff}}=\frac{v_0^2 r_+r_-}{(r_++r_-)^3}
 \end{align}
-This formula allows us to find the intersection points of the diffusion coefficients. As the curves for all noise intensities go through these points, they become independent of the noise intensity there.
+This formula allows us to find the intersection points of the diffusion coefficients. As the curves for all noise intensities go through these points, they become independent of the noise intensity there. Consequently, they should remain the same also for vanishing noise intensity.
 It is
 \begin{align*}
 D_{\text{eff}}&=\frac{v_0^2r_{0,+}r_{0,-}\exp\left(-\frac{\Delta U_++\Delta U_-}{D}\right)}{\left[r_{0,+}\exp(\frac{-\Delta U_+}{D})+r_{0,-}\exp\left(\frac{-\Delta U_-}{D}\right)\right]^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left[r_{0,+}\exp\left(-\frac{3\Delta U_+-\Delta U_+-\Delta U_-}{3D}\right)+r_{0,-}\exp\left(-\frac{3\Delta U_--\Delta U_+ -\Delta U_-}{3D}\right)\right]^3}\\&=\frac{v_0^2r_{0,+}r_{0,-}}{\left[r_{0,+}\exp\left(-\frac{2\Delta U_+-\Delta U_-}{3D}\right)+r_{0,-}\exp\left(-\frac{2\Delta U_--\Delta U_+}{3D}\right)\right]^3}
 \end{align*}
-In the limes $D\rightarrow 0,\Delta U_+>U_-$ the first term in the denominator vanishes, resulting in:
+In the limes $D\rightarrow 0,\Delta U_+\Delta>U_-$ the first term in the denominator vanishes, resulting in:
 \begin{align*}
 D_{\text{eff}}=\frac{v_0^2r_{0,+}}{r_{0,-}^2}\exp\left(-\frac{\Delta U_+-2\Delta U_-}{D}\right)
 \end{align*}
-Under the assumption that the prefactors change slowly in comparison to the exponential function, the following condition arises:
+Under the assumption that the prefactors change slowly in comparison to the exponential function, the following condition for the first intersection point arises:
 \begin{align}\label{fcrit}
 \Delta U_+=2\Delta U_-
 \end{align}
@@ -108,26 +114,31 @@ These can be acquired by measuring transition rates at different noise intensiti
 \begin{figure}[H]
 	\subfigure[]{\includegraphics[width=0.5\textwidth]{kramerfit.png}} 
 	\subfigure[]{\includegraphics[width=0.5\textwidth]{barrierplot.png}} 
-	\caption{The left shows the transition rates for a fixed bias force over a range of different noise intensities. Fits were done with both an Arrhenius and a Kramers law but yielded similar results for the effective barriers. On the right one can see the effective potential barriers, where the dotted curves are simply twice the solid curves.  The images have been taken from \cite{bpp}.}
+	\caption{The left shows the transition rates for a fixed bias force over a range of different noise intensities. Fits were done with both an Arrhenius (equation \ref{arrhlaw}) and a Kramers law that accounts for a temperature-dependence of the prefactor, $r_0\propto T^\alpha$, but yielded similar results for the effective barriers. On the right the effective potential barriers are shown, where the dotted curves are simply twice the solid curves.  The images have been taken from \cite{bpp}.}
 	\label{ratesintro} 
 \end{figure}
-It can be seen that the Arrhenius-like behavior continues over a wide range of noise intensities, allowing to get reliable values for the effective potential barriers. According to the criterion from (\ref{fcrit}), the critical forces are expected to be at 0.68 and 0.76, which roughly corresponds to the actual intersection points.\\
-Consequently, the bistable system at hand could be well described by the two-state theory. This implies that other resembling systems might show similar behavior, as for example bistable neurons. The quantities corresponding to position and velocity would be spike count and firing rate, and the noise source wouldn't be the temperature anymore, but channel noise or random input from surrounding neurons.
-Instead of a critical bias force, there would be a critical bias current which needed to be crossed to reach giant diffusion. One of the most important aspects of this similarity would be signal transmission. If the system is driven by a slow cosine signal with amplitude $\epsilon$, the signal-to-noise ratio can be computed via\cite{snr}
+It can be seen that the Arrhenius-like behavior continues over a wide range of noise intensities, allowing to get reliable values for the effective potential barriers. According to the criterion from (\ref{fcrit}), the critical forces are expected to be at 0.68 and 0.78, which roughly corresponds to the actual intersection points.\\
+These findings imply that similar systems might show similar behavior, which brings us back to the bistable neurons introduced in the beginning. If every event of a Brownian particle crossing a hill would be interpreted as a spike, the Brownian particle in a tilted potential itself can be seen as a model for bistable neurons. As a consequence, every observable in the here discussed system of Brownian particles has its equivalent in bistable neurons. The position $x$ is proportional to the number of crossed hills, thereby corresponding to the spike count. The velocity denotes the number of hills that are crossed in a certain time interval, which can be related to the firing rate. The neural spiking behavior can be influenced by applying a bias current $I$ which corresponds to the force $F$ determining the tilt of the potential. The noise source is not thermal noise anymore, but channel noise or random input from surrounding neurons. With regard to the results for Brownian particles in a tilted potential, bistable neurons should therefore also display giant diffusion in the form of a strong increase of spike count diffusion over a certain range of bias currents.
+\\
+In addition to that, it should also be possible to measure transition rates between both states, extract effective potential barriers from these and describe the behavior of a bistable neuron model with the two-state theory. 
+\\
+As the main purpose of neurons is the transmission of information, the relevance of giant diffusion in neurons can be best understood with regard to signal transmission. The important aspect here is not that the effective diffusion coefficient $D_{eff}$ can get arbitrarily large at low noise but the two critical currents where all curves intersect. Near the critical current, a small change of currents can induce a large increase or decrease of $D_{eff}$. This means that at this point the neuron is very susceptible to variations which can also be caused by an external signal. Thus, it is to be expected that the quality of signal transmission improves strongly near the critical current.
+\\
+The quality of signal transmission can be quantified by the signal-to-noise ratio SNR which compares the amplitude of the signal to the noise background. The behavior of the SNR in neurons has already been treated analytically under the assumption of some simplifications. If the system is driven by a slow cosine signal with amplitude $\epsilon$, the signal-to-noise ratio can be computed via\cite{snr}
 \begin{align*}
 SNR=\frac{\epsilon ^2T}{8}\frac{|\chi(0)|^2}{D_{eff}}
 \end{align*}
-where $T$ denotes the total simulation time. Near the critical current, the spike count diffusion would change by multiple orders of magnitude, leading to a similar change in the SNR. \\
-All in all, bistable neuron models are suggested to exhibit giant diffusion and therefore possess critical currents. When the system is near such a critical point, slight changes in the bias current can cause great changes in the SNR and possibly a large enhancement of signal transmission. The goal of this thesis is to find out whether giant diffusion exists for neuron models, to identify the critical currents and to investigate the system under the influence of slow periodic signals. 
+where $\chi$ denotes the susceptibility and $T$ the total simulation time. This formula confirms our previous conjecture: near the critical current, the spike count diffusion would change by multiple orders of magnitude, leading to a similar, opposite change in the SNR. \\
+All in all, bistable neuron models are suggested to exhibit giant diffusion and therefore possess critical currents. When the system is near such a critical point, slight changes in the bias current can cause strong changes in the SNR and possibly a large enhancement of signal transmission. The goal of this thesis is to find out whether giant diffusion exists for neuron models, investigate possible consequences for signal transmission and try to describe the findings with the two-state theory. In order to do that, three different systems are examined in this thesis: both the $I_{Na,p}+I_K$ model with saddle-node bifurcation off invariant cycle and with subcritical Andronov-Hopf bifurcation\cite{izi} as well as a two-dimensional simplification of the Hodgkin-Huxley model that was proposed by Rinzel\cite{rinzel}. In section \ref{modmet}, the general behavior of these models is discussed, including phase plane analysis and the influence of initial conditions and different bias currents. The count statistics of all models are presented in section \ref{countstat}. In section \ref{tranrates}, the findings are compared to the two-state theory based on transition rates between the states. Finally, section \ref{con} shows the influence of a periodic signal on the systems and once again compares the measurements with the two-state theory.
 \newpage
-\section{Models and Methods}
-\subsection{The $I_{Na,p}+I_K$ model with saddle-node bifurcation}
+\section{Models and Methods}\label{modmet}
+\subsection{The $I_{Na,p}+I_K$ model with saddle-node bifurcation}\label{inapikwsn}
 The main focus of this thesis lies on the study of the $I_{Na,p}+I_K$-model, the persistent sodium plus potassium model with additive noise:
 \begin{align}\label{Veq}
 C\dot{V} &= I - g_L(V-E_L) - g_{Na}m_{\infty}(V)(V-E_{Na}) - g_Kn(V-E_K)+\sqrt{2D}\xi(t)\\\label{neq}
 \dot{n} &= (n_{\infty}(V)-n)/\tau(V)
 \end{align}
-Here, $V$ denotes the membrane voltage, $C$ is the capacitance, $I$ is the bias current, $g_i$ are conductances and $E_i$ the Nernst equilibrium potentials. Noise with intensity $D$ was added to make the system burst. Lastly, $m_{\infty}$ is the activation variable of the instantaneous $Na^+$ current, while $n$ governs the variation of the slower $K^+$ current. The steady-state activation functions are approximated by the Boltzmann-function:
+Here, $V$ denotes the membrane voltage, $C$ is the capacitance, $I$ is the bias current, $g_i$ are conductances and $E_i$ the Nernst equilibrium potentials. Noise with intensity $D$ was added to make the system burst. Lastly, $m_{\infty}$ is the activation variable of the instantaneous $Na^+$ current, while $n$ governs the variation of the slower $K^+$ current. The steady-state activation functions are approximated by a sigmoid function:
 \begin{align*}
 f_{\infty}(V) = \frac{1}{1+\exp\{(V_{1/2}-V)/k\}}
 \end{align*}
@@ -204,33 +215,33 @@ Provided that we are in the bistable regime, a system with arbitrary initial con
 		The left side shows the evolution of the system with resting initial conditions (ICs), and on the right one can see the behavior under spiking ICs.}
 	\label{subfig} 
 \end{figure}
-Analytically, it is hardly possible to determine whether a specific starting point ($V_0$,$n_0$) leads to repetitive spiking or no spiking at all. The only thing one can say for sure is that the line that separates both domains will go through the saddle point that was found in the phase plane analysis. Assuming that the gating variable does not change, any trajectory starting at higher voltages will lead to spiking while all trajectories at lower voltage converge to the stable node. A numerical investigation of the model without noise confirms our presumptions (figure \ref{twodom}).
+Analytically, it is hardly possible to determine whether a specific starting point ($V_0$,$n_0$) leads to repetitive spiking or no spiking at all. The only thing one can say for sure is that the line that separates both domains will go through the saddle point that was found in the phase plane analysis. Assuming that the gating variable does not change, any trajectory starting at higher voltages will lead to spiking while all trajectories at lower voltage converge to the stable node. A numerical investigation of the model without noise confirms our conjecture (figure \ref{twodom}).
 \begin{figure}[H]
 	\hspace*{-0.5cm}
 	\subfigure[]{	\includegraphics[scale=0.45]{contourtime01wn2.pdf}}
 	\subfigure[]{\includegraphics[scale=0.45]{contoureqtime01wn3.pdf}}
 	
-	\caption{Phase plane image of the neuron model with $I=0.1$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right picture, the equilibration times for both states were measured. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
+	\caption{Phase plane of the neuron model with $I=0.1$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right figure, the equilibration times for both states were measured. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
 	\label{twodom}
 \end{figure}		
 There are two distinct regions which can be separated by a monotonically increasing curve that passes through the saddle point. In figure \ref{twodom}b one can see a small intermediate area of large equilibration times. If the system parameters lie in the vicinity of this transition area, a small perturbation suffices to bring the system into either state. Remarkably, most of this area is made up by starting points leading to the stable equilibrium while only a small streak consists of spiking initial conditions. Consequently, the spiking state is reached much faster than the resting state.
 \subsubsection{System with noise}
 When noise is brought into the system, the findings for the noiseless system still apply to a great extent. Starting in one of the two domains, the system will most likely first converge to the corresponding state, and the time it takes for that will be about the same as before. However, the system will not stay in this state forever, but constantly perform noise-driven transitions between the states. Thus, it will not be possible anymore to assign an end state to each set of initial conditions. Obviously, both transition rates, meaning from running to resting and in the opposite direction, will grow when the noise intensity $D$ increases. \\
-In addition to that, depending on the overall configuration, the system is usually biased towards one of the states. It is to be expected that at low bias current $I$, the resting state dominates and the running state is favored at high $I$. Considering the simulations (figure \ref{currentnoise}), this turns out to be a valid hypothesis: At $I=-0.1$, the neuron almost immediately returns to the resting state once it has gotten into the running state. At a slightly higher bias current of $I=0$, the periods of stay in both states are almost equal, and at $I=0.15$, the system is in the running state for the majority of time. The firing frequency in the running state lies at about 70 Hz.
+In addition to that, depending on the overall configuration, the system is usually biased towards one of the states. It is to be expected that at low bias current $I$, the resting state dominates and the running state is favored at high $I$. Considering the simulations (figure \ref{currentnoise}), this turns out to be a valid hypothesis: At $I=-0.1$, the neuron almost immediately returns to the resting state once it has gotten into the running state. At a slightly higher bias current of $I=0$, the periods of stay in both states are almost equal, and at $I=0.15$, the system is in the running state for the majority of time. The firing frequency in the running state is at about 70 Hz.
 \begin{figure}[H]
 	\subfigure[]{\includegraphics[scale=0.4]{realstatevar1252.pdf}} 
 	\subfigure[]{	\includegraphics[scale=0.4]{realstatevar1352.pdf}}\\	\subfigure[]{\includegraphics[scale=0.4]{realstatevar152.pdf}} 
 	\subfigure[]{	\includegraphics[scale=0.4]{realstatevar125vsh2.pdf}}
-	\caption{Behavior of the membrane voltage for constant noise $D=1$ and changing bias current $I$. In figure (d), a segment with a higher time resolution is shown in order to better illustrate the evolution of the voltage variable.}
+	\caption{(a)-(c): Behavior of the membrane voltage for constant noise $D=1$ and changing bias currents $I$. In figure (d), a segment with a higher time resolution is shown in order to better illustrate the evolution of the voltage variable.}
 	\label{currentnoise} 
 \end{figure}
-The picture with a higher time resolution illustrates he influence of noise on a system that is mainly composed of two states. Even though the neuron fires at a regular frequency in the firing state, the peak heights vary by up to 10 mV. Actually, the membrane voltage in the resting state is not really at rest but mostly fluctuates in a range of 20 mV, and also the transition between the states happens quite irregularly.
+The figure with a higher time resolution illustrates the influence of noise on a system that is mainly composed of two states. Even though the neuron fires at a regular frequency in the firing state, the peak heights vary by up to 10 mV. Actually, the membrane voltage in the resting state is not really at rest but mostly fluctuates in a range of 20 mV, and also the transition between the states happens quite irregularly.
 \begin{figure}[H]
 \hspace*{-0.5cm}
 \subfigure[]{	\includegraphics[scale=0.45]{realstatevar125vsh2.pdf}}
 \subfigure[]{\includegraphics[scale=0.45]{realstatep125vshbig.pdf}}
 
-\caption{Evolution of the membrane voltage over time (left) and the corresponding phase space picture.}
+\caption{Evolution of the membrane voltage over time (left) and the corresponding phase space.}
 \label{ppcompneur}
 \end{figure}
 This can be even better understood in the phase space (figure \ref{ppcompneur}).
@@ -248,7 +259,7 @@ $C=1$ , $g_L=1$ , $E_L=-78$ , $g_{Na}=4$ , $E_{Na}=60$ , $g_K=4$ , $E_K=-90$.
 \intertext{$K^+$ current:} k_n&=5 , V_{1/2,n}=-45 , \tau(V)=\text{const}=1.
 \end{align*}
 \subsubsection{System without noise}\label{anhopfwon}
-Due to the parameter adjustments one obtains a slightly different phase space picture:
+Due to the parameter adjustments one obtains a slightly different phase space image:
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.95]{inapikanhopfnc.pdf}\caption{Nullclines of the adjusted $I_{Na,p}+I_K$-model with $I=46$. The arrows indicate the direction of motion in the different regions.}
@@ -275,14 +286,14 @@ In order to be able to distinguish between spiking and resting initial condition
 	\subfigure[]{	\includegraphics[scale=0.45]{contouranhopfa2sh.pdf}}
 	\subfigure[]{\includegraphics[scale=0.45]{contouranhopfa2time.pdf}}
 	
-	\caption{Phase plane image of the neuron model with $I=46$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right picture, the equilibration times for both states were measured. In both images one can see the shape of the unstable limit cycle that separates both domains. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
+	\caption{Phase plane of the neuron model with $I=46$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right figure, the equilibration times for both states were measured. In both images one can see the shape of the unstable limit cycle that separates both domains. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
 	\label{twodom2}
 \end{figure}
-The area of resting initial conditions is completely enclosed by the spiking regime. Near the border, the system takes longer to equilibrate. This is due to the unstable limit cycle which separates both regimes. By crossing this ellipse from within or from the outside, the system goes over into the firing or resting state, respectively. The course of the unstable limit cycle can be seen in figure \ref{unstable}. These images were obtained by simulating the neuron model with negative time steps. That way, unstable regions are turned into stable ones and vice versa. 
+The area of resting initial conditions is completely enclosed by the spiking regime. Near the border, the system takes longer to equilibrate. This is due to the unstable limit cycle which separates both regimes. By crossing this ellipse from within or from the outside, the system goes over into the firing or resting state, respectively. The course of the unstable limit cycle can be seen in figure \ref{unstable}. These figures were obtained by simulating the neuron model backward in time. That way, unstable regions are turned into stable ones and vice versa. 
 \begin{figure}[H]
 	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfunstablewn2black.pdf}} 
 	\subfigure[]{	\includegraphics[scale=0.45]{inaprealanhopfunstablevtblack.pdf}}
-	\caption{Evolution of the system on the unstable limit cycle. The left side shows the phase plane picture and on the right one can see the membrane voltage over time.}
+	\caption{Evolution of the system on the unstable limit cycle. The left side shows the phase plane image and on the right one can see the membrane voltage over time.}
 	\label{unstable} 
 \end{figure}
 Due to the numerical impossibility to put the system exactly onto the unstable limit cycle, any time-forward simulation starting on the unstable cycle will eventually collapse into either stable configuration, as shown in figure \ref{divergent}.
@@ -302,17 +313,17 @@ Due to the numerical impossibility to put the system exactly onto the unstable l
 	\label{ahnoise} 
 \end{figure}
 Considering that even in the noiseless system, the unstable limit cycle only lasts a few ms, it will not play any role in the noise-driven neuron. Therefore, the noise again just switches the system between spiking and resting state. The probability of each state can be influenced by tuning the bias current $I$, as can be seen in figure \ref{ahnoise}.
-Over a range of $1\mu A/cm^2$, the neuron switches from barely spiking to basically only spiking. Due to the oscillatory properties of the system, small disturbances suffice to induce a change of state, if they occur at the right moment, as can be seen in 13 (c): Even though the state vector should be attracted to the stable focus, appropriate noise can slowly increase the amplitude of rotation until the spiking limit cycle is reached. In connection to this there exists another interesting phenomenon which is visible in (d): If the pulse amplitude is too small to make the neuron spike, it oscillates back to the focus with a high frequency. These subthreshold oscillations are a general characteristic of neurons with oscillatory potentials.\\
+Over a range of $1\mu A/cm^2$, the neuron switches from barely spiking to basically only spiking. Due to the oscillatory properties of the system, small disturbances suffice to induce a change of state, if they occur at the right moment, as can be seen in 13 (c): Even though the state vector should be attracted to the stable focus, appropriate noise can slowly increase the amplitude of rotation until the spiking limit cycle is reached. In connection to this there exists another interesting phenomenon which is visible in (d): If the pulse amplitude is too small to make the neuron spike, it oscillates back to the focus with a high frequency, generating subthreshold oscillations.\\
 The phenomenological investigation of the model will be concluded with a comparison between phase space and evolution over time.
 \begin{figure}[H]
 	\hspace*{-0.5cm}
 	\subfigure[]{	\includegraphics[scale=0.45]{realstateanhopf5sh3.pdf}}
 	\subfigure[]{\includegraphics[scale=0.45]{inaprealanhopfreal5psh.pdf}}
 	
-	\caption{Evolution of the membrane voltage over time (left) and the corresponding phase space picture.}
+	\caption{Evolution of the membrane voltage over time (left) and the corresponding phase space image.}
 	\label{ppcompanhopf}
 \end{figure}
-Here, we see a quite stable limit cycle with amplitude variations of less than 5 mV, representing only a couple percent of the whole voltage range of the system. This is also clearly visible in the phase space: after crossing the V-nullcline near 0 mV in counterclockwise direction, all limit cycles practically overlap until they reach the n-nullcline at around 55 mV. On the other hand, the resting state is much more irregular than for the saddle-node bifurcation. The reason for this lies in the nature of the equilibrium point. When near the focus, the state vector does not directly approach it. Instead, it performs oscillations with shrinking radius. It is helpful to consider once more the eigenvalues of the Jacobian matrix. The ratio between real and imaginary part was about 1:46, meaning that the system near the equilibrium would roughly need to perform 10 oscillations to halve he radius of these oscillations. Therefore, the system only slowly approaches the resting point and can be easily influenced in either direction by noise.
+Here, we see a quite stable limit cycle with amplitude variations of less than 5 mV, representing only a couple percent of the whole voltage range of the system. This is also clearly visible in the phase space: after crossing the V-nullcline near 0 mV in counterclockwise direction, all spiking trajectories practically overlap until they reach the n-nullcline at around 55 mV. On the other hand, the resting state is much more irregular than for the saddle-node bifurcation. The reason for this lies in the nature of the equilibrium point. When near the focus, the state vector does not directly approach it. Instead, it performs oscillations with shrinking radius. It is helpful to consider once more the eigenvalues of the Jacobian matrix. The ratio between real and imaginary part was about 1:46, meaning that the system near the equilibrium would roughly need to perform 10 oscillations to halve he radius of these oscillations. Therefore, the system only slowly approaches the resting point and can be easily influenced in either direction by noise.
 \subsection{Rinzel model}
 The last model is a two-dimensional approximation of the Hodgkin-Huxley model, proposed by Rinzel in 1985 \cite{rinzel}. By assuming instantaneous $Na^+$ dynamics and expressing the two gating variables $h$ and $n$ by a single recovery variable $W$, Rinzel got the following model:
 \begin{align*}
@@ -348,7 +359,7 @@ with
 \end{align*}
 
 \subsubsection{System without noise}
-The first step in the phase plane analysis would again be determining the nullclines. Unfortunately, the variable $W$ not only appears linearly, but also in 4th power. This makes it analytically difficult to find a simple equation for the nullclines. Therefore, the nullclines were determined numerically:
+The first step in the phase plane analysis would again be determining the nullclines. Unfortunately, the variable $W$ not only occurs in linear form, but also in 4th power. This makes it analytically difficult to find a simple equation for the nullclines. Therefore, the nullclines were determined numerically:
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.95]{rinzelclinesarrowwp.pdf}\caption{Nullclines of the Rinzel model with $I=-10$. The arrows indicate the direction of motion in the different regions.}
@@ -377,7 +388,7 @@ The two sets of initial conditions can once again be distinguished by letting th
 	\subfigure[]{	\includegraphics[scale=0.45]{contourrinzela12shalt3.pdf}}
 	\subfigure[]{\includegraphics[scale=0.45]{contourrinzela12time.pdf}}
 	
-	\caption{Phase plane image of the neuron model with $I=-10$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right picture, the equilibration times for both states were measured. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
+	\caption{Phase plane image of the neuron model with $I=-10$ and no noise. Each point represents a specific combination of starting parameters. The left plot shows the number of spikes over a short period of time and for the right figure, the equilibration times for both states were measured. Irregularities arise from the finite resolution of the $V_0$-$n_0$-lattice.}
 	\label{twodomrinzel}
 \end{figure}
 Even though the nullclines have a more complex shape, the sets of initial conditions are again separated by a single line.
@@ -399,11 +410,11 @@ Here, too, the bias current $I$ is the parameter that controls whether resting o
 	\subfigure[]{	\includegraphics[scale=0.45]{realstatedetrinzel16100sh2.pdf}}
 	\subfigure[]{\includegraphics[scale=0.45]{realstatedetrinzelp16100shnn.pdf}}
 	
-	\caption{Evolution of the membrane voltage over time (left) and the corresponding phase space picture. The blue curves represent the V-nullcline, the orange one is the n-nullcline. }
+	\caption{Evolution of the membrane voltage over time (left) and the corresponding phase space image. The blue curves represent the V-nullcline, the orange one is the n-nullcline. }
 	\label{ppcomprinzel}
 \end{figure}
-The noise-induced fluctuations of the system can be even better observed in phase space. Here, one can see that resting and spiking state both are subject to variations in both variables. Considering that just in figure \ref{ppcomprinzel} there are 5 distinct limit cycles, there does not seem to be such a thing as a stable cycle. It comes as no surprise that the resting state is characterized by continuous jittering in W- and V-direction. The stable equilibrium is now much closer to $V_{1/2}$ of the W-nullcline than in the first model, so we can expect changes in both variables. Lastly, the transition from resting to spiking happens quite regularly, once the V-nullcline is crossed. However, the opposite transition is noisy the whole time. This indicates that the transition to the resting takes a longer time and therefore might also be less likely, as was already observed in the system without noise.\\\\
-In conclusion, all three two-dimensional bursting neuron models display the same characteristics as the Brownian particle in a tilted potential. Therefore, we expect to find similar count statistics and giant diffusion for these systems as well. If this assumption is actually valid will be examined in the following chapter.
+The noise-induced fluctuations are illustrated by trajectories in the phase plane. Here, one can see that resting and spiking state both are subject to variations in both variables. Considering that just in figure \ref{ppcomprinzel} there are five distinct trajectories near the limit cycle, there does not seem to be such a thing as a stable cycle. It comes as no surprise that the resting state is characterized by continuous jittering in W- and V-direction. The stable equilibrium is now much closer to $V_{1/2}$ of the W-nullcline than in the first model, so we can expect changes in both variables. Lastly, the transition from resting to spiking happens quite regularly, once the V-nullcline is crossed. However, the opposite transition is noisy the whole time. This indicates that the transition to the resting takes a longer time and therefore might also be less likely, as was already observed in the system without noise.\\\\
+In conclusion, all three two-dimensional bursting neuron models display the same characteristics as the underdamped Brownian particle in a tilted potential. They have bistable firing dynamics in the form of a state of repetitive spiking, corresponding to the running state and a resting state without spiking that can be associated with the locked state. Furthermore, transitions between the states can be induced by noise. Therefore, we expect to find similar count statistics and giant diffusion for these systems as well. If this assumption is actually valid will be examined in the following chapter.
 \subsection{Quantities of interest}\label{quant}
 %\subsubsection{System without signal}
 In the context of Brownian Motion, there were two characteristic quantities: the ensemble of particles moves with a mean velocity
@@ -423,16 +434,20 @@ An important quantity is the spike count $N(t)$ which describes the number of sp
 N(t)=\int_{0}^{t}dt'x(t')=\sum_{t_i<t} 1
 \end{equation}
 Instead of the mean velocity, one can ask for the average firing rate
-\begin{equation}
+\begin{equation}\label{vdef}
 \left\langle v\right\rangle =\lim_{t\rightarrow\infty}\frac{\left\langle N(t) \right\rangle}{t}
 \end{equation} 
 and the diffusive spread of the spike count
-\begin{equation}
+\begin{equation}\label{deffdef}
 D_{eff}=\lim_{t\rightarrow\infty}\frac{\left\langle N^2(t) \right\rangle-\left\langle N(t)\right\rangle ^2}{2t}
 \end{equation}
 A more common way to measure spiking variability in neurons is the Fano factor, which can be calculated by dividing the variance of the spike count by its mean value:
 \begin{align*}
-F=\frac{\left\langle \Delta N^2(t) \right\rangle}{\left\langle N(t)\right\rangle}=\frac{2D_{eff}}{\langle v\rangle}
+F=\frac{\left\langle \Delta N^2(t) \right\rangle}{\left\langle N(t)\right\rangle}
+\end{align*}
+Using equations \ref{deffdef} and \ref{vdef}, the Fano factor can be related to firing rate $\left<v\right>$ and $D_{eff}$:
+\begin{align*}
+F=\frac{2D_{eff}}{\langle v\rangle}
 \end{align*}
 %\subsubsection{System with signal}\label{sws}
 When bistable neurons are subjected to a periodic stimulus, they should change their firing pattern accordingly. This is best visible in the power spectrum of the spike train, 
@@ -445,7 +460,7 @@ SNR=\frac{S(f_{s})-S_{bg}(f_{s})}{S_{bg}(f_{s})}
 \end{equation}
 The background power can be obtained by averaging the spectral power of a couple of points near the signal frequency while excluding the signal frequency itself. 
 \\
-In the case of a weak and very slow signal, some simplifications can be made. First, it can be assumed that apart from a peak at the signal frequency, the power spectrum looks similar to the unperturbed one, yielding $S_{bg}(f_s)=S_0(f_s)$. In the low-frequency-limit, this simplifies even further to $S_{0}(f_s)=S_0(0)$. Lastly, the susceptibility $\chi$ which quantifies the modulation of the firing rate can be approximated with the derivative of the firing rate $\left<v\right>$ by the control parameter, in our case this is the bias current $I$. All in all, one then gets
+In the case of a weak and very slow signal, some simplifications can be made. First, it can be assumed that apart from a peak at the signal frequency, the power spectrum looks similar to the unperturbed one, yielding $S_{bg}(f_s)=S_0(f_s)$. In the low-frequency-limit, this simplifies even further to $S_{0}(f_s)=S_0(0)$. At long simulations times, the power spectrum can be related to the effective diffusion coefficient via $S_0(0)=2D_{eff}$\cite{deffspec}, which was used in equation \ref{snrweaksig}. Lastly, the susceptibility $\chi$ which quantifies the modulation of the firing rate can be approximated with the derivative of the firing rate $\left<v\right>$ by the control parameter, in our case this is the bias current $I$. All in all, one then gets
 \begin{align}\label{snrweaksig}
 SNR=\frac{\epsilon ^2T}{4}\frac{|\chi(\omega)|^2}{S_0(\omega)}=\frac{\epsilon^2T|d\left<v\right>/dI|^2}{8\cdot D_{eff}}
 \end{align}
@@ -553,15 +568,15 @@ In the introduction we were able to describe the firing behavior of the neuron b
 \begin{align*}
 r_{\pm}=r_{0,\pm}\exp\left(-\frac{\Delta U_{\pm}}{D}\right)
 \end{align*}
-This allowed us to define the effective diffusion coefficient:
+This allowed us to calculate the effective diffusion coefficient:
 \begin{align*}
 D_{\text{eff}}=\frac{v_0^2 r_+r_-}{(r_++r_-)^3}
 \end{align*}
-As mentioned before, the calculation of a Fano factor is a more common way to describe the spiking characteristics of a neuron. Therefore, we will examine whether the Fano factor displays similar features in the weak noise limit as the effective diffusion coefficient. As 
+As mentioned before, the Fano factor $F$ is a more common way to describe the spiking characteristics of a neuron. Therefore, we will examine whether the Fano factor displays similar features in the weak noise limit as the effective diffusion coefficient. As 
 \begin{align*}
 F=\frac{2D_{\text{eff}}}{\langle v\rangle}
 \end{align*}
-an expression for the average firing rate is required to compute the Fano factor. Taking into account that the firing rate is zero when the particle is in the locked state, one finds the following formula for the total mean firing rate:
+an expression for the average firing rate is required to compute $F$. Taking into account that the firing rate is zero when the particle is in the locked state, one finds the following formula for the total mean firing rate:
 \begin{align*}
 \langle v\rangle=v_0\frac{r_-}{r_++r_-}
 \end{align*}
@@ -569,13 +584,22 @@ Therefore
 \begin{align*}
 F=\frac{2v_0r_+}{(r_++r_-)^2}=\frac{2v_0r_{0,+}\exp\left(\frac{-\Delta U_+}{D}\right)}{\left(r_{0,+}\exp\left(\frac{-\Delta U_+}{D}\right)+r_{0,-}\exp\left(-\frac{\Delta U_-}{D}\right)\right)^2}
 \end{align*}
-In the limes $D\ll1$ there are again two solutions. For $\Delta U_+ > \Delta U_-$:
+Having access to the transition rates, this formula allows to find a description of the Fano factor. In order to make general statements about $F$, one can again take a look at possible intersection points of all curves. Similarly to the approach in the introduction, these can be found by looking for a vanishing $D$-dependence in the low-noise limit.\\
+For $\Delta U_+ > \Delta U_-$, it is:
 \begin{align*}
-F=\frac{2v_0r_{0,+}}{r_{0,-}^2}\exp\left(-\frac{\Delta U_+-2\Delta U_-}{D}\right) \rightarrow \Delta U_+=2\Delta U_-
+F=\frac{2v_0r_{0,+}}{r_{0,-}^2}\exp\left(-\frac{\Delta U_+-2\Delta U_-}{D}\right) 
 \end{align*}
-as well as for $\Delta U_+ < \Delta U_-$:
+Neglecting the prefactors with regard to the exponential term, the $D$-dependence disappears if the exponent becomes zero, yielding 
 \begin{align*}
-F=\frac{2v_0}{r_{0,+}}\exp\left(-\frac{\Delta U_+-2\Delta U_+}{D}\right) \rightarrow \Delta U_+=0
+\Delta U_+=2\Delta U_-
+\end{align*}
+The case $\Delta U_+ < \Delta U_-$ gives:
+\begin{align*}
+F=\frac{2v_0}{r_{0,+}}\exp\left(-\frac{\Delta U_+-2\Delta U_+}{D}\right)
+\end{align*}
+This simply reduces to the criterion
+\begin{align*}
+\Delta U_+=0
 \end{align*}
 The intersection point for $\Delta U_+ > \Delta U_-$ stays the same while at the other critical point the potential barrier from running to locked state needs to vanish. As the latter condition violates the requirements for the application of the two-state theory - because only one state would exist in this case - the second intersection point can not be determined via this two-state model. This implies that the Fano factor $F$ only has one intersection point.\\\\
 %\subsubsection{Behavior of SNR}
@@ -597,13 +621,13 @@ Once again, the missing derivatives can now be calculated numerically.
 %\subsection{The bursting neuron model}
 \subsection{Numerical implementation}\label{numerics}
 \subsubsection{Simulation parameters}
-The behavior of the two-dimensional neuron model can be investigated by conducting simulations with the parameters described above and evaluating the data in a couple different ways. The simulations were done by letting the system evolve almost freely with the only external influence being the white gaussian noise with intensity $D$. The evolution of the system was calculated with the forward Euler method.\\
-In all of the computations, only a single neuron was simulated over a long period of time. The ensemble of neurons was created by cutting this long simulations into multiple segments. When investigating an ergodic system, this procedure ensures that the results are independent of the initial conditions if the simulation time is long enough. Furthermore, an ensemble of neurons would need to be equilibrated before starting any measurements so that the obtained results would be correct. This equilibration time can be omitted now, which saves some computation time. \\
+The behavior of the two-dimensional neuron models can be investigated by conducting simulations with the parameters described above and evaluating the data in a couple different ways. The simulations were done by letting the system evolve almost freely with the only external influence being the white gaussian noise with intensity $D$. The evolution of the system was calculated with the forward Euler method.\\
+In all of the computations, only a single neuron was simulated over a long period of time. The ensemble of neurons was created by cutting this long simulations into multiple segments. When investigating an ergodic system, this procedure ensures that the results are independent of the initial conditions if the simulation time is long enough. Furthermore, an ensemble of neurons would need to be equilibrated before starting any measurements so that the obtained results would be stationary. This equilibration time can be omitted now, which saves some computation time. \\
 In all of the cases, the spike train was cut into $n_S=50$ segments, which corresponds to an ensemble of 50 neurons. Each segment was cut into $n_I=10^5$ intervals of length $T_I$. At each of these timepoints the spike count was combined with the spike counts from all the other segments in order to determine the effective diffusion coefficient $D_{eff}$ and the fano factor $F$. This means that these quantities were calculated as double sums over time and segment:
 \begin{align*}
-D_{eff}=\frac{1}{n_S}\sum_{1}^{n_S}\left(\frac{1}{n_I}\sum_{i=1}^{n_I}\frac{N^2(T_I\cdot i)}{2T_I\cdot i}\right)-\frac{1}{n_I}\sum_{j=1}^{n_I}\left(\frac{1}{n_S}\sum_{1}^{n_S}\frac{N(T_I\cdot j)}{\sqrt{2T_I\cdot j}}\right)^2\qquad F=\frac{2D_{eff}}{\left<v\right>}
+D_{eff}=\frac{1}{n_S}\sum_{1}^{n_S}\left(\frac{1}{n_I}\sum_{i=1}^{n_I}\frac{N^2(I_i)}{2T_I}\right)-\frac{1}{n_I}\sum_{j=1}^{n_I}\left(\frac{1}{n_S}\sum_{1}^{n_S}\frac{N(I_j)}{\sqrt{2T_I}}\right)^2\qquad F=\frac{2D_{eff}}{\left<v\right>}
 \end{align*}
-Obviously, the average firing rate follows from the quotient of spike count and time.\\
+Obviously, the average firing rate follows from the ratio of spike count and time.\\
 The other relevant parameters are shown in table \ref{params}.
 \begin{table}[h]
 
@@ -620,8 +644,7 @@ The other relevant parameters are shown in table \ref{params}.
 \caption{Parameters of the investigated models}	
 \label{params}
 \end{table}
-Longer simulation times have been used for smaller noise intensities. The ranges of $I$ have been chosen in such a way that they lie completely in the bistable regime. For a bias current outside of that regime, the system would not switch anymore between the states and therefore also not exhibit stochastic bursting, which is required for our investigations. The noise intensities $D$ were as small as practically feasible. At very low noise intensities, the number of transitions was too low to observe enough switchings even in week-long simulations and thereby lower limits for $D$ were set.\\The ideal timestep was determined by simulating the system in the running state without noise. If the timestep was too large, the spike count would keep changing until finally approaching a minimum or maximum value.% as can be seen in figure \ref{dtanhopf}. 
-It can be argued, however, that in the presence of noise, there is no deterministic behavior. This means that possibly larger timesteps would give the same results.
+Longer simulation times have been used for smaller noise intensities. The ranges of $I$ have been chosen in such a way that they lie completely in the bistable regime. For a bias current outside of that regime, the system would not switch anymore between the states and therefore also not exhibit stochastic bursting, which is required for our investigations. The noise intensities $D$ were as small as practically feasible. At very low noise intensities, the number of transitions was too low to observe enough switchings even in week-long simulations and thereby lower limits for $D$ were set.\\The ideal timestep was determined by simulating the system in the spiking state without noise. If the timestep was too large, a simulation with smaller timesteps would give a different firing rate. Therefore, the timesteps were reduced until the firing rate approached a minimal or maximal value and did not change anymore.% as can be seen in figure \ref{dtanhopf}. 
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[scale=0.5]{detmotimeanhopfbig2.pdf}\caption{Determination of the ideal timestep for the $I_{Na,p}+I_K$ model. Shown is the deterministic spike count at different time steps.}
@@ -633,13 +656,13 @@ The most important event in the evolution of the neuron state vector is a spike.
 In the case of a system with saddle-node bifurcation off invariant cycle, a spike corresponds to a rotation of the state vector around the unstable equilibrium (not the saddle). This allows for a quite simple numerical criterion: every time the membrane voltage crosses the equilibrium value from below before the gating variable crosses its equilibrium value (also from below), a spike will be counted. Taking a look at the evolution of the membrane voltage, one might get the impression that just defining a voltage threshold would be enough to detect a spike. However, in the presence of noise, a neuron that is near the critical value can theoretically perform infinitely many back-and-forth transitions over the threshold and thereby render an infinite - and unphysical - spike count. Consequently, a spike will only be counted after both thresholds have been crossed successively in the given order.\\
 As mentioned before, the Two-State Theory allows us to describe our findings theoretically. As it is based on the transition rates between the states, it is important to be able to have a way to determine the state of the system. Clearly, the spiking state is characterized by repetitive firing. Thus, after having fired a spike, the neuron is considered to be in the spiking state. \\
 In the resting state, the neuron state vector is in the vicinity of the stable equilibrium. This can be used to find a criterion similar to the detection of a spike: the neuron will be assumed to be in the resting state if membrane voltage and gating variable successively cross its stable equilibrium values. That way, one can ensure that it really has converged to the stable node and is not still in the intermediate area, where it may jump back any time. \\
-Both criterions require the knowledge of stable and unstable equilibrium points. The stable equilibrium can be found by starting the simulation near the equilibrium and just letting the system evolve for a timespan much longer than the equilibration time. Luckily, also the unstable equilibrium can be found numerically. This was done by simulating the neuron with negative time steps. As described before, this inverts the phase space dynamics and turns stable points into unstable ones and vice versa. Therefore, any simulation starting near the unstable equilibrium will then eventually end up there.
+Both criterions require the knowledge of stable and unstable equilibrium points. The stable equilibrium can be found by starting the simulation near the equilibrium and just letting the system evolve for a timespan much longer than the equilibration time. Luckily, also the unstable equilibrium can be found numerically. This was done by simulating the neuron backward in time. As described before, this inverts the phase space dynamics and turns stable points into unstable ones and vice versa. Therefore, any simulation starting near the unstable equilibrium will then eventually end up there.
 \\
 Considering that the neuron with subcritical Andronov-Hopf bifurcation shows slightly different phase space dynamics, the criteria needed to be adjusted. For the identification of the spiking state, a reference point was chosen between unstable and stable limit cycle, as far away as possible from the stable equilibrium. This point then again provided thresholds in both components which needed to be crossed in a successive order to count a spike. \\
 In the resting state, the neuron would perform oscillations around the same equilibrium point, only with a smaller amplitude. Thus, a rectangle was drawn around the equilibrium, and once the oscillations stayed within this rectangle, it should have converged to the resting state. \\
 The last aspect to take into consideration is the choice of initial conditions. As presumed, this has no influence on the overall course of the membrane voltage. Some results of simulations with different initial conditions are presented in the following section.
 \newpage
-\section{Count statistics of bistable neurons}
+\section{Count statistics of bistable neurons}\label{countstat}
 %\subsection{Count statistics}
 \subsection{$I_{Na,p}+I_K$-model with saddle-node bifurcation}
 The first quantity to be considered is $D_{eff}$.
@@ -684,7 +707,7 @@ Taking a look at the effective diffusion coefficient of our second model, some s
 %	\includegraphics[scale=1]{dneur3critrealanhopf26flogrealanhopf19flog.pdf}\caption{Effective diffusion coefficients for different noise intensities. The vertical lines mark the intersection points of the curves.}
 %	\label{deffanhopf}
 %\end{figure}
-Next, we discuss the overall firing rate. All curves monotonically increase, intersect and finally converge to the firing rate in the spiking state. Especially in this picture one can see the greater asymmetry of the second neuron model: while the curves for the first model looked point-symmetrical with regard to the intersection point, the intersection is now shifted towards a higher bias current. Consequently, the corresponding average velocity lies clearly above half of the firing rate in spiking state. 
+Next, we discuss the overall firing rate. All curves monotonically increase, intersect and finally converge to the firing rate in the spiking state. Especially in this figure one can see the greater asymmetry of the second neuron model: while the curves for the first model looked point-symmetrical with regard to the intersection point, the intersection is now shifted towards a higher bias current. Consequently, the corresponding average velocity lies clearly above half of the firing rate in spiking state. 
 In addition to that, its position barely matches the maximum of $D_{eff}$. At least this should be the case however, considering that diffusion gets maximal where the system changes from no spiking to only spiking in the zero-noise limit. Obviously, this does not have to hold true for large noise. Then, the intersection happens at a point where the mean number of transitions from spiking to resting in the whole ensemble is equal to the number of opposite transitions, thus maintaining the overall firing rate.
 %This seems reasonable because in the limit of $D\rightarrow0$, this would be the point where the neuron switches from resting to spiking activity, and therefore also the maximum of $D_{eff}$.
 Last, we take a look at the Fano factor. Also here, in accordance with the Two-State theory, all curves have only one intersection point which corresponds to the right critical current. Furthermore, all curves have a maximum inside the region of giant diffusion. At lower bias currents $I$, the curves display a modest decrease up to 2 orders of magnitude. However, at bias currents right of the maximum, the Fano factor drops much steeper by up to 8 orders of magnitude in the shown range, similarly to $D_{eff}$.
@@ -700,20 +723,20 @@ Last, we take a look at the Fano factor. Also here, in accordance with the Two-S
 %	\label{rateanhopf}
 %\end{figure}
 \subsection{Rinzel model}\label{rinzelmodel}
-Having observed giant diffusion in two variants of the $I_{Na,p}+I_K$ model, we will now try to answer the question whether the much more complex model proposed by Rinzel aligns with the simpler model. Once again we will start with the effective diffusion coefficient $D_{eff}$.\\
+Having observed giant diffusion in two variants of the $I_{Na,p}+I_K$ model, we will now try to answer the question whether the qualitatively different model proposed by Rinzel aligns with the other model. Once again we will start with the effective diffusion coefficient $D_{eff}$.\\
 At first glance, the image does not look too different from the previous models. All curves have maxima in the simulated range of bias currents, and they share a sharp intersection point at around $I\approx-11$, with the exception of $D=20$. However, there is no clear intersection on the left side. In addition, the maxima visibly shift to the right with decreasing noise. This might suggest that the chosen noise intensities are still too far away from the low noise limit which is a requirement for sharp intersection points. Nevertheless, the diffusion coefficient increases with decreasing noise between the intersections, and decreases outside of this region, resulting in changes of 5 orders of magnitude. Consequently, giant diffusion exists also in this model.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=1]{allfastrinzel2.pdf}\caption{Count statistics for the Rinzel model with saddle-node bifurcation. The vertical line marks the critical value of $I$ determined from the curves of $D_{eff}$}
 	\label{allrinzel}
 \end{figure}
-The firing display an unprecedented behavior. Even though all curves increase monotonically with the bias current $I$ and finally approach a value of around 400 Hz, they never intersect. This has to do with the firing rate in the spiking state which exhibits a noise-dependence, meaning that higher noise leads to faster firing. For the first model, a short simulation of the undisturbed (noise-free) system yielded a reference value for the firing rate in the spiking state. This is now not possible anymore. Instead, one can simulate the models with noise, count the spikes and divide this by the total time in the spiking state. The results from these simulations agree well with the measurements shown here but were omitted for the sake of clarity.
+The firing rate displays an unprecedented behavior. Even though all curves increase monotonically with the bias current $I$ and finally approach a value of around 400 Hz, they never intersect. This has to do with the firing rate in the spiking state which exhibits a noise-dependence, meaning that higher noise leads to faster firing. For the first model, a short simulation of the undisturbed (noise-free) system yielded a reference value for the firing rate in the spiking state. This is now not possible anymore. Instead, the firing rates in the spiking state have to be obtained from simulations of the model with the addition of noise. The results from these simulations agree well with the measurements shown here but were omitted for the sake of clarity. Instead, they are presented in section \ref{tstrinzel}.\\
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[scale=1]{dneursinglecritrealrinzelrangelong26d1realrinzelrange26d1.pdf}\caption{Average firing rates for different noise intensities. As the firing rate in the spiking state depends on the noise intensity, the reference curves were omitted for the sake of clarity.}
 %	\label{deffrinzel}
 %\end{figure}
-Finally, the Fano factor looks almost similar to the $I_{Na,p}+I_K$ model. The curves intersect at the critical current, decrease left of it and increase right of it until they reach a maximum and start to slowly decline. As in $D_{eff}$, the overall change amounts to up to 5 orders of magnitude.
+Finally, the Fano factor looks similar to the $I_{Na,p}+I_K$ model. The curves intersect at the critical current, decrease right of it and increase left of it until they reach a maximum and start to slowly decline. As in $D_{eff}$, the overall change amounts to up to 5 orders of magnitude.
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[scale=1]{fneursinglecritrealrinzelrangelong26d1realrinzelrange26d1.pdf}\caption{Fano factors for different noise intensities. As the firing rate in the spiking state depends on the noise intensity, no reference curves could be determined.}
@@ -731,18 +754,18 @@ We mentioned before that the choice of initial conditions should in theory not h
 	\hspace*{-0.5cm}
 	\subfigure[]{\includegraphics[scale=0.45]{dneursinglerealrinzel20ninv0realrinzel15ninv0.pdf}}
 	\subfigure[]{\includegraphics[scale=0.45]{gneursinglerealrinzel20ninv0realrinzel15ninv0.pdf}}
-	\caption{Simulations with starting and resting initial conditions. It can be clearly seen that the choice of starting parameters neither affects the effective diffusion coefficient nor the overall firing rate.}
+	\caption{Simulations with spiking and resting initial conditions. It can be clearly seen that the choice of starting parameters neither affects the effective diffusion coefficient nor the overall firing rate.}
 	\label{icrinzel}
 \end{figure}
 \subsection{Conclusion}
-Examining 3 different two-dimensional bistable neuron models we have found giant diffusion in all of them. This implies that bistability between resting and repetitive firing is the only condition that needs to be fulfilled in order to observe this phenomenon in neurons.
+Examining three different two-dimensional bistable neuron models we have found giant diffusion in all of them. This implies that bistability between resting and repetitive firing is the only condition that needs to be fulfilled in order to observe this phenomenon in neurons.
 \newpage
-\section{Transition rates in bistable neurons}
-While the spike count may be the most important quantity to determine, there are some other characteristics which should be investigated. An example for these are the transition rates between the states which could allow us to describe our findings with the Two-State theory. Considering that we have seen some differences between the 3 neuron models, we will go into each one separately in this section. 
+\section{Transition rates in bistable neurons}\label{tranrates}
+While the spike count may be the most important quantity to determine, there are some other characteristics which should be investigated. An example for these are the transition rates between the states which could allow us to describe our findings with the Two-State theory. Considering that we have seen some differences between the three neuron models, we will discuss each one separately in this section. 
 \subsection{$I_{Na,p}+I_K$ model with saddle node bifurcation}
-\subsubsection{State lifetimes and transition rates}
+\subsubsection{Residence times and transition rates}
 The transition rate from one state into the other is inversely proportional to the amount of time the system stays in the first state: the longer it stays in one state, the smaller the transition rate to the other state. So, in order to find transition rates, we will investigate the statistics of the running and resting time intervals.\\
-In the case of a high number of transitions, the equilibrium as well as the resting time intervals display a simple exponential distribution, indicating that the transitions are random and independent (figure \ref{intdistgood}). This is an important finding because it justifies just averaging the interval lengths in order to get average transition rates. If the distributions looked more complex, e. g. if they featured multiple extrema, this description might not be adequate anymore.
+In the case of a high number of transitions, the equilibrium as well as the resting time intervals display an exponential distribution, indicating that the transitions are random and independent (figure \ref{intdistgood}). This is an important finding because it justifies just averaging the interval lengths in order to get average transition rates. If the distributions looked more complex, e. g. if they featured multiple extrema, this description might not be adequate anymore.
 \begin{figure}[H]
 	\hspace*{-0.5cm}
 	\subfigure[]{	\includegraphics[scale=0.45]{eqdistplotmaster2.pdf}}
@@ -750,7 +773,11 @@ In the case of a high number of transitions, the equilibrium as well as the rest
 	\caption{Distribution of equilibrium time intervals (left) and running time intervals at high switching rates}
 	\label{intdistgood}
 \end{figure}
-Depending on the noise intensity, the interval lengths can range from some seconds to a few minutes. As the number of events decreases with the interval length, the tail of the distribution gets less regular. Consequently, in the case of a small number of transitions, the whole distribution looks like the tails of the shown histograms.
+Depending on the noise intensity, the interval lengths can range from some seconds to a few minutes. As the number of events decreases with the interval length, the tail of the distribution gets less regular. In the case of a small number of overall transitions, for example at very high or low $I$, the whole distribution looks as frayed as the tail end of the here shown histograms. The regularity of the intervals can be quantified with the coefficient of variance,
+\begin{equation}
+CV=\frac{\sqrt{\left<\Delta I^2\right>}}{\left<I\right>}
+\end{equation} 
+For a regular distribution with intervals of similar length, this number gets close to 0. A process with an exponential interval density gives values close to 1, and even more irregular processes can yield values greater than 1. Judging from figure \ref{intdistgood}, a $CV$ near 1 can be expected. The resting intervals have $0.75\leq CV\leq1.06$. Obviously, the lowest values are reached at high bias currents $I$. The spiking intervals give $0.9\leq CV_s\leq 1$ where the low values are obtained at small bias currents. Overall this means that the interval distributions are random but slightly more regular than simple exponential distributions.
 %\subsubsection{Transition rates at different noise intensities}
 \\
 Due to the exponential (and thereby fast decaying) distribution of the resting and running intervals, one can now reasonably calculate transition rates.
@@ -759,7 +786,7 @@ Due to the exponential (and thereby fast decaying) distribution of the resting a
 	\includegraphics[scale=1]{tranratesneur32.pdf}\caption{Transition rates between the states for a couple different noise intensities}
 	\label{tranrateneur}
 \end{figure}
-As expected, the transition rates grow with the noise intensity. Furthermore, the transition rates from running state to equilibrium decrease with the bias current, while the rates of the opposite transition grow. What this basically means is that the higher the bias current, the higher the likelihood of getting into the running state and the longer are the residence times in this state, which is consistent with the phenomenology of the system. The last observation to discuss here are the intersection points of the rates at the same noise intensity. These can all be found at a bias current of about 0.07 $\mu A/cm^2$, corresponding to the maxima of the effective diffusion coefficients in figure \ref{deff}. Thus, diffusion gets maximal when the transition rates are of equal size and the system stays in both states equally long, which agrees with our understanding of the system.
+As expected, the transition rates grow with the noise intensity. Furthermore, the transition rates from running state to equilibrium decrease with the bias current, while the rates of the opposite transition grow. What this basically means is that the higher the bias current, the higher the likelihood of getting into the running state and the longer are the residence times in this state, which is consistent with the phenomenology of the system. The last observation to discuss here are the intersection points of the rates at the same noise intensity. These can all be found at a bias current of about 0.07 $\mu A/cm^2$, corresponding to the maxima of the effective diffusion coefficients in figure \ref{allreal}. Thus, diffusion gets maximal when the transition rates are of equal size and the system stays in both states equally long, which agrees with our understanding of the system.
 \subsubsection{Arrhenius Plots and effective potential barriers}
 For a given bias current, the transition rates can be put into an Arrhenius plot.
 \begin{figure}[H]
@@ -773,11 +800,12 @@ The logarithmic plots illustrate the exponential dependence of the transition ra
 \begin{align}\label{tranratefor}
 r_{\pm}=r_{0,\pm}\exp\left(-\frac{\Delta U_{\pm}}{D}\right)
 \end{align}
-as introduced in section \ref{tst}. Another possible way to fit the data would be to introduce a noise dependence into the prefactor in order to have a Kramers-like formula:
+as introduced in section \ref{tst}. Computing the $R^2$ values, one gets $0.991\leq R^2\leq1$ for the fits of the transition rate $r_+$ from spiking to resting state and $0.988\leq R^2\leq1$ for $r_-$.
+Another possible way to fit the data would be to introduce a noise dependence into the prefactor in order to have a Kramers-like formula:
 \begin{align*}
 r_{\pm}=r_{0,\pm}D^\alpha\exp\left(-\frac{\Delta U_{\pm}}{D}\right)
 \end{align*}
-This yields only slightly better results with regard to the $R^2$ value, so the simpler formula will be used for our calculations.\\
+This yields only slightly better results with regard to the $R^2$ value: $0.991\leq R^2\leq1$ for $r_+$ and $0.995\leq R^2\leq1$ for $r_-$. Because of that, the simpler formula will be used for our calculations.\\
 Assuming the functionality given in equation (\ref{tranratefor}), the effective potential barriers can very easily be obtained by determining the slope of the lines in figure \ref{arrhplots}.
 \begin{figure}[H]
 \hspace*{-0.5cm}
@@ -802,7 +830,7 @@ After plugging the values into these formula, one gets the following results:
 	\subfigure[]{	\includegraphics[scale=0.45]{fcompdfpwnewbig2realfast23mtfrealfast19mtf.pdf}}
 	\caption{Point-for-point comparison of measured $D_{eff}$ (a) and $F$ (b) with the two-state theory based on the transition rates. The curves for $D=0.25$ were predicted from the transition rates for the other noise intensities.}
 \end{figure}
-The two-state theory is able to almost exactly describe - and, in the case of $D=0.25$, predict - the behavior of both quantities up to a bias current of $\unit[0.2]{\mu A/\text{cm}^2}$. After this point, the measured curves seem to saturate and do not go below a certain value whereas the two-state theory assumes continuing exponential behavior. Thus, the theory predicts a steeper decrease of $D_{eff}$ and $F$, respectively. There are two possible reasons for this. The first one is the criterium for the resting state that requires a rotation around the stable equilibrium. The neuron could be in the resting state without having performed this rotation. That way, the measured residence time would be too low, leading to an overestimation of the transition rate $r_+$ from resting to spiking state and consequently an underestimation of $D_{eff}$ at high bias currents. Still, the Two-State theory assumes exponential behavior which does not show in the data after $I=0.2$. So, this does not explain everything. The other explanation can be found in the phase picture. At $I\approx 0.36$, the system undergoes a saddle-node bifurcation, which means that saddle and node are already close together at $I=0.3$. As a result, very low noise may be sufficient to induce transitions and at the same time keep the state from immediately changing back as higher noise would do. These short resting intervals can be enough to prevent $D_{eff}$ from decreasing even further.
+The two-state theory is able to almost exactly describe - and, in the case of $D=0.25$, predict - the behavior of both quantities up to a bias current of $\unit[0.2]{\mu A/\text{cm}^2}$. After this point, the measured curves seem to saturate and do not go below a certain value whereas the two-state theory assumes continuing exponential behavior. Thus, the theory predicts a steeper decrease of $D_{eff}$ and $F$, respectively. There are two possible reasons for this. The first one is the criterium for the resting state that requires a rotation around the stable equilibrium. The neuron could be in the resting state without having performed this rotation. That way, the measured residence time would be too low, leading to an overestimation of the transition rate $r_+$ from resting to spiking state and consequently an underestimation of $D_{eff}$ at high bias currents. Still, the Two-State theory assumes exponential behavior which does not show in the data after $I=0.2$. So, this does not explain everything. The other explanation can be found in the phase space. At $I\approx 0.36$, the system undergoes a saddle-node bifurcation, which means that saddle and node are already close together at $I=0.3$. As a result, very low noise may be sufficient to induce transitions and at the same time keep the state from immediately changing back as higher noise would do. These short resting intervals can be enough to prevent $D_{eff}$ from decreasing even further.
 \\
 The consistency between measurements and two-state theory
 now allows to make predictions for lower noise intensities up to $I=0.2$.
@@ -818,7 +846,7 @@ now allows to make predictions for lower noise intensities up to $I=0.2$.
 At lower noise intensities, the qualitative behavior of the measured quantities does not change much. All curves of $D_{eff}$ intersect at two points and thereby define the region where exponential growth occurs. As before, the curves go to zero outside of this region. Here it is important to note that the curves intersect slightly earlier with respect to the maximum. This implies that the limit of $D\rightarrow$ has not yet been reached numerically and requires a reduction in $D$ of about an order of magnitude compared to the conducted simulations. However, even further decreases in $D$ do not yield a different intersection point. \\
 Similar to the simulations, the fano factor only has one intersection point at the right border of giant diffusion, and even though it gets maximal at the same point where $D_{eff}$ reaches its highest value, the curves again do not seem to have a second intersection point.
 \subsection{$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}
-\subsubsection{State lifetimes and transition rates}
+\subsubsection{Residence times and transition rates}
 Again, we have to take a short look at the statistics of spiking and resting intervals first to make sure that our approach is justified. The spiking and resting intervals are clearly exponentially distributed again, so the process of changing the state is completely stochastic. The second conclusion we can draw from this image is the validity of our criteria for the two states. If these criteria were too loose, meaning that they would account for a transition even though it has not been completed yet, one would register too many switchings in the intermediate area between both states, giving a clearly visible peak at the smallest interval size. As this is not the case here, our criteria seem to work fine.
 \begin{figure}[H]
 	\hspace*{-0.5cm}
@@ -828,7 +856,8 @@ Again, we have to take a short look at the statistics of spiking and resting int
 	\label{intdistanhopf}
 \end{figure}
 %\subsubsection{Transition rates at different noise intensities}
-
+Here, we get $0.95\leq CV_r\leq 1.04$ for the resting intervals and $0.86\leq CV_s\leq 1.06$, which confirms the exponential nature of the distributions.
+\\
 Next, we take a look at the transition rates.
 These behave quite regularly. The rate from resting to spiking state monotonically increases with $I$ and the opposite rate decreases, as the spiking state gets more and more probable. Additionally, higher noise leads to more transitions and thereby higher transitions rates. Different to the first model are the intersection points of the curves which get shifted to the right with decreasing noise. This indicates that we are not in the low-noise limit yet, because the intersection point would stay at the same position otherwise.
 \begin{figure}[H]
@@ -875,9 +904,9 @@ Using the two-state theory to look at lower noise intensities, we get known resu
 	\caption{Point-for-point prediction of effective diffusion coefficient (\ref{deffpredanhopf}) and Fano factor (\ref{fanopredanhopf}) with the two-state theory}
 \end{figure}
 
-\subsection{Rinzel model with saddle-node bifurcation}
-\subsubsection{State lifetimes and transition rates}
-Even though we have a much more complicated phase space dynamics here, the transitions still remain purely stochastic, as one can see in the exponential distribution of the state intervals. Comparing the interval lengths with the $I_{Na,p}+I_K$ model, the much shorter interval lengths become apparent, so we will have higher transition rates. This might be due to generally faster dynamics. Considering that we have seen firing rates of a couple hundreds of Hertz also in the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation, another possible explanation might be too high noise intensities with regard to the desired low-noise limit.
+\subsection{Rinzel model with saddle-node bifurcation}\label{tstrinzel}
+\subsubsection{Residence times and transition rates}
+Even though we have a different phase space dynamics here, the transitions still remain purely stochastic, as one can see in the exponential distribution of the state intervals. Comparing the interval lengths with the $I_{Na,p}+I_K$ model, the much shorter interval lengths become apparent, so we will have higher transition rates. This might be due to generally faster dynamics. Considering that we have seen firing rates of a couple hundreds of Hertz also in the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation, another possible explanation might be too high noise intensities with regard to the desired low-noise limit.
 \begin{figure}[H]
 	\hspace*{-0.5cm}
 	\subfigure[]{	\includegraphics[scale=0.45]{eqdistajrj2realrinzelrangeshort26d15009.pdf}}
@@ -886,7 +915,8 @@ Even though we have a much more complicated phase space dynamics here, the trans
 	\label{intdistrinzel}
 \end{figure}
 %\subsubsection{Transition rates at different noise intensities}
-
+The $CV$ values here are $0.9\leq CV_r\leq 1$ for the resting intervals and $0.92\leq CV_s\leq 1$ for the spiking intervals, so the distributions are overall a little more regular than exponential.
+\\
 Despite possibly large noise, the transition rates over the whole range of $I$ show the expected regular behavior. The most interesting aspect here is again the clearly visible shift of the intersection points to the right, which supports the assumption of high noise.
 \begin{figure}[H]
 	\centering
@@ -912,7 +942,7 @@ The behavior of the potential barriers corresponds to the transition rates. In c
 	\caption{Effective potential barriers for both transitions. As the running state is favored at high bias currents, $\Delta U_+$ increases, while the other one drops. The points where $\Delta U_i=2\Delta U_j$ correspond to the numerically computed intersection points from figure \ref{allrinzel} with only slight deviations.}
 \end{figure}
 \subsubsection{Comparison with two-state theory}
-We saw in section \ref{rinzelmodel} that there was a noise-dependency of the firing rate in the spiking state. The spiking firing rates can be simply found by dividing the spike count by the time spent in the spiking state. As we have just determined the transition rates, this can be done with the already obtained data. However, a second independent measurement that confirms the first results can help us getting a consistent picture of the system, so that is what was done here. \\
+We saw in section \ref{rinzelmodel} that there was a noise-dependency of the firing rate in the spiking state. The spiking firing rates can be simply found by dividing the spike count by the time spent in the spiking state. As we have just determined the transition rates, this can be done with the already obtained data. However, a second independent measurement that confirms the first results can help us getting a consistent image of the system, so that is what was done here. \\
 The firing rate in spiking state increases with the bias current and at the same time approaches the overall firing rate, as the spiking state dominates the behavior of the system. 
 %\begin{figure}[H]
 %	\centering
@@ -975,13 +1005,14 @@ Finally, the good agreement with the data gives us the opportunity to calculate 
 	\caption{Point-for-point prediction of effective diffusion coefficient (\ref{deffpredrinzel}) and Fano factor (\ref{fanopredrinzel}) with the two-state theory}
 \end{figure}
 \subsection{Conclusion}
-By counting the transitions between spiking and resting states, transitions rates could be calculated. Fits of these rates yielded effective potential barriers. Using the Two-State theory and thereby reducing the dynamics of the system on just the transitions, the results could be verified and predictions for lower noise intensities were possible. Neurons with saddle-node bifurcation displayed deviations at high bias currents, possibly because of the vicinity of saddle and node.  
+By counting the transitions between spiking and resting states, transitions rates could be calculated. Fits of these rates yielded effective potential barriers. Using the Two-State theory and thereby reducing the dynamics of the system to its transitions, the results could be verified and predictions for lower noise intensities were possible. Neurons with saddle-node bifurcation displayed deviations at high bias currents, possibly because of the vicinity of saddle and node.  
 \newpage
-\section{Consequences for Signal transmission}
-In the previous chapter, we clearly observed giant diffusion in three different neuron models. In order to understand the relevance of this finding, we need to take a look at possible applications of this phenomenon. The most obvious one in neurons is the transport of information. Therefore, we observed the behavior of the neuron models at hand under the influence of a slow periodic stimulus.
+\section{Consequences for Signal transmission}\label{con}
+In the previous chapter, we clearly observed giant diffusion in three different neuron models. In order to understand the relevance of this finding, we need to take a look at possible applications of this phenomenon. The most obvious one in neurons is the transmission of information. Therefore, we observed the behavior of the neuron models at hand under the influence of a slow periodic stimulus.
 \\
 From a phenomenological point of view, there are two possible effects that a periodic signal can have on a system near the critical current. First, the effective diffusion coefficient $D_{eff}$ is very susceptible to changes in the bias current near the critical point. Therefore, already a signal with a small amplitude may periodically shift the system from irregular firing to quite regular firing, which should be visible in the output.
 Secondly, one might assume that a neuron transmit information better when it is in a state of regular firing than when it fires stochastically and produces a noisy signal. Thus, the great decrease of $D_{eff}$ outside the critical region could lead to an equal enhancement of signal transmission as the system changes from giant diffusion of the spike count to a more regular firing pattern.
+This is even further supported by formula \ref{snrweaksig}. By associating the spectral power of the noise with the effective diffusion coefficient $D_{eff}$, the inverse proportionality $SNR\propto1/D_{eff}$ was found. This means that a rapid change in $D_{eff}$ should have a similar, opposite effect on the SNR.
 All in all, it is to be expected that signal transmission improves greatly when the bias current crosses its critical value.\\\\
 %\subsection{Frequency Spectrum}
 The changes induced by a periodic stimulus can be best observed in the frequency domain. That is why we will mainly focus on the power spectrum of our signal,
@@ -994,7 +1025,7 @@ where $\tilde{x}$ is the fourier transform of the spike train,
 \end{equation}
 The averaging in equation \ref{powerspec} is again done by cutting the spike train in segments and doing a separate Fourier transform for each segment. Hereby we had to pay respect to the wide range of frequencies occurring in our simulations. This means that we chose a short and a longer segment length, corresponding to low-frequency and high-frequency sampling, respectively and put the spectra together at an intermediate frequency.
 \subsection{$I_{Na,p}+I_K$ model with saddle-node bifurcation}
-A lot of the characteristics of the spike train power spectrum can be well understood using the spike count statistics. For a start, there is a visible maximum at the firing rate in the spiking state, followed by a few higher harmonics. Next, the zero-frequency limit should approximately match double the effective diffusion coefficient, $S(f\rightarrow0)\approx2D_{eff}$, and at high frequencies, the spectrum is expected to saturate at the overall firing rate $\left<r\right>$ \cite{speclim}\cite{speclim2}. Both of these predictions show good agreement with the spectra shown in figure \ref{snspec}. Lastly, one should mention that the membrane voltage was influenced by a periodic current, resulting in a small delta-peak at the signal frequency. The signal-to-noise ration SNR can now be calculated from the height of the delta peak and the background amplitude, which is simply the average spectral power in the vicinity of the signal peak.
+A lot of the characteristics of the spike train power spectrum can be well understood using the spike count statistics. For a start, there is a visible maximum at the firing rate in the spiking state, followed by a few higher harmonics. Next, the zero-frequency limit should approximately match double the effective diffusion coefficient, $S(f\rightarrow0)\approx2D_{eff}$, and at high frequencies, the spectrum is expected to saturate at the overall firing rate $\left<v\right>$ \cite{speclim}\cite{speclim2}. Both of these predictions show good agreement with the spectra shown in figure \ref{snspec}. Lastly, one should mention that the membrane voltage was influenced by a periodic current, resulting in a small delta-peak at the signal frequency. The signal-to-noise ration SNR can now be calculated from the height of the delta peak and the background amplitude, which is simply the average spectral power in the vicinity of the signal peak.
 \begin{figure}[H]
 	\label{snspec}
 	\hspace*{-0.5cm}
@@ -1010,7 +1041,7 @@ Since these criteria are fulfilled, we can now take a look at the SNR we obtain 
 	\includegraphics[scale=0.95]{snrealonly2crit5.pdf}\caption{Signal-to-noise ratio SNR for the $I_{Na,p}+I_K$ model with saddle-node bifurcation}
 	\label{specneur}
 \end{figure}
-To begin with, the SNR greatly increases after passing the critical current by up to two orders of magnitude, thereby confirming our assumptions. However, the curves do not intersect at this point but only at a higher value. This may indicate that the noise intensities are still too low, yielding some finite-size effects. Next, all curves exhibit a maximum at almost the same bias current as $D_{eff}$, where the inverse proportionality of SNR and $D_{eff}$ would imply a minimum. This can be explained by including the firing rate into our considerations. Near the maximal $D_{eff}$, the firing rate displays a very steep increase. Therefore, it is very susceptible to even small adjustments as induced by the signal. This effect outweighs the maximal diffusion in this case. The last aspect to discuss here is the vanishing SNR at low bias current. With regard to this observation, one has to keep in mind that neurons encode information in their spiking pattern. The neuron therefore needs to produce spikes to transport information. However, the spike count goes to zero at low bias currents, making signal transmission impossible and leading to a vanishing SNR.
+To begin with, the SNR greatly increases after passing the critical current by up to two orders of magnitude, thereby confirming our assumptions. However, the curves do not intersect at this point as the relation $SNR\propto1/D_{eff}$ implies, but only at a higher value. This may indicate that the noise intensities are still too low, yielding some finite-size effects. Next, all curves exhibit a maximum at almost the same bias current as $D_{eff}$, where the inverse proportionality of SNR and $D_{eff}$ would imply a minimum. This can be explained by including the firing rate into our considerations. Near the maximal $D_{eff}$, the firing rate displays a very steep increase. Therefore, it is very sensitive to even small adjustments as induced by the signal. This effect outweighs the maximal diffusion in this case. The last aspect to discuss here is the vanishing SNR at low bias current. With regard to this observation, one has to keep in mind that neurons encode information in their spiking pattern. The neuron therefore needs to produce spikes to transmit information. However, the spike count goes to zero at low bias currents, making signal transmission impossible and leading to a vanishing SNR.
 \\
 Fortunately, there is also a way to describe the SNR with the two-state theory, potentially leading to a deeper insight into our findings.
 \begin{figure}[H]
@@ -1033,7 +1064,7 @@ Because of the good agreement with the other data points and prediction of $D=0.
 %	\includegraphics[scale=1]{snrpredneur2.pdf}\caption{Prediction of SNR at low noise  using the Two-State Theory for the $I_{Na,p}+I_K$ model with saddle-node bifurcation.}
 %	\label{snrpredsn}
 %\end{figure}
-At low noise, the Two-State model predicts a monotone increase of the SNR. Furthermore, all curves now intersect at the same point where the predicted curves of $D_{eff}$ cross each other, so we have reached consistency in this regard. The fact that the curves seem to increase endlessly has to be considered carefully. After the system undergoes the saddle-node bifurcation, only the spiking state exists. At this point, the signal can not induce transitions between the two firing regimes anymore, so one should expect that the SNR saturates eventually.
+At low noise, the Two-State model predicts a monotone increase of the SNR. Furthermore, all curves now intersect at the same point where the predicted curves of $D_{eff}$ cross each other, so we have reached consistency in this regard. The fact that the curves seem to increase endlessly has to be considered carefully. After the system undergoes the saddle-node bifurcation, only the spiking state exists. At this point, the signal can not induce transitions between the two firing regimes anymore, so one should expect that the SNR saturates eventually. One last aspect to consider is the enormous range of more than 100 orders of magnitude that is spanned by the SNR. Even if these noise low intensities can be achieved, the SNR will not be measurable over the whole range.
 \subsection{$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}
 Seeing that signal transmission could be enhanced by multiple magnitudes near the critical current for one model, it would be interesting to find out whether this holds true for other models and which factors may have an impact there. The power spectra look similar to the first model: the curves start approximately at $2D_{eff}$, then decrease to a minimum shortly before the peak at the (maximal) firing rate appears, and finally converge to the overall firing rate. Furthermore, it is noticeable that the spectra display more maxima at higher frequencies than before, which may be due to the more irregular stable limit cycle, as mentioned in section \ref{anhopfwon}.
 \begin{figure}[H]
@@ -1050,7 +1081,7 @@ Finally, one should again note that the criterion of small signal frequencies is
 	\includegraphics[scale=0.95]{snranhopfcrit2.pdf}\caption{Signal-to-noise ratio SNR for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}
 	\label{specanhopf}
 \end{figure}
-The N-shaped curvature is more pronounced than before, but apart from that, we have a similar picture. After the critical current, the SNR rises by up to three orders of magnitude and the intersection point is located left of $I_{crit}$. 
+The N-shaped curvature is more pronounced than before, but apart from that, we have a similar figure. After the critical current, the SNR rises by up to three orders of magnitude and the intersection point is located left of $I_{crit}$. 
 \\
 Next, we will take a look at the Two-state theory to confirm the reliability of our measurements and predict the outcome at lower noise intensities $D$.
 %\begin{figure}[H]
@@ -1072,9 +1103,9 @@ Almost over the whole range of bias currents, the Two-State Theory shows excelle
 %	\includegraphics[scale=1]{snranhopfpred2.pdf}\caption{Prediction of SNR at low noise  using the Two-State Theory for the $I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation.}
 %	\label{snrpredanhopf}
 %\end{figure}
-Surprisingly, the N-shape remains until $D=0.03$, before the curves finally become monotone. We see that the intersection point is now slightly left of the critical current, similarly to $D_{eff}$ at low noise. Even though the noise intensities has decreased by just an order of magnitude, the SNR now went up by more than 40 orders of magnitude after the critical current, underlining the potential that lies within these systems.
+Surprisingly, the N-shape remains until $D=0.03$, before the curves finally become monotone. We see that the intersection point is now slightly left of the critical current, similarly to $D_{eff}$ at low noise. Even though the noise intensities has decreased by just an order of magnitude, the SNR now went up by more than 40 orders of magnitude after the critical current. This once again shows the potentially possible enhancement of signal transmission that could be achieved in bistable systems.
 \subsection{Rinzel model with saddle-node bifurcation}
-Surprisingly and despite its much more complex phase space picture, the spectrum for the Rinzel model looks familiar. The high-and low-frequency limits correspond to their theoretical predictions and there are peaks at signal and spiking frequency. Apart from that, there are some qualitative differences to the spectra from the $I_{Na,p}+I_K$ model. There is only a blurred maximum with a small amplitude at the firing frequency and no higher harmonics. This can be explained by the high noise-sensitivity of the spiking limit cycle. The noise-driven Rinzel model has no such thing as one single spiking cycle, but rotates around the unstable node with varying frequency and amplitude. One last thing that should be discussed is the height of the peaks at signal frequency which seem to be larger than before. This is due to the overall higher noise background and does not result in higher SNR, as can be seen in figure\ref{specrinzel}.
+Surprisingly and despite its very different phase space image, the spectrum for the Rinzel model looks familiar. The high-and low-frequency limits correspond to their theoretical predictions and there are peaks at signal and spiking frequency. Apart from that, there are some qualitative differences to the spectra from the $I_{Na,p}+I_K$ model. There is only a blurred maximum with a small amplitude at the firing frequency and no higher harmonics. This can be explained by the high noise-sensitivity of the spiking limit cycle. The noise-driven Rinzel model has no such thing as one single spiking cycle, but rotates around the unstable node with varying frequency and amplitude. One last thing that should be discussed is the height of the peaks at signal frequency which seem to be larger than before. This is due to the overall higher noise background and does not result in higher SNR, as can be seen in figure\ref{specrinzel}.
 \begin{figure}[H]
 	\label{rinzelspec}
 	\hspace*{-0.5cm}
@@ -1089,7 +1120,7 @@ Even though the signal peaks looked large, the maximal value of the SNR is at $1
 	\includegraphics[scale=0.95]{snrinzelonlycrit.pdf}\caption{Signal-to-noise ratio SNR for the Rinzel model with Saddle-node bifurcation}
 	\label{specrinzel}
 \end{figure}
-The comparison with the Two-State Theory gives a similar picture to $D_{eff}$ and the fano factor. Up to $I\approx-11$, there is a good agreement between data and theory and even the intersection point at $I\approx-10.5$ is only slightly off. After that, there is an overestimation of the SNR.  
+The comparison with the two-state theory gives a similar picture to $D_{eff}$ and the fano factor. Up to $I\approx-11$, there is a good agreement between data and theory and even the intersection point at $I\approx-10.5$ is only slightly off. After that, there is an overestimation of the SNR.  
 %\begin{figure}[H]
 %	\centering
 %	\includegraphics[scale=1]{snrinzelrange26dcompletecritnofit3.pdf}\caption{Comparison of Two-State Theory with measured SNR for the Rinzel model with Saddle-node bifurcation. The curve for $D=20$ is a complete prediction using the transition rates of the other noise intensities.}
@@ -1119,22 +1150,21 @@ In theory, however, the intersection point should eventually be at the intersect
 %	\label{snrinzelpred2}
 %\end{figure}
 \subsection{Conclusion}
-The neurons were simulated under the influence of a periodic stimulus. The spectral density showed good agreement with theoretical values. As expected from the behavior of $D_{eff}$, the SNR showed an increase by multiple orders of magnitude near the critical current. the Two-State theory showed good agreement with the measurements and predicted monotonous behavior of the SNR at low noise.
+The neurons were simulated under the influence of a periodic stimulus. The spectral density showed good agreement with theoretical values. As expected from the behavior of $D_{eff}$, the SNR displayed an increase by multiple orders of magnitude near the critical current. The Two-State theory was consistent with the measurements and predicted monotonous behavior of the SNR at low noise.
 \newpage
 \section{Conclusions}
-In this work, we examined three different two-dimensional bistable neuron models. We were able to induce constant stochastic transitions between the states by introducing noise into the system. For each model, we found a region of giant enhancement of spike count diffusion, which has shown in the effective diffusion coefficient $D_{eff}$ and the Fano factor $F$. From that we drew the conclusion that the only condition that needs to be fulfilled to observe giant diffusion is bistability and the ability to induce changes between the states by adding noise. This region of giant diffusion was defined by two critical currents. Near the critical current, the neuron models experience a great decrease of spike count diffusion. This observation lead to the assumption that one should observe a great increase of the signal-to-noise ratio SNR at this point. Therefore, we added a periodic signal to the systems and did a spectral analysis of the spike trains. This showed an increase of the SNR by up to three orders of magnitude, thereby confirming our assumptions.\\
-These findings are of particular interest with regard to the perspective of an experimenter. We took giant diffusion in models of Brownian Particles as motivation to investigate count statistics of bistable neuron models and drew conclusions for the SNR from our results. However, the experimenter will be more interested in just measuring the signal-to-noise ratio SNR of a periodically stimulated neuron. Upon increase of an external current, the experimenter might expect a steady increase of the SNR and could find himself surprised by the N-shape of the SNR as well as the critical current $I_{crit}$ where the SNR experiences a jump and increases greatly over a short range of currents. As we approached this topic from the opposite direction, we can deliver explanations for both of these phenomena, namely giant enhancement of spike count diffusion and a sharp increase of the susceptibility.
+In this work, we examined three different two-dimensional bistable systems. We were able to induce constant stochastic transitions between the states by introducing noise into the system. For each model, we found a region of giant enhancement of spike count diffusion, which has shown in the effective diffusion coefficient $D_{eff}$ and the Fano factor $F$. This is remarkable as it underlines that the phenomenon of giant diffusion is not restricted to one specific model but happens in multiple different bistable neuron models. From that we drew the conclusion that the only condition that needs to be fulfilled to observe giant diffusion is bistability of the firing rate and the ability to induce changes between the states by adding noise. This region of giant diffusion was defined by two critical currents. Near the critical current, the neuron models experience a strong decrease of spike count diffusion. This observation lead to the conjecture that one should observe a sharp increase of the signal-to-noise ratio SNR at this point. Therefore, we added a periodic signal to the systems and did a spectral analysis of the spike trains. This showed an increase of the SNR by up to three orders of magnitude, thereby confirming our assumptions.\\
+These findings are of particular interest with regard to the perspective of an experimenter. We took giant diffusion in models of Brownian Particles as motivation to investigate count statistics of bistable neuron models and drew conclusions for the SNR from our results. However, the experimenter will be more interested in just measuring the signal-to-noise ratio SNR of a periodically stimulated neuron. Upon increase of an external current, the experimenter might expect a steady increase of the SNR and could find himself surprised by the N-shape of the SNR as well as the critical current $I_{crit}$ where the SNR experiences a jump and increases greatly over a short range of currents. As we approached this topic from the opposite direction, we can deliver explanations for both of these phenomena, namely giant enhancement of spike count diffusion and a sharp increase of the signal-to-noise ratio SNR.
 \\
 A second focus of this thesis lies on the two-state theory. By simply defining the spiking state as a period of repetitive firing
 and the resting state as an interval of no firing, we broke the behavior down into bistable dynamics. Then, we would count the transitions between these states to obtain transition rates. These could be fit with an Arrhenius-equation to find effective potential barriers which would not depend on the noise intensity $D$ anymore. This is important because it not only allowed us to compare theory and measurements and see good agreement there, but also to predict the outcome at even lower noise intensities. These predictions showed that the curves qualitatively stayed the same and only experienced more drastic changes.\\
-Finally, we now would like to transfer these findings to real neurons. One way to determine the influence of noise on the system dynamics is the coefficient of variation $CV$, which is given by the quotient of standard deviation and mean value of an Interval length $I$\cite{cvref},
+Finally, we now would like to transfer these findings to real neurons. One way to determine the influence of noise on the system dynamics is the coefficient of variation $CV$, which is given by the ratio of standard deviation and mean value of an Interval length $I$\cite{cvref},
 \begin{equation}
 CV=\frac{\sqrt{\left<\Delta I^2\right>}}{\left<I\right>}
 \end{equation}  
-In the context of neurons, the interval length of interest is often the inter-spike interval $ISI$ between two consecutive spikes. The bistable neuron models discussed in this work exhibit regular firing in the spiking state, no firing in the resting state and constant transitions between both states. Thus, the $ISI$ is not the most suitable quantity here. More relevant are the lengths of resting and spiking intervals. As mentioned in the introduction, multiple studies have focused on the investigation of bistable neurons. In the paper by LOEWENSTEIN et al \cite{sensorystm1}, the duration of spiking and restig states in rodent cerebrellar Purkinje cells and their corresponding $CV$ have been measured. They obtained $CV_r=0.74\pm0.06$ for the resting state. In the $I_{Na,p}+I_K$ model we measured $0.75\leq CV_r\leq1.06$ for the saddle-node bifurcation and $0.95\leq CV_r\leq 1.04$ in the case of the Andronov-Hopf bifurcation. The Rinzel model had $0.9\leq CV_r\leq 1$. Obviously, the smallest values were reached at high bias currents $I$ and at low bias currents they were near 1. Overall, only the $I_{Na,p}+I_K$ model with saddle-node bifurcation had noise intensities comparable to these experiments and even that only at large $I$. This means that the variability in our simulations was much higher
-than in the experiments. \\
-For the spiking intervals, the experimenters got $CV_s=0.58\pm0.05$. Our simulations gave for the $I_{Na,p}+I_K$ model with saddle-node bifurcation $0.9\leq CV_s\leq 1$, with Andronov-Hopf bifurcation $0.86\leq CV_s\leq 1.06$ and $0.92\leq CV_s\leq 1$ in the Rinzel model. Again, the simulations had a much higher variability than the experiments. This can mean one of two things. The first possibility is that the experiment already achieved a lower noise level than our simulations. This would mean that one should be able to observe giant diffusion and an improvement of the SNR in these neurons. What speaks against this is that the experimenters only recorded up to a couple minutes, while we simulated multiple hours of activity with comparable spiking frequencies. Therefore, one should expect that the simulations could go to lower noise intensities. The second possibility is that the simulated neurons behaved too irregularly. Two-dimensional neuron models can exhibit resting and spiking activity, but not by itself change the state. The constant switching between spiking and resting activity that we observed in our models can be considered as bursting. In order to describe bursting neurons, Izhikevich\cite{izi} introduces a third variable that modulates the spiking pattern. That way, the interval distribution can become more regular and yield lower values of $CV$. \\
-Future research could concentrate on more complex neuron models as well as neuronal networks consisting of bistable neurons. Both approaches might provide pictures of these neurons in a more realistic environment. Lastly, experimental research could investigate bistable neurons with regard to giant diffusion and SNR. This can be done by slowly varying a bias current and trying to find the critical point. In the end, this hopefully results in a deeper understanding of signal transmission and processing in bistable and bursting neurons. 
+In the context of neurons, the interval length of interest is often the inter-spike interval $ISI$ between two consecutive spikes. The bistable neuron models discussed in this work exhibit regular firing in the spiking state, no firing in the resting state and constant transitions between both states. Thus, the $ISI$ is not the most suitable quantity here. More relevant are the lengths of resting and spiking intervals. As mentioned in the introduction, multiple studies have focused on the investigation of bistable neurons. In the paper by Loewenstein et al \cite{sensorystm1}, the duration of spiking and resting states in rodent cerebrellar Purkinje cells and their corresponding $CV$ have been measured. They obtained $CV_r=0.74\pm0.06$ for the resting state. Among all models, only the $I_{Na,p}+I_K$ model with saddle-node bifurcation had noise intensities comparable to these experiments and even that only at large $I$. This means that the variability in our simulations was much higher than in the experiments. \\
+For the spiking intervals, the experimenters got $CV_s=0.58\pm0.05$. Our simulations had all a $CV$ near 1 and therefore had a much higher variability than the experiments. This can mean one of two things. The first possibility is that the experiment already achieved a lower noise level than our simulations. This would mean that one should be able to observe giant diffusion and an improvement of the SNR in these neurons. What speaks against this is that the experimenters only recorded up to a couple minutes, while we simulated multiple hours of activity with comparable spiking frequencies. Therefore, one should expect that the simulations could go to lower noise intensities. The second possibility is that the simulated neurons behaved too irregularly. Two-dimensional neuron models can exhibit resting and spiking activity, but not by itself change the state. The constant switching between spiking and resting activity that we observed in our models can be considered as bursting. In order to describe bursting neurons, Izhikevich\cite{izi} introduces a third variable that modulates the spiking pattern. That way, the interval distribution can become more regular and yield lower values of $CV$. \\
+Future research could concentrate on more complex neuron models with three or more variables, which might give a more realistic picture of bistable neurons. Lastly, experimental research could investigate bistable neurons with regard to giant diffusion and SNR. This can be done by slowly varying a bias current and trying to find the critical point. In the end, this hopefully results in a deeper understanding of signal transmission and processing in bistable and bursting neurons. 
 \newpage
 \bibliography{quellen}
 \bibliographystyle{ieeetr}

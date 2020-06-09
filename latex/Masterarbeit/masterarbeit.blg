@@ -6,44 +6,44 @@ A level-1 auxiliary file: other/abstract.aux
 The style file: ieeetr.bst
 A level-1 auxiliary file: other/declaration.aux
 Database file #1: quellen.bib
-You've used 26 entries,
+You've used 27 entries,
             1876 wiz_defined-function locations,
-            602 strings with 6642 characters,
-and the built_in function-call counts, 3445 in all, are:
-= -- 289
-> -- 104
+            606 strings with 6792 characters,
+and the built_in function-call counts, 3576 in all, are:
+= -- 300
+> -- 108
 < -- 0
-+ -- 52
-- -- 26
-* -- 182
-:= -- 584
-add.period$ -- 27
-call.type$ -- 26
-change.case$ -- 25
++ -- 54
+- -- 27
+* -- 189
+:= -- 606
+add.period$ -- 28
+call.type$ -- 27
+change.case$ -- 26
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 234
-empty$ -- 446
-format.name$ -- 26
-if$ -- 814
+cite$ -- 27
+duplicate$ -- 243
+empty$ -- 463
+format.name$ -- 27
+if$ -- 845
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 27
-newline$ -- 82
-num.names$ -- 26
-pop$ -- 106
+int.to.str$ -- 27
+missing$ -- 28
+newline$ -- 85
+num.names$ -- 27
+pop$ -- 110
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 25
+skip$ -- 26
 stack$ -- 0
 substring$ -- 0
-swap$ -- 26
+swap$ -- 27
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 26
-width$ -- 28
-write$ -- 211
+while$ -- 27
+width$ -- 29
+write$ -- 219

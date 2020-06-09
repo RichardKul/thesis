@@ -46,7 +46,7 @@
 
 \bibitem{spindle}
 {P. Fuentealba et al.}, ``{Membrane Bistability in Thalamic Reticular Neurons
-  During SpindleOscillations},'' {\em J. Neurophysiol. 93}, 2005.
+  During Spindle Oscillations},'' {\em J. Neurophysiol. 93}, 2005.
 
 \bibitem{bpp}
 {B. Lindner and I. M. Sokolov}, ``{Giant diffusion of underdamped particles in
@@ -76,6 +76,10 @@
 {L. Gammaitoni et al.}, ``{Stochastic resonance},'' {\em Rev. Mod. Phys. 70},
   1998.
 
+\bibitem{rinzel}
+{J. Rinzel}, ``{Excitation dynamics: insights from simplified membrane
+  models},'' {\em Federation Proc 44}, 1985.
+
 \bibitem{gamma}
 {L. V. Moran and L. E. Hong}, ``{High vs Low Frequency Neural Oscillations in
   Schizophrenia},'' {\em Schizophr Bull 37}, 2011.
@@ -93,9 +97,10 @@
 {X. Zhao et al.}, ``{Low dimensional model of bursting neurons},'' {\em J
   Comput Neurosci 36}, 2014.
 
-\bibitem{rinzel}
-{J. Rinzel}, ``{Excitation dynamics: insights from simplified membrane
-  models},'' {\em Federation Proc 44}, 1985.
+\bibitem{deffspec}
+{G. Hill et al.}, ``{Diffusion and the power spectral density of velocity
+  fluctuations for electrons in InP by Monte Carlo methods},'' {\em J Appl Phys
+  50}, 1979.
 
 \bibitem{speclim}
 {R. F. O. Pena et al.}, ``{Self-Consistent Scheme for Spike-Train Power Spectra
