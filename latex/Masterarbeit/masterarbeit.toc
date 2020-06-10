@@ -1,43 +1,43 @@
 \babel@toc {english}{}
 \contentsline {section}{\numberline {1}Introduction}{1}% 
-\contentsline {section}{\numberline {2}Models and Methods}{8}% 
-\contentsline {subsection}{\numberline {2.1}The $I_{Na,p}+I_K$ model with saddle-node bifurcation}{8}% 
-\contentsline {subsubsection}{\numberline {2.1.1}System without noise}{8}% 
-\contentsline {subsubsection}{\numberline {2.1.2}System with noise}{12}% 
-\contentsline {subsection}{\numberline {2.2}$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}{14}% 
-\contentsline {subsubsection}{\numberline {2.2.1}System without noise}{14}% 
-\contentsline {subsubsection}{\numberline {2.2.2}System with noise}{18}% 
-\contentsline {subsection}{\numberline {2.3}Rinzel model}{19}% 
-\contentsline {subsubsection}{\numberline {2.3.1}System without noise}{20}% 
-\contentsline {subsubsection}{\numberline {2.3.2}System with noise}{24}% 
-\contentsline {subsection}{\numberline {2.4}Quantities of interest}{25}% 
-\contentsline {subsection}{\numberline {2.5}Two-state theory}{27}% 
-\contentsline {subsection}{\numberline {2.6}Numerical implementation}{28}% 
-\contentsline {subsubsection}{\numberline {2.6.1}Simulation parameters}{28}% 
-\contentsline {subsubsection}{\numberline {2.6.2}Numerical subtleties}{29}% 
-\contentsline {section}{\numberline {3}Count statistics of bistable neurons}{31}% 
-\contentsline {subsection}{\numberline {3.1}$I_{Na,p}+I_K$-model with saddle-node bifurcation}{31}% 
-\contentsline {subsection}{\numberline {3.2}$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}{32}% 
-\contentsline {subsection}{\numberline {3.3}Rinzel model}{34}% 
-\contentsline {subsection}{\numberline {3.4}Influence of the initial conditions}{35}% 
-\contentsline {subsection}{\numberline {3.5}Conclusion}{35}% 
-\contentsline {section}{\numberline {4}Transition rates in bistable neurons}{36}% 
-\contentsline {subsection}{\numberline {4.1}$I_{Na,p}+I_K$ model with saddle node bifurcation}{36}% 
-\contentsline {subsubsection}{\numberline {4.1.1}Residence times and transition rates}{36}% 
-\contentsline {subsubsection}{\numberline {4.1.2}Arrhenius Plots and effective potential barriers}{38}% 
-\contentsline {subsubsection}{\numberline {4.1.3}Comparison with two-state theory}{39}% 
-\contentsline {subsection}{\numberline {4.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{41}% 
-\contentsline {subsubsection}{\numberline {4.2.1}Residence times and transition rates}{41}% 
-\contentsline {subsubsection}{\numberline {4.2.2}Arrhenius Plots and effective potential barriers}{43}% 
-\contentsline {subsubsection}{\numberline {4.2.3}Comparison with two-state theory}{44}% 
-\contentsline {subsection}{\numberline {4.3}Rinzel model with saddle-node bifurcation}{45}% 
-\contentsline {subsubsection}{\numberline {4.3.1}Residence times and transition rates}{45}% 
-\contentsline {subsubsection}{\numberline {4.3.2}Arrhenius Plots and effective potential barriers}{47}% 
-\contentsline {subsubsection}{\numberline {4.3.3}Comparison with two-state theory}{47}% 
-\contentsline {subsection}{\numberline {4.4}Conclusion}{50}% 
-\contentsline {section}{\numberline {5}Consequences for Signal transmission}{51}% 
-\contentsline {subsection}{\numberline {5.1}$I_{Na,p}+I_K$ model with saddle-node bifurcation}{51}% 
-\contentsline {subsection}{\numberline {5.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{54}% 
-\contentsline {subsection}{\numberline {5.3}Rinzel model with saddle-node bifurcation}{56}% 
-\contentsline {subsection}{\numberline {5.4}Conclusion}{58}% 
-\contentsline {section}{\numberline {6}Conclusions}{59}% 
+\contentsline {section}{\numberline {2}Models and Methods}{7}% 
+\contentsline {subsection}{\numberline {2.1}The $I_{Na,p}+I_K$ model with saddle-node bifurcation}{7}% 
+\contentsline {subsubsection}{\numberline {2.1.1}System without noise}{7}% 
+\contentsline {subsubsection}{\numberline {2.1.2}System with noise}{11}% 
+\contentsline {subsection}{\numberline {2.2}$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}{13}% 
+\contentsline {subsubsection}{\numberline {2.2.1}System without noise}{13}% 
+\contentsline {subsubsection}{\numberline {2.2.2}System with noise}{17}% 
+\contentsline {subsection}{\numberline {2.3}Rinzel model with saddle-node bifurcation}{18}% 
+\contentsline {subsubsection}{\numberline {2.3.1}System without noise}{19}% 
+\contentsline {subsubsection}{\numberline {2.3.2}System with noise}{22}% 
+\contentsline {subsection}{\numberline {2.4}Quantities of interest}{23}% 
+\contentsline {subsection}{\numberline {2.5}Two-state theory}{25}% 
+\contentsline {subsection}{\numberline {2.6}Numerical implementation}{26}% 
+\contentsline {subsubsection}{\numberline {2.6.1}Simulation parameters}{26}% 
+\contentsline {subsubsection}{\numberline {2.6.2}Numerical subtleties}{27}% 
+\contentsline {section}{\numberline {3}Count statistics of bistable neurons}{29}% 
+\contentsline {subsection}{\numberline {3.1}$I_{Na,p}+I_K$-model with saddle-node bifurcation}{29}% 
+\contentsline {subsection}{\numberline {3.2}$I_{Na,p}+I_K$ model with subcritical Andronov-Hopf bifurcation}{30}% 
+\contentsline {subsection}{\numberline {3.3}Rinzel model with saddle-node bifurcation}{31}% 
+\contentsline {subsection}{\numberline {3.4}Influence of the initial conditions}{32}% 
+\contentsline {subsection}{\numberline {3.5}Conclusion}{33}% 
+\contentsline {section}{\numberline {4}Transition rates in bistable neurons}{34}% 
+\contentsline {subsection}{\numberline {4.1}$I_{Na,p}+I_K$ model with saddle node bifurcation}{34}% 
+\contentsline {subsubsection}{\numberline {4.1.1}Residence times and transition rates}{34}% 
+\contentsline {subsubsection}{\numberline {4.1.2}Arrhenius Plots and effective potential barriers}{36}% 
+\contentsline {subsubsection}{\numberline {4.1.3}Comparison with two-state theory}{37}% 
+\contentsline {subsection}{\numberline {4.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{39}% 
+\contentsline {subsubsection}{\numberline {4.2.1}Residence times and transition rates}{39}% 
+\contentsline {subsubsection}{\numberline {4.2.2}Arrhenius Plots and effective potential barriers}{40}% 
+\contentsline {subsubsection}{\numberline {4.2.3}Comparison with two-state theory}{41}% 
+\contentsline {subsection}{\numberline {4.3}Rinzel model with saddle-node bifurcation}{42}% 
+\contentsline {subsubsection}{\numberline {4.3.1}Residence times and transition rates}{42}% 
+\contentsline {subsubsection}{\numberline {4.3.2}Arrhenius Plots and effective potential barriers}{43}% 
+\contentsline {subsubsection}{\numberline {4.3.3}Comparison with two-state theory}{44}% 
+\contentsline {subsection}{\numberline {4.4}Conclusion}{47}% 
+\contentsline {section}{\numberline {5}Consequences for Signal transmission}{48}% 
+\contentsline {subsection}{\numberline {5.1}$I_{Na,p}+I_K$ model with saddle-node bifurcation}{48}% 
+\contentsline {subsection}{\numberline {5.2}$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{51}% 
+\contentsline {subsection}{\numberline {5.3}Rinzel model with saddle-node bifurcation}{53}% 
+\contentsline {subsection}{\numberline {5.4}Conclusion}{55}% 
+\contentsline {section}{\numberline {6}Conclusions}{56}% 

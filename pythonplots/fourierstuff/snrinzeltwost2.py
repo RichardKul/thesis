@@ -12,7 +12,7 @@ from scipy.fftpack import fft, ifft
 
 from scipy.optimize import curve_fit
 
-matplotlib.rcParams.update({'font.size': 18})
+#matplotlib.rcParams.update({'font.size': 18})
 
 def barrier(a,b,x):
 	return a * x + b
@@ -434,18 +434,18 @@ plt.xlim(xnew[1]-0.4,xnew[ivalues-2]+0.4)
 colorv=[ '#1f77b4', '#ff7f0e', '#2ca02c','#d62728','#9467bd'] 
 #colorv=['y','g','b'] # 3 colors
 #colorv=['y','c','g','k','b'] # 5 colors
-for n in range(0,1):
-	nl=round(ivalues-offset[n])
+#for n in range(0,1):
+#	nl=round(ivalues-offset[n])
 	#plt.plot(xvec[n,0:nl],(SNR[n,0:nl]-1)/scale[n,0:nl],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
-	plt.plot(xvec[n,0:nl],abs((SNR[n,0:nl]-1))/scale[n,0:nl],'o',label='D=%.0f*' %(Dtot[n]*0.1))
-for n in range(1,l2):
+#	plt.plot(xvec[n,0:nl],abs((SNR[n,0:nl]-1))/scale[n,0:nl],'o',label='D=%.0f*' %(Dtot[n]*0.1))
+for n in range(0,l2):
 	nl=round(ivalues-offset[n])
 #	plt.plot(xvec[n,0:nl],(SNR[n,0:nl]-1)/scale[n,0:nl],colorv[n]+'o',label='D=%.2f' %(Dtot[n]*0.1))
-	plt.plot(xvec[n,0:nl],abs((SNR[n,0:nl]-1))/scale[n,0:nl],'o',label='D=%.0f' %(Dtot[n]*0.1))
+	plt.plot(xvec[n,0:nl],abs((SNR[n,0:nl]-1))/scale[n,0:nl],label='D=%.0f' %(Dtot[n]*0.1))
 #Dtot=[30,40,50,60]
-l2=len(Dtot)
-for n in range(0,l2):
-	plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.1,comps(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2])),comp(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2]),fit(Dtot[n]/10,colxa[3],cola[3])),r0ps,r0ms)/8,colorv[n])#,label='D=%.0f' %(Dtot[n]*0.1))
+#l2=len(Dtot)
+#for n in range(0,l2):
+	#plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.1,comps(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2])),comp(xnew[1:ivalues-1],fit(Dtot[n]/10,colxa[0],cola[0]),fit(Dtot[n]/10,colxa[1],cola[1]),fit(Dtot[n]/10,colxa[2],cola[2]),fit(Dtot[n]/10,colxa[3],cola[3])),r0ps,r0ms)/8,colorv[n])#,label='D=%.0f' %(Dtot[n]*0.1))
 	#bv=b[2*n+1] # 3 plots
 	#cv=c[2*n+1]
 	#dv=d[2*n+1]
@@ -465,10 +465,11 @@ for n in range(0,l2):
 #order = [0,2,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 #plt.plot(sax2,say2/T2,label='e6')
-#plt.plot([-10.8, -10.8], [10**(-8), 10**(-3)], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([-10.8, -10.8], [10**(-8), 10**(-3)], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([-13, -13], [10**(-8), 10**(-3)], color='black', linestyle='--',label='$I_{max}$')
 #plt.plot([-10.8, -10.8], [10**(-38), 10**(5)], color='black', linestyle='-',label='$I_{crit}$')
 plt.legend()
 plt.tight_layout()
-plt.savefig('snrinzelrange26dcompletecritnofit3big.pdf')
+#plt.savefig('snrinzelrange26dcompletecritnofit3big.pdf')
 #plt.savefig('snrinzelpred2big.pdf')
-#plt.savefig('snrinzelonlycrit.pdf')
+plt.savefig('snrinzelonlycritmax.pdf')

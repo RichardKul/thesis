@@ -56,12 +56,12 @@ for n in range(0,l):
 	nl=round(ivalues-offset[n])
 	plt.plot(vecx[n,0:nl],vec[n,0:nl],label='D=%.2f' %(D[n]/100))
 #plt.plot([0.16, 0.16], [5*10**(-1), 50000], color='black', linestyle='-',label='$I_{crit}$')
-#plt.plot([-0.01, -0.01], [5*10**(-1), 50000], color='black', linestyle='-')
+plt.plot([0.06, 0.06], [5*10**(-1), 50000], color='black', linestyle='-')
 plt.legend()
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [1,0,2,3]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('dneur25nocritsp%s.pdf' %(date[0]+date[1]))
+plt.savefig('dneur25nocritspmax%s.pdf' %(date[0]+date[1]))
 
 vec=np.zeros((l,20))
 vecx=np.zeros((l,ivalues))
@@ -97,12 +97,12 @@ for n in range(0,l):
 	nl=round(ivalues-offset[n])
 	plt.plot(vecx[n,0:nl],vec[n,0:nl],label='D=%.2f' %(D[n]/100))
 #plt.plot([0.16, 0.16], [10**(-2), 30000], color='black', linestyle='-',label='$I_{crit}$')
-#plt.plot([-0.01, -0.01], [10**(-2), 30000], color='black', linestyle='-')
+plt.plot([0.06, 0.06], [10**(-2), 30000], color='black', linestyle='-')
 plt.legend()
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [1,0,2,3]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-plt.savefig('fneur25nocritsp%s.pdf' %(date[0]+date[1]))
+plt.savefig('fneur25nocritspmax%s.pdf' %(date[0]+date[1]))
 
 vec=np.zeros((l,20))
 vecx=np.zeros((l,ivalues))
