@@ -8,6 +8,7 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
+matplotlib.rcParams.update({'font.size': 14})
 #datevar=['realfast11jjem2','realfast11jjem2sh','realfast11jjem2']
 #Dvar=np.array([30])
 #lvar=len(Dvar)
@@ -127,14 +128,15 @@ plt.yscale('log')
 for n in range(0,l):
 	nl=round(ivalues-offset[n])
 	plt.plot(vecx[n,0:nl],vec[n,0:nl]*timefac,label='D=%.2f' %(Dtot[n]/100))
-plt.plot([44.98, 44.98], [10**(-2), 10**5], color='black', linestyle='-',label='$I_{crit}$')
-plt.plot([46.1, 46.1], [10**(-2), 10**5], color='black', linestyle='-')
+plt.plot([46.1, 46.1], [10**(-2), 10**5], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([45.3, 45.3], [10**(-2),10**(5)], color='black', linestyle='--',label='$I_{max}$')
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [2,0,1]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 
 plt.legend()
-plt.savefig('dneur3crit%s.pdf' %(date+date1))
+plt.tight_layout()
+plt.savefig('dneur31crit%s.pdf' %(date+date1))
 
 vec=np.zeros((l,ivalues))
 vecx=np.zeros((l,ivalues))
@@ -237,8 +239,8 @@ plt.ylabel('Fano factor F')
 for n in range(0,l):
 	nl=round(ivalues-offset2[n])
 	bx.plot(vecx[n,0:nl],vec[n,0:nl],label='D=%.2f' %(Dtot[n]/100))
-bx.plot([44.98, 44.98], [10**(-3), 8*10**3], color='black', linestyle='-',label='$I_{crit}$')
-bx.plot([46.1, 46.1], [10**(-3), 8*10**3], color='black', linestyle='-')
+bx.plot([46.1, 46.1], [10**(-3), 8*10**3], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([45.3, 45.3], [10**(-3),8*10**(3)], color='black', linestyle='--',label='$I_{max}$')
 #plt.plot([46.1, 46.1], [10**(-4), 10**5], color='black', linestyle='-')
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [2,0,1]
@@ -251,7 +253,8 @@ bx.yaxis.set_major_locator(locmaj)
 locmin = matplotlib.ticker.LogLocator(base=10.0, subs=np.arange(2, 10) * .1, numticks=100)
 bx.yaxis.set_minor_locator(locmin)
 bx.yaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
-plt.savefig('fneur3crit%s.pdf' %(date+date1))
+plt.tight_layout()
+plt.savefig('fneur31crit%s.pdf' %(date+date1))
 
 vec=np.zeros((l,ivalues))
 vecx=np.zeros((l,ivalues))
@@ -357,7 +360,7 @@ plt.legend()
 #handles, labels = plt.gca().get_legend_handles_labels()
 #order = [3,1,2,0]
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
-
-plt.savefig('gneur3critsp%s.pdf' %(date+date1))
+plt.tight_layout()
+plt.savefig('gneur31critsp%s.pdf' %(date+date1))
 
 

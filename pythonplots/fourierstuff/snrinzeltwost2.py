@@ -12,7 +12,7 @@ from scipy.fftpack import fft, ifft
 
 from scipy.optimize import curve_fit
 
-#matplotlib.rcParams.update({'font.size': 18})
+matplotlib.rcParams.update({'font.size': 18})
 
 def barrier(a,b,x):
 	return a * x + b
@@ -472,4 +472,4 @@ plt.legend()
 plt.tight_layout()
 #plt.savefig('snrinzelrange26dcompletecritnofit3big.pdf')
 #plt.savefig('snrinzelpred2big.pdf')
-plt.savefig('snrinzelonlycritmax.pdf')
+plt.savefig('snrinzelonlycritmaxdef.pdf')

@@ -12,7 +12,7 @@ from scipy.fftpack import fft, ifft
 
 from scipy.optimize import curve_fit
 
-#matplotlib.rcParams.update({'font.size': 18})
+matplotlib.rcParams.update({'font.size': 14}) #18
 
 def func(x, a, b):
 	return a * np.exp(-b * x)
@@ -143,22 +143,34 @@ t=np.arange(-18,-8,0.1)
 plt.yscale('log')
 #plt.xscale('log')
 #plt.xlim(4*10**(-3),5*10**3)
-#plt.xlim(4*10**(-4),100)
+plt.ylim(10**(-6),10**(-2))
 colorv=['r','#1f77b4', '#ff7f0e', '#2ca02c', '#d62728'] # 6 colors
 #colorv=['y','g','b'] # 3 colors
 #colorv=['y','c','g','k','b'] # 5 colors
+
 #for n in range(1,2):
-#	plt.plot(xnew[1:ivalues-1],SNR[n,1:ivalues-1],'o',label='D=%.2f*' %(Dtot[n]*0.01))
-#	plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])
+#	plt.plot(xnew[1:ivalues-1],SNR[n,1:ivalues-1],'o',label='D=%.2f' %(Dtot[n]*0.01))
+	#plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])
+#plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,10*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,'purple',label='D=0.1')
 for n in range(1,l2):
 	plt.plot(xnew[1:ivalues-1],SNR[n,1:ivalues-1],label='D=%.2f' %(Dtot[n]*0.01))
-	#plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n])#,label='D=%.2f' %(Dtot[n]*0.01))#plt.plot(xnew,ratenew,colorv[n])
+	#plt.plot(xnew[1:ivalues-1],snrcor(rbtoeq[1:ivalues-1],reqtob[1:ivalues-1],ubtoeq[1:ivalues-1],ueqtob[1:ivalues-1],ups,ums,Dtot[n]*0.01,dratenew[1:ivalues-1],ratenew[1:ivalues-1],r0ps,r0ms)/8,colorv[n],label='D=%.2f' %(Dtot[n]*0.01))#plt.plot(xnew,ratenew,colorv[n])
+
+#for n in range(1,2):
+#	plt.plot(xnew[1:ivalues-3],SNR[n,1:ivalues-3],'o',label='D=%.2f*' %(Dtot[n]*0.01))
+#	plt.plot(xnew[1:ivalues-3],snrcor(rbtoeq[1:ivalues-3],reqtob[1:ivalues-3],ubtoeq[1:ivalues-3],ueqtob[1:ivalues-3],ups[0:ivalues-4],ums[0:ivalues-4],Dtot[n]*0.01,dratenew[1:ivalues-3],ratenew[1:ivalues-3],r0ps[0:ivalues-4],r0ms[0:ivalues-4])/8,colorv[n])
+#for n in range(2,l2):
+#	plt.plot(xnew[1:ivalues-3],SNR[n,1:ivalues-3],'o',label='D=%.2f' %(Dtot[n]*0.01))
+	#plt.plot(xnew[1:ivalues-3],snrcor(rbtoeq[1:ivalues-3],reqtob[1:ivalues-3],ubtoeq[1:ivalues-3],ueqtob[1:ivalues-3],ups[0:ivalues-4],ums[0:ivalues-4],Dtot[n]*0.01,dratenew[1:ivalues-3],ratenew[1:ivalues-3],r0ps[0:ivalues-4],r0ms[0:ivalues-4])/8,colorv[n])
 #plt.plot([46.1, 46.1], [10**(-48), 10**(37)], color='black', linestyle='-',label='$I_{crit}$')
-plt.plot([46.1, 46.1], [10**(-6), 10**(-2)], color='black', linestyle='-',label='$I_{crit}$')
-plt.plot([45.3, 45.3], [10**(-6), 10**(-2)], color='black', linestyle='--',label='$I_{max}$')
-plt.legend(loc='upper left')
+plt.plot([46.1, 46.1], [3*10**(-8),5*10**(-1)], color='black', linestyle='-',label='$I_{crit}$')
+plt.plot([45.3, 45.3], [3*10**(-8),5*10**(-1)], color='black', linestyle='--',label='$I_{max}$')
+#plt.text(45.4,0.5*10**(-6),'$I_{max}$',fontsize='20')
+#plt.text(46.2,0.5*10**(-6),'$I_{crit}$',fontsize='20')
+#plt.legend(loc='upper left')
+plt.legend()
 plt.tight_layout()
 #plt.savefig('snrtwostatecompanhopf7mnofit4big.pdf')
 #plt.savefig('snranhopfpred2big.pdf')
-plt.savefig('snranhopfcrit2max.pdf')
+plt.savefig('snranhopfdef.pdf')
 #plt.savefig('snrinzelonly.pdf')

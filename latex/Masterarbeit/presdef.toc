@@ -1,0 +1,13 @@
+\babel@toc {ngerman}{}
+\beamer@sectionintoc {1}{Motivation}{2}{0}{1}
+\beamer@subsectionintoc {1}{1}{Giant diffusion}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Transition to Neuron models}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{Goals}{6}{0}{1}
+\beamer@sectionintoc {2}{$I_{Na,p}+I_K$ model with Andronov-Hopf bifurcation}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Theory}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Simulation}{10}{0}{2}
+\beamer@subsectionintoc {2}{3}{Comparison with other models}{13}{0}{2}
+\beamer@subsectionintoc {2}{4}{Two-state theory}{14}{0}{2}
+\beamer@sectionintoc {3}{Signal transmission}{18}{0}{3}
+\beamer@sectionintoc {4}{$I_{Na,p}+I_K$ model with Andronov-Hopf Bifurkation}{20}{0}{4}
+\beamer@sectionintoc {5}{Summary}{25}{0}{5}

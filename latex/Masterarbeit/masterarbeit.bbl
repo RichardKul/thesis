@@ -102,6 +102,10 @@
   fluctuations for electrons in InP by Monte Carlo methods},'' {\em J Appl Phys
   50}, 1979.
 
+\bibitem{cvref}
+{A. Shpiro et al.}, ``{Balance between noise and adaptation in competition
+  models of perceptual bistability},'' {\em J Comput Neurosci 27}, 2009.
+
 \bibitem{speclim}
 {R. F. O. Pena et al.}, ``{Self-Consistent Scheme for Spike-Train Power Spectra
   in Heterogeneous Sparse Networks},'' {\em Frontiers in Comp. Neuroscience},
@@ -111,9 +115,5 @@
 {S. Vellmer and B. Lindner}, ``{Theory of spike-train power spectra for
   multidimensional integrate-and-fire neurons},'' {\em Phys. Rev. Research},
   2019.
-
-\bibitem{cvref}
-{A. Shpiro et al.}, ``{Balance between noise and adaptation in competition
-  models of perceptual bistability},'' {\em J Comput Neurosci 27}, 2009.
 
 \end{thebibliography}

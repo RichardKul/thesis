@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  12 JUN 2020 10:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.28)  10 JUL 2020 11:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,13 +528,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--257
 
  []
 
-<inapikanhopfnc.pdf, id=597, 462.52798pt x 346.89601pt>
+<inapikanhopfnc.pdf, id=597, 462.52802pt x 346.89601pt>
 File: inapikanhopfnc.pdf Graphic file (type pdf)
 <use inapikanhopfnc.pdf>
 Package pdftex.def Info: inapikanhopfnc.pdf  used on input line 266.
-(pdftex.def)             Requested size: 439.39908pt x 329.54933pt.
+(pdftex.def)             Requested size: 439.39911pt x 329.54933pt.
 
-Overfull \hbox (12.60773pt too wide) in paragraph at lines 266--266
+Overfull \hbox (12.60776pt too wide) in paragraph at lines 266--266
  [][] 
  []
 
@@ -560,23 +560,23 @@ File: inaprealanhopfvtblack.pdf Graphic file (type pdf)
 Package pdftex.def Info: inaprealanhopfvtblack.pdf  used on input line 280.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
  [15 <./inapikanhopfnc.pdf>]
-<contouranhopfa2sh.pdf, id=649, 462.52798pt x 346.89601pt>
+<contouranhopfa2sh.pdf, id=652, 462.52798pt x 346.89601pt>
 File: contouranhopfa2sh.pdf Graphic file (type pdf)
 <use contouranhopfa2sh.pdf>
 Package pdftex.def Info: contouranhopfa2sh.pdf  used on input line 287.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<contouranhopfa2time.pdf, id=650, 462.52798pt x 346.89601pt>
+<contouranhopfa2time.pdf, id=653, 462.52798pt x 346.89601pt>
 File: contouranhopfa2time.pdf Graphic file (type pdf)
 <use contouranhopfa2time.pdf>
 Package pdftex.def Info: contouranhopfa2time.pdf  used on input line 288.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<inaprealanhopfunstablewn2black.pdf, id=651, 462.52798pt x 346.89601pt>
+<inaprealanhopfunstablewn2black.pdf, id=654, 462.52798pt x 346.89601pt>
 File: inaprealanhopfunstablewn2black.pdf Graphic file (type pdf)
 <use inaprealanhopfunstablewn2black.pdf>
 Package pdftex.def Info: inaprealanhopfunstablewn2black.pdf  used on input line
  296.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<inaprealanhopfunstablevtblack.pdf, id=652, 462.52798pt x 346.89601pt>
+<inaprealanhopfunstablevtblack.pdf, id=655, 462.52798pt x 346.89601pt>
 File: inaprealanhopfunstablevtblack.pdf Graphic file (type pdf)
 <use inaprealanhopfunstablevtblack.pdf>
 Package pdftex.def Info: inaprealanhopfunstablevtblack.pdf  used on input line 
@@ -603,33 +603,33 @@ pdfTeX warning: /usr/bin/pdflatex (file ./contouranhopfa2sh.pdf): PDF inclusion
 pdfTeX warning: /usr/bin/pdflatex (file ./contouranhopfa2time.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
 >]
-<inaprealanhopfnb2black.pdf, id=853, 462.52798pt x 346.89601pt>
+<inaprealanhopfnb2black.pdf, id=857, 462.52798pt x 346.89601pt>
 File: inaprealanhopfnb2black.pdf Graphic file (type pdf)
 <use inaprealanhopfnb2black.pdf>
 Package pdftex.def Info: inaprealanhopfnb2black.pdf  used on input line 303.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<inaprealanhopfunstable2black.pdf, id=854, 462.52798pt x 346.89601pt>
+<inaprealanhopfunstable2black.pdf, id=858, 462.52798pt x 346.89601pt>
 File: inaprealanhopfunstable2black.pdf Graphic file (type pdf)
 <use inaprealanhopfunstable2black.pdf>
 Package pdftex.def Info: inaprealanhopfunstable2black.pdf  used on input line 3
 04.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<realstateanhopf45full.pdf, id=855, 462.52798pt x 346.89601pt>
+<realstateanhopf45full.pdf, id=859, 462.52798pt x 346.89601pt>
 File: realstateanhopf45full.pdf Graphic file (type pdf)
 <use realstateanhopf45full.pdf>
 Package pdftex.def Info: realstateanhopf45full.pdf  used on input line 311.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<realstateanhopf55full.pdf, id=856, 462.52798pt x 346.89601pt>
+<realstateanhopf55full.pdf, id=860, 462.52798pt x 346.89601pt>
 File: realstateanhopf55full.pdf Graphic file (type pdf)
 <use realstateanhopf55full.pdf>
 Package pdftex.def Info: realstateanhopf55full.pdf  used on input line 312.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<realstateanhopf5sh3.pdf, id=857, 462.52798pt x 346.89601pt>
+<realstateanhopf5sh3.pdf, id=861, 462.52798pt x 346.89601pt>
 File: realstateanhopf5sh3.pdf Graphic file (type pdf)
 <use realstateanhopf5sh3.pdf>
 Package pdftex.def Info: realstateanhopf5sh3.pdf  used on input line 312.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<realstateanhopf52sh.pdf, id=858, 462.52798pt x 346.89601pt>
+<realstateanhopf52sh.pdf, id=862, 462.52798pt x 346.89601pt>
 File: realstateanhopf52sh.pdf Graphic file (type pdf)
 <use realstateanhopf52sh.pdf>
 Package pdftex.def Info: realstateanhopf52sh.pdf  used on input line 313.
@@ -652,7 +652,7 @@ File: realstateanhopf5sh3.pdf Graphic file (type pdf)
 <use realstateanhopf5sh3.pdf>
 Package pdftex.def Info: realstateanhopf5sh3.pdf  used on input line 322.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<inaprealanhopfreal5psh.pdf, id=982, 462.52798pt x 346.89601pt>
+<inaprealanhopfreal5psh.pdf, id=985, 462.52798pt x 346.89601pt>
 File: inaprealanhopfreal5psh.pdf Graphic file (type pdf)
 <use inaprealanhopfreal5psh.pdf>
 Package pdftex.def Info: inaprealanhopfreal5psh.pdf  used on input line 323.
@@ -679,7 +679,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 342--346
 
  []
 
-<rinzelclinesarrowwp.pdf, id=1199, 462.52798pt x 346.89601pt>
+<rinzelclinesarrowwp.pdf, id=1202, 462.52798pt x 346.89601pt>
 File: rinzelclinesarrowwp.pdf Graphic file (type pdf)
 <use rinzelclinesarrowwp.pdf>
 Package pdftex.def Info: rinzelclinesarrowwp.pdf  used on input line 368.
@@ -690,35 +690,35 @@ Overfull \hbox (12.60773pt too wide) in paragraph at lines 368--368
  []
 
 [20]
-<realstatedetrinzelpnb2wnblack.pdf, id=1203, 462.52798pt x 346.89601pt>
+<realstatedetrinzelpnb2wnblack.pdf, id=1206, 462.52798pt x 346.89601pt>
 File: realstatedetrinzelpnb2wnblack.pdf Graphic file (type pdf)
 <use realstatedetrinzelpnb2wnblack.pdf>
 Package pdftex.def Info: realstatedetrinzelpnb2wnblack.pdf  used on input line 
 382.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<realstatedetrinzelpnbwnblack.pdf, id=1204, 462.52798pt x 346.89601pt>
+<realstatedetrinzelpnbwnblack.pdf, id=1207, 462.52798pt x 346.89601pt>
 File: realstatedetrinzelpnbwnblack.pdf Graphic file (type pdf)
 <use realstatedetrinzelpnbwnblack.pdf>
 Package pdftex.def Info: realstatedetrinzelpnbwnblack.pdf  used on input line 3
 83.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<realstatedetrinzelpnb2.pdf, id=1205, 462.52798pt x 346.89601pt>
+<realstatedetrinzelpnb2.pdf, id=1208, 462.52798pt x 346.89601pt>
 File: realstatedetrinzelpnb2.pdf Graphic file (type pdf)
 <use realstatedetrinzelpnb2.pdf>
 Package pdftex.def Info: realstatedetrinzelpnb2.pdf  used on input line 383.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<realstatedetrinzelpnb.pdf, id=1206, 462.52798pt x 346.89601pt>
+<realstatedetrinzelpnb.pdf, id=1209, 462.52798pt x 346.89601pt>
 File: realstatedetrinzelpnb.pdf Graphic file (type pdf)
 <use realstatedetrinzelpnb.pdf>
 Package pdftex.def Info: realstatedetrinzelpnb.pdf  used on input line 384.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
  [21 <./rinzelclinesarrowwp.pdf>]
-<contourrinzela12shalt3.pdf, id=1253, 462.52798pt x 346.89601pt>
+<contourrinzela12shalt3.pdf, id=1257, 462.52798pt x 346.89601pt>
 File: contourrinzela12shalt3.pdf Graphic file (type pdf)
 <use contourrinzela12shalt3.pdf>
 Package pdftex.def Info: contourrinzela12shalt3.pdf  used on input line 392.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<contourrinzela12time.pdf, id=1254, 462.52798pt x 346.89601pt>
+<contourrinzela12time.pdf, id=1258, 462.52798pt x 346.89601pt>
 File: contourrinzela12time.pdf Graphic file (type pdf)
 <use contourrinzela12time.pdf>
 Package pdftex.def Info: contourrinzela12time.pdf  used on input line 393.
@@ -744,23 +744,23 @@ usion: multiple pdfs with page group included in a single page
 pdfTeX warning: /usr/bin/pdflatex (file ./contourrinzela12time.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >]
-<realstatedetrinzel16100.pdf, id=1504, 462.52798pt x 346.89601pt>
+<realstatedetrinzel16100.pdf, id=1507, 462.52798pt x 346.89601pt>
 File: realstatedetrinzel16100.pdf Graphic file (type pdf)
 <use realstatedetrinzel16100.pdf>
 Package pdftex.def Info: realstatedetrinzel16100.pdf  used on input line 405.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<realstatedetrinzel12100.pdf, id=1505, 462.52798pt x 346.89601pt>
+<realstatedetrinzel12100.pdf, id=1508, 462.52798pt x 346.89601pt>
 File: realstatedetrinzel12100.pdf Graphic file (type pdf)
 <use realstatedetrinzel12100.pdf>
 Package pdftex.def Info: realstatedetrinzel12100.pdf  used on input line 406.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<realstatedetrinzel16100sh2.pdf, id=1506, 462.52798pt x 346.89601pt>
+<realstatedetrinzel16100sh2.pdf, id=1509, 462.52798pt x 346.89601pt>
 File: realstatedetrinzel16100sh2.pdf Graphic file (type pdf)
 <use realstatedetrinzel16100sh2.pdf>
 Package pdftex.def Info: realstatedetrinzel16100sh2.pdf  used on input line 406
 .
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<realstatedetrinzel12100sh.pdf, id=1507, 462.52798pt x 346.89601pt>
+<realstatedetrinzel12100sh.pdf, id=1510, 462.52798pt x 346.89601pt>
 File: realstatedetrinzel12100sh.pdf Graphic file (type pdf)
 <use realstatedetrinzel12100sh.pdf>
 Package pdftex.def Info: realstatedetrinzel12100sh.pdf  used on input line 407.
@@ -771,7 +771,7 @@ File: realstatedetrinzel16100sh2.pdf Graphic file (type pdf)
 Package pdftex.def Info: realstatedetrinzel16100sh2.pdf  used on input line 415
 .
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<realstatedetrinzelp16100shnn.pdf, id=1508, 462.52798pt x 346.89601pt>
+<realstatedetrinzelp16100shnn.pdf, id=1511, 462.52798pt x 346.89601pt>
 File: realstatedetrinzelp16100shnn.pdf Graphic file (type pdf)
 <use realstatedetrinzelp16100shnn.pdf>
 Package pdftex.def Info: realstatedetrinzelp16100shnn.pdf  used on input line 4
@@ -806,7 +806,7 @@ bi-fur-ca-tion shows slightly
  []
 
 [28] [29]
-<allfast4.pdf, id=1743, 462.52798pt x 346.89601pt>
+<allfast4.pdf, id=1746, 462.52798pt x 346.89601pt>
 File: allfast4.pdf Graphic file (type pdf)
 <use allfast4.pdf>
 Package pdftex.def Info: allfast4.pdf  used on input line 677.
@@ -817,7 +817,7 @@ Overfull \hbox (35.73549pt too wide) in paragraph at lines 677--677
  []
 
 [30 <./allfast4.pdf>]
-<allfastanhopf2.pdf, id=1774, 462.52798pt x 346.89601pt>
+<allfastanhopf2.pdf, id=1777, 462.52798pt x 346.89601pt>
 File: allfastanhopf2.pdf Graphic file (type pdf)
 <use allfastanhopf2.pdf>
 Package pdftex.def Info: allfastanhopf2.pdf  used on input line 707.
@@ -828,7 +828,7 @@ Overfull \hbox (35.73549pt too wide) in paragraph at lines 707--707
  []
 
 [31 <./allfastanhopf2.pdf>]
-<allfastrinzel2.pdf, id=1805, 462.52798pt x 346.89601pt>
+<allfastrinzel2.pdf, id=1808, 462.52798pt x 346.89601pt>
 File: allfastrinzel2.pdf Graphic file (type pdf)
 <use allfastrinzel2.pdf>
 Package pdftex.def Info: allfastrinzel2.pdf  used on input line 736.
@@ -839,7 +839,7 @@ Overfull \hbox (35.73549pt too wide) in paragraph at lines 736--736
  []
 
 [32]
-<dneursinglerealrinzel20ninv0realrinzel15ninv0.pdf, id=1809, 462.52798pt x 346.
+<dneursinglerealrinzel20ninv0realrinzel15ninv0.pdf, id=1812, 462.52798pt x 346.
 89601pt>
 File: dneursinglerealrinzel20ninv0realrinzel15ninv0.pdf Graphic file (type pdf)
 
@@ -847,7 +847,7 @@ File: dneursinglerealrinzel20ninv0realrinzel15ninv0.pdf Graphic file (type pdf)
 Package pdftex.def Info: dneursinglerealrinzel20ninv0realrinzel15ninv0.pdf  use
 d on input line 761.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<gneursinglerealrinzel20ninv0realrinzel15ninv0.pdf, id=1810, 462.52798pt x 346.
+<gneursinglerealrinzel20ninv0realrinzel15ninv0.pdf, id=1813, 462.52798pt x 346.
 89601pt>
 File: gneursinglerealrinzel20ninv0realrinzel15ninv0.pdf Graphic file (type pdf)
 
@@ -862,17 +862,17 @@ pdfTeX warning: /usr/bin/pdflatex (file ./gneursinglerealrinzel20ninv0realrinze
 l15ninv0.pdf): PDF inclusion: multiple pdfs with page group included in a singl
 e page
 >]
-<eqdistplotmaster2.pdf, id=1927, 462.52798pt x 346.89601pt>
+<eqdistplotmaster2.pdf, id=1930, 462.52798pt x 346.89601pt>
 File: eqdistplotmaster2.pdf Graphic file (type pdf)
 <use eqdistplotmaster2.pdf>
 Package pdftex.def Info: eqdistplotmaster2.pdf  used on input line 777.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<bdistplotmaster3.pdf, id=1928, 462.52798pt x 346.89601pt>
+<bdistplotmaster3.pdf, id=1931, 462.52798pt x 346.89601pt>
 File: bdistplotmaster3.pdf Graphic file (type pdf)
 <use bdistplotmaster3.pdf>
 Package pdftex.def Info: bdistplotmaster3.pdf  used on input line 778.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<tranratesneur32.pdf, id=1929, 462.52798pt x 346.89601pt>
+<tranratesneur32.pdf, id=1932, 462.52798pt x 346.89601pt>
 File: tranratesneur32.pdf Graphic file (type pdf)
 <use tranratesneur32.pdf>
 Package pdftex.def Info: tranratesneur32.pdf  used on input line 793.
@@ -887,7 +887,7 @@ Overfull \hbox (35.73549pt too wide) in paragraph at lines 793--793
 pdfTeX warning: /usr/bin/pdflatex (file ./bdistplotmaster3.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
 >]
-<arrheniustotbigrealfast9acoarsetfrealfast23mtffit7fln.pdf, id=2016, 462.52798p
+<arrheniustotbigrealfast9acoarsetfrealfast23mtffit7fln.pdf, id=2020, 462.52798p
 t x 346.89601pt>
 File: arrheniustotbigrealfast9acoarsetfrealfast23mtffit7fln.pdf Graphic file (t
 ype pdf)
@@ -895,7 +895,7 @@ ype pdf)
 Package pdftex.def Info: arrheniustotbigrealfast9acoarsetfrealfast23mtffit7fln.
 pdf  used on input line 801.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<arrheniustotbigrealfast9acoarsetfrealfast23mtffit15fln.pdf, id=2017, 462.52798
+<arrheniustotbigrealfast9acoarsetfrealfast23mtffit15fln.pdf, id=2021, 462.52798
 pt x 346.89601pt>
 File: arrheniustotbigrealfast9acoarsetfrealfast23mtffit15fln.pdf Graphic file (
 type pdf)
@@ -904,12 +904,12 @@ Package pdftex.def Info: arrheniustotbigrealfast9acoarsetfrealfast23mtffit15fln
 .pdf  used on input line 802.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
  [36 <./tranratesneur32.pdf>]
-<barriereal5linebig.pdf, id=2072, 462.52798pt x 346.89601pt>
+<barriereal5linebig.pdf, id=2075, 462.52798pt x 346.89601pt>
 File: barriereal5linebig.pdf Graphic file (type pdf)
 <use barriereal5linebig.pdf>
 Package pdftex.def Info: barriereal5linebig.pdf  used on input line 822.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<barriercomprealfit5linecritbig.pdf, id=2073, 462.52798pt x 346.89601pt>
+<barriercomprealfit5linecritbig.pdf, id=2076, 462.52798pt x 346.89601pt>
 File: barriercomprealfit5linecritbig.pdf Graphic file (type pdf)
 <use barriercomprealfit5linecritbig.pdf>
 Package pdftex.def Info: barriercomprealfit5linecritbig.pdf  used on input line
@@ -922,21 +922,21 @@ pdfTeX warning: /usr/bin/pdflatex (file ./arrheniustotbigrealfast9acoarsetfreal
 fast23mtffit15fln.pdf): PDF inclusion: multiple pdfs with page group included i
 n a single page
 >]
-<dcompdfpwnewbig2realfast23mtfrealfast19mtf.pdf, id=2177, 462.52798pt x 346.896
+<dcompdfpwnewbig2realfast23mtfrealfast19mtf.pdf, id=2180, 462.52798pt x 346.896
 01pt>
 File: dcompdfpwnewbig2realfast23mtfrealfast19mtf.pdf Graphic file (type pdf)
 <use dcompdfpwnewbig2realfast23mtfrealfast19mtf.pdf>
 Package pdftex.def Info: dcompdfpwnewbig2realfast23mtfrealfast19mtf.pdf  used o
 n input line 837.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<fcompdfpwnewbig2realfast23mtfrealfast19mtf.pdf, id=2178, 462.52798pt x 346.896
+<fcompdfpwnewbig2realfast23mtfrealfast19mtf.pdf, id=2181, 462.52798pt x 346.896
 01pt>
 File: fcompdfpwnewbig2realfast23mtfrealfast19mtf.pdf Graphic file (type pdf)
 <use fcompdfpwnewbig2realfast23mtfrealfast19mtf.pdf>
 Package pdftex.def Info: fcompdfpwnewbig2realfast23mtfrealfast19mtf.pdf  used o
 n input line 838.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<dcompdfpwnewpred3realfast11jjem2shrealfast19jjem2st.pdf, id=2179, 462.52798pt 
+<dcompdfpwnewpred3realfast11jjem2shrealfast19jjem2st.pdf, id=2182, 462.52798pt 
 x 346.89601pt>
 File: dcompdfpwnewpred3realfast11jjem2shrealfast19jjem2st.pdf Graphic file (typ
 e pdf)
@@ -944,7 +944,7 @@ e pdf)
 Package pdftex.def Info: dcompdfpwnewpred3realfast11jjem2shrealfast19jjem2st.pd
 f  used on input line 849.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<fcompdfpwnewpred3realfast11jjem2shrealfast19jjem2st.pdf, id=2180, 462.52798pt 
+<fcompdfpwnewpred3realfast11jjem2shrealfast19jjem2st.pdf, id=2183, 462.52798pt 
 x 346.89601pt>
 File: fcompdfpwnewpred3realfast11jjem2shrealfast19jjem2st.pdf Graphic file (typ
 e pdf)
@@ -967,13 +967,13 @@ pdfTeX warning: /usr/bin/pdflatex (file ./fcompdfpwnewbig2realfast23mtfrealfast
 19mtf.pdf): PDF inclusion: multiple pdfs with page group included in a single p
 age
 >]
-<eqdistajrj2realanhopf19flog354.pdf, id=2367, 462.52798pt x 346.89601pt>
+<eqdistajrj2realanhopf19flog354.pdf, id=2370, 462.52798pt x 346.89601pt>
 File: eqdistajrj2realanhopf19flog354.pdf Graphic file (type pdf)
 <use eqdistajrj2realanhopf19flog354.pdf>
 Package pdftex.def Info: eqdistajrj2realanhopf19flog354.pdf  used on input line
  861.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<bdistajrj2realanhopf19flog2013.pdf, id=2368, 462.52798pt x 346.89601pt>
+<bdistajrj2realanhopf19flog2013.pdf, id=2371, 462.52798pt x 346.89601pt>
 File: bdistajrj2realanhopf19flog2013.pdf Graphic file (type pdf)
 <use bdistajrj2realanhopf19flog2013.pdf>
 Package pdftex.def Info: bdistajrj2realanhopf19flog2013.pdf  used on input line
@@ -986,7 +986,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./fcompdfpwnewpred3realfast11jjem2shrea
 lfast19jjem2st.pdf): PDF inclusion: multiple pdfs with page group included in a
  single page
 >]
-<tranratesanhopfsp.pdf, id=2468, 462.52798pt x 346.89601pt>
+<tranratesanhopfsp.pdf, id=2472, 462.52798pt x 346.89601pt>
 File: tranratesanhopfsp.pdf Graphic file (type pdf)
 <use tranratesanhopfsp.pdf>
 Package pdftex.def Info: tranratesanhopfsp.pdf  used on input line 873.
@@ -1002,7 +1002,7 @@ f
 pdfTeX warning: /usr/bin/pdflatex (file ./bdistajrj2realanhopf19flog2013.pdf): 
 PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<arrheniustotbigrealanhopf19flogrealanhopf11flogfit3.pdf, id=2555, 462.52798pt 
+<arrheniustotbigrealanhopf19flogrealanhopf11flogfit3.pdf, id=2558, 462.52798pt 
 x 346.89601pt>
 File: arrheniustotbigrealanhopf19flogrealanhopf11flogfit3.pdf Graphic file (typ
 e pdf)
@@ -1010,7 +1010,7 @@ e pdf)
 Package pdftex.def Info: arrheniustotbigrealanhopf19flogrealanhopf11flogfit3.pd
 f  used on input line 880.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<arrheniustotbigrealanhopf19flogrealanhopf11flogfit11.pdf, id=2556, 462.52798pt
+<arrheniustotbigrealanhopf19flogrealanhopf11flogfit11.pdf, id=2559, 462.52798pt
  x 346.89601pt>
 File: arrheniustotbigrealanhopf19flogrealanhopf11flogfit11.pdf Graphic file (ty
 pe pdf)
@@ -1018,12 +1018,12 @@ pe pdf)
 Package pdftex.def Info: arrheniustotbigrealanhopf19flogrealanhopf11flogfit11.p
 df  used on input line 881.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<barrieranhopfbig.pdf, id=2557, 462.52798pt x 346.89601pt>
+<barrieranhopfbig.pdf, id=2560, 462.52798pt x 346.89601pt>
 File: barrieranhopfbig.pdf Graphic file (type pdf)
 <use barrieranhopfbig.pdf>
 Package pdftex.def Info: barrieranhopfbig.pdf  used on input line 891.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<barriercompanhopfcritbig.pdf, id=2558, 462.52798pt x 346.89601pt>
+<barriercompanhopfcritbig.pdf, id=2561, 462.52798pt x 346.89601pt>
 File: barriercompanhopfcritbig.pdf Graphic file (type pdf)
 <use barriercompanhopfcritbig.pdf>
 Package pdftex.def Info: barriercompanhopfcritbig.pdf  used on input line 892.
@@ -1040,7 +1040,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./arrheniustotbigrealanhopf19flogrealan
 hopf11flogfit11.pdf): PDF inclusion: multiple pdfs with page group included in 
 a single page
 >]
-<dcompdfpwnew2shrealanhopf26flogrealanhopf19flog.pdf, id=2711, 462.52798pt x 34
+<dcompdfpwnew2shrealanhopf26flogrealanhopf19flog.pdf, id=2714, 462.52798pt x 34
 6.89601pt>
 File: dcompdfpwnew2shrealanhopf26flogrealanhopf19flog.pdf Graphic file (type pd
 f)
@@ -1048,7 +1048,7 @@ f)
 Package pdftex.def Info: dcompdfpwnew2shrealanhopf26flogrealanhopf19flog.pdf  u
 sed on input line 901.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<fcompdfpwnew2shrealanhopf26flogrealanhopf19flog.pdf, id=2712, 462.52798pt x 34
+<fcompdfpwnew2shrealanhopf26flogrealanhopf19flog.pdf, id=2715, 462.52798pt x 34
 6.89601pt>
 File: fcompdfpwnew2shrealanhopf26flogrealanhopf19flog.pdf Graphic file (type pd
 f)
@@ -1056,7 +1056,7 @@ f)
 Package pdftex.def Info: fcompdfpwnew2shrealanhopf26flogrealanhopf19flog.pdf  u
 sed on input line 902.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<dcompdfpwnewpred2realanhopf19flogrealanhopf11flog.pdf, id=2713, 462.52798pt x 
+<dcompdfpwnewpred2realanhopf19flogrealanhopf11flog.pdf, id=2716, 462.52798pt x 
 346.89601pt>
 File: dcompdfpwnewpred2realanhopf19flogrealanhopf11flog.pdf Graphic file (type 
 pdf)
@@ -1064,7 +1064,7 @@ pdf)
 Package pdftex.def Info: dcompdfpwnewpred2realanhopf19flogrealanhopf11flog.pdf 
  used on input line 911.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<fcompdfpwnewpred2realanhopf19flogrealanhopf11flog.pdf, id=2714, 462.52798pt x 
+<fcompdfpwnewpred2realanhopf19flogrealanhopf11flog.pdf, id=2717, 462.52798pt x 
 346.89601pt>
 File: fcompdfpwnewpred2realanhopf19flogrealanhopf11flog.pdf Graphic file (type 
 pdf)
@@ -1087,20 +1087,20 @@ pdfTeX warning: /usr/bin/pdflatex (file ./fcompdfpwnew2shrealanhopf26flogrealan
 hopf19flog.pdf): PDF inclusion: multiple pdfs with page group included in a sin
 gle page
 >]
-<eqdistajrj2realrinzelrangeshort26d15009.pdf, id=2904, 462.52798pt x 346.89601p
+<eqdistajrj2realrinzelrangeshort26d15009.pdf, id=2908, 462.52798pt x 346.89601p
 t>
 File: eqdistajrj2realrinzelrangeshort26d15009.pdf Graphic file (type pdf)
 <use eqdistajrj2realrinzelrangeshort26d15009.pdf>
 Package pdftex.def Info: eqdistajrj2realrinzelrangeshort26d15009.pdf  used on i
 nput line 922.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<bdistajrj2realrinzelrange26d12501.pdf, id=2905, 462.52798pt x 346.89601pt>
+<bdistajrj2realrinzelrange26d12501.pdf, id=2909, 462.52798pt x 346.89601pt>
 File: bdistajrj2realrinzelrange26d12501.pdf Graphic file (type pdf)
 <use bdistajrj2realrinzelrange26d12501.pdf>
 Package pdftex.def Info: bdistajrj2realrinzelrange26d12501.pdf  used on input l
 ine 923.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<tranratesrinzel.pdf, id=2906, 462.52798pt x 346.89601pt>
+<tranratesrinzel.pdf, id=2910, 462.52798pt x 346.89601pt>
 File: tranratesrinzel.pdf Graphic file (type pdf)
 <use tranratesrinzel.pdf>
 Package pdftex.def Info: tranratesrinzel.pdf  used on input line 936.
@@ -1126,7 +1126,7 @@ pdfTeX warning: /usr/bin/pdflatex (file ./eqdistajrj2realrinzelrangeshort26d150
 pdfTeX warning: /usr/bin/pdflatex (file ./bdistajrj2realrinzelrange26d12501.pdf
 ): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<arrheniustotbigrealrinzelrange26d1realrinzelrange26d1fit0.pdf, id=3095, 462.52
+<arrheniustotbigrealrinzelrange26d1realrinzelrange26d1fit0.pdf, id=3098, 462.52
 798pt x 346.89601pt>
 File: arrheniustotbigrealrinzelrange26d1realrinzelrange26d1fit0.pdf Graphic fil
 e (type pdf)
@@ -1134,7 +1134,7 @@ e (type pdf)
 Package pdftex.def Info: arrheniustotbigrealrinzelrange26d1realrinzelrange26d1f
 it0.pdf  used on input line 943.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<arrheniustotbigrealrinzelrange26d1realrinzelrange26d1fit7.pdf, id=3096, 462.52
+<arrheniustotbigrealrinzelrange26d1realrinzelrange26d1fit7.pdf, id=3099, 462.52
 798pt x 346.89601pt>
 File: arrheniustotbigrealrinzelrange26d1realrinzelrange26d1fit7.pdf Graphic fil
 e (type pdf)
@@ -1143,23 +1143,23 @@ Package pdftex.def Info: arrheniustotbigrealrinzelrange26d1realrinzelrange26d1f
 it7.pdf  used on input line 944.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
  [44 <./tranratesrinzel.pdf>]
-<barrierinzelbig.pdf, id=3154, 462.52798pt x 346.89601pt>
+<barrierinzelbig.pdf, id=3157, 462.52798pt x 346.89601pt>
 File: barrierinzelbig.pdf Graphic file (type pdf)
 <use barrierinzelbig.pdf>
 Package pdftex.def Info: barrierinzelbig.pdf  used on input line 953.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<barriercomprinzelcritbig.pdf, id=3155, 462.52798pt x 346.89601pt>
+<barriercomprinzelcritbig.pdf, id=3158, 462.52798pt x 346.89601pt>
 File: barriercomprinzelcritbig.pdf Graphic file (type pdf)
 <use barriercomprinzelcritbig.pdf>
 Package pdftex.def Info: barriercomprinzelcritbig.pdf  used on input line 954.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<detmocountrinzelcompnew2big.pdf, id=3156, 462.52798pt x 346.89601pt>
+<detmocountrinzelcompnew2big.pdf, id=3159, 462.52798pt x 346.89601pt>
 File: detmocountrinzelcompnew2big.pdf Graphic file (type pdf)
 <use detmocountrinzelcompnew2big.pdf>
 Package pdftex.def Info: detmocountrinzelcompnew2big.pdf  used on input line 96
 9.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<detmocountrinzelcomp6big.pdf, id=3157, 462.52798pt x 346.89601pt>
+<detmocountrinzelcomp6big.pdf, id=3160, 462.52798pt x 346.89601pt>
 File: detmocountrinzelcomp6big.pdf Graphic file (type pdf)
 <use detmocountrinzelcomp6big.pdf>
 Package pdftex.def Info: detmocountrinzelcomp6big.pdf  used on input line 971.
@@ -1179,12 +1179,12 @@ multiple pdfs with page group included in a single page
 pdfTeX warning: /usr/bin/pdflatex (file ./barriercomprinzelcritbig.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
 >]
-<detmocountrinzelparam30.pdf, id=3354, 462.52798pt x 346.89601pt>
+<detmocountrinzelparam30.pdf, id=3357, 462.52798pt x 346.89601pt>
 File: detmocountrinzelparam30.pdf Graphic file (type pdf)
 <use detmocountrinzelparam30.pdf>
 Package pdftex.def Info: detmocountrinzelparam30.pdf  used on input line 990.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<detmocountrinzelparam32.pdf, id=3355, 462.52798pt x 346.89601pt>
+<detmocountrinzelparam32.pdf, id=3358, 462.52798pt x 346.89601pt>
 File: detmocountrinzelparam32.pdf Graphic file (type pdf)
 <use detmocountrinzelparam32.pdf>
 Package pdftex.def Info: detmocountrinzelparam32.pdf  used on input line 991.
@@ -1202,7 +1202,7 @@ lusion: multiple pdfs with page group included in a single page
 pdfTeX warning: /usr/bin/pdflatex (file ./detmocountrinzelparam32.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >]
-<dcompdfpwnew2bigrealrinzelrangelong26d1realrinzelrange26d1.pdf, id=3501, 462.5
+<dcompdfpwnew2bigrealrinzelrangelong26d1realrinzelrange26d1.pdf, id=3504, 462.5
 2798pt x 346.89601pt>
 File: dcompdfpwnew2bigrealrinzelrangelong26d1realrinzelrange26d1.pdf Graphic fi
 le (type pdf)
@@ -1210,7 +1210,7 @@ le (type pdf)
 Package pdftex.def Info: dcompdfpwnew2bigrealrinzelrangelong26d1realrinzelrange
 26d1.pdf  used on input line 1006.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<fcompdfpwnew2bigrealrinzelrangelong26d1realrinzelrange26d1.pdf, id=3502, 462.5
+<fcompdfpwnew2bigrealrinzelrangelong26d1realrinzelrange26d1.pdf, id=3505, 462.5
 2798pt x 346.89601pt>
 File: fcompdfpwnew2bigrealrinzelrangelong26d1realrinzelrange26d1.pdf Graphic fi
 le (type pdf)
@@ -1218,7 +1218,7 @@ le (type pdf)
 Package pdftex.def Info: fcompdfpwnew2bigrealrinzelrangelong26d1realrinzelrange
 26d1.pdf  used on input line 1007.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<dcompdfpwnewpred3realrinzelrange26d1realrinzelrange26d1.pdf, id=3503, 462.5279
+<dcompdfpwnewpred3realrinzelrange26d1realrinzelrange26d1.pdf, id=3506, 462.5279
 8pt x 346.89601pt>
 File: dcompdfpwnewpred3realrinzelrange26d1realrinzelrange26d1.pdf Graphic file 
 (type pdf)
@@ -1226,7 +1226,7 @@ File: dcompdfpwnewpred3realrinzelrange26d1realrinzelrange26d1.pdf Graphic file
 Package pdftex.def Info: dcompdfpwnewpred3realrinzelrange26d1realrinzelrange26d
 1.pdf  used on input line 1015.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<fcompdfpwnewpred3realrinzelrange26d1realrinzelrange26d1.pdf, id=3504, 462.5279
+<fcompdfpwnewpred3realrinzelrange26d1realrinzelrange26d1.pdf, id=3507, 462.5279
 8pt x 346.89601pt>
 File: fcompdfpwnewpred3realrinzelrange26d1realrinzelrange26d1.pdf Graphic file 
 (type pdf)
@@ -1251,18 +1251,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 1024--1032
 
  []
 
-<specpaper6.pdf, id=3702, 462.52798pt x 346.89601pt>
+<specpaper6.pdf, id=3705, 462.52798pt x 346.89601pt>
 File: specpaper6.pdf Graphic file (type pdf)
 <use specpaper6.pdf>
 Package pdftex.def Info: specpaper6.pdf  used on input line 1046.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<specpaper7.pdf, id=3703, 462.52798pt x 346.89601pt>
+<specpaper7.pdf, id=3706, 462.52798pt x 346.89601pt>
 File: specpaper7.pdf Graphic file (type pdf)
 <use specpaper7.pdf>
 Package pdftex.def Info: specpaper7.pdf  used on input line 1047.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
 [49]
-<snrealonly2crit5max.pdf, id=3707, 462.52798pt x 346.89601pt>
+<snrealonly2crit5max.pdf, id=3710, 462.52798pt x 346.89601pt>
 File: snrealonly2crit5max.pdf Graphic file (type pdf)
 <use snrealonly2crit5max.pdf>
 Package pdftex.def Info: snrealonly2crit5max.pdf  used on input line 1056.
@@ -1277,13 +1277,13 @@ Overfull \hbox (12.60773pt too wide) in paragraph at lines 1056--1056
 pdfTeX warning: /usr/bin/pdflatex (file ./specpaper7.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
 >]
-<snrtwostateneurcorsh5big.pdf, id=3815, 462.52798pt x 346.89601pt>
+<snrtwostateneurcorsh5big.pdf, id=3818, 462.52798pt x 346.89601pt>
 File: snrtwostateneurcorsh5big.pdf Graphic file (type pdf)
 <use snrtwostateneurcorsh5big.pdf>
 Package pdftex.def Info: snrtwostateneurcorsh5big.pdf  used on input line 1065.
 
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<snrpredneur2big.pdf, id=3816, 462.52798pt x 346.89601pt>
+<snrpredneur2big.pdf, id=3819, 462.52798pt x 346.89601pt>
 File: snrpredneur2big.pdf Graphic file (type pdf)
 <use snrpredneur2big.pdf>
 Package pdftex.def Info: snrpredneur2big.pdf  used on input line 1066.
@@ -1297,17 +1297,17 @@ clusion: multiple pdfs with page group included in a single page
 pdfTeX warning: /usr/bin/pdflatex (file ./snrpredneur2big.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
-<specanhopf2.pdf, id=3974, 462.52798pt x 346.89601pt>
+<specanhopf2.pdf, id=3978, 462.52798pt x 346.89601pt>
 File: specanhopf2.pdf Graphic file (type pdf)
 <use specanhopf2.pdf>
 Package pdftex.def Info: specanhopf2.pdf  used on input line 1088.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<specanhopf3.pdf, id=3975, 462.52798pt x 346.89601pt>
+<specanhopf3.pdf, id=3979, 462.52798pt x 346.89601pt>
 File: specanhopf3.pdf Graphic file (type pdf)
 <use specanhopf3.pdf>
 Package pdftex.def Info: specanhopf3.pdf  used on input line 1089.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<snranhopfcrit2max.pdf, id=3976, 462.52798pt x 346.89601pt>
+<snranhopfcrit2max.pdf, id=3980, 462.52798pt x 346.89601pt>
 File: snranhopfcrit2max.pdf Graphic file (type pdf)
 <use snranhopfcrit2max.pdf>
 Package pdftex.def Info: snranhopfcrit2max.pdf  used on input line 1095.
@@ -1322,13 +1322,13 @@ Overfull \hbox (12.60773pt too wide) in paragraph at lines 1095--1095
 pdfTeX warning: /usr/bin/pdflatex (file ./specanhopf3.pdf): PDF inclusion: mult
 iple pdfs with page group included in a single page
 >]
-<snrtwostatecompanhopf7mnofit4big.pdf, id=4086, 462.52798pt x 346.89601pt>
+<snrtwostatecompanhopf7mnofit4big.pdf, id=4089, 462.52798pt x 346.89601pt>
 File: snrtwostatecompanhopf7mnofit4big.pdf Graphic file (type pdf)
 <use snrtwostatecompanhopf7mnofit4big.pdf>
 Package pdftex.def Info: snrtwostatecompanhopf7mnofit4big.pdf  used on input li
 ne 1109.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<snranhopfpred2big.pdf, id=4087, 462.52798pt x 346.89601pt>
+<snranhopfpred2big.pdf, id=4090, 462.52798pt x 346.89601pt>
 File: snranhopfpred2big.pdf Graphic file (type pdf)
 <use snranhopfpred2big.pdf>
 Package pdftex.def Info: snranhopfpred2big.pdf  used on input line 1110.
@@ -1342,17 +1342,17 @@ pdfTeX warning: /usr/bin/pdflatex (file ./snrtwostatecompanhopf7mnofit4big.pdf)
 pdfTeX warning: /usr/bin/pdflatex (file ./snranhopfpred2big.pdf): PDF inclusion
 : multiple pdfs with page group included in a single page
 >]
-<specarinzelnew1.pdf, id=4249, 462.52798pt x 346.89601pt>
+<specarinzelnew1.pdf, id=4252, 462.52798pt x 346.89601pt>
 File: specarinzelnew1.pdf Graphic file (type pdf)
 <use specarinzelnew1.pdf>
 Package pdftex.def Info: specarinzelnew1.pdf  used on input line 1127.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<specarinzelnew2.pdf, id=4250, 462.52798pt x 346.89601pt>
+<specarinzelnew2.pdf, id=4253, 462.52798pt x 346.89601pt>
 File: specarinzelnew2.pdf Graphic file (type pdf)
 <use specarinzelnew2.pdf>
 Package pdftex.def Info: specarinzelnew2.pdf  used on input line 1128.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<snrinzelonlycritmax.pdf, id=4251, 462.52798pt x 346.89601pt>
+<snrinzelonlycritmax.pdf, id=4254, 462.52798pt x 346.89601pt>
 File: snrinzelonlycritmax.pdf Graphic file (type pdf)
 <use snrinzelonlycritmax.pdf>
 Package pdftex.def Info: snrinzelonlycritmax.pdf  used on input line 1134.
@@ -1367,14 +1367,14 @@ Overfull \hbox (12.60773pt too wide) in paragraph at lines 1134--1134
 pdfTeX warning: /usr/bin/pdflatex (file ./specarinzelnew2.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
-<snrinzelrange26dcompletecritnofit3big.pdf, id=4363, 462.52798pt x 346.89601pt>
+<snrinzelrange26dcompletecritnofit3big.pdf, id=4366, 462.52798pt x 346.89601pt>
 
 File: snrinzelrange26dcompletecritnofit3big.pdf Graphic file (type pdf)
 <use snrinzelrange26dcompletecritnofit3big.pdf>
 Package pdftex.def Info: snrinzelrange26dcompletecritnofit3big.pdf  used on inp
 ut line 1156.
 (pdftex.def)             Requested size: 208.13567pt x 156.10176pt.
-<snrinzelpred2big.pdf, id=4364, 462.52798pt x 346.89601pt>
+<snrinzelpred2big.pdf, id=4367, 462.52798pt x 346.89601pt>
 File: snrinzelpred2big.pdf Graphic file (type pdf)
 <use snrinzelpred2big.pdf>
 Package pdftex.def Info: snrinzelpred2big.pdf  used on input line 1157.
@@ -1418,10 +1418,10 @@ amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on masterarbeit.pdf (64 pages, 4485402 bytes).
+Output written on masterarbeit.pdf (64 pages, 4488037 bytes).
 PDF statistics:
- 4608 PDF objects out of 5155 (max. 8388607)
- 1086 compressed objects within 11 object streams
+ 4612 PDF objects out of 5155 (max. 8388607)
+ 1106 compressed objects within 12 object streams
  0 named destinations out of 1000 (max. 500000)
  531 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -31,7 +31,7 @@ def vana(r0p,r0m,ap,am,bp,bm,t,D,av,v0):
 def fanofun(x,rp,rm,v0,av):
 	return 2*deff(x,rp,rm,v0,av)/v(x,rp,rm,v0,av)
 
-matplotlib.rcParams.update({'font.size': 18})
+matplotlib.rcParams.update({'font.size': 14})
 
 D2=[20,25,30]
 D3=[]
@@ -216,7 +216,7 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
 plt.tight_layout()
-plt.savefig('dcompdfpwnew2sh%s.pdf' %(date1+date2))
+plt.savefig('dcompdfpwnew2shdef%s.pdf' %(date1+date2))
 
 g=np.zeros((l,ivalues1))
 ii=0
@@ -309,7 +309,7 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
 plt.tight_layout()
-plt.savefig('gcompdfpwnew2sh%s.pdf' %(date1+date2))
+plt.savefig('gcompdfpwnew2shdef%s.pdf' %(date1+date2))
 
 
 fano=np.zeros((l,ivalues1))
@@ -404,7 +404,7 @@ for n in range(0,l):
 #plt.legend([handles[idx] for idx in order],[labels[idx] for idx in order])
 plt.legend()
 plt.tight_layout()
-plt.savefig('fcompdfpwnew2sh%s.pdf' %(date1+date2))
+plt.savefig('fcompdfpwnew2shdef%s.pdf' %(date1+date2))
 
 #t=np.arange(-12,-9,0.01)
 #plt.figure()

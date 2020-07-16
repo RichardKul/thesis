@@ -13,6 +13,7 @@ def finf(x,v12,k):
 def vnc(x,I,v12,k,gL,EL,gNa,ENa,gK,EK):
 	return (I-gL*(x-EL)-gNa*finf(x,v12,k)*(x-ENa))/(gK*(x-EK)) 
 
+matplotlib.rcParams.update({'font.size': 22})
 plt.axes().set_aspect(1)
 
 style="Simple,tail_width=0.5,head_width=4,head_length=8"
@@ -52,5 +53,6 @@ plt.text(-50.2138-1,finf(-50.2138,vn,kn)+0.02,'$P$')
 plt.xlim((-75,-10))
 plt.ylim((-0.1,1.1))
 plt.legend()
+plt.tight_layout()
 plt.savefig('inapikanhopfnc.pdf')
 

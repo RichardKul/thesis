@@ -13,7 +13,7 @@ from scipy.fftpack import fft, ifft
 def spectrum(f,tau,sigma):
 	return (2*tau*sigma**2)/(1+(2*np.pi*f*tau)**2)
 
-matplotlib.rcParams.update({'font.size': 16})
+matplotlib.rcParams.update({'font.size': 16}) #20
 
 omega=0.000005
 runs=50
@@ -150,21 +150,22 @@ for z in range(istart,istart+ivalues):
 	plt.arrow(0.5862, 0.3, 0, -0.3, transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
 	#plt.text(10**2,1,'firing rate')
 	#plt.text(10**(2),0.7,'in spiking state')
-	plt.text(10**2,0.5,'firing rate')
-	plt.text(10**(2),0.2,'in spiking state')
+	plt.text(10**2,0.5,'firing rate in')
+	plt.text(10**(2),0.2,'spiking state')
 	plt.text(8*10**(-7),1.3*d*timefac,'$2D_{eff}$')
 	#plt.plot(10**(-4),2*d*timefac,'bx')
 	plt.arrow(0.05, 0.778, -0.05, 0,transform=plot1.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
 	
 #plt.plot(ax2,spectrum(ax2,1/(4.748*10**(-3)),13),label='theory')
 #plt.plot(omega,background/T,'kx')
-	plt.legend(bbox_to_anchor=(0.4, 0.65))
-	#plt.legend()
+	#plt.legend(bbox_to_anchor=(0.4, 0.65))
+	#plt.legend(loc='center right')
+	plt.legend()
 #plt.plot(sax2,say2/T2,label='e6')
 	#plt.savefig('specglue%s%sD=%.2fI=%.2f.pdf' %(mode,date,D*0.01,-0.1+z*0.02))
 	#plot1.set_yticks(list(plot1.get_yticks()) +[2*d*timefac])
 	plot1.spines['right'].set_visible(False)
 	plot1.spines['top'].set_visible(False)
 	plt.tight_layout()
-	plt.savefig('specpaper6.pdf')
+	plt.savefig('specpaper62.pdf')
 	#plt.savefig('inapikanhopf%s2%sfourierD=%.2fI=%.2f.pdf' %(mode,date,D/100,43+z*0.25))	

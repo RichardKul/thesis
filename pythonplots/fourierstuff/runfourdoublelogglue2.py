@@ -145,7 +145,7 @@ for z in range(istart,istart+ivalues):
 	#plt.arrow(70,10,0,-9,length_includes_head=True)
 	plt.arrow(0.5862, 0.6, 0, -0.6, transform=bx.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
 	#plt.arrow(10**(-3), d*timefac, -10**(-3), 0,)# transform=bx.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
-	plt.text(8*10**(-7),1.7*dv*timefac,'$2D_{eff}$')
+	plt.text(13*10**(-7),1.7*dv*timefac,'$2D_{eff}$')
 	#plt.arrow(0.5862, 0.3, 0, -0.3, transform=bx.transAxes, length_includes_head=True,head_width=0.01,head_length=0.03)
 	plt.text(10**2,1,'firing rate')
 	plt.text(10**(2),0.6,'in spiking state')
